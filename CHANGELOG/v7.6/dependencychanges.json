@@ -1,0 +1,249 @@
+[
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.1",
+    "PackageId": "System.Security.Cryptography.Xml",
+    "FromVersion": "10.0.5",
+    "ToVersion": "10.0.6",
+    "VulnerabilityId": [
+      "GHSA-W3X6-4M5H-CXQF",
+      "CVE-2026-26171",
+      "GHSA-37GX-XXP4-5RGX",
+      "CVE-2026-33116"
+    ],
+    "Severity": [
+      "high"
+    ],
+    "VulnerableRanges": [
+      "[10.0.0, 10.0.5]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
+      "https://github.com/advisories/GHSA-37gx-xxp4-5rgx"
+    ],
+    "Justification": null,
+    "TimestampUtc": "2026-04-16T23:13:21.4575733Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.1",
+    "PackageId": ".NET SDK",
+    "FromVersion": "10.0.201",
+    "ToVersion": "10.0.202",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Updated .NET SDK. Building with the latest SDK is required.",
+    "TimestampUtc": "2026-04-16T23:13:22.4500098Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.1",
+    "PackageId": "System.Security.Cryptography.Pkcs",
+    "FromVersion": "10.0.5",
+    "ToVersion": "10.0.6",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Required dependency of System.Security.Cryptography.Xml.",
+    "TimestampUtc": "2026-04-16T23:13:22.4500098Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.2",
+    "PackageId": ".NET SDK",
+    "FromVersion": "10.0.202",
+    "ToVersion": "10.0.300",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Updated .NET SDK. Building with the latest SDK is required.",
+    "TimestampUtc": "2026-05-14T17:53:01.1430124Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.3",
+    "PackageId": ".NET SDK",
+    "FromVersion": "10.0.300",
+    "ToVersion": "10.0.301",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Updated .NET SDK. Building with the latest SDK is required.",
+    "TimestampUtc": "2026-06-09T20:21:29.3313254Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.4",
+    "PackageId": ".NET SDK",
+    "FromVersion": "10.0.301",
+    "ToVersion": "10.0.302",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Updated .NET SDK. Building with the latest SDK is required.",
+    "TimestampUtc": "2026-07-15T15:01:47.0062032Z"
+  },
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.5",
+    "PackageId": "System.Security.Cryptography.Xml",
+    "FromVersion": "10.0.6",
+    "ToVersion": "10.0.10",
+    "VulnerabilityId": [
+      "CVE-2026-47302",
+      "CVE-2026-47304",
+      "CVE-2026-50525",
+      "CVE-2026-50527",
+      "CVE-2026-50648",
+      "GHSA-23RF-6693-G89P",
+      "GHSA-8Q5V-6PQQ-X66H",
+      "GHSA-CVVH-RHRC-WG4Q",
+      "GHSA-G8R8-53C2-PM3F",
+      "GHSA-MMJF-RQRV-855V"
+    ],
+    "Severity": [
+      "high"
+    ],
+    "VulnerableRanges": [
+      "[10.0.0, 10.0.9]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-23rf-6693-g89p",
+      "https://github.com/advisories/GHSA-8q5v-6pqq-x66h",
+      "https://github.com/advisories/GHSA-cvvh-rhrc-wg4q",
+      "https://github.com/advisories/GHSA-g8r8-53c2-pm3f",
+      "https://github.com/advisories/GHSA-mmjf-rqrv-855v"
+    ],
+    "Justification": "",
+    "TimestampUtc": "2026-08-08T02:42:35.481037Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.5",
+    "PackageId": "System.Security.Cryptography.Pkcs",
+    "FromVersion": "10.0.6",
+    "ToVersion": "10.0.10",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Required by System.Security.Cryptography.Xml 10.0.10 dependency constraint '[10.0.10, )'.",
+    "TimestampUtc": "2026-08-08T02:42:35.4946389Z"
+  },
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.7",
+    "PackageId": "System.Security.Cryptography.Pkcs",
+    "FromVersion": "10.0.10",
+    "ToVersion": "10.0.13",
+    "VulnerabilityId": [
+      "GHSA-2FMV-RV2C-59X7",
+      "GHSA-846F-F764-76MX"
+    ],
+    "Severity": [
+      "High",
+      "Moderate"
+    ],
+    "VulnerableRanges": [
+      "[10.0.0, 10.0.12]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-2fmv-rv2c-59x7",
+      "https://github.com/advisories/GHSA-846f-f764-76mx"
+    ],
+    "Justification": "",
+    "TimestampUtc": "2026-10-15T20:47:53.6897267Z"
+  },
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.7",
+    "PackageId": "System.Security.Cryptography.Xml",
+    "FromVersion": "10.0.10",
+    "ToVersion": "10.0.13",
+    "VulnerabilityId": [
+      "GHSA-7HQP-7C5M-4VQ6",
+      "GHSA-C399-9853-6JMJ",
+      "GHSA-R955-8Q5J-3H83"
+    ],
+    "Severity": [
+      "High"
+    ],
+    "VulnerableRanges": [
+      "[10.0.0, 10.0.12]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-7hqp-7c5m-4vq6",
+      "https://github.com/advisories/GHSA-c399-9853-6jmj",
+      "https://github.com/advisories/GHSA-r955-8q5j-3h83"
+    ],
+    "Justification": "",
+    "TimestampUtc": "2026-10-15T20:47:53.7020243Z"
+  },
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.7",
+    "PackageId": "System.Security.Cryptography.Pkcs",
+    "FromVersion": "10.0.5",
+    "ToVersion": "10.0.13",
+    "VulnerabilityId": [
+      "GHSA-846F-F764-76MX",
+      "GHSA-2FMV-RV2C-59X7"
+    ],
+    "Severity": [
+      "High",
+      "Moderate"
+    ],
+    "VulnerableRanges": [
+      "[10.0.0, 10.0.12]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-846f-f764-76mx",
+      "https://github.com/advisories/GHSA-2fmv-rv2c-59x7"
+    ],
+    "Justification": null,
+    "TimestampUtc": "2026-10-15T20:47:53.7021127Z"
+  },
+  {
+    "ChangeType": "Security",
+    "Branch": "release/v7.6.7",
+    "PackageId": "System.Security.Cryptography.Pkcs",
+    "FromVersion": "9.0.14",
+    "ToVersion": "9.0.21",
+    "VulnerabilityId": [
+      "GHSA-846F-F764-76MX",
+      "GHSA-2FMV-RV2C-59X7"
+    ],
+    "Severity": [
+      "High",
+      "Moderate"
+    ],
+    "VulnerableRanges": [
+      "[9.0.0, 9.0.20]"
+    ],
+    "AdvisoryUrls": [
+      "https://github.com/advisories/GHSA-846f-f764-76mx",
+      "https://github.com/advisories/GHSA-2fmv-rv2c-59x7"
+    ],
+    "Justification": null,
+    "TimestampUtc": "2026-10-15T20:47:53.7021735Z"
+  },
+  {
+    "ChangeType": "NonSecurity",
+    "Branch": "release/v7.6.9",
+    "PackageId": ".NET SDK",
+    "FromVersion": "10.0.402",
+    "ToVersion": "10.0.403",
+    "VulnerabilityId": [],
+    "Severity": [],
+    "VulnerableRanges": [],
+    "AdvisoryUrls": [],
+    "Justification": "Updated .NET SDK. Building with the latest SDK is required.",
+    "TimestampUtc": "2026-10-24T23:19:55.1758673Z"
+  }
+]
