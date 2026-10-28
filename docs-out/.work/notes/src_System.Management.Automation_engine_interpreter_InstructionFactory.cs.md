@@ -1,0 +1,4 @@
+# InstructionFactory.cs (130) fully read
+- abstract InstructionFactory L23: ConditionalWeakTable<Type,InstructionFactory> s_factories pre-seeded with 15 types: object,bool,byte,sbyte,short,ushort,int,uint,long,ulong,float,double,char,string,BigInteger (L32-46); other types via reflection MakeGenericType(InstructionFactory<>).Factory (L51-52). Abstract factory methods: GetArrayItem, SetArrayItem, TypeIs, TypeAs, DefaultValue, NewArray, NewArrayInit(count).
+- InstructionFactory<T> L70 sealed: lazily caches one instance of GetArrayItemInstruction<T>, SetArrayItemInstruction<T>, TypeIsInstruction<T>, TypeAsInstruction<T>, DefaultValueInstruction<T>, NewArrayInstruction<T>; NewArrayInitInstruction<T>(elementCount) cached for count < MaxArrayInitElementCountCache=32.
+- => these 7 generic instruction families are instantiated per element type T on demand ("instances created by factories").

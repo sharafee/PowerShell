@@ -1,0 +1,28 @@
+# src/Microsoft.Management.UI.Internal/resources/pl
+
+| Tier | Project | File count | LOC | Type count | Flags |
+|---|---|---:|---:|---:|---|
+| B:6 | Microsoft.PowerShell.GraphicalHost | 6 | 1395 | 0 | GENERATED |
+
+**Purpose.** _GENERATED stub — not annotated by reading._
+
+## Files
+
+| File | LOC | Main types | Role | Covering document |
+|---|---:|---|---|---|
+| `public.GraphicalHostResources.pl.resx` | 123 | - |  |  |
+| `public.HelpWindowResources.pl.resx` | 230 | - |  |  |
+| `public.InvariantResources.pl.resx` | 151 | - |  |  |
+| `public.ShowCommandResources.pl.resx` | 239 | - |  |  |
+| `public.UICultureResources.pl.resx` | 238 | - |  |  |
+| `public.XamlLocalizableResources.pl.resx` | 414 | - |  |  |
+
+## Partial-class and conditional-compilation notes
+
+No partial types spanning files (APPROX).
+
+No conditionally-compiled types (APPROX).
+
+## Related documents
+
+_none linked yet_

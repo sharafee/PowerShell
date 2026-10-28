@@ -1,0 +1,13 @@
+{
+  "version_pin": "v7.6.9",
+  "commit": "523031e0af7fa960441734e6cacdf9e927d81619",
+  "commit_short": "523031e",
+  "pin_method": "last-commit-history + tree metadata: commit d4d786f message 'Import PowerShell v7.6.9' and newest CHANGELOG/7.6.md entry [7.6.9]; no tags, no upstream remote",
+  "pin_notes": "Pin commit is the HEAD at run start. Documents are committed on top of it under docs-out/ only; validators check 'git diff --stat <commit> HEAD -- . :!docs-out' is empty instead of HEAD equality (see DECISIONS.md D-003).",
+  "sdk_global_json": "10.0.403",
+  "target_frameworks": "to be filled by projects.json (Phase 0)",
+  "branch": "claude/repo-review-explanation-22f3xr",
+  "run_verification": "none",
+  "allow_static_only": true,
+  "date": "2026-10-28"
+}

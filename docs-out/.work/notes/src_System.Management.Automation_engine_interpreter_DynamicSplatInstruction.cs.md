@@ -1,0 +1,1 @@
+# DynamicSplatInstruction.cs (53) fully read: sealed DynamicSplatInstruction(argumentCount, CallSite<Func<CallSite,ArgumentArray,object>>); Run wraps frame.Data[first..] as ArgumentArray (DLR type) and calls site target. Produced 1 consumed argCount. NO creator found by rg (see grep) -> unused in this repo (INFERENCE: inherited DLR code).

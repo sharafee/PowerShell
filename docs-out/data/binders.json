@@ -1,0 +1,1139 @@
+[
+ {
+  "name": "System.Management.Automation.ComInterop.ComBinder.ComGetMemberBinder",
+  "file": "src/System.Management.Automation/engine/ComInterop/ComBinder.cs",
+  "start": 308,
+  "end": 336,
+  "bases": [
+   "GetMemberBinder"
+  ],
+  "chain": [
+   "GetMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/ComInterop/ComBinder.cs",
+    "line": 43
+   }
+  ],
+  "site_count": 1,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ComInterop.ComBinder.ComInvokeMemberBinder",
+  "file": "src/System.Management.Automation/engine/ComInterop/ComBinder.cs",
+  "start": 341,
+  "end": 375,
+  "bases": [
+   "InvokeMemberBinder"
+  ],
+  "chain": [
+   "InvokeMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/ComInterop/ComBinder.cs",
+    "line": 125
+   }
+  ],
+  "site_count": 1,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ComInterop.ComInvokeAction",
+  "file": "src/System.Management.Automation/engine/ComInterop/ComInvokeAction.cs",
+  "start": 16,
+  "end": 41,
+  "bases": [
+   "InvokeBinder"
+  ],
+  "chain": [
+   "InvokeBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/ComInterop/ComInvokeAction.cs",
+    "line": 77
+   }
+  ],
+  "site_count": 1,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ComInterop.SplatInvokeBinder",
+  "file": "src/System.Management.Automation/engine/ComInterop/ComInvokeAction.cs",
+  "start": 47,
+  "end": 83,
+  "bases": [
+   "CallSiteBinder"
+  ],
+  "chain": [
+   "CallSiteBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/ComInterop/ComInvokeAction.cs",
+    "line": 49
+   }
+  ],
+  "site_count": 1,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSEnumerableBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 518,
+  "end": 780,
+  "bases": [
+   "ConvertBinder"
+  ],
+  "chain": [
+   "ConvertBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 1997
+   },
+   {
+    "file": "src/System.Management.Automation/engine/LanguagePrimitives.cs",
+    "line": 546
+   },
+   {
+    "file": "src/System.Management.Automation/engine/Attributes.cs",
+    "line": 227
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5005
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5670
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 520
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 723
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 831
+   }
+  ],
+  "site_count": 8,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSToObjectArrayBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 785,
+  "end": 839,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6519
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 787
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSPipeWriterBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 841,
+  "end": 926,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 2435
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 843
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSArrayAssignmentRHSBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 935,
+  "end": 1042,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 3549
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6935
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 949
+   }
+  ],
+  "site_count": 3,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSToStringBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1054,
+  "end": 1114,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4164
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4460
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4584
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4591
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5779
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6604
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1056
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1572
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1603
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3100
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3278
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3318
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3319
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3333
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3334
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4323
+   }
+  ],
+  "site_count": 16,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSPipelineResultToBoolBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1119,
+  "end": 1178,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 2328
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1121
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSInvokeDynamicMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1180,
+  "end": 1276,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6441
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1213
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSGetDynamicMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1291,
+  "end": 1399,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6343
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6700
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1305
+   }
+  ],
+  "site_count": 3,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSSetDynamicMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1401,
+  "end": 1491,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6716
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1415
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSSwitchClauseEvalBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1493,
+  "end": 1609,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4548
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1505
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSAttributeGenerator",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1613,
+  "end": 1792,
+  "bases": [
+   "CreateInstanceBinder"
+  ],
+  "chain": [
+   "CreateInstanceBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1306
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1625
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSCustomObjectConverter",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1794,
+  "end": 1828,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6160
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1796
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSDynamicConvertBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1830,
+  "end": 1863,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1235
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1832
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSVariableAssignmentBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 1868,
+  "end": 2110,
+  "bases": [
+   "DynamicMetaObjectBinder"
+  ],
+  "chain": [
+   "DynamicMetaObjectBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/ShellVariable.cs",
+    "line": 698
+   },
+   {
+    "file": "src/System.Management.Automation/engine/scriptparameterbinder.cs",
+    "line": 50
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/ast.cs",
+    "line": 9585
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 883
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1870
+   }
+  ],
+  "site_count": 5,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSBinaryOperationBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 2119,
+  "end": 3422,
+  "bases": [
+   "BinaryOperationBinder"
+  ],
+  "chain": [
+   "BinaryOperationBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 1981
+   },
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 1991
+   },
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 1999
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1019
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5672
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5747
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5755
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5758
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5766
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5774
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5786
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5789
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5792
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5795
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5798
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5809
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5812
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5815
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5818
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5821
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5824
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5891
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5894
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5897
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 5900
+   }
+  ],
+  "site_count": 34,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSUnaryOperationBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 3427,
+  "end": 3738,
+  "bases": [
+   "UnaryOperationBinder"
+  ],
+  "chain": [
+   "UnaryOperationBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6007
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6022
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6063
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6076
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3442
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3446
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3450
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3454
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3458
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3462
+   }
+  ],
+  "site_count": 10,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSConvertBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 3743,
+  "end": 3941,
+  "bases": [
+   "ConvertBinder"
+  ],
+  "chain": [
+   "ConvertBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 1975
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 749
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1323
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1326
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1329
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1332
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1335
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1338
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 1341
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 4576
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1566
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1860
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3756
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6363
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6383
+   },
+   {
+    "file": "src/System.Management.Automation/engine/lang/scriptblock.cs",
+    "line": 785
+   }
+  ],
+  "site_count": 16,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSGetIndexBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 3946,
+  "end": 4533,
+  "bases": [
+   "GetIndexBinder"
+  ],
+  "chain": [
+   "GetIndexBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6630
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6634
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6853
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6863
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 3963
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4470
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4529
+   }
+  ],
+  "site_count": 7,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSSetIndexBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 4538,
+  "end": 4905,
+  "bases": [
+   "SetIndexBinder"
+  ],
+  "chain": [
+   "SetIndexBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6885
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6892
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1479
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4554
+   }
+  ],
+  "site_count": 4,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSGetMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 4910,
+  "end": 5956,
+  "bases": [
+   "GetMemberBinder"
+  ],
+  "chain": [
+   "GetMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/MshObject.cs",
+    "line": 2265
+   },
+   {
+    "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+    "line": 46
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6342
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6692
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1355
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1367
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 5039
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 5070
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 5131
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 5622
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6020
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6185
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6244
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6325
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6462
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6478
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6715
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6857
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6867
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7339
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7359
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7368
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7444
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7452
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7453
+   }
+  ],
+  "site_count": 30,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSGetMemberBinder.ReservedMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 4936,
+  "end": 4974,
+  "bases": [
+   "PSGetMemberBinder"
+  ],
+  "chain": [
+   "PSGetMemberBinder",
+   "GetMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4988
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4990
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4992
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4994
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 4996
+   }
+  ],
+  "site_count": 5,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSSetMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 5961,
+  "end": 6594,
+  "bases": [
+   "SetMemberBinder"
+  ],
+  "chain": [
+   "SetMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/MshObject.cs",
+    "line": 2275
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6710
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1464
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6007
+   }
+  ],
+  "site_count": 4,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSInvokeBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 6596,
+  "end": 6606,
+  "bases": [
+   "InvokeBinder"
+  ],
+  "chain": [
+   "InvokeBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7098
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 8005
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSInvokeMemberBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 6608,
+  "end": 7737,
+  "bases": [
+   "InvokeMemberBinder"
+  ],
+  "chain": [
+   "InvokeMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/MshObject.cs",
+    "line": 2255
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6418
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 1269
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 6687
+   }
+  ],
+  "site_count": 4,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSCreateInstanceBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 7739,
+  "end": 7932,
+  "bases": [
+   "CreateInstanceBinder"
+  ],
+  "chain": [
+   "CreateInstanceBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/MshReference.cs",
+    "line": 75
+   },
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6417
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7776
+   }
+  ],
+  "site_count": 3,
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.PSInvokeBaseCtorBinder",
+  "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+  "start": 7934,
+  "end": 8012,
+  "bases": [
+   "InvokeMemberBinder"
+  ],
+  "chain": [
+   "InvokeMemberBinder"
+  ],
+  "created_or_obtained_at": [
+   {
+    "file": "src/System.Management.Automation/engine/parser/Compiler.cs",
+    "line": 6428
+   },
+   {
+    "file": "src/System.Management.Automation/engine/runtime/Binding/Binders.cs",
+    "line": 7968
+   }
+  ],
+  "site_count": 2,
+  "label": "APPROX"
+ }
+]

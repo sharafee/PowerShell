@@ -1,0 +1,2827 @@
+[
+ {
+  "name": "System.Management.Automation.Language.VariableAnalysis.AssignmentTarget",
+  "file": "src/System.Management.Automation/engine/parser/VariableAnalysis.cs",
+  "start": 441,
+  "end": 477,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "private",
+   "sealed"
+  ],
+  "accessibility": "private",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "_targetAst",
+    "sig": "internal readonly ExpressionAst _targetAst",
+    "line": 443
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.SequencePointAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 424,
+  "end": 451,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "internal"
+  ],
+  "accessibility": "internal",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.ErrorStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 456,
+  "end": 648,
+  "base_chain": [
+   "PipelineBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "StatementRule",
+    "line": 2093
+   },
+   {
+    "method": "BlockStatementRule",
+    "line": 2355
+   },
+   {
+    "method": "IfStatementRule",
+    "line": 2431
+   },
+   {
+    "method": "IfStatementRule",
+    "line": 2447
+   },
+   {
+    "method": "IfStatementRule",
+    "line": 2471
+   },
+   {
+    "method": "IfStatementRule",
+    "line": 2485
+   },
+   {
+    "method": "IfStatementRule",
+    "line": 2524
+   },
+   {
+    "method": "SwitchStatementRule",
+    "line": 2885
+   },
+   {
+    "method": "ConfigurationStatementRule",
+    "line": 3145
+   },
+   {
+    "method": "ForeachStatementRule",
+    "line": 3431
+   },
+   {
+    "method": "ForeachStatementRule",
+    "line": 3446
+   },
+   {
+    "method": "ForeachStatementRule",
+    "line": 3510
+   },
+   {
+    "method": "ForStatementRule",
+    "line": 3555
+   },
+   {
+    "method": "ForStatementRule",
+    "line": 3620
+   },
+   {
+    "method": "WhileStatementRule",
+    "line": 3649
+   },
+   {
+    "method": "WhileStatementRule",
+    "line": 3666
+   },
+   {
+    "method": "WhileStatementRule",
+    "line": 3690
+   },
+   {
+    "method": "WhileStatementRule",
+    "line": 3703
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3927
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3971
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3978
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 4030
+   },
+   {
+    "method": "CreateErrorStatementAst",
+    "line": 4097
+   },
+   {
+    "method": "DoWhileStatementRule",
+    "line": 4195
+   },
+   {
+    "method": "ClassDefinitionRule",
+    "line": 4255
+   },
+   {
+    "method": "ClassDefinitionRule",
+    "line": 4314
+   },
+   {
+    "method": "ClassDefinitionRule",
+    "line": 4370
+   },
+   {
+    "method": "EnumDefinitionRule",
+    "line": 4728
+   },
+   {
+    "method": "EnumDefinitionRule",
+    "line": 4777
+   },
+   {
+    "method": "EnumDefinitionRule",
+    "line": 4811
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 4948
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 4965
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 4978
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 4988
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5017
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5023
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5045
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5072
+   },
+   {
+    "method": "MethodDeclarationRule",
+    "line": 5277
+   },
+   {
+    "method": "FunctionDeclarationRule",
+    "line": 5362
+   },
+   {
+    "method": "FunctionDeclarationRule",
+    "line": 5389
+   },
+   {
+    "method": "TrapStatementRule",
+    "line": 5477
+   },
+   {
+    "method": "TryStatementRule",
+    "line": 5620
+   },
+   {
+    "method": "TryStatementRule",
+    "line": 5665
+   },
+   {
+    "method": "DataStatementRule",
+    "line": 5763
+   },
+   {
+    "method": "PipelineChainRule",
+    "line": 5834
+   },
+   {
+    "method": "PipelineChainRule",
+    "line": 5908
+   },
+   {
+    "method": "PipelineChainRule",
+    "line": 5935
+   },
+   {
+    "method": "GetKeyValuePair",
+    "line": 7452
+   },
+   {
+    "method": "GetKeyValuePair",
+    "line": 7482
+   },
+   {
+    "method": "ParenthesizedExpressionRule",
+    "line": 7596
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Flags",
+    "sig": "public Dictionary < string , Tuple < Token , Ast > > Flags",
+    "line": 536
+   },
+   {
+    "name": "Conditions",
+    "sig": "public ReadOnlyCollection < Ast > Conditions",
+    "line": 541
+   },
+   {
+    "name": "Bodies",
+    "sig": "public ReadOnlyCollection < Ast > Bodies",
+    "line": 546
+   },
+   {
+    "name": "NestedAst",
+    "sig": "public ReadOnlyCollection < Ast > NestedAst",
+    "line": 553
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ErrorExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 653,
+  "end": 707,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "AttributeArgumentsRule",
+    "line": 1199
+   },
+   {
+    "method": "AttributeArgumentsRule",
+    "line": 1250
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3968
+   },
+   {
+    "method": "RedirectionRule",
+    "line": 6188
+   },
+   {
+    "method": "GetCommandArgument",
+    "line": 6336
+   },
+   {
+    "method": "ExpressionRule",
+    "line": 6742
+   },
+   {
+    "method": "ExpressionRule",
+    "line": 6765
+   },
+   {
+    "method": "ExpressionRule",
+    "line": 6781
+   },
+   {
+    "method": "BinaryExpressionRule",
+    "line": 6897
+   },
+   {
+    "method": "ErrorRecoveryParameterInExpression",
+    "line": 6963
+   },
+   {
+    "method": "ArrayLiteralRule",
+    "line": 7010
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7128
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7157
+   },
+   {
+    "method": "MemberAccessRule",
+    "line": 7737
+   },
+   {
+    "method": "ElementAccessRule",
+    "line": 7998
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "NestedAst",
+    "sig": "public ReadOnlyCollection < Ast > NestedAst",
+    "line": 670
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ScriptBlockAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 775,
+  "end": 1739,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParseFile",
+    "line": 92
+   },
+   {
+    "method": "ScriptBlockBodyRule",
+    "line": 1723
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1848
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeAst > Attributes",
+    "line": 1181
+   },
+   {
+    "name": "UsingStatements",
+    "sig": "public ReadOnlyCollection < UsingStatementAst > UsingStatements",
+    "line": 1188
+   },
+   {
+    "name": "ParamBlock",
+    "sig": "public ParamBlockAst ParamBlock",
+    "line": 1194
+   },
+   {
+    "name": "BeginBlock",
+    "sig": "public NamedBlockAst BeginBlock",
+    "line": 1199
+   },
+   {
+    "name": "ProcessBlock",
+    "sig": "public NamedBlockAst ProcessBlock",
+    "line": 1204
+   },
+   {
+    "name": "EndBlock",
+    "sig": "public NamedBlockAst EndBlock",
+    "line": 1209
+   },
+   {
+    "name": "CleanBlock",
+    "sig": "public NamedBlockAst CleanBlock",
+    "line": 1214
+   },
+   {
+    "name": "DynamicParamBlock",
+    "sig": "public NamedBlockAst DynamicParamBlock",
+    "line": 1220
+   },
+   {
+    "name": "Parameters",
+    "sig": "ReadOnlyCollection < ParameterAst > IParameterMetadataProvider . Parameters",
+    "line": 1592
+   },
+   {
+    "name": "Body",
+    "sig": "ScriptBlockAst IParameterMetadataProvider . Body",
+    "line": 1597
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ParamBlockAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 1745,
+  "end": 1858,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParamBlockRule",
+    "line": 911
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeAst > Attributes",
+    "line": 1789
+   },
+   {
+    "name": "Parameters",
+    "sig": "public ReadOnlyCollection < ParameterAst > Parameters",
+    "line": 1794
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.NamedBlockAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 1864,
+  "end": 2026,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "NamedBlockListRule",
+    "line": 1813
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1817
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1821
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1825
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1829
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Statements",
+    "sig": "public ReadOnlyCollection < StatementAst > Statements",
+    "line": 1964
+   },
+   {
+    "name": "Traps",
+    "sig": "public ReadOnlyCollection < TrapStatementAst > Traps",
+    "line": 1970
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.NamedAttributeArgumentAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2032,
+  "end": 2113,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "AttributeArgumentsRule",
+    "line": 1231
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Argument",
+    "sig": "public ExpressionAst Argument",
+    "line": 2078
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.AttributeBaseAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2119,
+  "end": 2146,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.AttributeAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2151,
+  "end": 2257,
+  "base_chain": [
+   "AttributeBaseAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "AttributeRule",
+    "line": 1133
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "PositionalArguments",
+    "sig": "public ReadOnlyCollection < ExpressionAst > PositionalArguments",
+    "line": 2199
+   },
+   {
+    "name": "NamedArguments",
+    "sig": "public ReadOnlyCollection < NamedAttributeArgumentAst > NamedArguments",
+    "line": 2204
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.TypeConstraintAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2262,
+  "end": 2317,
+  "base_chain": [
+   "AttributeBaseAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "AttributeRule",
+    "line": 1152
+   },
+   {
+    "method": "ClassDefinitionRule",
+    "line": 4288
+   },
+   {
+    "method": "EnumDefinitionRule",
+    "line": 4761
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.ParameterAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2323,
+  "end": 2512,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParameterRule",
+    "line": 991
+   },
+   {
+    "method": "ParameterRule",
+    "line": 1023
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeBaseAst > Attributes",
+    "line": 2371
+   },
+   {
+    "name": "Name",
+    "sig": "public VariableExpressionAst Name",
+    "line": 2376
+   },
+   {
+    "name": "DefaultValue",
+    "sig": "public ExpressionAst DefaultValue",
+    "line": 2381
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.StatementBlockAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2522,
+  "end": 2624,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParseFile",
+    "line": 92
+   },
+   {
+    "method": "ScriptBlockBodyRule",
+    "line": 1724
+   },
+   {
+    "method": "NamedBlockListRule",
+    "line": 1803
+   },
+   {
+    "method": "StatementBlockRule",
+    "line": 1894
+   },
+   {
+    "method": "SubExpressionRule",
+    "line": 7564
+   },
+   {
+    "method": "SubExpressionRule",
+    "line": 7570
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Statements",
+    "sig": "public ReadOnlyCollection < StatementAst > Statements",
+    "line": 2560
+   },
+   {
+    "name": "Traps",
+    "sig": "public ReadOnlyCollection < TrapStatementAst > Traps",
+    "line": 2566
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.StatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2629,
+  "end": 2642,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.TypeDefinitionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2667,
+  "end": 2865,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ClassDefinitionRule",
+    "line": 4359
+   },
+   {
+    "method": "EnumDefinitionRule",
+    "line": 4804
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeAst > Attributes",
+    "line": 2737
+   },
+   {
+    "name": "BaseTypes",
+    "sig": "public ReadOnlyCollection < TypeConstraintAst > BaseTypes",
+    "line": 2742
+   },
+   {
+    "name": "Members",
+    "sig": "public ReadOnlyCollection < MemberAst > Members",
+    "line": 2747
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.UsingStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 2901,
+  "end": 3105,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "UsingStatementRule",
+    "line": 5052
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5060
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5080
+   },
+   {
+    "method": "UsingStatementRule",
+    "line": 5084
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Name",
+    "sig": "public StringConstantExpressionAst Name",
+    "line": 3015
+   },
+   {
+    "name": "Alias",
+    "sig": "public StringConstantExpressionAst Alias",
+    "line": 3021
+   },
+   {
+    "name": "ModuleSpecification",
+    "sig": "public HashtableAst ModuleSpecification",
+    "line": 3027
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.MemberAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 3110,
+  "end": 3126,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.PropertyMemberAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 3156,
+  "end": 3315,
+  "base_chain": [
+   "MemberAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ClassMemberRule",
+    "line": 4579
+   },
+   {
+    "method": "EnumMemberRule",
+    "line": 4894
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "PropertyType",
+    "sig": "public TypeConstraintAst PropertyType",
+    "line": 3218
+   },
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeAst > Attributes",
+    "line": 3223
+   },
+   {
+    "name": "InitialValue",
+    "sig": "public ExpressionAst InitialValue",
+    "line": 3233
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.FunctionMemberAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 3342,
+  "end": 3633,
+  "base_chain": [
+   "MemberAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ClassMemberRule",
+    "line": 4625
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Attributes",
+    "sig": "public ReadOnlyCollection < AttributeAst > Attributes",
+    "line": 3403
+   },
+   {
+    "name": "ReturnType",
+    "sig": "public TypeConstraintAst ReturnType",
+    "line": 3408
+   },
+   {
+    "name": "Parameters",
+    "sig": "public ReadOnlyCollection < ParameterAst > Parameters",
+    "line": 3413
+   },
+   {
+    "name": "Body",
+    "sig": "public ScriptBlockAst Body",
+    "line": 3421
+   },
+   {
+    "name": "Parameters",
+    "sig": "ReadOnlyCollection < ParameterAst > IParameterMetadataProvider . Parameters",
+    "line": 3574
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CompilerGeneratedMemberFunctionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 3642,
+  "end": 3740,
+  "base_chain": [
+   "MemberAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "internal"
+  ],
+  "accessibility": "internal",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "DefiningType",
+    "sig": "internal TypeDefinitionAst DefiningType",
+    "line": 3667
+   },
+   {
+    "name": "Parameters",
+    "sig": "public ReadOnlyCollection < ParameterAst > Parameters",
+    "line": 3718
+   },
+   {
+    "name": "Body",
+    "sig": "public ScriptBlockAst Body",
+    "line": 3720
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.FunctionDefinitionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 3745,
+  "end": 4054,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "MethodDeclarationRule",
+    "line": 5305
+   },
+   {
+    "method": "FunctionDeclarationRule",
+    "line": 5405
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Parameters",
+    "sig": "public ReadOnlyCollection < ParameterAst > Parameters",
+    "line": 3841
+   },
+   {
+    "name": "Body",
+    "sig": "public ScriptBlockAst Body",
+    "line": 3846
+   },
+   {
+    "name": "Parameters",
+    "sig": "ReadOnlyCollection < ParameterAst > IParameterMetadataProvider . Parameters",
+    "line": 4005
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.IfStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4059,
+  "end": 4157,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "IfStatementRule",
+    "line": 2540
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "ElseClause",
+    "sig": "public StatementBlockAst ElseClause",
+    "line": 4103
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.DataStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4162,
+  "end": 4259,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "DataStatementRule",
+    "line": 5766
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "CommandsAllowed",
+    "sig": "public ReadOnlyCollection < ExpressionAst > CommandsAllowed",
+    "line": 4216
+   },
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 4221
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.LabeledStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4266,
+  "end": 4303,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Condition",
+    "sig": "public PipelineBaseAst Condition",
+    "line": 4302
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.LoopStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4309,
+  "end": 4337,
+  "base_chain": [
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 4336
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ForEachStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4363,
+  "end": 4484,
+  "base_chain": [
+   "LoopStatementAst",
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ForeachStatementRule",
+    "line": 3514
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Variable",
+    "sig": "public VariableExpressionAst Variable",
+    "line": 4431
+   },
+   {
+    "name": "ThrottleLimit",
+    "sig": "public ExpressionAst ThrottleLimit",
+    "line": 4436
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ForStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4489,
+  "end": 4571,
+  "base_chain": [
+   "LoopStatementAst",
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ForStatementRule",
+    "line": 3624
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Initializer",
+    "sig": "public PipelineBaseAst Initializer",
+    "line": 4527
+   },
+   {
+    "name": "Iterator",
+    "sig": "public PipelineBaseAst Iterator",
+    "line": 4532
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.DoWhileStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4576,
+  "end": 4627,
+  "base_chain": [
+   "LoopStatementAst",
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "DoWhileStatementRule",
+    "line": 4205
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.DoUntilStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4632,
+  "end": 4683,
+  "base_chain": [
+   "LoopStatementAst",
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "DoWhileStatementRule",
+    "line": 4202
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.WhileStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4688,
+  "end": 4739,
+  "base_chain": [
+   "LoopStatementAst",
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "WhileStatementRule",
+    "line": 3706
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.SwitchStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4791,
+  "end": 4913,
+  "base_chain": [
+   "LabeledStatementAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SwitchStatementRule",
+    "line": 2889
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Default",
+    "sig": "public StatementBlockAst Default",
+    "line": 4854
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CatchClauseAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 4922,
+  "end": 5010,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "CatchBlockRule",
+    "line": 5590
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "CatchTypes",
+    "sig": "public ReadOnlyCollection < TypeConstraintAst > CatchTypes",
+    "line": 4962
+   },
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 4973
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.TryStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5015,
+  "end": 5130,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "TryStatementRule",
+    "line": 5668
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 5075
+   },
+   {
+    "name": "CatchClauses",
+    "sig": "public ReadOnlyCollection < CatchClauseAst > CatchClauses",
+    "line": 5080
+   },
+   {
+    "name": "Finally",
+    "sig": "public StatementBlockAst Finally",
+    "line": 5086
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.TrapStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5135,
+  "end": 5206,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "TrapStatementRule",
+    "line": 5480
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "TrapType",
+    "sig": "public TypeConstraintAst TrapType",
+    "line": 5169
+   },
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 5174
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.BreakStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5215,
+  "end": 5267,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "BreakStatementRule",
+    "line": 2246
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Label",
+    "sig": "public ExpressionAst Label",
+    "line": 5238
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ContinueStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5272,
+  "end": 5324,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ContinueStatementRule",
+    "line": 2259
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Label",
+    "sig": "public ExpressionAst Label",
+    "line": 5295
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ReturnStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5329,
+  "end": 5381,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ReturnStatementRule",
+    "line": 2271
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Pipeline",
+    "sig": "public PipelineBaseAst Pipeline",
+    "line": 5352
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ExitStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5386,
+  "end": 5438,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ExitStatementRule",
+    "line": 2283
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Pipeline",
+    "sig": "public PipelineBaseAst Pipeline",
+    "line": 5409
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ThrowStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5443,
+  "end": 5529,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ThrowStatementRule",
+    "line": 2296
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Pipeline",
+    "sig": "public PipelineBaseAst Pipeline",
+    "line": 5466
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ChainableAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5534,
+  "end": 5543,
+  "base_chain": [
+   "PipelineBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.PipelineChainAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5549,
+  "end": 5647,
+  "base_chain": [
+   "ChainableAst",
+   "PipelineBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "PipelineChainRule",
+    "line": 5957
+   },
+   {
+    "method": "PipelineChainRule",
+    "line": 5968
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "LhsPipelineChain",
+    "sig": "public ChainableAst LhsPipelineChain",
+    "line": 5588
+   },
+   {
+    "name": "RhsPipeline",
+    "sig": "public PipelineAst RhsPipeline",
+    "line": 5593
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.PipelineBaseAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5657,
+  "end": 5678,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.PipelineAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5684,
+  "end": 5825,
+  "base_chain": [
+   "ChainableAst",
+   "PipelineBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SwitchStatementRule",
+    "line": 2662
+   },
+   {
+    "method": "PipelineRule",
+    "line": 6159
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "PipelineElements",
+    "sig": "public ReadOnlyCollection < CommandBaseAst > PipelineElements",
+    "line": 5763
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CommandElementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5830,
+  "end": 5843,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.CommandParameterAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5853,
+  "end": 5944,
+  "base_chain": [
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "CommandRule",
+    "line": 6533
+   },
+   {
+    "method": "CommandRule",
+    "line": 6583
+   },
+   {
+    "method": "ErrorRecoveryParameterInExpression",
+    "line": 6966
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Argument",
+    "sig": "public ExpressionAst Argument",
+    "line": 5906
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CommandBaseAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5949,
+  "end": 5982,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Redirections",
+    "sig": "public ReadOnlyCollection < RedirectionAst > Redirections",
+    "line": 5981
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CommandAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 5987,
+  "end": 6111,
+  "base_chain": [
+   "CommandBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "CommandRule",
+    "line": 6681
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "CommandElements",
+    "sig": "public ReadOnlyCollection < CommandElementAst > CommandElements",
+    "line": 6029
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.CommandExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6116,
+  "end": 6186,
+  "base_chain": [
+   "CommandBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SwitchStatementRule",
+    "line": 2663
+   },
+   {
+    "method": "MethodDeclarationRule",
+    "line": 5297
+   },
+   {
+    "method": "PipelineRule",
+    "line": 6058
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Expression",
+    "sig": "public ExpressionAst Expression",
+    "line": 6144
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.RedirectionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6191,
+  "end": 6208,
+  "base_chain": [
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.MergingRedirectionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6255,
+  "end": 6297,
+  "base_chain": [
+   "RedirectionAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "RedirectionRule",
+    "line": 6233
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.FileRedirectionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6302,
+  "end": 6372,
+  "base_chain": [
+   "RedirectionAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "RedirectionRule",
+    "line": 6202
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Location",
+    "sig": "public ExpressionAst Location",
+    "line": 6338
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.AssignmentStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6379,
+  "end": 6495,
+  "base_chain": [
+   "PipelineBaseAst",
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "PipelineChainRule",
+    "line": 5837
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Left",
+    "sig": "public ExpressionAst Left",
+    "line": 6428
+   },
+   {
+    "name": "Right",
+    "sig": "public StatementAst Right",
+    "line": 6438
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ConfigurationDefinitionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 6516,
+  "end": 6998,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ConfigurationStatementRule",
+    "line": 3268
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Body",
+    "sig": "public ScriptBlockExpressionAst Body",
+    "line": 6561
+   },
+   {
+    "name": "InstanceName",
+    "sig": "public ExpressionAst InstanceName",
+    "line": 6573
+   },
+   {
+    "name": "CustomAttributes",
+    "sig": "internal IEnumerable < AttributeAst > CustomAttributes",
+    "line": 6630
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.DynamicKeywordStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7003,
+  "end": 7335,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 4050
+   },
+   {
+    "method": "CommandRule",
+    "line": 6678
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "CommandElements",
+    "sig": "public ReadOnlyCollection < CommandElementAst > CommandElements",
+    "line": 7038
+   },
+   {
+    "name": "InstanceName",
+    "sig": "internal ExpressionAst InstanceName",
+    "line": 7113
+   },
+   {
+    "name": "OriginalInstanceName",
+    "sig": "internal ExpressionAst OriginalInstanceName",
+    "line": 7115
+   },
+   {
+    "name": "BodyExpression",
+    "sig": "internal ExpressionAst BodyExpression",
+    "line": 7117
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7344,
+  "end": 7399,
+  "base_chain": [
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public",
+   "abstract"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.TernaryExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7404,
+  "end": 7497,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ExpressionRule",
+    "line": 6784
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Condition",
+    "sig": "public ExpressionAst Condition",
+    "line": 7428
+   },
+   {
+    "name": "IfTrue",
+    "sig": "public ExpressionAst IfTrue",
+    "line": 7433
+   },
+   {
+    "name": "IfFalse",
+    "sig": "public ExpressionAst IfFalse",
+    "line": 7438
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.BinaryExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7502,
+  "end": 7617,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "BinaryExpressionRule",
+    "line": 6918
+   },
+   {
+    "method": "BinaryExpressionRule",
+    "line": 6936
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Left",
+    "sig": "public ExpressionAst Left",
+    "line": 7550
+   },
+   {
+    "name": "Right",
+    "sig": "public ExpressionAst Right",
+    "line": 7555
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.UnaryExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7622,
+  "end": 7704,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7112
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7221
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Child",
+    "sig": "public ExpressionAst Child",
+    "line": 7662
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.BlockStatementAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7710,
+  "end": 7773,
+  "base_chain": [
+   "StatementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "BlockStatementRule",
+    "line": 2358
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Body",
+    "sig": "public StatementBlockAst Body",
+    "line": 7739
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.AttributedExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7779,
+  "end": 7901,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7160
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7202
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Child",
+    "sig": "public ExpressionAst Child",
+    "line": 7809
+   },
+   {
+    "name": "Attribute",
+    "sig": "public AttributeBaseAst Attribute",
+    "line": 7814
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ConvertExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7906,
+  "end": 7990,
+  "base_chain": [
+   "AttributedExpressionAst",
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7186
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7201
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Type",
+    "sig": "public TypeConstraintAst Type",
+    "line": 7928
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.MemberExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 7997,
+  "end": 8110,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3969
+   },
+   {
+    "method": "MemberAccessRule",
+    "line": 7769
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Expression",
+    "sig": "public ExpressionAst Expression",
+    "line": 8052
+   },
+   {
+    "name": "Member",
+    "sig": "public CommandElementAst Member",
+    "line": 8057
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.InvokeMemberExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 8115,
+  "end": 8310,
+  "base_chain": [
+   "MemberExpressionAst",
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "MemberInvokeRule",
+    "line": 7879
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Arguments",
+    "sig": "public ReadOnlyCollection < ExpressionAst > Arguments",
+    "line": 8248
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.BaseCtorInvokeMemberExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 8315,
+  "end": 8363,
+  "base_chain": [
+   "InvokeMemberExpressionAst",
+   "MemberExpressionAst",
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "MethodDeclarationRule",
+    "line": 5296
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.TypeExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9345,
+  "end": 9398,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7175
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7193
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.VariableExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9404,
+  "end": 9624,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParameterRule",
+    "line": 991
+   },
+   {
+    "method": "ParameterRule",
+    "line": 1024
+   },
+   {
+    "method": "ForeachStatementRule",
+    "line": 3449
+   },
+   {
+    "method": "CheckUsingVariable",
+    "line": 7307
+   },
+   {
+    "method": "CheckUsingVariable",
+    "line": 7316
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.ConstantExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9631,
+  "end": 9688,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "AttributeArgumentsRule",
+    "line": 1209
+   },
+   {
+    "method": "PrimaryExpressionRule",
+    "line": 7258
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.StringConstantExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9732,
+  "end": 9819,
+  "base_chain": [
+   "ConstantExpressionAst",
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SimpleNameRule",
+    "line": 2186
+   },
+   {
+    "method": "InlineScriptRule",
+    "line": 2376
+   },
+   {
+    "method": "SwitchStatementRule",
+    "line": 2794
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 3906
+   },
+   {
+    "method": "DynamicKeywordStatementRule",
+    "line": 4043
+   },
+   {
+    "method": "ResolveUsingAssembly",
+    "line": 5163
+   },
+   {
+    "method": "GetCommandArgument",
+    "line": 6373
+   },
+   {
+    "method": "GetCommandArgument",
+    "line": 6385
+   },
+   {
+    "method": "CommandRule",
+    "line": 6532
+   },
+   {
+    "method": "CommandRule",
+    "line": 6550
+   },
+   {
+    "method": "CommandRule",
+    "line": 6602
+   },
+   {
+    "method": "CommandRule",
+    "line": 6632
+   },
+   {
+    "method": "PrimaryExpressionRule",
+    "line": 7268
+   },
+   {
+    "method": "ParseNestedExpressions",
+    "line": 7645
+   },
+   {
+    "method": "ExpandableStringRule",
+    "line": 7688
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.ExpandableStringExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9825,
+  "end": 9974,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "GetCommandArgument",
+    "line": 6368
+   },
+   {
+    "method": "ExpandableStringRule",
+    "line": 7684
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "NestedExpressions",
+    "sig": "public ReadOnlyCollection < ExpressionAst > NestedExpressions",
+    "line": 9924
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ScriptBlockExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 9979,
+  "end": 10041,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ScriptBlockExpressionRule",
+    "line": 7516
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "ScriptBlock",
+    "sig": "public ScriptBlockAst ScriptBlock",
+    "line": 10004
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ArrayLiteralAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10048,
+  "end": 10123,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "GetCommandArgument",
+    "line": 6438
+   },
+   {
+    "method": "ArrayLiteralRule",
+    "line": 7020
+   },
+   {
+    "method": "UnaryExpressionRule",
+    "line": 7108
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Elements",
+    "sig": "public ReadOnlyCollection < ExpressionAst > Elements",
+    "line": 10076
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.HashtableAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10128,
+  "end": 10218,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "HashExpressionRule",
+    "line": 7400
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": []
+ },
+ {
+  "name": "System.Management.Automation.Language.ArrayExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10224,
+  "end": 10284,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SubExpressionRule",
+    "line": 7569
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "SubExpression",
+    "sig": "public StatementBlockAst SubExpression",
+    "line": 10250
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.ParenExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10290,
+  "end": 10350,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ParenthesizedExpressionRule",
+    "line": 7618
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Pipeline",
+    "sig": "public PipelineBaseAst Pipeline",
+    "line": 10316
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.SubExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10356,
+  "end": 10411,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "SubExpressionRule",
+    "line": 7563
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "SubExpression",
+    "sig": "public StatementBlockAst SubExpression",
+    "line": 10382
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.UsingExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10416,
+  "end": 10550,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "CheckUsingVariable",
+    "line": 7313
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "SubExpression",
+    "sig": "public ExpressionAst SubExpression",
+    "line": 10443
+   }
+  ]
+ },
+ {
+  "name": "System.Management.Automation.Language.IndexExpressionAst",
+  "file": "src/System.Management.Automation/engine/parser/ast.cs",
+  "start": 10555,
+  "end": 10646,
+  "base_chain": [
+   "ExpressionAst",
+   "CommandElementAst",
+   "Ast"
+  ],
+  "modifiers": [
+   "public"
+  ],
+  "accessibility": "public",
+  "cond": [],
+  "created_by_parser": [
+   {
+    "method": "ElementAccessRule",
+    "line": 8019
+   }
+  ],
+  "label": "APPROX",
+  "ast_typed_members": [
+   {
+    "name": "Target",
+    "sig": "public ExpressionAst Target",
+    "line": 10599
+   },
+   {
+    "name": "Index",
+    "sig": "public ExpressionAst Index",
+    "line": 10604
+   }
+  ]
+ }
+]

@@ -1,0 +1,2704 @@
+[
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 20,
+  "end": 151,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 32,
+  "end": 42,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 44,
+  "end": 54,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 56,
+  "end": 66,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 68,
+  "end": 78,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 80,
+  "end": 90,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 92,
+  "end": 102,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 104,
+  "end": 114,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddInstruction.AddDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 116,
+  "end": 126,
+  "chain": [
+   "AddInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 153,
+  "end": 284,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 165,
+  "end": 175,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 177,
+  "end": 187,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 189,
+  "end": 199,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 201,
+  "end": 211,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 213,
+  "end": 223,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 225,
+  "end": 235,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 237,
+  "end": 247,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AddOvfInstruction.AddOvfDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/AddInstruction.cs",
+  "start": 249,
+  "end": 259,
+  "chain": [
+   "AddOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NewArrayInitInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ArrayOperations.cs",
+  "start": 18,
+  "end": 42,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NewArrayInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ArrayOperations.cs",
+  "start": 44,
+  "end": 58,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NewArrayBoundsInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ArrayOperations.cs",
+  "start": 60,
+  "end": 87,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GetArrayItemInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ArrayOperations.cs",
+  "start": 89,
+  "end": 109,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SetArrayItemInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ArrayOperations.cs",
+  "start": 111,
+  "end": 132,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.ActionCallInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/CallInstruction.Generated.cs",
+  "start": 432,
+  "end": 456,
+  "chain": [
+   "CallInstruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.FuncCallInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/CallInstruction.Generated.cs",
+  "start": 692,
+  "end": 715,
+  "chain": [
+   "CallInstruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MethodInfoCallInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/CallInstruction.Generated.cs",
+  "start": 942,
+  "end": 954,
+  "chain": [
+   "CallInstruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed",
+   "partial"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.CallInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/CallInstruction.cs",
+  "start": 22,
+  "end": 264,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract",
+   "partial"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MethodInfoCallInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/CallInstruction.cs",
+  "start": 266,
+  "end": 367,
+  "chain": [
+   "CallInstruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed",
+   "partial"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.OffsetInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 29,
+  "end": 64,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.BranchFalseInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 66,
+  "end": 92,
+  "chain": [
+   "OffsetInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.BranchTrueInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 94,
+  "end": 120,
+  "chain": [
+   "OffsetInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.CoalescingBranchInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 122,
+  "end": 150,
+  "chain": [
+   "OffsetInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.BranchInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 152,
+  "end": 196,
+  "chain": [
+   "OffsetInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.IndexedBranchInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 198,
+  "end": 227,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GotoInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 250,
+  "end": 303,
+  "chain": [
+   "IndexedBranchInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 305,
+  "end": 447,
+  "chain": [
+   "IndexedBranchInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EnterFinallyInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 452,
+  "end": 489,
+  "chain": [
+   "IndexedBranchInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LeaveFinallyInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 494,
+  "end": 514,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EnterExceptionHandlerInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 517,
+  "end": 547,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LeaveExceptionHandlerInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 552,
+  "end": 590,
+  "chain": [
+   "IndexedBranchInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LeaveFaultInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 595,
+  "end": 627,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.ThrowInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 629,
+  "end": 669,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SwitchInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 671,
+  "end": 690,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EnterLoopInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 692,
+  "end": 778,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.CompiledLoopInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs",
+  "start": 780,
+  "end": 794,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 20,
+  "end": 151,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 32,
+  "end": 42,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 44,
+  "end": 54,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 56,
+  "end": 66,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 68,
+  "end": 78,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 80,
+  "end": 90,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 92,
+  "end": 102,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 104,
+  "end": 114,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DivInstruction.DivDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/DivInstruction.cs",
+  "start": 116,
+  "end": 126,
+  "chain": [
+   "DivInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DynamicInstructionN",
+  "file": "src/System.Management.Automation/engine/interpreter/DynamicInstructionN.cs",
+  "start": 20,
+  "end": 77,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed",
+   "partial"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DynamicInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/DynamicInstructions.Generated.cs",
+  "start": 103,
+  "end": 127,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DynamicSplatInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/DynamicSplatInstruction.cs",
+  "start": 23,
+  "end": 52,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 20,
+  "end": 189,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualBoolean",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 33,
+  "end": 40,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualSByte",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 42,
+  "end": 49,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 51,
+  "end": 58,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualChar",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 60,
+  "end": 67,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 69,
+  "end": 76,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 78,
+  "end": 85,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualByte",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 87,
+  "end": 94,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 96,
+  "end": 103,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 105,
+  "end": 112,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 114,
+  "end": 121,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 123,
+  "end": 130,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 132,
+  "end": 139,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.EqualInstruction.EqualReference",
+  "file": "src/System.Management.Automation/engine/interpreter/EqualInstruction.cs",
+  "start": 141,
+  "end": 148,
+  "chain": [
+   "EqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadStaticFieldInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/FieldOperations.cs",
+  "start": 21,
+  "end": 38,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadFieldInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/FieldOperations.cs",
+  "start": 40,
+  "end": 59,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.StoreFieldInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/FieldOperations.cs",
+  "start": 61,
+  "end": 82,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.StoreStaticFieldInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/FieldOperations.cs",
+  "start": 84,
+  "end": 104,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 20,
+  "end": 168,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanSByte",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 32,
+  "end": 40,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 42,
+  "end": 50,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanChar",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 52,
+  "end": 60,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 62,
+  "end": 70,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 72,
+  "end": 80,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanByte",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 82,
+  "end": 90,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 92,
+  "end": 100,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 102,
+  "end": 110,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 112,
+  "end": 120,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 122,
+  "end": 130,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.GreaterThanInstruction.GreaterThanDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/GreaterThanInstruction.cs",
+  "start": 132,
+  "end": 140,
+  "chain": [
+   "GreaterThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/Instruction.cs",
+  "start": 72,
+  "end": 87,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 20,
+  "end": 168,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanSByte",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 32,
+  "end": 40,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 42,
+  "end": 50,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanChar",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 52,
+  "end": 60,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 62,
+  "end": 70,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 72,
+  "end": 80,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanByte",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 82,
+  "end": 90,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 92,
+  "end": 100,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 102,
+  "end": 110,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 112,
+  "end": 120,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 122,
+  "end": 130,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LessThanInstruction.LessThanDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/LessThanInstruction.cs",
+  "start": 132,
+  "end": 140,
+  "chain": [
+   "LessThanInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LocalAccessInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 34,
+  "end": 49,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadLocalInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 53,
+  "end": 73,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadLocalBoxedInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 75,
+  "end": 90,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadLocalFromClosureInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 92,
+  "end": 107,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadLocalFromClosureBoxedInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 109,
+  "end": 124,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AssignLocalInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 130,
+  "end": 151,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.StoreLocalInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 153,
+  "end": 173,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AssignLocalBoxedInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 175,
+  "end": 192,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.StoreLocalBoxedInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 194,
+  "end": 211,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.AssignLocalToClosureInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 213,
+  "end": 230,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 237,
+  "end": 418,
+  "chain": [
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.Reference",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 244,
+  "end": 266,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.ImmutableValue",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 268,
+  "end": 293,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.ImmutableBox",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 295,
+  "end": 316,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.ParameterBox",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 318,
+  "end": 330,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.Parameter",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 332,
+  "end": 359,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.MutableValue",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 361,
+  "end": 395,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.InitializeLocalInstruction.MutableBox",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 397,
+  "end": 417,
+  "chain": [
+   "InitializeLocalInstruction",
+   "LocalAccessInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.RuntimeVariablesInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/LocalAccess.cs",
+  "start": 424,
+  "end": 453,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 20,
+  "end": 151,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 32,
+  "end": 42,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 44,
+  "end": 54,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 56,
+  "end": 66,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 68,
+  "end": 78,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 80,
+  "end": 90,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 92,
+  "end": 102,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 104,
+  "end": 114,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulInstruction.MulDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 116,
+  "end": 126,
+  "chain": [
+   "MulInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 153,
+  "end": 284,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 165,
+  "end": 175,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 177,
+  "end": 187,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 189,
+  "end": 199,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 201,
+  "end": 211,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 213,
+  "end": 223,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 225,
+  "end": 235,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 237,
+  "end": 247,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.MulOvfInstruction.MulOvfDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/MulInstruction.cs",
+  "start": 249,
+  "end": 259,
+  "chain": [
+   "MulOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 20,
+  "end": 189,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualBoolean",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 33,
+  "end": 40,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualSByte",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 42,
+  "end": 49,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 51,
+  "end": 58,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualChar",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 60,
+  "end": 67,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 69,
+  "end": 76,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 78,
+  "end": 85,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualByte",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 87,
+  "end": 94,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 96,
+  "end": 103,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 105,
+  "end": 112,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 114,
+  "end": 121,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 123,
+  "end": 130,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 132,
+  "end": 139,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NotEqualInstruction.NotEqualReference",
+  "file": "src/System.Management.Automation/engine/interpreter/NotEqualInstruction.cs",
+  "start": 141,
+  "end": 148,
+  "chain": [
+   "NotEqualInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NumericConvertInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/NumericConvertInstruction.cs",
+  "start": 18,
+  "end": 284,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NumericConvertInstruction.Unchecked",
+  "file": "src/System.Management.Automation/engine/interpreter/NumericConvertInstruction.cs",
+  "start": 38,
+  "end": 159,
+  "chain": [
+   "NumericConvertInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NumericConvertInstruction.Checked",
+  "file": "src/System.Management.Automation/engine/interpreter/NumericConvertInstruction.cs",
+  "start": 162,
+  "end": 283,
+  "chain": [
+   "NumericConvertInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.UpdatePositionInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/PowerShellInstructions.cs",
+  "start": 18,
+  "end": 50,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadObjectInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/StackOperations.cs",
+  "start": 21,
+  "end": 42,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.LoadCachedObjectInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/StackOperations.cs",
+  "start": 44,
+  "end": 70,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.PopInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/StackOperations.cs",
+  "start": 72,
+  "end": 90,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DupInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/StackOperations.cs",
+  "start": 92,
+  "end": 112,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 20,
+  "end": 151,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 32,
+  "end": 42,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 44,
+  "end": 54,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 56,
+  "end": 66,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 68,
+  "end": 78,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 80,
+  "end": 90,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 92,
+  "end": 102,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 104,
+  "end": 114,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubInstruction.SubDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 116,
+  "end": 126,
+  "chain": [
+   "SubInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 153,
+  "end": 284,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "abstract"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 165,
+  "end": 175,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 177,
+  "end": 187,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 189,
+  "end": 199,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfUInt16",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 201,
+  "end": 211,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfUInt32",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 213,
+  "end": 223,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfUInt64",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 225,
+  "end": 235,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfSingle",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 237,
+  "end": 247,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.SubOvfInstruction.SubOvfDouble",
+  "file": "src/System.Management.Automation/engine/interpreter/SubInstruction.cs",
+  "start": 249,
+  "end": 259,
+  "chain": [
+   "SubOvfInstruction",
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.CreateDelegateInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 21,
+  "end": 55,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.NewInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 57,
+  "end": 99,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.DefaultValueInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 101,
+  "end": 119,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.TypeIsInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 121,
+  "end": 140,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.TypeAsInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 142,
+  "end": 170,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Interpreter.TypeEqualsInstruction",
+  "file": "src/System.Management.Automation/engine/interpreter/TypeOperations.cs",
+  "start": 172,
+  "end": 196,
+  "chain": [
+   "Instruction"
+  ],
+  "modifiers": [
+   "internal",
+   "sealed"
+  ],
+  "label": "APPROX"
+ }
+]

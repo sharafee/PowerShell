@@ -1,0 +1,765 @@
+{
+ "source": "src/System.Management.Automation/engine/SpecialVariables.cs",
+ "constants": [
+  {
+   "field": "HistorySize",
+   "name": "MaximumHistoryCount",
+   "line": 24,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/hostifaces/History.cs",
+     "line": 176,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "MyInvocation",
+   "name": "MyInvocation",
+   "line": 28,
+   "reference_count": 3,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "OFS",
+   "name": "OFS",
+   "line": 32,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSStyle",
+   "name": "PSStyle",
+   "line": 36,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "OutputEncoding",
+   "name": "OutputEncoding",
+   "line": 40,
+   "reference_count": 3,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "VerboseHelpErrors",
+   "name": "VerboseHelpErrors",
+   "line": 44,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogEngineHealthEvent",
+   "name": "LogEngineHealthEvent",
+   "line": 50,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogEngineLifecycleEvent",
+   "name": "LogEngineLifecycleEvent",
+   "line": 54,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogCommandHealthEvent",
+   "name": "LogCommandHealthEvent",
+   "line": 58,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogCommandLifecycleEvent",
+   "name": "LogCommandLifecycleEvent",
+   "line": 62,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogProviderHealthEvent",
+   "name": "LogProviderHealthEvent",
+   "line": 66,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogProviderLifecycleEvent",
+   "name": "LogProviderLifecycleEvent",
+   "line": 70,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "LogSettingsEvent",
+   "name": "LogSettingsEvent",
+   "line": 74,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSLogUserData",
+   "name": "PSLogUserData",
+   "line": 78,
+   "reference_count": 0,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "NestedPromptLevel",
+   "name": "NestedPromptLevel",
+   "line": 84,
+   "reference_count": 2,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "CurrentlyExecutingCommand",
+   "name": "CurrentlyExecutingCommand",
+   "line": 88,
+   "reference_count": 3,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/hostifaces/InternalHost.cs",
+     "line": 314,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/hostifaces/InternalHost.cs",
+     "line": 378,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSBoundParameters",
+   "name": "PSBoundParameters",
+   "line": 92,
+   "reference_count": 5,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/ParameterBinderBase.cs",
+     "line": 2018,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/hostifaces/InternalHost.cs",
+     "line": 379,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "Matches",
+   "name": "Matches",
+   "line": 96,
+   "reference_count": 3,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs",
+     "line": 2522,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/lang/parserutils.cs",
+     "line": 1214,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "LastExitCode",
+   "name": "LASTEXITCODE",
+   "line": 100,
+   "reference_count": 7,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/ScriptCommandProcessor.cs",
+     "line": 604,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/NativeCommandProcessor.cs",
+     "line": 1143,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs",
+     "line": 2400,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs",
+     "line": 5937,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleIntrinsics.cs",
+     "line": 239,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/hostifaces/LocalPipeline.cs",
+     "line": 417,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSDebugContext",
+   "name": "PSDebugContext",
+   "line": 104,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/debugger/debugger.cs",
+     "line": 1801,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "StackTrace",
+   "name": "StackTrace",
+   "line": 108,
+   "reference_count": 3,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs",
+     "line": 2016,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "FirstToken",
+   "name": "^",
+   "line": 112,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+     "line": 322,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "LastToken",
+   "name": "$",
+   "line": 116,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+     "line": 331,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSItem",
+   "name": "PSItem",
+   "line": 122,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Underbar",
+   "name": "_",
+   "line": 123,
+   "reference_count": 6,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Question",
+   "name": "?",
+   "line": 127,
+   "reference_count": 4,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Args",
+   "name": "args",
+   "line": 131,
+   "reference_count": 4,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "This",
+   "name": "this",
+   "line": 135,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Input",
+   "name": "input",
+   "line": 139,
+   "reference_count": 3,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSCmdlet",
+   "name": "PSCmdlet",
+   "line": 143,
+   "reference_count": 2,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Error",
+   "name": "error",
+   "line": 147,
+   "reference_count": 4,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "EventError",
+   "name": "error",
+   "line": 151,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PathExt",
+   "name": "env:PATHEXT",
+   "line": 155,
+   "reference_count": 0,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSEmailServer",
+   "name": "PSEmailServer",
+   "line": 159,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSDefaultParameterValues",
+   "name": "PSDefaultParameterValues",
+   "line": 163,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 130,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSScriptRoot",
+   "name": "PSScriptRoot",
+   "line": 167,
+   "reference_count": 18,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/Modules/PSModuleInfo.cs",
+     "line": 162,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs",
+     "line": 558,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs",
+     "line": 565,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+     "line": 1461,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+     "line": 1469,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/utils/PsUtils.cs",
+     "line": 294,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/utils/PsUtils.cs",
+     "line": 299,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSCommandPath",
+   "name": "PSCommandPath",
+   "line": 171,
+   "reference_count": 10,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs",
+     "line": 559,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs",
+     "line": 566,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+     "line": 1463,
+     "kind": "write?"
+    },
+    {
+     "file": "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+     "line": 1470,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSSenderInfo",
+   "name": "PSSenderInfo",
+   "line": 175,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "pwd",
+   "name": "PWD",
+   "line": 187,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "Null",
+   "name": "null",
+   "line": 191,
+   "reference_count": 7,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "True",
+   "name": "true",
+   "line": 195,
+   "reference_count": 4,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "False",
+   "name": "false",
+   "line": 199,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSModuleAutoLoading",
+   "name": "PSModuleAutoLoadingPreference",
+   "line": 203,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "IsLinux",
+   "name": "IsLinux",
+   "line": 209,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "IsMacOS",
+   "name": "IsMacOS",
+   "line": 213,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "IsWindows",
+   "name": "IsWindows",
+   "line": 217,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "IsCoreCLR",
+   "name": "IsCoreCLR",
+   "line": 221,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "DebugPreference",
+   "name": "DebugPreference",
+   "line": 229,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "ErrorActionPreference",
+   "name": "ErrorActionPreference",
+   "line": 233,
+   "reference_count": 7,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "ProgressPreference",
+   "name": "ProgressPreference",
+   "line": 237,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "VerbosePreference",
+   "name": "VerbosePreference",
+   "line": 241,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "WarningPreference",
+   "name": "WarningPreference",
+   "line": 245,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "WhatIfPreference",
+   "name": "WhatIfPreference",
+   "line": 249,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "ConfirmPreference",
+   "name": "ConfirmPreference",
+   "line": 253,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "InformationPreference",
+   "name": "InformationPreference",
+   "line": 257,
+   "reference_count": 5,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "NativeArgumentPassing",
+   "name": "PSNativeCommandArgumentPassing",
+   "line": 269,
+   "reference_count": 2,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "ErrorView",
+   "name": "ErrorView",
+   "line": 273,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSSessionConfigurationName",
+   "name": "PSSessionConfigurationName",
+   "line": 280,
+   "reference_count": 2,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSSessionApplicationName",
+   "name": "PSSessionApplicationName",
+   "line": 288,
+   "reference_count": 2,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "ExecutionContext",
+   "name": "ExecutionContext",
+   "line": 294,
+   "reference_count": 1,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 319,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "Home",
+   "name": "HOME",
+   "line": 295,
+   "reference_count": 1,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 312,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "Host",
+   "name": "Host",
+   "line": 296,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PID",
+   "name": "PID",
+   "line": 297,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSCulture",
+   "name": "PSCulture",
+   "line": 298,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSHome",
+   "name": "PSHOME",
+   "line": 299,
+   "reference_count": 1,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 368,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSUICulture",
+   "name": "PSUICulture",
+   "line": 300,
+   "reference_count": 1,
+   "write_candidate_sites": [],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSVersionTable",
+   "name": "PSVersionTable",
+   "line": 301,
+   "reference_count": 1,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 326,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "PSEdition",
+   "name": "PSEdition",
+   "line": 302,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 333,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "ShellId",
+   "name": "ShellId",
+   "line": 303,
+   "reference_count": 1,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 361,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  },
+  {
+   "field": "EnabledExperimentalFeatures",
+   "name": "EnabledExperimentalFeatures",
+   "line": 304,
+   "reference_count": 2,
+   "write_candidate_sites": [
+    {
+     "file": "src/System.Management.Automation/engine/SessionState.cs",
+     "line": 374,
+     "kind": "write?"
+    }
+   ],
+   "label": "APPROX"
+  }
+ ],
+ "arrays": []
+}

@@ -1,0 +1,130 @@
+[
+ {
+  "path": "src/Modules/Windows/Microsoft.PowerShell.Diagnostics/Diagnostics.format.ps1xml",
+  "root": "Configuration",
+  "views": [
+   {
+    "name": "Counter",
+    "selected_types": [
+     "Microsoft.PowerShell.Commands.GetCounter.PerformanceCounterSampleSet"
+    ]
+   },
+   {
+    "name": "Counter",
+    "selected_types": [
+     "Microsoft.PowerShell.Commands.GetCounter.CounterFileInfo"
+    ]
+   }
+  ]
+ },
+ {
+  "path": "src/Modules/Windows/Microsoft.PowerShell.Diagnostics/Event.format.ps1xml",
+  "root": "Configuration",
+  "views": [
+   {
+    "name": "Default",
+    "selected_types": [
+     "System.Diagnostics.Eventing.Reader.EventLogRecord"
+    ]
+   },
+   {
+    "name": "Default",
+    "selected_types": [
+     "System.Diagnostics.Eventing.Reader.EventLogConfiguration"
+    ]
+   },
+   {
+    "name": "Default",
+    "selected_types": [
+     "System.Diagnostics.Eventing.Reader.ProviderMetadata"
+    ]
+   }
+  ]
+ },
+ {
+  "path": "src/Modules/Windows/Microsoft.PowerShell.Diagnostics/GetEvent.types.ps1xml",
+  "root": "Types",
+  "types": [
+   {
+    "name": "System.Diagnostics.Eventing.Reader.EventLogConfiguration",
+    "member_count": 1
+   },
+   {
+    "name": "System.Diagnostics.Eventing.Reader.EventLogRecord",
+    "member_count": 1
+   },
+   {
+    "name": "System.Diagnostics.Eventing.Reader.ProviderMetadata",
+    "member_count": 2
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.GetCounter.CounterSet",
+    "member_count": 1
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.GetCounter.PerformanceCounterSample",
+    "member_count": 1
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.GetCounter.PerformanceCounterSampleSet",
+    "member_count": 1
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.GetCounter.PerformanceCounterSampleSet",
+    "member_count": 1
+   }
+  ]
+ },
+ {
+  "path": "src/Modules/Windows/Microsoft.PowerShell.Security/Security.types.ps1xml",
+  "root": "Types",
+  "types": [
+   {
+    "name": "System.Security.AccessControl.ObjectSecurity",
+    "member_count": 7
+   }
+  ]
+ },
+ {
+  "path": "src/Modules/Windows/Microsoft.WSMan.Management/WSMan.format.ps1xml",
+  "root": "Configuration",
+  "views": [
+   {
+    "name": "System.Xml.XmlElement#http://schemas.dmtf.org/wbem/wsman/identity/1/wsmanidentity.xsd#IdentifyResponse",
+    "selected_types": [
+     "System.Xml.XmlElement#http://schemas.dmtf.org/wbem/wsman/identity/1/wsmanidentity.xsd#IdentifyResponse"
+    ]
+   },
+   {
+    "name": "Microsoft.WSMan.Management.WSManConfigElement",
+    "selected_types": [
+     "Microsoft.WSMan.Management.WSManConfigElement"
+    ]
+   },
+   {
+    "name": "Microsoft.WSMan.Management.WSManConfigContainerElement",
+    "selected_types": [
+     "Microsoft.WSMan.Management.WSManConfigContainerElement"
+    ]
+   },
+   {
+    "name": "Microsoft.WSMan.Management.WSManConfigLeafElement",
+    "selected_types": [
+     "Microsoft.WSMan.Management.WSManConfigLeafElement"
+    ]
+   },
+   {
+    "name": "Microsoft.WSMan.Management.WSManConfigLeafElement#InitParams",
+    "selected_types": [
+     "Microsoft.WSMan.Management.WSManConfigLeafElement#InitParams"
+    ]
+   },
+   {
+    "name": "Microsoft.WSMan.Management.WSManConfigContainerElement#ComputerLevel",
+    "selected_types": [
+     "Microsoft.WSMan.Management.WSManConfigContainerElement#ComputerLevel"
+    ]
+   }
+  ]
+ }
+]
