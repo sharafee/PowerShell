@@ -1,0 +1,2458 @@
+[
+ {
+  "path": "docs/host-powershell/sample/MyApp/MyApp.csproj",
+  "name": "MyApp",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "MyApp",
+  "target_frameworks": "netcoreapp2.1",
+  "tfm_conditions": {
+   "TargetFramework": "netcoreapp2.1",
+   "OutputType": "Exe"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.PowerShell.SDK",
+    "version": "6.1.1",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.Diagnostics",
+    "version": "6.1.1",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.WSMan.Management",
+    "version": "6.1.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 35
+ },
+ {
+  "path": "src/GlobalTools/PowerShell.Windows.x64/PowerShell.Windows.x64.csproj",
+  "name": "PowerShell.Windows.x64",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "PowerShell.Windows.x64",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "OutputType": "Exe",
+   "TargetFramework": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Diagnostics/Microsoft.PowerShell.Commands.Diagnostics.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.Management.Infrastructure.CimCmdlets/Microsoft.Management.Infrastructure.CimCmdlets.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "src/Microsoft.Management.Infrastructure.CimCmdlets/Microsoft.Management.Infrastructure.CimCmdlets.csproj",
+  "name": "Microsoft.Management.Infrastructure.CimCmdlets",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.Management.Infrastructure.CimCmdlets",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [
+   "Microsoft.Windows.DSC.CoreConfProviders,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+  ],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 35,
+  "cs_loc": 15485
+ },
+ {
+  "path": "src/Microsoft.Management.UI.Internal/Microsoft.PowerShell.GraphicalHost.csproj",
+  "name": "Microsoft.PowerShell.GraphicalHost",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.GraphicalHost",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": "Microsoft.Management.UI.Internal",
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Utility/Microsoft.PowerShell.Commands.Utility.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 165,
+  "cs_loc": 26235
+ },
+ {
+  "path": "src/Microsoft.PowerShell.Commands.Diagnostics/Microsoft.PowerShell.Commands.Diagnostics.csproj",
+  "name": "Microsoft.PowerShell.Commands.Diagnostics",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Commands.Diagnostics",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "System.Configuration.ConfigurationManager",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.ProtectedData",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.PerformanceCounter",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [
+   {
+    "remove": "GetCounterCommand.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "CounterSample.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "CounterSet.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "PdhHelper.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "PdhSafeHandle.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "gen\\GetEventResources.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "GetEventCommand.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "NewWinEventCommand.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   }
+  ],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 8,
+  "cs_loc": 4727
+ },
+ {
+  "path": "src/Microsoft.PowerShell.Commands.Management/Microsoft.PowerShell.Commands.Management.csproj",
+  "name": "Microsoft.PowerShell.Commands.Management",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Commands.Management",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.Security/Microsoft.PowerShell.Security.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceProcess.ServiceController",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 61,
+  "cs_loc": 33198
+ },
+ {
+  "path": "src/Microsoft.PowerShell.Commands.Utility/Microsoft.PowerShell.Commands.Utility.csproj",
+  "name": "Microsoft.PowerShell.Commands.Utility",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Commands.Utility",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "Microsoft.Win32.SystemEvents",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Markdig.Signed",
+    "version": "0.44.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.MarkdownRender",
+    "version": "7.2.1",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.CodeAnalysis.CSharp",
+    "version": "5.0.0",
+    "condition": null
+   },
+   {
+    "name": "System.Drawing.Common",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "JsonSchema.Net",
+    "version": "7.4.0",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 143,
+  "cs_loc": 45004
+ },
+ {
+  "path": "src/Microsoft.PowerShell.ConsoleHost/Microsoft.PowerShell.ConsoleHost.csproj",
+  "name": "Microsoft.PowerShell.ConsoleHost",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.ConsoleHost",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [
+   {
+    "remove": "WindowsTaskbarJumpList\\*.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   }
+  ],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [
+   "powershell-tests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+  ],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 26,
+  "cs_loc": 17831
+ },
+ {
+  "path": "src/Microsoft.PowerShell.CoreCLR.Eventing/Microsoft.PowerShell.CoreCLR.Eventing.csproj",
+  "name": "Microsoft.PowerShell.CoreCLR.Eventing",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.CoreCLR.Eventing",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [
+   "System.Management.Automation,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+  ],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 9,
+  "cs_loc": 3811
+ },
+ {
+  "path": "src/Microsoft.PowerShell.GlobalTool.Shim/Microsoft.PowerShell.GlobalTool.Shim.csproj",
+  "name": "Microsoft.PowerShell.GlobalTool.Shim",
+  "in_solution": false,
+  "sdk": null,
+  "output_type": "EXE",
+  "assembly_name": "Microsoft.PowerShell.GlobalTool.Shim",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "EXE"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": "Microsoft.PowerShell.GlobalTool.Shim",
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 56
+ },
+ {
+  "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+  "name": "Microsoft.PowerShell.SDK",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.SDK",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Management/Microsoft.PowerShell.Commands.Management.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Utility/Microsoft.PowerShell.Commands.Utility.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.ConsoleHost/Microsoft.PowerShell.ConsoleHost.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Security/Microsoft.PowerShell.Security.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "Microsoft.Bcl.AsyncInterfaces",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Extensions.ObjectPool",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Win32.Registry.AccessControl",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Win32.SystemEvents",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-x86.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-bionic-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.maccatalyst-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.osx-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "runtime.osx-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ComponentModel.Composition",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ComponentModel.Composition.Registration",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Configuration.ConfigurationManager",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Data.Odbc",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Data.OleDb",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Data.SqlClient",
+    "version": "4.9.1",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.PerformanceCounter",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices.AccountManagement",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices.Protocols",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Drawing.Common",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Packaging",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Ports",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Net.Http.WinHttpHandler",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Reflection.Context",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Runtime.Caching",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Pkcs",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.ProtectedData",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Xml",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Permissions",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Http",
+    "version": "10.0.652802",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.NetFramingBase",
+    "version": "10.0.652802",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.NetTcp",
+    "version": "10.0.652802",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Primitives",
+    "version": "10.0.652802",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Windows.Compatibility",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Syndication",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceProcess.ServiceController",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Speech",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Windows.Extensions",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "src/Microsoft.PowerShell.Security/Microsoft.PowerShell.Security.csproj",
+  "name": "Microsoft.PowerShell.Security",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Security",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 11,
+  "cs_loc": 8196
+ },
+ {
+  "path": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj",
+  "name": "Microsoft.WSMan.Management",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.WSMan.Management",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.WSMan.Runtime/Microsoft.WSMan.Runtime.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceProcess.ServiceController",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 11,
+  "cs_loc": 13139
+ },
+ {
+  "path": "src/Microsoft.WSMan.Runtime/Microsoft.WSMan.Runtime.csproj",
+  "name": "Microsoft.WSMan.Runtime",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.WSMan.Runtime",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 112
+ },
+ {
+  "path": "src/Modules/PSGalleryModules.csproj",
+  "name": "PSGalleryModules",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "PSGalleryModules",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "PowerShellGet",
+    "version": "2.2.5",
+    "condition": null
+   },
+   {
+    "name": "PackageManagement",
+    "version": "1.4.8.1",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.PSResourceGet",
+    "version": "1.2.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.Archive",
+    "version": "1.2.6",
+    "condition": null
+   },
+   {
+    "name": "PSReadLine",
+    "version": "2.4.5",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.ThreadJob",
+    "version": "2.2.0",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "src/ResGen/ResGen.csproj",
+  "name": "ResGen",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "resgen",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 189
+ },
+ {
+  "path": "src/System.Management.Automation/System.Management.Automation.csproj",
+  "name": "System.Management.Automation",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "System.Management.Automation",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/System.Management.Automation/SourceGenerators/PSVersionInfoGenerator/PSVersionInfoGenerator.csproj",
+    "condition": null,
+    "analyzer": true
+   },
+   {
+    "path": "src/Microsoft.PowerShell.CoreCLR.Eventing/Microsoft.PowerShell.CoreCLR.Eventing.csproj",
+    "condition": " '$(IsWindows)' == 'true' ",
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.4",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.ApplicationInsights",
+    "version": "2.23.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Win32.Registry.AccessControl",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Configuration.ConfigurationManager",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Pkcs",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.ProtectedData",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Permissions",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Management.Infrastructure",
+    "version": "3.0.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.Native",
+    "version": "700.0.2",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Security.Extensions",
+    "version": "1.4.0",
+    "condition": null
+   },
+   {
+    "name": "System.Windows.Extensions",
+    "version": "10.0.14",
+    "condition": null
+   }
+  ],
+  "compile_removes": [
+   {
+    "remove": "SourceGenerators\\**\\*.cs",
+    "condition": null
+   },
+   {
+    "remove": "gen\\EventResource.cs",
+    "condition": null
+   },
+   {
+    "remove": "engine\\COM\\**\\*.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\ComInterop\\**\\*.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\ExtraAdapter.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\Interop\\Windows\\**\\*.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\ManagementObjectAdapter.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\remoting\\commands\\ConnectPSSession.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\remoting\\commands\\CustomShellCommands.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\remoting\\commands\\DisconnectPSSession.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\remoting\\commands\\ReceivePSSession.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\remoting\\commands\\TestPSSessionConfigurationFile.cs",
+    "condition": " '$(IsWindows)' != 'true' "
+   },
+   {
+    "remove": "engine\\Interop\\Unix\\**\\*.cs",
+    "condition": " '$(IsWindows)' == 'true' "
+   }
+  ],
+  "source_generators_analyzers": [
+   "src/System.Management.Automation/SourceGenerators/PSVersionInfoGenerator/PSVersionInfoGenerator.csproj"
+  ],
+  "internals_visible_to": [
+   "powershell-perf,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9",
+   "powershell-tests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+  ],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 704,
+  "cs_loc": 563707
+ },
+ {
+  "path": "src/System.Management.Automation/SourceGenerators/PSVersionInfoGenerator/PSVersionInfoGenerator.csproj",
+  "name": "PSVersionInfoGenerator",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "SMA.Generator",
+  "target_frameworks": "netstandard2.0",
+  "tfm_conditions": {
+   "TargetFramework": "netstandard2.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.CodeAnalysis.CSharp",
+    "version": "5.0.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.CodeAnalysis.Analyzers",
+    "version": "5.3.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.NETCore.Platforms",
+    "version": "1.1.2",
+    "condition": null
+   },
+   {
+    "name": "System.Buffers",
+    "version": "4.6.1",
+    "condition": null
+   },
+   {
+    "name": "System.Collections.Immutable",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Memory",
+    "version": "4.6.3",
+    "condition": null
+   },
+   {
+    "name": "System.Numerics.Vectors",
+    "version": "4.6.1",
+    "condition": null
+   },
+   {
+    "name": "System.Reflection.Metadata",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Runtime.CompilerServices.Unsafe",
+    "version": "6.1.2",
+    "condition": null
+   },
+   {
+    "name": "System.Threading.Tasks.Extensions",
+    "version": "4.6.3",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 136
+ },
+ {
+  "path": "src/TypeCatalogGen/TypeCatalogGen.csproj",
+  "name": "TypeCatalogGen",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "TypeCatalogGen",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 472
+ },
+ {
+  "path": "src/powershell-unix/powershell-unix.csproj",
+  "name": "powershell-unix",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "pwsh",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "src/powershell-win-core/powershell-win-core.csproj",
+  "name": "powershell-win-core",
+  "in_solution": true,
+  "sdk": null,
+  "output_type": "Exe",
+  "assembly_name": "pwsh",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": "Microsoft.PowerShell",
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Diagnostics/Microsoft.PowerShell.Commands.Diagnostics.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.Management.Infrastructure.CimCmdlets/Microsoft.Management.Infrastructure.CimCmdlets.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.Management.UI.Internal/Microsoft.PowerShell.GraphicalHost.csproj",
+    "condition": "'$(SDKToUse)' == 'Microsoft.NET.Sdk.WindowsDesktop' ",
+    "analyzer": false
+   }
+  ],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "test/hosting/hosting.tests.csproj",
+  "name": "hosting.tests",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "powershell-hosting-tests",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "xunit",
+    "version": "2.4.1",
+    "condition": null
+   },
+   {
+    "name": "XunitXml.TestLogger",
+    "version": "2.0.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.SDK",
+    "version": "$(RELEASE_VERSION)",
+    "condition": null
+   },
+   {
+    "name": "Xunit.SkippableFact",
+    "version": "1.3.6",
+    "condition": null
+   },
+   {
+    "name": "xunit.runner.visualstudio",
+    "version": "2.4.3",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.NET.Test.Sdk",
+    "version": "16.7.1",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Duplex",
+    "version": "4.10.3",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Http",
+    "version": "4.10.3",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.NetTcp",
+    "version": "4.10.3",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Primitives",
+    "version": "4.10.3",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Security",
+    "version": "4.10.3",
+    "condition": null
+   },
+   {
+    "name": "System.Private.ServiceModel",
+    "version": "4.10.3",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 224
+ },
+ {
+  "path": "test/perf/benchmarks/powershell-perf.csproj",
+  "name": "powershell-perf",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "powershell-perf",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe",
+   "TargetFrameworks [if '$(TargetFramework)' == '']": "netcoreapp3.1;net5.0;net6.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "test/perf/dotnet-tools/BenchmarkDotNet.Extensions/BenchmarkDotNet.Extensions.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+    "condition": "'$(PerfTargetVersion)' == ''",
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Diagnostics/Microsoft.PowerShell.Commands.Diagnostics.csproj",
+    "condition": "'$(PerfTargetVersion)' == ''",
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj",
+    "condition": "'$(PerfTargetVersion)' == ''",
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "Microsoft.PowerShell.SDK",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.Diagnostics",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.Management",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.Commands.Utility",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.ConsoleHost",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.Security",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.PowerShell.CoreCLR.Eventing",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.WSMan.Management",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "Microsoft.WSMan.Runtime",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   },
+   {
+    "name": "System.Management.Automation",
+    "version": "$(PerfTargetVersion)",
+    "condition": "'$(PerfTargetVersion)' != ''"
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 5,
+  "cs_loc": 262
+ },
+ {
+  "path": "test/perf/dotnet-tools/BenchmarkDotNet.Extensions/BenchmarkDotNet.Extensions.csproj",
+  "name": "BenchmarkDotNet.Extensions",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Library",
+  "assembly_name": "BenchmarkDotNet.Extensions",
+  "target_frameworks": "netstandard2.0",
+  "tfm_conditions": {
+   "OutputType": "Library",
+   "TargetFramework": "netstandard2.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "test/perf/dotnet-tools/Reporting/Reporting.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "BenchmarkDotNet",
+    "version": "0.15.8",
+    "condition": null
+   },
+   {
+    "name": "BenchmarkDotNet.Diagnostics.Windows",
+    "version": "0.15.8",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Bcl.AsyncInterfaces",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Diagnostics.NETCore.Client",
+    "version": "0.2.750501",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Diagnostics.Tracing.TraceEvent",
+    "version": "3.1.30",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.NETCore.Platforms",
+    "version": "1.1.2",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Collections.Immutable",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Pipelines",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Reflection.Metadata",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Text.Encodings.Web",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Text.Json",
+    "version": "9.0.21",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 11,
+  "cs_loc": 751
+ },
+ {
+  "path": "test/perf/dotnet-tools/Reporting/Reporting.csproj",
+  "name": "Reporting",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Library",
+  "assembly_name": "Reporting",
+  "target_frameworks": "netstandard2.0",
+  "tfm_conditions": {
+   "OutputType": "Library",
+   "TargetFramework": "netstandard2.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.NETCore.Platforms",
+    "version": "1.1.2",
+    "condition": null
+   },
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.4",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.DotNet.PlatformAbstractions",
+    "version": "5.0.0-preview.5.20278.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 8,
+  "cs_loc": 319
+ },
+ {
+  "path": "test/perf/dotnet-tools/ResultsComparer/ResultsComparer.csproj",
+  "name": "ResultsComparer",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "ResultsComparer",
+  "target_frameworks": "$(PERFLAB_TARGET_FRAMEWORKS)",
+  "tfm_conditions": {
+   "OutputType": "Exe",
+   "TargetFrameworks": "$(PERFLAB_TARGET_FRAMEWORKS)",
+   "TargetFramework [if '$(TargetFrameworks)' == '']": "net5.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "CommandLineParser",
+    "version": "2.9.1",
+    "condition": null
+   },
+   {
+    "name": "MarkdownLog.NS20",
+    "version": "0.10.1",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Bcl.AsyncInterfaces",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Diagnostics.NETCore.Client",
+    "version": "0.2.750501",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Diagnostics.Tracing.TraceEvent",
+    "version": "3.1.30",
+    "condition": null
+   },
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.4",
+    "condition": null
+   },
+   {
+    "name": "BenchmarkDotNet",
+    "version": "0.15.8",
+    "condition": null
+   },
+   {
+    "name": "Perfolizer",
+    "version": "0.6.1",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Collections.Immutable",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Pipelines",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Reflection.Metadata",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Text.Encodings.Web",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Text.Json",
+    "version": "9.0.21",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 3,
+  "cs_loc": 477
+ },
+ {
+  "path": "test/tools/Modules/PSGalleryTestModules.csproj",
+  "name": "PSGalleryTestModules",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "PSGalleryTestModules",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "SelfSignedCertificate",
+    "version": "0.0.4",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ },
+ {
+  "path": "test/tools/NamedPipeConnection/src/code/Microsoft.PowerShell.NamedPipeConnection.csproj",
+  "name": "Microsoft.PowerShell.NamedPipeConnection",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Library",
+  "assembly_name": "Microsoft.PowerShell.NamedPipeConnection",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "OutputType": "Library",
+   "TargetFrameworks": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": "Microsoft.PowerShell.NamedPipeConnection",
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.CSharp",
+    "version": "4.7.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.CoreCLR.Eventing",
+    "version": "7.6.8",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Win32.Registry.AccessControl",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.4",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Configuration.ConfigurationManager",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Management.Automation",
+    "version": "7.6.0-preview.2",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Pkcs",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.ProtectedData",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Permissions",
+    "version": "9.0.21",
+    "condition": null
+   },
+   {
+    "name": "System.Windows.Extensions",
+    "version": "9.0.21",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 641
+ },
+ {
+  "path": "test/tools/TestAlc/init/Test.Isolated.Init.csproj",
+  "name": "Test.Isolated.Init",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Test.Isolated.Init",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "PowerShellStandard.Library",
+    "version": "5.1.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 83
+ },
+ {
+  "path": "test/tools/TestAlc/nested/Test.Isolated.Nested.csproj",
+  "name": "Test.Isolated.Nested",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Test.Isolated.Nested",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "PowerShellStandard.Library",
+    "version": "5.1.1",
+    "condition": null
+   },
+   {
+    "name": "System.CommandLine",
+    "version": "2.0.0",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 43
+ },
+ {
+  "path": "test/tools/TestAlc/root/Test.Isolated.Root.csproj",
+  "name": "Test.Isolated.Root",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Test.Isolated.Root",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "PowerShellStandard.Library",
+    "version": "5.1.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 39
+ },
+ {
+  "path": "test/tools/TestExe/TestExe.csproj",
+  "name": "TestExe",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "testexe",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 248
+ },
+ {
+  "path": "test/tools/TestService/TestService.csproj",
+  "name": "TestService",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": "Exe",
+  "assembly_name": "TestService",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.Win32.Registry.AccessControl",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Win32.SystemEvents",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.Windows.Compatibility",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.android-x86.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-bionic-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-bionic-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-arm.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-musl-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.linux-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.maccatalyst-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.maccatalyst-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.osx-arm64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "runtime.osx-x64.runtime.native.System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.CodeDom",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.ComponentModel.Composition",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.ComponentModel.Composition.Registration",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Configuration.ConfigurationManager",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Data.Odbc",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Data.OleDb",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Data.SqlClient",
+    "version": "4.9.1",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.EventLog",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Diagnostics.PerformanceCounter",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices.AccountManagement",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.DirectoryServices.Protocols",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Drawing.Common",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Packaging",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.IO.Ports",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Management",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Reflection.Context",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Runtime.Caching",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Pkcs",
+    "version": "10.0.13",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.ProtectedData",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Cryptography.Xml",
+    "version": "10.0.13",
+    "condition": null
+   },
+   {
+    "name": "System.Security.Permissions",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceModel.Syndication",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.ServiceProcess.ServiceController",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Speech",
+    "version": "10.0.5",
+    "condition": null
+   },
+   {
+    "name": "System.Windows.Extensions",
+    "version": "10.0.5",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 3,
+  "cs_loc": 69
+ },
+ {
+  "path": "test/tools/UnixSocket/UnixSocket.csproj",
+  "name": "UnixSocket",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk.Web",
+  "output_type": "Exe",
+  "assembly_name": "UnixSocket",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0",
+   "OutputType": "Exe"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 1,
+  "cs_loc": 27
+ },
+ {
+  "path": "test/tools/WebListener/WebListener.csproj",
+  "name": "WebListener",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk.Web",
+  "output_type": null,
+  "assembly_name": "WebListener",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.AspNetCore.JsonPatch",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+    "version": "10.0.14",
+    "condition": null
+   },
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.4",
+    "condition": null
+   },
+   {
+    "name": "Newtonsoft.Json.Bson",
+    "version": "1.0.3",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 22,
+  "cs_loc": 1584
+ },
+ {
+  "path": "test/xUnit/xUnit.tests.csproj",
+  "name": "xUnit.tests",
+  "in_solution": true,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "powershell-tests",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [
+   {
+    "path": "src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.PowerShell.Commands.Diagnostics/Microsoft.PowerShell.Commands.Diagnostics.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj",
+    "condition": null,
+    "analyzer": false
+   },
+   {
+    "path": "src/Microsoft.Management.Infrastructure.CimCmdlets/Microsoft.Management.Infrastructure.CimCmdlets.csproj",
+    "condition": null,
+    "analyzer": false
+   }
+  ],
+  "package_references": [
+   {
+    "name": "xunit",
+    "version": "2.9.3",
+    "condition": null
+   },
+   {
+    "name": "Xunit.SkippableFact",
+    "version": "1.5.85",
+    "condition": null
+   },
+   {
+    "name": "xunit.runner.visualstudio",
+    "version": "3.1.5",
+    "condition": null
+   },
+   {
+    "name": "XunitXml.TestLogger",
+    "version": "8.0.0",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.NET.Test.Sdk",
+    "version": "18.0.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 29,
+  "cs_loc": 5749
+ },
+ {
+  "path": "tools/packaging/projects/reference/Microsoft.PowerShell.Commands.Utility/Microsoft.PowerShell.Commands.Utility.csproj",
+  "name": "Microsoft.PowerShell.Commands.Utility",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Commands.Utility",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Newtonsoft.Json",
+    "version": "13.0.3",
+    "condition": null
+   },
+   {
+    "name": "Microsoft.PowerShell.MarkdownRender",
+    "version": "7.2.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 143,
+  "cs_loc": 45004
+ },
+ {
+  "path": "tools/packaging/projects/reference/Microsoft.PowerShell.ConsoleHost/Microsoft.PowerShell.ConsoleHost.csproj",
+  "name": "Microsoft.PowerShell.ConsoleHost",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.ConsoleHost",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 26,
+  "cs_loc": 17831
+ },
+ {
+  "path": "tools/packaging/projects/reference/System.Management.Automation/System.Management.Automation.csproj",
+  "name": "System.Management.Automation",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "System.Management.Automation",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {},
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.Management.Infrastructure",
+    "version": "3.0.0",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 704,
+  "cs_loc": 563707
+ },
+ {
+  "path": "tools/wix/Microsoft.PowerShell.Packaging.csproj",
+  "name": "Microsoft.PowerShell.Packaging",
+  "in_solution": false,
+  "sdk": "Microsoft.NET.Sdk",
+  "output_type": null,
+  "assembly_name": "Microsoft.PowerShell.Packaging",
+  "target_frameworks": "net10.0",
+  "tfm_conditions": {
+   "TargetFramework": "net10.0"
+  },
+  "defines": {
+   "DefineConstants": "$(DefineConstants);CORECLR",
+   "DefineConstants [if  '$(IsWindows)' != 'true' ]": "$(DefineConstants);UNIX"
+  },
+  "root_namespace": null,
+  "project_references": [],
+  "package_references": [
+   {
+    "name": "Microsoft.Signed.Wix",
+    "version": "3.14.1-8722.20240403.1",
+    "condition": null
+   }
+  ],
+  "compile_removes": [],
+  "source_generators_analyzers": [],
+  "internals_visible_to": [],
+  "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
+  "cs_files": 0,
+  "cs_loc": 0
+ }
+]

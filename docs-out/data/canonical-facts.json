@@ -1,0 +1,182 @@
+[
+ {
+  "id": "CF-PIN-001",
+  "subject": "version, commit and pin method",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "README.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-LEX-001",
+  "subject": "tokenizer mode switching rule (command vs expression mode, when it switches)",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.1-tokenizer.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-LEX-002",
+  "subject": "numeric-literal rules (radix, suffixes, multipliers)",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.1-tokenizer.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-GRM-001",
+  "subject": "statement, pipeline and command grammar; statement terminators",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/GRAMMAR.ebnf.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-OP-001",
+  "subject": "operator precedence and associativity",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/OPERATOR-TABLE.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-CMP-001",
+  "subject": "compile-versus-interpret decision rule",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/TIERING-POLICY.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-CMP-002",
+  "subject": "every threshold and limit of the tiering policy",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/TIERING-POLICY.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-CMP-003",
+  "subject": "optimized-versus-unoptimized preconditions",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/TIERING-POLICY.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-CNV-001",
+  "subject": "conversion algorithm and converter order",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/CONVERSION-RULES.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-PIP-001",
+  "subject": "output unrolling and enumeration rules",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.6-types-and-operators.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-SCP-001",
+  "subject": "scope, variable lookup and assignment rules",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/SCOPE-AND-VARIABLES.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-FLW-001",
+  "subject": "flow-control semantics (break, continue, return, labels)",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.5-compiler-and-engine.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-ERR-001",
+  "subject": "terminating/non-terminating errors; try/catch/finally/trap ordering",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/errors-and-diagnostics.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-ERR-002",
+  "subject": "parse-error limits and recovery rule",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/ERROR-CATALOG.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-BND-001",
+  "subject": "parameter-binding order and parameter-set resolution",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/parameter-binding.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-DSC-001",
+  "subject": "command resolution order",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/command-discovery-and-invocation.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-LCY-001",
+  "subject": "command and script lifecycle (begin/process/end/clean, cmdlet lifecycle, stop)",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/runspace-and-pipeline.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-ETS-001",
+  "subject": "member resolution order",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/extended-type-system.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-MOD-001",
+  "subject": "module load, export and auto-load rules",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "03-runtime/modules.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-SEC-001",
+  "subject": "language-mode semantics",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "07-security/language-modes.md",
+  "status": "open"
+ }
+]

@@ -1,0 +1,1053 @@
+[
+ {
+  "name": "Microsoft.PowerShell.Commands.AddMemberCommand.NotePropertyTransformationAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/AddMember.cs",
+  "start": 588,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.AddMemberCommand.ValidateNotePropertyNameAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/AddMember.cs",
+  "start": 559,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.ArgumentToTypeNameTransformationAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/Update-TypeData.cs",
+  "start": 1359,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.HttpVersionCompletionsAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/WebCmdlet/Common/HttpVersionCompletionsAttribute.cs",
+  "start": 17,
+  "bases": [
+   "ArgumentCompletionsAttribute"
+  ],
+  "chain": [
+   "ArgumentCompletionsAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.SelectStringCommand.FileinfoToStringAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/MatchString.cs",
+  "start": 1989,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Runspaces.RunspaceAttribute",
+  "file": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/RunspaceAttribute.cs",
+  "start": 16,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "Microsoft.PowerShell.Commands.Utility",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.ArgumentToModuleTransformationAttribute",
+  "file": "src/System.Management.Automation/help/SaveHelpCommand.cs",
+  "start": 421,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.SetStrictModeCommand.ArgumentToPSVersionTransformationAttribute",
+  "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+  "start": 2654,
+  "bases": [
+   "ArgumentToVersionTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentToVersionTransformationAttribute",
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.Commands.SetStrictModeCommand.ValidateVersionAttribute",
+  "file": "src/System.Management.Automation/engine/InternalCommands.cs",
+  "start": 2668,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "Microsoft.PowerShell.DesiredStateConfiguration.ArgumentToConfigurationDataTransformationAttribute",
+  "file": "src/System.Management.Automation/DscSupport/CimDSCParser.cs",
+  "start": 280,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.AliasAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 542,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.AllowEmptyCollectionAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1905,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.AllowEmptyStringAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1893,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.AllowNullAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1881,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentCompleterAttribute",
+  "file": "src/System.Management.Automation/engine/CommandCompletion/ExtensibleCompletion.cs",
+  "start": 23,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentCompleterFactoryAttribute",
+  "file": "src/System.Management.Automation/engine/CommandCompletion/ExtensibleCompletion.cs",
+  "start": 164,
+  "bases": [
+   "ArgumentCompleterAttribute",
+   "IArgumentCompleterFactory"
+  ],
+  "chain": [
+   "ArgumentCompleterAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentCompletionsAttribute",
+  "file": "src/System.Management.Automation/engine/CommandCompletion/ExtensibleCompletion.cs",
+  "start": 293,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentEncodingCompletionsAttribute",
+  "file": "src/System.Management.Automation/utils/EncodingUtils.cs",
+  "start": 142,
+  "bases": [
+   "ArgumentCompletionsAttribute"
+  ],
+  "chain": [
+   "ArgumentCompletionsAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentToEncodingTransformationAttribute",
+  "file": "src/System.Management.Automation/utils/EncodingUtils.cs",
+  "start": 114,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentToVersionTransformationAttribute",
+  "file": "src/System.Management.Automation/engine/ArgumentToVersionTransformationAttribute.cs",
+  "start": 16,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentTransformationAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2302,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ArgumentTypeConverterAttribute",
+  "file": "src/System.Management.Automation/engine/ArgumentTypeConverterAttribute.cs",
+  "start": 16,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.CmdletAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 380,
+  "bases": [
+   "CmdletCommonMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletCommonMetadataAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.CmdletBindingAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 421,
+  "bases": [
+   "CmdletCommonMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletCommonMetadataAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.CmdletCommonMetadataAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 305,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.CredentialAttribute",
+  "file": "src/System.Management.Automation/security/CredentialParameter.cs",
+  "start": 14,
+  "bases": [
+   "ArgumentTransformationAttribute"
+  ],
+  "chain": [
+   "ArgumentTransformationAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.DscLocalConfigurationManagerAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 297,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.DscPropertyAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 274,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.DscResourceAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 259,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.DynamicClassImplementationAssemblyAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 527,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ExperimentalAttribute",
+  "file": "src/System.Management.Automation/engine/ExperimentalFeature/ExperimentalFeature.cs",
+  "start": 318,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.HiddenAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 812,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Internal.CmdletMetadataAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 31,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Internal.CommonParameters.ValidateVariableName",
+  "file": "src/System.Management.Automation/engine/CommonCommandParameters.cs",
+  "start": 260,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Internal.ParsingBaseAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 53,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Language.NoRunspaceAffinityAttribute",
+  "file": "src/System.Management.Automation/engine/parser/PSType.cs",
+  "start": 1511,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.NullValidationAttributeBase",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2031,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.OutputTypeAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 436,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage",
+   "SuppressMessage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.PSDefaultValueAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 793,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.PSTypeNameAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 756,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ParameterAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 571,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Provider.CmdletProviderAttribute",
+  "file": "src/System.Management.Automation/namespaces/ProviderDeclarationAttribute.cs",
+  "start": 14,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.SupportsWildcardsAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 782,
+  "bases": [
+   "ParsingBaseAttribute"
+  ],
+  "chain": [
+   "ParsingBaseAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.TraceSourceAttribute",
+  "file": "src/System.Management.Automation/utils/StructuredTraceSource.cs",
+  "start": 1789,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.Tracing.EtwEvent",
+  "file": "src/System.Management.Automation/utils/tracing/EtwActivity.cs",
+  "start": 19,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage",
+   "SuppressMessage",
+   "SuppressMessage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateArgumentsAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 105,
+  "bases": [
+   "CmdletMetadataAttribute"
+  ],
+  "chain": [
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateCountAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1494,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateDriveAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1921,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateEnumeratedArgumentsAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 168,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateLengthAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 825,
+  "bases": [
+   "ValidateEnumeratedArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateEnumeratedArgumentsAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateNotNullAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2060,
+  "bases": [
+   "NullValidationAttributeBase"
+  ],
+  "chain": [
+   "NullValidationAttributeBase",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateNotNullOrAttributeBase",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2114,
+  "bases": [
+   "NullValidationAttributeBase"
+  ],
+  "chain": [
+   "NullValidationAttributeBase",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateNotNullOrEmptyAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2245,
+  "bases": [
+   "ValidateNotNullOrAttributeBase"
+  ],
+  "chain": [
+   "ValidateNotNullOrAttributeBase",
+   "NullValidationAttributeBase",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateNotNullOrWhiteSpaceAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2263,
+  "bases": [
+   "ValidateNotNullOrAttributeBase"
+  ],
+  "chain": [
+   "ValidateNotNullOrAttributeBase",
+   "NullValidationAttributeBase",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidatePatternAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1343,
+  "bases": [
+   "ValidateEnumeratedArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateEnumeratedArgumentsAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateRangeAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 938,
+  "bases": [
+   "ValidateEnumeratedArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateEnumeratedArgumentsAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateScriptAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1419,
+  "bases": [
+   "ValidateEnumeratedArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateEnumeratedArgumentsAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateSetAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1675,
+  "bases": [
+   "ValidateEnumeratedArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateEnumeratedArgumentsAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateTrustedDataAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 1836,
+  "bases": [
+   "ValidateArgumentsAttribute"
+  ],
+  "chain": [
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "System.Management.Automation.ValidateUserDriveAttribute",
+  "file": "src/System.Management.Automation/engine/Attributes.cs",
+  "start": 2013,
+  "bases": [
+   "ValidateDriveAttribute"
+  ],
+  "chain": [
+   "ValidateDriveAttribute",
+   "ValidateArgumentsAttribute",
+   "CmdletMetadataAttribute",
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "System.Management.Automation",
+  "label": "APPROX"
+ },
+ {
+  "name": "PSTests.Internal.PriorityAttribute",
+  "file": "test/xUnit/Asserts/PriorityAttribute.cs",
+  "start": 9,
+  "bases": [
+   "Attribute"
+  ],
+  "chain": [
+   "Attribute"
+  ],
+  "attributes": [
+   "AttributeUsage"
+  ],
+  "project": "xUnit.tests",
+  "label": "APPROX"
+ }
+]

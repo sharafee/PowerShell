@@ -1,0 +1,371 @@
+[
+ {
+  "key": "REPO_FILES_TOTAL",
+  "value": 4546,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get REPO_FILES_TOTAL",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_FILES_ALL",
+  "value": 1269,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_ALL",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_FILES_SRC",
+  "value": 1179,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_SRC",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_LOC_SRC",
+  "value": 732804,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_LOC_SRC",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": "physical lines"
+ },
+ {
+  "key": "CS_LOC_SMA",
+  "value": 563843,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_LOC_SMA",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": "System.Management.Automation only"
+ },
+ {
+  "key": "CS_FILES_SMA",
+  "value": 705,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_SMA",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_LOC_TIER_A",
+  "value": 125308,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_LOC_TIER_A",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_FILES_TIER_A",
+  "value": 106,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_TIER_A",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_FILES_TIER_B",
+  "value": 636,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_TIER_B",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "CS_FILES_TIER_C",
+  "value": 527,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get CS_FILES_TIER_C",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "PROJECT_COUNT",
+  "value": 40,
+  "dataset": "projects.json",
+  "command": "python3 docs-out/tools/numbers.py get PROJECT_COUNT",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": "every .csproj in the tree"
+ },
+ {
+  "key": "PROJECTS_IN_SOLUTION",
+  "value": 15,
+  "dataset": "projects.json",
+  "command": "python3 docs-out/tools/numbers.py get PROJECTS_IN_SOLUTION",
+  "evidence": "E1",
+  "label": "GENERATED",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_TOTAL",
+  "value": 4012,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_TOTAL",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "incl. nested types and delegates"
+ },
+ {
+  "key": "TYPES_CLASS",
+  "value": 3204,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_CLASS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_STRUCT",
+  "value": 211,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_STRUCT",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_INTERFACE",
+  "value": 83,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_INTERFACE",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_ENUM",
+  "value": 427,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_ENUM",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_DELEGATE",
+  "value": 87,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_DELEGATE",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TYPES_SMA",
+  "value": 2857,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/numbers.py get TYPES_SMA",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "ENUMS_TOTAL",
+  "value": 427,
+  "dataset": "enums.json",
+  "command": "python3 docs-out/tools/numbers.py get ENUMS_TOTAL",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "TOKENKIND_MEMBERS",
+  "value": 157,
+  "dataset": "enums.json",
+  "command": "python3 docs-out/tools/numbers.py get TOKENKIND_MEMBERS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "members of enum TokenKind (incl. platform-conditional ones)"
+ },
+ {
+  "key": "TOKENFLAGS_MEMBERS",
+  "value": 28,
+  "dataset": "enums.json",
+  "command": "python3 docs-out/tools/numbers.py get TOKENFLAGS_MEMBERS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "AST_CLASSES_ALL",
+  "value": 77,
+  "dataset": "ast-hierarchy.json",
+  "command": "python3 docs-out/tools/numbers.py get AST_CLASSES_ALL",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "classes whose base chain reaches Ast (name-based)"
+ },
+ {
+  "key": "AST_CLASSES_CONCRETE",
+  "value": 66,
+  "dataset": "ast-hierarchy.json",
+  "command": "python3 docs-out/tools/numbers.py get AST_CLASSES_CONCRETE",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "VISITOR_IMPLEMENTATIONS",
+  "value": 30,
+  "dataset": "visitors.json",
+  "command": "python3 docs-out/tools/numbers.py get VISITOR_IMPLEMENTATIONS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "BINDER_CLASSES",
+  "value": 30,
+  "dataset": "binders.json",
+  "command": "python3 docs-out/tools/numbers.py get BINDER_CLASSES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "classes deriving (transitively, name-based) from DLR binder base types"
+ },
+ {
+  "key": "INSTRUCTION_CLASSES",
+  "value": 183,
+  "dataset": "instructions.json",
+  "command": "python3 docs-out/tools/numbers.py get INSTRUCTION_CLASSES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "classes deriving (transitively) from Instruction"
+ },
+ {
+  "key": "CMDLET_CLASSES",
+  "value": 300,
+  "dataset": "cmdlets.json",
+  "command": "python3 docs-out/tools/numbers.py get CMDLET_CLASSES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "types carrying [Cmdlet]; platform-conditional ones included"
+ },
+ {
+  "key": "PROVIDER_CLASSES",
+  "value": 8,
+  "dataset": "cmdlets.json",
+  "command": "python3 docs-out/tools/numbers.py get PROVIDER_CLASSES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "PARSER_ERROR_RESOURCE_KEYS",
+  "value": 412,
+  "dataset": "resources.json",
+  "command": "python3 docs-out/tools/numbers.py get PARSER_ERROR_RESOURCE_KEYS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "keys of neutral ParserStrings.resx"
+ },
+ {
+  "key": "RESX_NEUTRAL_FILES",
+  "value": 150,
+  "dataset": "resources.json",
+  "command": "python3 docs-out/tools/numbers.py get RESX_NEUTRAL_FILES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "non-localized .resx files under src/"
+ },
+ {
+  "key": "RESX_NEUTRAL_KEYS",
+  "value": 4169,
+  "dataset": "resources.json",
+  "command": "python3 docs-out/tools/numbers.py get RESX_NEUTRAL_KEYS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "SPECIAL_VARIABLE_CONSTANTS",
+  "value": 70,
+  "dataset": "auto-variables.json",
+  "command": "python3 docs-out/tools/numbers.py get SPECIAL_VARIABLE_CONSTANTS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "string consts in SpecialVariables.cs (automatic + preference + internal)"
+ },
+ {
+  "key": "ATTRIBUTE_TYPES",
+  "value": 61,
+  "dataset": "attributes.json",
+  "command": "python3 docs-out/tools/numbers.py get ATTRIBUTE_TYPES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "PESTER_FILES",
+  "value": 410,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_FILES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "PESTER_IT_BLOCKS",
+  "value": 6385,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_IT_BLOCKS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "regex count of literal-named It blocks"
+ },
+ {
+  "key": "XUNIT_FILES",
+  "value": 29,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get XUNIT_FILES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "XUNIT_FACTS",
+  "value": 146,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get XUNIT_FACTS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "CONDITIONAL_SYMBOLS",
+  "value": 21,
+  "dataset": "conditional-compilation.json",
+  "command": "python3 docs-out/tools/numbers.py get CONDITIONAL_SYMBOLS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "ENFORCEMENT_SEED_HITS",
+  "value": 2006,
+  "dataset": "enforcement-points.json",
+  "command": "python3 docs-out/tools/numbers.py get ENFORCEMENT_SEED_HITS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "unverified seed hits; not enforcement points"
+ },
+ {
+  "key": "PARSER_METHODS",
+  "value": 276,
+  "dataset": "parser-methods.json",
+  "command": "python3 docs-out/tools/numbers.py get PARSER_METHODS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "methods in Parser.cs + tokenizer.cs"
+ }
+]

@@ -1,0 +1,3977 @@
+[
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Parser",
+  "start": 52,
+  "end": 57,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseFile",
+  "start": 66,
+  "end": 120,
+  "access": "public",
+  "calls": [
+   "Parse",
+   "Parser"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseInput",
+  "start": 131,
+  "end": 134,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseInput",
+  "start": 144,
+  "end": 162,
+  "access": "public",
+  "calls": [
+   "Parse",
+   "Parser"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Parse",
+  "start": 164,
+  "end": 174,
+  "access": "internal",
+  "calls": [
+   "ParseTask"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseTask",
+  "start": 176,
+  "end": 227,
+  "access": "private",
+  "calls": [
+   "ReportError",
+   "ScriptBlockRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScanNumber",
+  "start": 230,
+  "end": 268,
+  "access": "internal",
+  "calls": [
+   "NextToken",
+   "Parser"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScanType",
+  "start": 270,
+  "end": 290,
+  "access": "internal",
+  "calls": [
+   "Parser",
+   "TypeNameRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScanString",
+  "start": 292,
+  "end": 305,
+  "access": "internal",
+  "calls": [
+   "ExpandableStringRule",
+   "NextToken",
+   "Parser"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "IgnoreTokenWhenUpdatingPreviousFirstLast",
+  "start": 310,
+  "end": 315,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SetPreviousFirstLastToken",
+  "start": 317,
+  "end": 342,
+  "access": "internal",
+  "calls": [
+   "IgnoreTokenWhenUpdatingPreviousFirstLast"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SkipNewlines",
+  "start": 348,
+  "end": 355,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SkipNewlinesAndSemicolons",
+  "start": 357,
+  "end": 364,
+  "access": "private",
+  "calls": [
+   "SkipNewlines"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SyncOnError",
+  "start": 366,
+  "end": 432,
+  "access": "private",
+  "calls": [
+   "NextToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NextToken",
+  "start": 434,
+  "end": 439,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "PeekToken",
+  "start": 441,
+  "end": 446,
+  "access": "private",
+  "calls": [
+   "NextToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NextMemberAccessToken",
+  "start": 448,
+  "end": 454,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NextInvokeMemberToken",
+  "start": 456,
+  "end": 462,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NextLBracket",
+  "start": 464,
+  "end": 474,
+  "access": "private",
+  "calls": [
+   "NextToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetVerbatimCommandArgumentToken",
+  "start": 476,
+  "end": 485,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SkipToken",
+  "start": 487,
+  "end": 491,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "UngetToken",
+  "start": 493,
+  "end": 497,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SetTokenizerMode",
+  "start": 499,
+  "end": 536,
+  "access": "private",
+  "calls": [
+   "NextToken",
+   "Resync"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Resync",
+  "start": 538,
+  "end": 542,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Resync",
+  "start": 544,
+  "end": 548,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "IsSpecificParameter",
+  "start": 550,
+  "end": 555,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "RequireStatementTerminator",
+  "start": 557,
+  "end": 570,
+  "access": "internal",
+  "calls": [
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 572,
+  "end": 583,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Before",
+  "start": 585,
+  "end": 592,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "After",
+  "start": 594,
+  "end": 600,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "LastCharacterOf",
+  "start": 602,
+  "end": 613,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentFromFirstOf",
+  "start": 615,
+  "end": 646,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 648,
+  "end": 648,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 650,
+  "end": 650,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 652,
+  "end": 652,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 654,
+  "end": 654,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 656,
+  "end": 656,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 658,
+  "end": 658,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 660,
+  "end": 660,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExtentOf",
+  "start": 662,
+  "end": 662,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "Before",
+  "start": 665,
+  "end": 665,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "After",
+  "start": 667,
+  "end": 667,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "After",
+  "start": 669,
+  "end": 669,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetNestedErrorAsts",
+  "start": 671,
+  "end": 702,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "TryParseAsConstantHashtable",
+  "start": 710,
+  "end": 766,
+  "access": "internal",
+  "calls": [
+   "ParseInput"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScriptBlockRule",
+  "start": 772,
+  "end": 775,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScriptBlockRule",
+  "start": 777,
+  "end": 809,
+  "access": "private",
+  "calls": [
+   "ParamBlockRule",
+   "Resync",
+   "ScriptBlockBodyRule",
+   "SkipNewlines",
+   "SkipNewlinesAndSemicolons",
+   "UsingStatementsRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "UsingStatementsRule",
+  "start": 811,
+  "end": 843,
+  "access": "private",
+  "calls": [
+   "PeekToken",
+   "Resync",
+   "SkipNewlinesAndSemicolons",
+   "SkipToken",
+   "UsingStatementRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParamBlockRule",
+  "start": 845,
+  "end": 912,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeListRule",
+   "Before",
+   "ExtentOf",
+   "NextToken",
+   "ParameterListRule",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParameterListRule",
+  "start": 914,
+  "end": 952,
+  "access": "private",
+  "calls": [
+   "After",
+   "ParameterRule",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParameterRule",
+  "start": 954,
+  "end": 1025,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeListRule",
+   "ExpressionRule",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken",
+   "SyncOnError",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "AttributeListRule",
+  "start": 1027,
+  "end": 1052,
+  "access": "private",
+  "calls": [
+   "AttributeRule",
+   "SkipNewlines"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "AttributeRule",
+  "start": 1054,
+  "end": 1153,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeArgumentsRule",
+   "Before",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "NextLBracket",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "Resync",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "TypeNameRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "AttributeArgumentsRule",
+  "start": 1155,
+  "end": 1269,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExpressionRule",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SimpleNameRule",
+   "SkipNewlines",
+   "SkipToken",
+   "SyncOnError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "TypeNameRule",
+  "start": 1271,
+  "end": 1331,
+  "access": "private",
+  "calls": [
+   "FinishTypeNameRule",
+   "NextToken",
+   "SetTokenizerMode",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "FinishTypeNameRule",
+  "start": 1333,
+  "end": 1395,
+  "access": "private",
+  "calls": [
+   "After",
+   "CompleteArrayTypeName",
+   "ExtentOf",
+   "GenericTypeNameRule",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "SyncOnError",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetSingleGenericArgument",
+  "start": 1397,
+  "end": 1432,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "FinishTypeNameRule",
+   "NextToken",
+   "ReportIncompleteInput",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GenericTypeArgumentsRule",
+  "start": 1434,
+  "end": 1473,
+  "access": "private",
+  "calls": [
+   "After",
+   "GetSingleGenericArgument",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GenericTypeNameRule",
+  "start": 1475,
+  "end": 1521,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "CompleteArrayTypeName",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "GenericTypeArgumentsRule",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CompleteArrayTypeName",
+  "start": 1523,
+  "end": 1627,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "SkipToken",
+   "SyncOnError",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CompleteScriptBlockBody",
+  "start": 1629,
+  "end": 1680,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "ExtentOf",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScriptBlockBodyRule",
+  "start": 1682,
+  "end": 1725,
+  "access": "private",
+  "calls": [
+   "CompleteScriptBlockBody",
+   "ExtentOf",
+   "NamedBlockListRule",
+   "PeekToken",
+   "StatementListRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NamedBlockListRule",
+  "start": 1727,
+  "end": 1857,
+  "access": "private",
+  "calls": [
+   "After",
+   "CompleteScriptBlockBody",
+   "ExtentOf",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlinesAndSemicolons",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "StatementBlockRule",
+  "start": 1859,
+  "end": 1895,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "NextToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "StatementListRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "StatementListRule",
+  "start": 1897,
+  "end": 1944,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "PeekToken",
+   "SkipNewlinesAndSemicolons",
+   "StatementRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "StatementRule",
+  "start": 1950,
+  "end": 2159,
+  "access": "private",
+  "calls": [
+   "AttributeListRule",
+   "BlockStatementRule",
+   "BreakStatementRule",
+   "ClassDefinitionRule",
+   "ConfigurationStatementRule",
+   "ContinueStatementRule",
+   "DataStatementRule",
+   "DoWhileStatementRule",
+   "DynamicKeywordStatementRule",
+   "EnumDefinitionRule",
+   "ExitStatementRule",
+   "ForStatementRule",
+   "ForeachStatementRule",
+   "FunctionDeclarationRule",
+   "IfStatementRule",
+   "LabeledStatementRule",
+   "NextToken",
+   "PipelineChainRule",
+   "ReportError",
+   "Resync",
+   "ReturnStatementRule",
+   "SkipNewlines",
+   "SwitchStatementRule",
+   "ThrowStatementRule",
+   "TrapStatementRule",
+   "TryStatementRule",
+   "UngetToken",
+   "UsingStatementRule",
+   "WhileStatementRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SimpleNameRule",
+  "start": 2161,
+  "end": 2165,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SimpleNameRule",
+  "start": 2167,
+  "end": 2190,
+  "access": "private",
+  "calls": [
+   "PeekToken",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "LabelOrKeyRule",
+  "start": 2192,
+  "end": 2234,
+  "access": "private",
+  "calls": [
+   "PeekToken",
+   "SimpleNameRule",
+   "UnaryExpressionRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "BreakStatementRule",
+  "start": 2236,
+  "end": 2247,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "LabelOrKeyRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ContinueStatementRule",
+  "start": 2249,
+  "end": 2260,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "LabelOrKeyRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReturnStatementRule",
+  "start": 2262,
+  "end": 2272,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "PipelineChainRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExitStatementRule",
+  "start": 2274,
+  "end": 2284,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "PipelineChainRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ThrowStatementRule",
+  "start": 2286,
+  "end": 2297,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "PipelineChainRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "LabeledStatementRule",
+  "start": 2299,
+  "end": 2339,
+  "access": "private",
+  "calls": [
+   "DoWhileStatementRule",
+   "ForStatementRule",
+   "ForeachStatementRule",
+   "NextToken",
+   "PipelineChainRule",
+   "Resync",
+   "SwitchStatementRule",
+   "WhileStatementRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "BlockStatementRule",
+  "start": 2341,
+  "end": 2359,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "ReportIncompleteInput",
+   "StatementBlockRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "InlineScriptRule",
+  "start": 2370,
+  "end": 2398,
+  "access": "private",
+  "calls": [
+   "After",
+   "NextToken",
+   "ReportIncompleteInput",
+   "ScriptBlockExpressionRule",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "IfStatementRule",
+  "start": 2400,
+  "end": 2541,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "PipelineChainRule",
+   "ReportIncompleteInput",
+   "Resync",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SwitchStatementRule",
+  "start": 2543,
+  "end": 2891,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "GetSingleCommandArgument",
+   "IsSpecificParameter",
+   "NextToken",
+   "PeekToken",
+   "PipelineChainRule",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipNewlinesAndSemicolons",
+   "SkipToken",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ConfigurationStatementRule",
+  "start": 2893,
+  "end": 3322,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetWordOrExpression",
+   "NextToken",
+   "Parser",
+   "ReportError",
+   "ReportErrorsAsWarnings",
+   "ReportIncompleteInput",
+   "Resync",
+   "ScriptBlockExpressionRule",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetWordOrExpression",
+  "start": 3331,
+  "end": 3356,
+  "access": "private",
+  "calls": [
+   "After",
+   "GetCommandArgument",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ForeachStatementRule",
+  "start": 3358,
+  "end": 3518,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "GetSingleCommandArgument",
+   "IsSpecificParameter",
+   "NextToken",
+   "PeekToken",
+   "PipelineChainRule",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ForStatementRule",
+  "start": 3520,
+  "end": 3626,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "NextToken",
+   "PeekToken",
+   "PipelineChainRule",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "WhileStatementRule",
+  "start": 3628,
+  "end": 3708,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "NextToken",
+   "PipelineChainRule",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "DynamicKeywordStatementRule",
+  "start": 3724,
+  "end": 4090,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "CommandRule",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "GetSingleCommandArgument",
+   "HashExpressionRule",
+   "LastCharacterOf",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "ScriptBlockExpressionRule",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CreateErrorStatementAst",
+  "start": 4092,
+  "end": 4098,
+  "access": "internal",
+  "calls": [
+   "ExtentOf",
+   "GetNestedErrorAsts"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "DoWhileStatementRule",
+  "start": 4100,
+  "end": 4206,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "NextToken",
+   "PipelineChainRule",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ClassDefinitionRule",
+  "start": 4208,
+  "end": 4379,
+  "access": "private",
+  "calls": [
+   "After",
+   "ClassMemberRule",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SimpleNameRule",
+   "SkipNewlines",
+   "SkipToken",
+   "TypeNameRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ClassMemberRule",
+  "start": 4381,
+  "end": 4639,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeRule",
+   "ExpressionRule",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "MethodDeclarationRule",
+   "PeekToken",
+   "RecordErrorAsts",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipNewlinesAndSemicolons",
+   "SkipToken",
+   "SyncOnError",
+   "TryUseTokenAsSimpleName"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "TryUseTokenAsSimpleName",
+  "start": 4641,
+  "end": 4652,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "RecordErrorAsts",
+  "start": 4654,
+  "end": 4664,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "RecordErrorAsts",
+  "start": 4666,
+  "end": 4676,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "NextTypeIdentifierToken",
+  "start": 4678,
+  "end": 4699,
+  "access": "private",
+  "calls": [
+   "NextToken",
+   "SetTokenizerMode",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "EnumDefinitionRule",
+  "start": 4701,
+  "end": 4820,
+  "access": "private",
+  "calls": [
+   "After",
+   "EnumMemberRule",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SimpleNameRule",
+   "SkipNewlines",
+   "SkipToken",
+   "TypeNameRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "EnumMemberRule",
+  "start": 4822,
+  "end": 4895,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExpressionRule",
+   "ExtentOf",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SimpleNameRule",
+   "SkipNewlines",
+   "SkipNewlinesAndSemicolons",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "UsingStatementRule",
+  "start": 4897,
+  "end": 5086,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "GetCommandArgument",
+   "NextToken",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "RequireStatementTerminator",
+   "ResolveUsingAssembly",
+   "SkipToken",
+   "SyncOnError",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ResolveUsingAssembly",
+  "start": 5088,
+  "end": 5168,
+  "access": "private",
+  "calls": [
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "MethodDeclarationRule",
+  "start": 5170,
+  "end": 5314,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "FunctionParameterDeclarationRule",
+   "InvokeParamParenListRule",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "ScriptBlockRule",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "FunctionDeclarationRule",
+  "start": 5316,
+  "end": 5413,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "FunctionParameterDeclarationRule",
+   "NextToken",
+   "ReportIncompleteInput",
+   "ScriptBlockRule",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "FunctionParameterDeclarationRule",
+  "start": 5415,
+  "end": 5447,
+  "access": "private",
+  "calls": [
+   "After",
+   "NextToken",
+   "ParameterListRule",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "TrapStatementRule",
+  "start": 5449,
+  "end": 5481,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeRule",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "ReportIncompleteInput",
+   "Resync",
+   "SkipNewlines",
+   "StatementBlockRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CatchBlockRule",
+  "start": 5494,
+  "end": 5591,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeRule",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "Resync",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementBlockRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "TryStatementRule",
+  "start": 5593,
+  "end": 5670,
+  "access": "private",
+  "calls": [
+   "After",
+   "CatchBlockRule",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementBlockRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "DataStatementRule",
+  "start": 5672,
+  "end": 5767,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "GetNestedErrorAsts",
+   "GetSingleCommandArgument",
+   "IsSpecificParameter",
+   "PeekToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SimpleNameRule",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementBlockRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "PipelineChainRule",
+  "start": 5773,
+  "end": 5988,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExpressionRule",
+   "ExtentOf",
+   "PeekToken",
+   "PipelineRule",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken",
+   "StatementRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "PipelineRule",
+  "start": 5990,
+  "end": 6160,
+  "access": "private",
+  "calls": [
+   "After",
+   "CommandRule",
+   "ExpressionRule",
+   "ExtentOf",
+   "PeekToken",
+   "RedirectionRule",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "RedirectionRule",
+  "start": 6162,
+  "end": 6264,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetSingleCommandArgument",
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetSingleCommandArgument",
+  "start": 6266,
+  "end": 6283,
+  "access": "private",
+  "calls": [
+   "GetCommandArgument",
+   "NextToken",
+   "PeekToken",
+   "SetTokenizerMode"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetCommandArgument",
+  "start": 6295,
+  "end": 6442,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "NextToken",
+   "ParseNestedExpressions",
+   "PeekToken",
+   "PrimaryExpressionRule",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CommandRule",
+  "start": 6444,
+  "end": 6684,
+  "access": "internal",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GetCommandArgument",
+   "GetVerbatimCommandArgumentToken",
+   "InlineScriptRule",
+   "NextToken",
+   "PeekToken",
+   "RedirectionRule",
+   "ReportError",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExpressionRule",
+  "start": 6696,
+  "end": 6790,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "BinaryExpressionRule",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "BinaryExpressionRule",
+  "start": 6798,
+  "end": 6950,
+  "access": "private",
+  "calls": [
+   "After",
+   "ArrayLiteralRule",
+   "ErrorRecoveryParameterInExpression",
+   "ExtentOf",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "SkipToken",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ErrorRecoveryParameterInExpression",
+  "start": 6952,
+  "end": 6967,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "ReportError",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ArrayLiteralRule",
+  "start": 6975,
+  "end": 7021,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipToken",
+   "UnaryExpressionRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "UnaryExpressionRule",
+  "start": 7029,
+  "end": 7226,
+  "access": "private",
+  "calls": [
+   "After",
+   "AttributeListRule",
+   "CheckPostPrimaryExpressionOperators",
+   "ExtentOf",
+   "NextMemberAccessToken",
+   "PeekToken",
+   "PrimaryExpressionRule",
+   "ReportIncompleteInput",
+   "Resync",
+   "SkipNewlines",
+   "SkipToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "PrimaryExpressionRule",
+  "start": 7228,
+  "end": 7299,
+  "access": "private",
+  "calls": [
+   "CheckPostPrimaryExpressionOperators",
+   "CheckUsingVariable",
+   "ExpandableStringRule",
+   "HashExpressionRule",
+   "NextMemberAccessToken",
+   "NextToken",
+   "ParenthesizedExpressionRule",
+   "ScriptBlockExpressionRule",
+   "SubExpressionRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CheckUsingVariable",
+  "start": 7301,
+  "end": 7317,
+  "access": "private",
+  "calls": [
+   "CheckPostPrimaryExpressionOperators",
+   "NextMemberAccessToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CheckPostPrimaryExpressionOperators",
+  "start": 7319,
+  "end": 7339,
+  "access": "private",
+  "calls": [
+   "ElementAccessRule",
+   "MemberAccessRule",
+   "NextMemberAccessToken",
+   "SkipNewlines"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "HashExpressionRule",
+  "start": 7341,
+  "end": 7403,
+  "access": "private",
+  "calls": [
+   "After",
+   "Before",
+   "ExtentOf",
+   "GetKeyValuePair",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "SkipNewlinesAndSemicolons",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetKeyValuePair",
+  "start": 7405,
+  "end": 7491,
+  "access": "private",
+  "calls": [
+   "After",
+   "LabelOrKeyRule",
+   "NextToken",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "StatementRule",
+   "SyncOnError",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ScriptBlockExpressionRule",
+  "start": 7493,
+  "end": 7517,
+  "access": "private",
+  "calls": [
+   "ScriptBlockRule",
+   "SetTokenizerMode",
+   "SkipNewlines"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SubExpressionRule",
+  "start": 7519,
+  "end": 7571,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "NextToken",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "StatementListRule",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParenthesizedExpressionRule",
+  "start": 7573,
+  "end": 7619,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "NextToken",
+   "PipelineChainRule",
+   "ReportIncompleteInput",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseNestedExpressions",
+  "start": 7621,
+  "end": 7672,
+  "access": "private",
+  "calls": [
+   "CheckUsingVariable",
+   "PrimaryExpressionRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ExpandableStringRule",
+  "start": 7674,
+  "end": 7692,
+  "access": "private",
+  "calls": [
+   "ParseNestedExpressions"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "MemberNameRule",
+  "start": 7694,
+  "end": 7716,
+  "access": "private",
+  "calls": [
+   "PeekToken",
+   "PrimaryExpressionRule",
+   "SimpleNameRule",
+   "UnaryExpressionRule"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "MemberAccessRule",
+  "start": 7718,
+  "end": 7775,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExtentOf",
+   "GenericMethodArgumentsRule",
+   "GetSingleCommandArgument",
+   "MemberInvokeRule",
+   "MemberNameRule",
+   "NextInvokeMemberToken",
+   "ReportIncompleteInput",
+   "Resync"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GenericMethodArgumentsRule",
+  "start": 7777,
+  "end": 7847,
+  "access": "private",
+  "calls": [
+   "Before",
+   "GenericTypeArgumentsRule",
+   "NextInvokeMemberToken",
+   "NextMemberAccessToken",
+   "NextToken",
+   "PeekToken",
+   "ReportIncompleteInput",
+   "Resync",
+   "SetTokenizerMode",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "MemberInvokeRule",
+  "start": 7849,
+  "end": 7887,
+  "access": "private",
+  "calls": [
+   "ExtentOf",
+   "InvokeParamParenListRule",
+   "ScriptBlockExpressionRule",
+   "SkipNewlines"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "InvokeParamParenListRule",
+  "start": 7889,
+  "end": 7968,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExpressionRule",
+   "ExtentFromFirstOf",
+   "NextToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ElementAccessRule",
+  "start": 7970,
+  "end": 8020,
+  "access": "private",
+  "calls": [
+   "After",
+   "ExpressionRule",
+   "ExtentFromFirstOf",
+   "ExtentOf",
+   "NextToken",
+   "ReportIncompleteInput",
+   "SkipNewlines",
+   "UngetToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SaveError",
+  "start": 8026,
+  "end": 8044,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SaveError",
+  "start": 8046,
+  "end": 8057,
+  "access": "private",
+  "calls": [
+   "AssertErrorIdCorrespondsToMsgString"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "AssertErrorIdCorrespondsToMsgString",
+  "start": 8067,
+  "end": 8093,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportIncompleteInput",
+  "start": 8111,
+  "end": 8118,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportIncompleteInput",
+  "start": 8120,
+  "end": 8128,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportIncompleteInput",
+  "start": 8130,
+  "end": 8141,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportError",
+  "start": 8143,
+  "end": 8146,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportError",
+  "start": 8148,
+  "end": 8152,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportError",
+  "start": 8154,
+  "end": 8159,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportError",
+  "start": 8161,
+  "end": 8164,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportError",
+  "start": 8166,
+  "end": 8169,
+  "access": "internal",
+  "calls": [
+   "SaveError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Parser",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ReportErrorsAsWarnings",
+  "start": 8171,
+  "end": 8184,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParseError",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseError",
+  "start": 8201,
+  "end": 8204,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParseError",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseError",
+  "start": 8206,
+  "end": 8216,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParseError",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ToString",
+  "start": 8221,
+  "end": 8224,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseStart",
+  "start": 8254,
+  "end": 8254,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ParseStop",
+  "start": 8256,
+  "end": 8256,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ResolveSymbolsStart",
+  "start": 8258,
+  "end": 8258,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "ResolveSymbolsStop",
+  "start": 8260,
+  "end": 8260,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SemanticChecksStart",
+  "start": 8262,
+  "end": 8262,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "SemanticChecksStop",
+  "start": 8264,
+  "end": 8264,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CheckSecurityStart",
+  "start": 8266,
+  "end": 8266,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CheckSecurityStop",
+  "start": 8268,
+  "end": 8268,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CompileStart",
+  "start": 8270,
+  "end": 8270,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "CompileStop",
+  "start": 8272,
+  "end": 8272,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.ParserEventSource",
+  "file": "src/System.Management.Automation/engine/parser/Parser.cs",
+  "method": "GetFileOrScript",
+  "start": 8274,
+  "end": 8277,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Reset",
+  "start": 106,
+  "end": 109,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Push",
+  "start": 114,
+  "end": 118,
+  "access": "public",
+  "calls": [
+   "Reset"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Pop",
+  "start": 123,
+  "end": 126,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetKeyword",
+  "start": 132,
+  "end": 137,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetKeyword",
+  "start": 143,
+  "end": 146,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ContainsKeyword",
+  "start": 152,
+  "end": 161,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "AddKeyword",
+  "start": 166,
+  "end": 183,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "RemoveKeyword",
+  "start": 190,
+  "end": 199,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsHiddenKeyword",
+  "start": 206,
+  "end": 215,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeyword",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Copy",
+  "start": 230,
+  "end": 259,
+  "access": "public",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeywordExtension",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsMetaDSCResource",
+  "start": 361,
+  "end": 378,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeywordExtension",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsCompatibleWithConfigurationType",
+  "start": 380,
+  "end": 384,
+  "access": "internal",
+  "calls": [
+   "IsMetaDSCResource"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.DynamicKeywordExtension",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetAllowedKeywords",
+  "start": 397,
+  "end": 412,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Tokenizer",
+  "start": 697,
+  "end": 722,
+  "access": null,
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Tokenizer",
+  "start": 724,
+  "end": 727,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "InCommandMode",
+  "start": 754,
+  "end": 754,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "InExpressionMode",
+  "start": 756,
+  "end": 756,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "InTypeNameMode",
+  "start": 758,
+  "end": 758,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "InSignatureMode",
+  "start": 760,
+  "end": 760,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Initialize",
+  "start": 762,
+  "end": 797,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "StartNestedScan",
+  "start": 799,
+  "end": 821,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "FinishNestedScan",
+  "start": 823,
+  "end": 833,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetChar",
+  "start": 837,
+  "end": 850,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "UngetChar",
+  "start": 852,
+  "end": 857,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "PeekChar",
+  "start": 859,
+  "end": 869,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SkipChar",
+  "start": 871,
+  "end": 876,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "AtEof",
+  "start": 878,
+  "end": 881,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsKeyword",
+  "start": 883,
+  "end": 896,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SkipNewlines",
+  "start": 898,
+  "end": 974,
+  "access": "internal",
+  "calls": [
+   "GetChar",
+   "PeekChar",
+   "ScanBlockComment",
+   "ScanLineComment",
+   "ScanLineContinuation",
+   "ScanNewline",
+   "ScanSemicolon",
+   "SkipChar",
+   "SkipWhiteSpace",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SkipWhiteSpace",
+  "start": 976,
+  "end": 988,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanNewline",
+  "start": 990,
+  "end": 1000,
+  "access": "private",
+  "calls": [
+   "NewToken",
+   "NormalizeCRLF"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanSemicolon",
+  "start": 1002,
+  "end": 1011,
+  "access": "private",
+  "calls": [
+   "NewToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanLineContinuation",
+  "start": 1013,
+  "end": 1023,
+  "access": "private",
+  "calls": [
+   "NewToken",
+   "NormalizeCRLF"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetRestorePoint",
+  "start": 1025,
+  "end": 1029,
+  "access": "internal",
+  "calls": [
+   "CurrentExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Resync",
+  "start": 1031,
+  "end": 1037,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Resync",
+  "start": 1039,
+  "end": 1078,
+  "access": "internal",
+  "calls": [
+   "RemoveTokensFromListDuringResync"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "RemoveTokensFromListDuringResync",
+  "start": 1080,
+  "end": 1100,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReplaceSavedTokens",
+  "start": 1102,
+  "end": 1122,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NormalizeCRLF",
+  "start": 1124,
+  "end": 1131,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "CheckAstIsBeforeSignature",
+  "start": 1133,
+  "end": 1144,
+  "access": "internal",
+  "calls": [
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportError",
+  "start": 1146,
+  "end": 1149,
+  "access": "private",
+  "calls": [
+   "NewScriptExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportError",
+  "start": 1151,
+  "end": 1154,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportError",
+  "start": 1156,
+  "end": 1159,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportError",
+  "start": 1161,
+  "end": 1164,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportIncompleteInput",
+  "start": 1166,
+  "end": 1169,
+  "access": "private",
+  "calls": [
+   "NewScriptExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ReportIncompleteInput",
+  "start": 1171,
+  "end": 1174,
+  "access": "private",
+  "calls": [
+   "NewScriptExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewScriptExtent",
+  "start": 1176,
+  "end": 1179,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "CurrentExtent",
+  "start": 1181,
+  "end": 1207,
+  "access": "internal",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetScriptExtent",
+  "start": 1209,
+  "end": 1212,
+  "access": "internal",
+  "calls": [
+   "NewScriptExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewCommentToken",
+  "start": 1214,
+  "end": 1217,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SaveToken",
+  "start": 1219,
+  "end": 1241,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewToken",
+  "start": 1243,
+  "end": 1246,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewNumberToken",
+  "start": 1248,
+  "end": 1251,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewParameterToken",
+  "start": 1253,
+  "end": 1256,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewVariableToken",
+  "start": 1258,
+  "end": 1261,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewStringLiteralToken",
+  "start": 1263,
+  "end": 1266,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewStringExpandableToken",
+  "start": 1268,
+  "end": 1283,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewGenericExpandableToken",
+  "start": 1285,
+  "end": 1288,
+  "access": "private",
+  "calls": [
+   "NewStringExpandableToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewGenericToken",
+  "start": 1290,
+  "end": 1293,
+  "access": "private",
+  "calls": [
+   "NewStringLiteralToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewInputRedirectionToken",
+  "start": 1295,
+  "end": 1298,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewFileRedirectionToken",
+  "start": 1300,
+  "end": 1314,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "InExpressionMode",
+   "NewNumberToken",
+   "SaveToken",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewMergingRedirectionToken",
+  "start": 1316,
+  "end": 1319,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NewLabelToken",
+  "start": 1321,
+  "end": 1324,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "SaveToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsAtEndOfScript",
+  "start": 1326,
+  "end": 1331,
+  "access": "internal",
+  "calls": [
+   "OnlyWhitespaceOrCommentsAfterExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "OnlyWhitespaceOrCommentsAfterExtent",
+  "start": 1333,
+  "end": 1358,
+  "access": "private",
+  "calls": [
+   "SkipBlockComment",
+   "SkipLineComment"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "IsPipeContinuation",
+  "start": 1360,
+  "end": 1365,
+  "access": "internal",
+  "calls": [
+   "ContinuationAfterExtent"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ContinuationAfterExtent",
+  "start": 1367,
+  "end": 1431,
+  "access": "private",
+  "calls": [
+   "SkipBlockComment",
+   "SkipLineComment"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SkipLineComment",
+  "start": 1433,
+  "end": 1446,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "SkipBlockComment",
+  "start": 1448,
+  "end": 1461,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Backtick",
+  "start": 1463,
+  "end": 1492,
+  "access": "private",
+  "calls": [
+   "ScanUnicodeEscape"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanUnicodeEscape",
+  "start": 1494,
+  "end": 1588,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "GetCharsFromUtf32",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewScriptExtent",
+   "Release",
+   "ReportError",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetCharsFromUtf32",
+  "start": 1590,
+  "end": 1603,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanToEndOfCommentLine",
+  "start": 1605,
+  "end": 1754,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "GetStringBuilder",
+   "GetStringSimilarity",
+   "Release",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetStringBuilder",
+  "start": 1765,
+  "end": 1768,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "Release",
+  "start": 1770,
+  "end": 1779,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetStringAndRelease",
+  "start": 1781,
+  "end": 1786,
+  "access": "private",
+  "calls": [
+   "Release"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanLineComment",
+  "start": 1792,
+  "end": 1807,
+  "access": "private",
+  "calls": [
+   "CurrentExtent",
+   "NewCommentToken",
+   "ScanToEndOfCommentLine"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanBlockComment",
+  "start": 1809,
+  "end": 1837,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "NewCommentToken",
+   "NormalizeCRLF",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetStringSimilarity",
+  "start": 1841,
+  "end": 1890,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetScriptRequirements",
+  "start": 1894,
+  "end": 1987,
+  "access": "internal",
+  "calls": [
+   "FinishNestedScan",
+   "HandleRequiresParameter",
+   "ReportError",
+   "StartNestedScan"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "HandleRequiresParameter",
+  "start": 1997,
+  "end": 2214,
+  "access": "private",
+  "calls": [
+   "HandleRequiresAssemblyArgument",
+   "HandleRequiresPSEditionArgument",
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "HandleRequiresAssemblyArgument",
+  "start": 2216,
+  "end": 2236,
+  "access": "private",
+  "calls": [
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "HandleRequiresPSEditionArgument",
+  "start": 2238,
+  "end": 2274,
+  "access": "private",
+  "calls": [
+   "ReportError"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetVerbatimCommandArgument",
+  "start": 2283,
+  "end": 2315,
+  "access": "internal",
+  "calls": [
+   "AtEof",
+   "CurrentExtent",
+   "GetChar",
+   "NewStringLiteralToken",
+   "PeekChar",
+   "SkipWhiteSpace",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanStringLiteral",
+  "start": 2317,
+  "end": 2353,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanStringLiteral",
+  "start": 2355,
+  "end": 2360,
+  "access": "private",
+  "calls": [
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewStringLiteralToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanSubExpression",
+  "start": 2362,
+  "end": 2447,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "CurrentExtent",
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanStringExpandable",
+  "start": 2449,
+  "end": 2515,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "Backtick",
+   "GetChar",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "ScanDollarInStringExpandable",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanDollarInStringExpandable",
+  "start": 2518,
+  "end": 2566,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "ScanSubExpression",
+   "ScanVariable",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanStringExpandable",
+  "start": 2568,
+  "end": 2576,
+  "access": "private",
+  "calls": [
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewStringExpandableToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanAfterHereStringHeader",
+  "start": 2578,
+  "end": 2635,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "NormalizeCRLF",
+   "PeekChar",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanPossibleHereStringFooter",
+  "start": 2637,
+  "end": 2683,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "PeekChar",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanHereStringLiteral",
+  "start": 2685,
+  "end": 2753,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewStringLiteralToken",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "ScanAfterHereStringHeader",
+   "ScanPossibleHereStringFooter",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanHereStringExpandable",
+  "start": 2755,
+  "end": 2865,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "Backtick",
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewStringExpandableToken",
+   "PeekChar",
+   "ReportIncompleteInput",
+   "ScanAfterHereStringHeader",
+   "ScanDollarInStringExpandable",
+   "ScanPossibleHereStringFooter",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanVariable",
+  "start": 2872,
+  "end": 3180,
+  "access": "private",
+  "calls": [
+   "AtEof",
+   "Backtick",
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "InCommandMode",
+   "NewScriptExtent",
+   "NewToken",
+   "NewVariableToken",
+   "PeekChar",
+   "ReportError",
+   "ReportIncompleteInput",
+   "ScanGenericToken",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanParameter",
+  "start": 3185,
+  "end": 3338,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "InCommandMode",
+   "InExpressionMode",
+   "NewParameterToken",
+   "NewToken",
+   "ScanGenericToken",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "CheckOperatorInCommandMode",
+  "start": 3340,
+  "end": 3348,
+  "access": "private",
+  "calls": [
+   "InCommandMode",
+   "NewToken",
+   "PeekChar",
+   "ScanGenericToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "CheckOperatorInCommandMode",
+  "start": 3350,
+  "end": 3361,
+  "access": "private",
+  "calls": [
+   "GetStringBuilder",
+   "InCommandMode",
+   "NewToken",
+   "PeekChar",
+   "ScanGenericToken"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanGenericToken",
+  "start": 3363,
+  "end": 3368,
+  "access": "private",
+  "calls": [
+   "GetStringBuilder"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanGenericToken",
+  "start": 3370,
+  "end": 3380,
+  "access": "private",
+  "calls": [
+   "GetStringBuilder"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanGenericToken",
+  "start": 3382,
+  "end": 3479,
+  "access": "private",
+  "calls": [
+   "Backtick",
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewGenericExpandableToken",
+   "NewGenericToken",
+   "NewToken",
+   "PeekChar",
+   "Release",
+   "ScanDollarInStringExpandable",
+   "ScanStringExpandable",
+   "ScanStringLiteral",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanHexDigits",
+  "start": 3483,
+  "end": 3492,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanDecimalDigits",
+  "start": 3494,
+  "end": 3507,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanBinaryDigits",
+  "start": 3509,
+  "end": 3518,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanExponent",
+  "start": 3520,
+  "end": 3537,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "ScanDecimalDigits",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanNumberAfterDot",
+  "start": 3539,
+  "end": 3553,
+  "access": "private",
+  "calls": [
+   "PeekChar",
+   "ScanDecimalDigits",
+   "ScanExponent",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "TryGetNumberValue",
+  "start": 3555,
+  "end": 3882,
+  "access": "private",
+  "calls": [],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanNumber",
+  "start": 3884,
+  "end": 3918,
+  "access": "private",
+  "calls": [
+   "GetStringBuilder",
+   "InExpressionMode",
+   "NewNumberToken",
+   "NewScriptExtent",
+   "ReportError",
+   "ScanGenericToken",
+   "ScanNumberHelper",
+   "TryGetNumberValue"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanNumberHelper",
+  "start": 3933,
+  "end": 4163,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "InExpressionMode",
+   "PeekChar",
+   "Release",
+   "ScanBinaryDigits",
+   "ScanDecimalDigits",
+   "ScanExponent",
+   "ScanHexDigits",
+   "ScanNumberAfterDot",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetMemberAccessOperator",
+  "start": 4167,
+  "end": 4262,
+  "access": "internal",
+  "calls": [
+   "InCommandMode",
+   "NewToken",
+   "PeekChar",
+   "ScanBlockComment",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetInvokeMemberOpenParen",
+  "start": 4264,
+  "end": 4283,
+  "access": "internal",
+  "calls": [
+   "NewToken",
+   "PeekChar",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetLBracket",
+  "start": 4285,
+  "end": 4365,
+  "access": "internal",
+  "calls": [
+   "GetChar",
+   "NewToken",
+   "PeekChar",
+   "Resync",
+   "ScanBlockComment",
+   "ScanLineComment",
+   "SkipChar",
+   "SkipWhiteSpace",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanDot",
+  "start": 4367,
+  "end": 4398,
+  "access": "private",
+  "calls": [
+   "InCommandMode",
+   "NewToken",
+   "PeekChar",
+   "ScanGenericToken",
+   "ScanNumber",
+   "SkipChar",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanIdentifier",
+  "start": 4402,
+  "end": 4458,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "InCommandMode",
+   "InSignatureMode",
+   "InTypeNameMode",
+   "NewToken",
+   "Release",
+   "ScanGenericToken",
+   "ScanTypeName",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanTypeName",
+  "start": 4462,
+  "end": 4493,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "NewToken",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanAssemblyNameSpecToken",
+  "start": 4495,
+  "end": 4517,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "NewToken",
+   "SkipWhiteSpace",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "GetAssemblyNameSpec",
+  "start": 4519,
+  "end": 4570,
+  "access": "internal",
+  "calls": [
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "NewToken",
+   "PeekChar",
+   "ScanAssemblyNameSpecToken",
+   "SkipChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "ScanLabel",
+  "start": 4574,
+  "end": 4610,
+  "access": "private",
+  "calls": [
+   "GetChar",
+   "GetStringAndRelease",
+   "GetStringBuilder",
+   "InCommandMode",
+   "NewGenericToken",
+   "NewLabelToken",
+   "ScanGenericToken",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ },
+ {
+  "type": "System.Management.Automation.Language.Tokenizer",
+  "file": "src/System.Management.Automation/engine/parser/tokenizer.cs",
+  "method": "NextToken",
+  "start": 4612,
+  "end": 5081,
+  "access": "internal",
+  "calls": [
+   "AtEof",
+   "Backtick",
+   "CheckOperatorInCommandMode",
+   "GetChar",
+   "GetStringBuilder",
+   "InCommandMode",
+   "InExpressionMode",
+   "NewFileRedirectionToken",
+   "NewInputRedirectionToken",
+   "NewMergingRedirectionToken",
+   "NewScriptExtent",
+   "NewToken",
+   "NormalizeCRLF",
+   "PeekChar",
+   "ReportError",
+   "ReportIncompleteInput",
+   "SaveToken",
+   "ScanBlockComment",
+   "ScanDot",
+   "ScanGenericToken",
+   "ScanHereStringExpandable",
+   "ScanHereStringLiteral",
+   "ScanIdentifier",
+   "ScanLabel",
+   "ScanLineComment",
+   "ScanNumber",
+   "ScanNumberHelper",
+   "ScanParameter",
+   "ScanStringExpandable",
+   "ScanStringLiteral",
+   "ScanVariable",
+   "SkipChar",
+   "SkipWhiteSpace",
+   "UngetChar"
+  ],
+  "label": "APPROX (name-based call extraction)"
+ }
+]
