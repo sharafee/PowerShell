@@ -332,7 +332,7 @@ def tests():
                 tree = []
                 for m in re.finditer(r"^\s*(Describe|Context|It)\s+(['\"])(.*?)\2([^\n]*)", txt, re.M | re.I):
                     kind, name, rest = m.group(1).capitalize(), m.group(3), m.group(4)
-                    tags = re.findall(r"-Tag\s+(?:@\()?([^\)\n{]+)", rest, re.I)
+                    tags = re.findall(r"-Tags?\s+(?:@\()?([^\)\n{]+)", rest, re.I)
                     tree.append({"kind": kind, "name": name, "line": txt.count("\n", 0, m.start()) + 1,
                                  "tags": [x.strip().strip("'\"") for t in tags for x in re.split(r"[,\s]+", t) if x.strip()]})
                 tc = len(re.findall(r"-TestCases|-ForEach", txt))

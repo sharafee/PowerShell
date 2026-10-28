@@ -367,5 +367,86 @@
   "evidence": "E1",
   "label": "APPROX",
   "notes": "methods in Parser.cs + tokenizer.cs"
+ },
+ {
+  "key": "PESTER_DESCRIBE_BLOCKS",
+  "value": 881,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_DESCRIBE_BLOCKS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "literal-named Describe blocks"
+ },
+ {
+  "key": "PESTER_TAG_CI",
+  "value": 668,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_CI",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "PESTER_TAG_FEATURE",
+  "value": 203,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_FEATURE",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "PESTER_TAG_SCENARIO",
+  "value": 3,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_SCENARIO",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "PESTER_TAG_SLOW",
+  "value": 9,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_SLOW",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "PESTER_TAG_REQUIREADMINONWINDOWS",
+  "value": 189,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_REQUIREADMINONWINDOWS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "PESTER_TAG_REQUIRESUDOONUNIX",
+  "value": 25,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get PESTER_TAG_REQUIRESUDOONUNIX",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Describe blocks carrying the tag (regex on -Tag/-Tags)"
+ },
+ {
+  "key": "XUNIT_TEST_FILES_WITH_FACTS",
+  "value": 23,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/numbers.py get XUNIT_TEST_FILES_WITH_FACTS",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": ""
+ },
+ {
+  "key": "RESX_LOCALIZED_FILES",
+  "value": 1950,
+  "dataset": "files.csv",
+  "command": "python3 docs-out/tools/numbers.py get RESX_LOCALIZED_FILES",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "localized resx = all resx minus neutral"
  }
 ]

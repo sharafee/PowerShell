@@ -195,7 +195,9 @@
      "kind": "Describe",
      "name": "SSHRemoting Basic Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -337,7 +339,10 @@
      "kind": "Describe",
      "name": "Basic remoting test with docker",
      "line": 4,
-     "tags": []
+     "tags": [
+      "Scenario",
+      "Slow"
+     ]
     },
     {
      "kind": "It",
@@ -377,7 +382,10 @@
      "kind": "Describe",
      "name": "NamedPipe Custom Remote Connection Tests",
      "line": 18,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -447,7 +455,9 @@
      "kind": "Describe",
      "name": "Get-CimClass",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -477,7 +487,9 @@
      "kind": "Describe",
      "name": "Get-CimClass",
      "line": 26,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -615,7 +627,9 @@
      "kind": "Describe",
      "name": "CI Tests for Get-Counter cmdlet",
      "line": 36,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -633,7 +647,9 @@
      "kind": "Describe",
      "name": "Feature tests for Get-Counter cmdlet",
      "line": 53,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -699,7 +715,9 @@
      "kind": "Describe",
      "name": "Get-Counter cmdlet does not run on IoT",
      "line": 235,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -727,13 +745,17 @@
      "kind": "Describe",
      "name": "CI tests for Export-Counter cmdlet",
      "line": 114,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Feature tests for Export-Counter cmdlet",
      "line": 140,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -773,13 +795,17 @@
      "kind": "Describe",
      "name": "CI tests for Import-Counter cmdlet",
      "line": 224,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Feature tests for Import-Counter cmdlet",
      "line": 256,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -803,7 +829,9 @@
      "kind": "Describe",
      "name": "Import-Counter cmdlet does not run on IoT",
      "line": 461,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -825,7 +853,9 @@
      "kind": "Describe",
      "name": "Get-WinEvent",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -967,7 +997,9 @@
      "kind": "Describe",
      "name": "New-WinEvent",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -1103,7 +1135,10 @@
      "kind": "Describe",
      "name": "File Only Entry throws for interactive or non-file scenarios",
      "line": 21,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1125,7 +1160,9 @@
      "kind": "Describe",
      "name": "SecureString conversion tests",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -1183,7 +1220,9 @@
      "kind": "Describe",
      "name": "Property setting in constrained language",
      "line": 20,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -1201,7 +1240,10 @@
      "kind": "Describe",
      "name": "Help built-in function should not expose nested module private functions when run on locked down systems",
      "line": 55,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1213,7 +1255,10 @@
      "kind": "Describe",
      "name": "NoLanguage runspace pool session should remain in NoLanguage mode when created on a system-locked down machine",
      "line": 132,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1225,7 +1270,10 @@
      "kind": "Describe",
      "name": "Built-ins work within constrained language",
      "line": 202,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1237,7 +1285,10 @@
      "kind": "Describe",
      "name": "Background jobs",
      "line": 230,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -1267,7 +1318,10 @@
      "kind": "Describe",
      "name": "Add-Type in constrained language",
      "line": 277,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1285,7 +1339,10 @@
      "kind": "Describe",
      "name": "New-Object in constrained language",
      "line": 305,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -1333,7 +1390,10 @@
      "kind": "Describe",
      "name": "New-Item command on function drive in constrained language",
      "line": 383,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1345,7 +1405,10 @@
      "kind": "Describe",
      "name": "Engine events in constrained language mode",
      "line": 406,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1357,7 +1420,10 @@
      "kind": "Describe",
      "name": "Module scope scripts in constrained language mode",
      "line": 428,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1369,7 +1435,10 @@
      "kind": "Describe",
      "name": "Switch -file in constrained language mode",
      "line": 453,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1381,7 +1450,10 @@
      "kind": "Describe",
      "name": "Get content syntax in constrained language mode",
      "line": 469,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1393,7 +1465,10 @@
      "kind": "Describe",
      "name": "Stream redirection in constrained language mode",
      "line": 486,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1405,7 +1480,10 @@
      "kind": "Describe",
      "name": "Invoke-Expression in constrained language mode",
      "line": 503,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1417,7 +1495,10 @@
      "kind": "Describe",
      "name": "Dynamic method invocation in constrained language mode",
      "line": 540,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1435,7 +1516,10 @@
      "kind": "Describe",
      "name": "Conversion in constrained language mode",
      "line": 591,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1447,7 +1531,10 @@
      "kind": "Describe",
      "name": "Variable AllScope in constrained language mode",
      "line": 608,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1465,7 +1552,10 @@
      "kind": "Describe",
      "name": "Data section additional commands in constrained language",
      "line": 651,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1483,7 +1573,10 @@
      "kind": "Describe",
      "name": "Add-Type in no language mode on locked down system",
      "line": 707,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1495,7 +1588,10 @@
      "kind": "Describe",
      "name": "Import-LocalizedData additional commands in constrained language",
      "line": 742,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1507,7 +1603,10 @@
      "kind": "Describe",
      "name": "Where and Foreach operators should not allow unapproved types in constrained language",
      "line": 768,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1531,7 +1630,10 @@
      "kind": "Describe",
      "name": "ThreadJob Constrained Language Tests",
      "line": 918,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1561,7 +1663,10 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel Constrained Language Tests",
      "line": 994,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1573,7 +1678,10 @@
      "kind": "Describe",
      "name": "Dot sourced script block functions from trusted script files should not run FullLanguage in ConstrainedLanguage context",
      "line": 1014,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1585,7 +1693,10 @@
      "kind": "Describe",
      "name": "Dot sourcing trusted script in ConstrainedLanguage context is allowed when importing modules",
      "line": 1073,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1597,7 +1708,10 @@
      "kind": "Describe",
      "name": "PowerShell classes are not allowed in constrained language mode",
      "line": 1124,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1633,7 +1747,10 @@
      "kind": "Describe",
      "name": "Invoke-History should not run command lines in FullLanguage mode when system is locked down",
      "line": 1240,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1645,7 +1762,10 @@
      "kind": "Describe",
      "name": "Enter-PSHostProcess cmdlet should be disabled on locked down systems",
      "line": 1302,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -1667,7 +1787,9 @@
      "kind": "Describe",
      "name": "CmsMessage cmdlets and Get-PfxCertificate basic tests",
      "line": 8,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -1721,7 +1843,9 @@
      "kind": "Describe",
      "name": "CmsMessage cmdlets thorough tests",
      "line": 82,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -1863,7 +1987,9 @@
      "kind": "Describe",
      "name": "Certificate Provider tests",
      "line": 28,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -1923,7 +2049,9 @@
      "kind": "Describe",
      "name": "Certificate Provider tests",
      "line": 80,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -2029,7 +2157,9 @@
      "kind": "Describe",
      "name": "Test suite for NewFileCatalogAndTestFileCatalogCmdlets",
      "line": 12,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -2273,7 +2403,9 @@
      "kind": "Describe",
      "name": "ExecutionPolicy",
      "line": 9,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -2315,7 +2447,9 @@
      "kind": "Describe",
      "name": "Help work with ExecutionPolicy Restricted ",
      "line": 51,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -2327,7 +2461,9 @@
      "kind": "Describe",
      "name": "Validate ExecutionPolicy cmdlets in PowerShell",
      "line": 76,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -2429,7 +2565,9 @@
      "kind": "Describe",
      "name": "Validate Set-ExecutionPolicy -Scope",
      "line": 1106,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -2459,7 +2597,10 @@
      "kind": "Describe",
      "name": "Validate Set-ExecutionPolicy -Scope (Admin)",
      "line": 1139,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2487,7 +2628,10 @@
      "kind": "Describe",
      "name": "Export-ModuleMember should not work across language boundaries",
      "line": 21,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2499,7 +2643,10 @@
      "kind": "Describe",
      "name": "Dot-source operator is not allowed in modules on locked down systems that export functions with wildcards",
      "line": 86,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2565,7 +2712,10 @@
      "kind": "Describe",
      "name": "Call operator invocation of trusted module private function",
      "line": 450,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2577,7 +2727,10 @@
      "kind": "Describe",
      "name": "Tests module table restrictions",
      "line": 502,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2595,7 +2748,10 @@
      "kind": "Describe",
      "name": "Import mix of trusted and untrusted manifest and module files",
      "line": 621,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2625,7 +2781,10 @@
      "kind": "Describe",
      "name": "Import trusted module files in system lockdown mode",
      "line": 803,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2649,7 +2808,10 @@
      "kind": "Describe",
      "name": "Import trusted manifest files in system lockdown mode",
      "line": 909,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2721,7 +2883,10 @@
      "kind": "Describe",
      "name": "Untrusted manifest and module files import in lock down mode",
      "line": 1313,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2765,7 +2930,10 @@
      "kind": "Describe",
      "name": "New-Module should not create module from trusted scriptblock when running in ConstrainedLanguage context",
      "line": 1508,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2793,7 +2961,9 @@
      "kind": "Describe",
      "name": "CmsMessage cmdlets using X509 cert",
      "line": 29,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -2929,7 +3099,10 @@
      "kind": "Describe",
      "name": "Importing PowerShell script files are not allowed in ConstrainedLanguage",
      "line": 20,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2947,7 +3120,10 @@
      "kind": "Describe",
      "name": "Start-Job initialization script should work in system lock down",
      "line": 56,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2969,7 +3145,10 @@
      "kind": "Describe",
      "name": "Local script debugger is disabled in system lock down mode",
      "line": 20,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -2997,7 +3176,10 @@
      "kind": "Describe",
      "name": "AMSI scan should detect suspicious content",
      "line": 8,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3019,7 +3201,9 @@
      "kind": "Describe",
      "name": "Verify Expected LocalGroupMember Cmdlets are present",
      "line": 63,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -3031,7 +3215,10 @@
      "kind": "Describe",
      "name": "Validate simple Add-LocalGroupMember",
      "line": 74,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3043,7 +3230,10 @@
      "kind": "Describe",
      "name": "Validate Add-LocalGroupMember cmdlet",
      "line": 99,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3139,7 +3329,10 @@
      "kind": "Describe",
      "name": "Validate simple Get-LocalGroupMember",
      "line": 247,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3151,7 +3344,10 @@
      "kind": "Describe",
      "name": "Validate Get-LocalGroupMember cmdlet",
      "line": 279,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3199,7 +3395,10 @@
      "kind": "Describe",
      "name": "Validate simple Remove-LocalGroupMember",
      "line": 413,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3211,7 +3410,10 @@
      "kind": "Describe",
      "name": "Validate Remove-LocalGroupMember cmdlet",
      "line": 440,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3329,7 +3531,9 @@
      "kind": "Describe",
      "name": "Verify Expected LocalGroup Cmdlets are present",
      "line": 46,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -3341,7 +3545,10 @@
      "kind": "Describe",
      "name": "Validate simple New-LocalGroup",
      "line": 59,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3353,7 +3560,10 @@
      "kind": "Describe",
      "name": "Validate New-LocalGroup cmdlet",
      "line": 75,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3431,7 +3641,10 @@
      "kind": "Describe",
      "name": "Validate simple Get-LocalGroup",
      "line": 230,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3443,7 +3656,10 @@
      "kind": "Describe",
      "name": "Validate Get-LocalGroup cmdlet",
      "line": 253,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3515,7 +3731,10 @@
      "kind": "Describe",
      "name": "Validate simple Set-LocalGroup",
      "line": 371,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3527,7 +3746,10 @@
      "kind": "Describe",
      "name": "Validate Set-LocalGroup cmdlet",
      "line": 400,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3575,7 +3797,10 @@
      "kind": "Describe",
      "name": "Validate simple Rename-LocalGroup",
      "line": 474,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3587,7 +3812,10 @@
      "kind": "Describe",
      "name": "Validate Rename-LocalGroup cmdlet",
      "line": 511,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3677,7 +3905,10 @@
      "kind": "Describe",
      "name": "Validate simple Remove-LocalGroup",
      "line": 684,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3689,7 +3920,10 @@
      "kind": "Describe",
      "name": "Validate Remove-LocalGroup cmdlet",
      "line": 722,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3777,7 +4011,9 @@
      "kind": "Describe",
      "name": "Verify Expected LocalUser Cmdlets are present",
      "line": 53,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -3789,7 +4025,10 @@
      "kind": "Describe",
      "name": "Verify Expected LocalUser Aliases are present",
      "line": 68,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3801,7 +4040,10 @@
      "kind": "Describe",
      "name": "Validate simple New-LocalUser",
      "line": 91,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3813,7 +4055,10 @@
      "kind": "Describe",
      "name": "Validate New-LocalUser cmdlet",
      "line": 110,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3981,7 +4226,10 @@
      "kind": "Describe",
      "name": "Validate simple Get-LocalUser",
      "line": 405,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -3993,7 +4241,10 @@
      "kind": "Describe",
      "name": "Validate Get-LocalUser cmdlet",
      "line": 429,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4083,7 +4334,10 @@
      "kind": "Describe",
      "name": "Validate simple Set-LocalUser",
      "line": 574,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4095,7 +4349,10 @@
      "kind": "Describe",
      "name": "Validate Set-LocalUser cmdlet",
      "line": 604,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4239,7 +4496,10 @@
      "kind": "Describe",
      "name": "Validate simple Rename-LocalUser",
      "line": 826,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4251,7 +4511,10 @@
      "kind": "Describe",
      "name": "Validate Rename-LocalUser cmdlet",
      "line": 856,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4329,7 +4592,10 @@
      "kind": "Describe",
      "name": "Validate simple Remove-LocalUser",
      "line": 1007,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4341,7 +4607,10 @@
      "kind": "Describe",
      "name": "Validate Remove-LocalUser cmdlet",
      "line": 1046,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4413,7 +4682,10 @@
      "kind": "Describe",
      "name": "Validate simple Enable-LocalUser",
      "line": 1220,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4425,7 +4697,10 @@
      "kind": "Describe",
      "name": "Validate Enable-LocalUser cmdlet",
      "line": 1250,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4515,7 +4790,10 @@
      "kind": "Describe",
      "name": "Validate simple Disable-LocalUser",
      "line": 1391,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4527,7 +4805,10 @@
      "kind": "Describe",
      "name": "Validate Disable-LocalUser cmdlet",
      "line": 1421,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -4627,7 +4908,9 @@
      "kind": "Describe",
      "name": "Start-Transcript, Stop-Transcript tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -4775,7 +5058,9 @@
      "kind": "Describe",
      "name": "PowerShellGet - Module tests",
      "line": 126,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -4793,7 +5078,11 @@
      "kind": "Describe",
      "name": "PowerShellGet - Module tests (Admin)",
      "line": 158,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -4805,7 +5094,9 @@
      "kind": "Describe",
      "name": "PowerShellGet - Script tests",
      "line": 202,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -4823,7 +5114,11 @@
      "kind": "Describe",
      "name": "PowerShellGet - Script tests (Admin)",
      "line": 235,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -4835,7 +5130,9 @@
      "kind": "Describe",
      "name": "PowerShellGet Type tests",
      "line": 262,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -4857,7 +5154,9 @@
      "kind": "Describe",
      "name": "PackageManagement Acceptance Test",
      "line": 15,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -4921,7 +5220,9 @@
      "kind": "Describe",
      "name": "PSResourceGet - Module tests",
      "line": 152,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -4957,7 +5258,11 @@
      "kind": "Describe",
      "name": "PSResourceGet - Module tests (Admin)",
      "line": 227,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -4969,7 +5274,9 @@
      "kind": "Describe",
      "name": "PSResourceGet - Script tests",
      "line": 258,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -4993,7 +5300,11 @@
      "kind": "Describe",
      "name": "PSResourceGet - Script tests (Admin)",
      "line": 311,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -5005,7 +5316,9 @@
      "kind": "Describe",
      "name": "PSResourceGet - ACR tests",
      "line": 341,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -5033,7 +5346,9 @@
      "kind": "Describe",
      "name": "Module loading with version constraints",
      "line": 192,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -5117,7 +5432,9 @@
      "kind": "Describe",
      "name": "Versioned directory loading with module constraints",
      "line": 370,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -5201,7 +5518,9 @@
      "kind": "Describe",
      "name": "Rooted module loading with module constraints",
      "line": 550,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -5285,7 +5604,9 @@
      "kind": "Describe",
      "name": "Preloaded module specification checking",
      "line": 730,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -5509,7 +5830,9 @@
      "kind": "Describe",
      "name": "Preloaded rooted module specification checking",
      "line": 1201,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -6173,7 +6496,9 @@
      "kind": "Describe",
      "name": "Get-Command Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6285,7 +6610,9 @@
      "kind": "Describe",
      "name": "Manifest required module autoloading from module path with simple names",
      "line": 56,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6297,7 +6624,9 @@
      "kind": "Describe",
      "name": "Manifest required module autoloading with relative path to dir",
      "line": 91,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6309,7 +6638,9 @@
      "kind": "Describe",
      "name": "Manifest required module autoloading with relative path to manifest",
      "line": 127,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6321,7 +6652,9 @@
      "kind": "Describe",
      "name": "Manifest required module autoloading with absolute path to dir",
      "line": 164,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6333,7 +6666,9 @@
      "kind": "Describe",
      "name": "Manifest required module autoloading with absolute path to manifest",
      "line": 201,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6355,7 +6690,10 @@
      "kind": "Describe",
      "name": "Validate Register-PSSessionConfiguration",
      "line": 48,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -6367,7 +6705,10 @@
      "kind": "Describe",
      "name": "Validate Get-PSSessionConfiguration, Enable-PSSessionConfiguration, Disable-PSSessionConfiguration, Unregister-PSSessionConfiguration cmdlets",
      "line": 70,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -6427,7 +6768,10 @@
      "kind": "Describe",
      "name": "Validate Register-PSSessionConfiguration, Set-PSSessionConfiguration cmdlets",
      "line": 296,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -6517,7 +6861,10 @@
      "kind": "Describe",
      "name": "Basic tests for New-PSSessionConfigurationFile Cmdlet",
      "line": 583,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -6529,7 +6876,10 @@
      "kind": "Describe",
      "name": "Feature tests for New-PSSessionConfigurationFile Cmdlet",
      "line": 607,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -6541,7 +6891,10 @@
      "kind": "Describe",
      "name": "Test suite for Test-PSSessionConfigurationFile Cmdlet",
      "line": 615,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -6565,7 +6918,10 @@
      "kind": "Describe",
      "name": "Validate Enable-PSSession Cmdlet",
      "line": 805,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -6593,7 +6949,9 @@
      "kind": "Describe",
      "name": "Where-Object",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -6861,7 +7219,9 @@
      "kind": "Describe",
      "name": "Switch-Process tests for Unix",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7216,7 +7576,9 @@
      "kind": "Describe",
      "name": "Get-Module -ListAvailable",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7306,7 +7668,9 @@
      "kind": "Describe",
      "name": "Get-Module -ListAvailable with path",
      "line": 282,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7358,7 +7722,9 @@
      "kind": "Describe",
      "name": "Remove-Module -Name | -FullyQualifiedName | -ModuleInfo",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7400,7 +7766,9 @@
      "kind": "Describe",
      "name": "Remove-Module : module is readOnly | Constant",
      "line": 206,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7424,7 +7792,9 @@
      "kind": "Describe",
      "name": "Remove-Module : module provides the PSDrive for current PS Session",
      "line": 328,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7436,7 +7806,9 @@
      "kind": "Describe",
      "name": "Remove-Module : module contains nested modules",
      "line": 336,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7460,7 +7832,9 @@
      "kind": "Describe",
      "name": "Remove-Module core module on module path by name",
      "line": 394,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7478,7 +7852,9 @@
      "kind": "Describe",
      "name": "Remove-Module custom module with FullyQualifiedName",
      "line": 421,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -7500,7 +7876,9 @@
      "kind": "Describe",
      "name": "History cmdlet test cases",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -7594,7 +7972,10 @@
      "kind": "Describe",
      "name": "Remote module tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -7646,7 +8027,9 @@
      "kind": "Describe",
      "name": "Set-PSDebug",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -7686,7 +8069,9 @@
      "kind": "Describe",
      "name": "Get-Error",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7756,7 +8141,9 @@
      "kind": "Describe",
      "name": "Import PowerShell provider",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7778,7 +8165,10 @@
      "kind": "Describe",
      "name": "Remote import-module tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -7806,7 +8196,9 @@
      "kind": "Describe",
      "name": "SSH Remoting Cmdlet Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -7846,7 +8238,9 @@
      "kind": "Describe",
      "name": "ForEach-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7892,7 +8286,9 @@
      "kind": "Describe",
      "name": "Import-Module",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7934,7 +8330,9 @@
      "kind": "Describe",
      "name": "Import-Module with ScriptsToProcess",
      "line": 73,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -7946,7 +8344,9 @@
      "kind": "Describe",
      "name": "Import-Module for Binary Modules in GAC",
      "line": 114,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -7976,7 +8376,9 @@
      "kind": "Describe",
      "name": "Import-Module for Binary Modules",
      "line": 148,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8012,7 +8414,9 @@
      "kind": "Describe",
      "name": "Import-Module should be case insensitive",
      "line": 277,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8024,7 +8428,9 @@
      "kind": "Describe",
      "name": "Circular nested module test",
      "line": 316,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8104,7 +8510,9 @@
      "kind": "Describe",
      "name": "Basic ThreadJob Tests",
      "line": 25,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8242,7 +8650,9 @@
      "kind": "Describe",
      "name": "Job2 class API tests",
      "line": 353,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8288,7 +8698,9 @@
      "kind": "Describe",
      "name": "Select-Object",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8384,7 +8796,9 @@
      "kind": "Describe",
      "name": "Select-Object DRT basic functionality",
      "line": 127,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8534,7 +8948,9 @@
      "kind": "Describe",
      "name": "Select-Object with Property = '*'",
      "line": 323,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8588,7 +9004,9 @@
      "kind": "Describe",
      "name": "Select-Object behaviour with hashtable entries and actual members",
      "line": 385,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -8628,7 +9046,9 @@
      "kind": "Describe",
      "name": "Register-EngineEvent",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -8656,7 +9076,9 @@
      "kind": "Describe",
      "name": "Json Tests",
      "line": 11,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -8806,7 +9228,9 @@
      "kind": "Describe",
      "name": "Validate Json serialization",
      "line": 621,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -8890,7 +9314,9 @@
      "kind": "Describe",
      "name": "Json Bug fixes",
      "line": 1638,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -8930,7 +9356,9 @@
      "kind": "Describe",
      "name": "New-Event",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -8976,7 +9404,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-Markdown tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -9172,7 +9602,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Json with PSSerializeJSONLongEnumAsNumber",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9346,7 +9778,9 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel Basic Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9556,7 +9990,9 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel common parameters",
      "line": 402,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9574,7 +10010,9 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel -AsJob Basic Tests",
      "line": 474,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9658,7 +10096,9 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel runspace pool tests",
      "line": 610,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9676,7 +10116,9 @@
      "kind": "Describe",
      "name": "ForEach-Object -Parallel Functional Tests",
      "line": 627,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -9716,7 +10158,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-Json Unit Tests",
      "line": 32,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -9848,7 +10292,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-Json -Depth Tests",
      "line": 386,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -9882,7 +10328,9 @@
      "kind": "Describe",
      "name": "Test-Json",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10150,7 +10598,9 @@
      "kind": "Describe",
      "name": "Disable-PSBreakpoint",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10178,7 +10628,9 @@
      "kind": "Describe",
      "name": "Write-Error Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10260,7 +10712,9 @@
      "kind": "Describe",
      "name": "Using delimiters with Export-CSV and Import-CSV behave correctly",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -10312,7 +10766,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Json",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10400,7 +10856,9 @@
      "kind": "Describe",
      "name": "Write-Output DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10424,7 +10882,9 @@
      "kind": "Describe",
      "name": "Write-Output",
      "line": 35,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -10512,7 +10972,9 @@
      "kind": "Describe",
      "name": "Unblock-File",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -10594,7 +11056,9 @@
      "kind": "Describe",
      "name": "Enable-PSBreakpoint",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10622,7 +11086,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Xml DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10704,7 +11170,9 @@
      "kind": "Describe",
      "name": "Sort-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10722,7 +11190,9 @@
      "kind": "Describe",
      "name": "Sort-Object DRT Unit Tests",
      "line": 24,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -10812,7 +11282,9 @@
      "kind": "Describe",
      "name": "Sort-Object Stable Unit Tests",
      "line": 227,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -10854,7 +11326,9 @@
      "kind": "Describe",
      "name": "Sort-Object Top and Bottom Unit Tests",
      "line": 313,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -11002,7 +11476,9 @@
      "kind": "Describe",
      "name": "Get-Culture",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11050,7 +11526,9 @@
      "kind": "Describe",
      "name": "`$PSCulture",
      "line": 66,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11090,7 +11568,9 @@
      "kind": "Describe",
      "name": "Export-Csv",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11286,7 +11766,9 @@
      "kind": "Describe",
      "name": "Register-ObjectEvent",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -11332,7 +11814,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Html Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11438,7 +11922,9 @@
      "kind": "Describe",
      "name": "Get-SecureRandom DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11462,7 +11948,9 @@
      "kind": "Describe",
      "name": "Get-SecureRandom",
      "line": 92,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11568,7 +12056,9 @@
      "kind": "Describe",
      "name": "Out-String DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11580,7 +12070,9 @@
      "kind": "Describe",
      "name": "Out-String",
      "line": 14,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11638,7 +12130,9 @@
      "kind": "Describe",
      "name": "Unimplemented Utility Cmdlet Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11660,7 +12154,9 @@
      "kind": "Describe",
      "name": "Get-UICulture",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11682,7 +12178,9 @@
      "kind": "Describe",
      "name": "Remove-PSBreakpoint",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -11746,7 +12244,9 @@
      "kind": "Describe",
      "name": "Get-TraceSource",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -11768,7 +12268,9 @@
      "kind": "Describe",
      "name": "Format-Custom",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -11804,7 +12306,9 @@
      "kind": "Describe",
      "name": "Format-Custom DRT basic functionality",
      "line": 27,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11846,7 +12350,9 @@
      "kind": "Describe",
      "name": "Format-Custom with expression based EntrySelectedBy in a CustomControl",
      "line": 323,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11874,7 +12380,9 @@
      "kind": "Describe",
      "name": "Import-Alias DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11904,7 +12412,9 @@
      "kind": "Describe",
      "name": "Import-Alias",
      "line": 45,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11950,7 +12460,9 @@
      "kind": "Describe",
      "name": "Update-FormatData",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -11980,7 +12492,9 @@
      "kind": "Describe",
      "name": "Update-FormatData basic functionality",
      "line": 61,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -11998,7 +12512,9 @@
      "kind": "Describe",
      "name": "Update-FormatData with resources in CustomControls",
      "line": 106,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -12038,7 +12554,9 @@
      "kind": "Describe",
      "name": "New-Variable DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12068,7 +12586,9 @@
      "kind": "Describe",
      "name": "New-Variable",
      "line": 53,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12294,7 +12814,9 @@
      "kind": "Describe",
      "name": "New-TimeSpan DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12306,7 +12828,9 @@
      "kind": "Describe",
      "name": "New-TimeSpan",
      "line": 15,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12346,7 +12870,9 @@
      "kind": "Describe",
      "name": "Compare-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12454,7 +12980,9 @@
      "kind": "Describe",
      "name": "Compare-Object DRT basic functionality",
      "line": 130,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12518,7 +13046,9 @@
      "kind": "Describe",
      "name": "Set-Variable DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12596,7 +13126,9 @@
      "kind": "Describe",
      "name": "Set-Variable",
      "line": 147,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12708,7 +13240,9 @@
      "kind": "Describe",
      "name": "Measure-Command",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -12754,7 +13288,9 @@
      "kind": "Describe",
      "name": "Get-Alias DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12838,7 +13374,9 @@
      "kind": "Describe",
      "name": "Get-Alias",
      "line": 169,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12856,7 +13394,9 @@
      "kind": "Describe",
      "name": "Get-Alias null tests",
      "line": 211,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -12896,7 +13436,9 @@
      "kind": "Describe",
      "name": "Get-EventSubscriber",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -12942,7 +13484,9 @@
      "kind": "Describe",
      "name": "Remove-TypeData DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -12976,7 +13520,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-Csv",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13024,7 +13570,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-Csv DRT Unit Tests",
      "line": 70,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13046,7 +13594,9 @@
      "kind": "Describe",
      "name": "Environment-Variables",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13110,7 +13660,9 @@
      "kind": "Describe",
      "name": "Remove-Event",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -13156,7 +13708,9 @@
      "kind": "Describe",
      "name": "Get-Variable DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13192,7 +13746,9 @@
      "kind": "Describe",
      "name": "Get-Variable",
      "line": 46,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13310,7 +13866,9 @@
      "kind": "Describe",
      "name": "Select-Xml DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13322,7 +13880,9 @@
      "kind": "Describe",
      "name": "Select-Xml Feature Tests",
      "line": 31,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -13386,7 +13946,9 @@
      "kind": "Describe",
      "name": "Get-Member",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13422,7 +13984,9 @@
      "kind": "Describe",
      "name": "Get-Member DRT Unit Tests",
      "line": 58,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -13516,7 +14080,9 @@
      "kind": "Describe",
      "name": "New-Alias DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13546,7 +14112,9 @@
      "kind": "Describe",
      "name": "New-Alias",
      "line": 38,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13586,7 +14154,9 @@
      "kind": "Describe",
      "name": "Get-PSCallStack DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13620,7 +14190,9 @@
      "kind": "Describe",
      "name": "Write-Verbose",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13672,7 +14244,9 @@
      "kind": "Describe",
      "name": "Write-Progress DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -13724,7 +14298,9 @@
      "kind": "Describe",
      "name": "Invoke-Item basic tests",
      "line": 65,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -13760,7 +14336,10 @@
      "kind": "Describe",
      "name": "Invoke-Item tests on Windows",
      "line": 266,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -13788,7 +14367,10 @@
      "kind": "Describe",
      "name": "Invoke-WebRequest tests",
      "line": 395,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -14750,7 +15332,10 @@
      "kind": "Describe",
      "name": "Invoke-RestMethod tests",
      "line": 2548,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -15620,7 +16205,10 @@
      "kind": "Describe",
      "name": "Validate Invoke-WebRequest and Invoke-RestMethod -InFile",
      "line": 4309,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -15656,7 +16244,10 @@
      "kind": "Describe",
      "name": "Web cmdlets tests using the cmdlet's aliases",
      "line": 4419,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -15680,7 +16271,10 @@
      "kind": "Describe",
      "name": "Invoke-WebRequest and Invoke-RestMethod support Cancellation through CTRL-C",
      "line": 4461,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -15794,7 +16388,10 @@
      "kind": "Describe",
      "name": "Web cmdlets Unix Sockets tests",
      "line": 4601,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -15812,7 +16409,10 @@
      "kind": "Describe",
      "name": "Invoke-WebRequest and Invoke-RestMethod support OperationTimeoutSeconds",
      "line": 4646,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -15950,7 +16550,9 @@
      "kind": "Describe",
      "name": "Get-RunspaceDebug",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -15978,7 +16580,9 @@
      "kind": "Describe",
      "name": "Unit tests for JsonObject",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16060,7 +16664,9 @@
      "kind": "Describe",
      "name": "Start-Sleep DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16108,7 +16714,9 @@
      "kind": "Describe",
      "name": "Start-Sleep",
      "line": 66,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -16136,7 +16744,9 @@
      "kind": "Describe",
      "name": "New-Guid",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16194,7 +16804,9 @@
      "kind": "Describe",
      "name": "Format-Wide",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16236,7 +16848,9 @@
      "kind": "Describe",
      "name": "Format-Wide DRT basic functionality",
      "line": 36,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16300,7 +16914,9 @@
      "kind": "Describe",
      "name": "Select-String",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -16562,7 +17178,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Csv DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16592,7 +17210,9 @@
      "kind": "Describe",
      "name": "ConvertTo-Csv",
      "line": 38,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16758,7 +17378,9 @@
      "kind": "Describe",
      "name": "XmlCommand DRT basic functionality Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -16978,7 +17600,9 @@
      "kind": "Describe",
      "name": "Get-Event",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -17030,7 +17654,9 @@
      "kind": "Describe",
      "name": "Update-TypeData basic functionality",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -17160,7 +17786,9 @@
      "kind": "Describe",
      "name": "Out-File DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -17178,7 +17806,9 @@
      "kind": "Describe",
      "name": "Out-File",
      "line": 21,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -17248,7 +17878,9 @@
      "kind": "Describe",
      "name": "Trace-Command",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -17438,7 +18070,9 @@
      "kind": "Describe",
      "name": "Format-Table",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -17678,7 +18312,9 @@
      "kind": "Describe",
      "name": "FormatHex",
      "line": 14,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -17862,7 +18498,9 @@
      "kind": "Describe",
      "name": "Add-Type",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -17974,7 +18612,9 @@
      "kind": "Describe",
      "name": "New-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -18004,7 +18644,9 @@
      "kind": "Describe",
      "name": "New-Object DRT basic functionality",
      "line": 46,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -18082,7 +18724,9 @@
      "kind": "Describe",
      "name": "New-Object COM functionality",
      "line": 138,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -18110,7 +18754,10 @@
      "kind": "Describe",
      "name": "Implicit remoting and CIM cmdlets with AllSigned and Restricted policy",
      "line": 13,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18128,7 +18775,10 @@
      "kind": "Describe",
      "name": "Tests Import-PSSession cmdlet works with types unavailable on the client",
      "line": 93,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18140,7 +18790,10 @@
      "kind": "Describe",
      "name": "Cmdlet help from remote session",
      "line": 138,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18152,7 +18805,10 @@
      "kind": "Describe",
      "name": "Import-PSSession Cmdlet error handling",
      "line": 164,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18224,7 +18880,10 @@
      "kind": "Describe",
      "name": "Tests Export-PSSession",
      "line": 288,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18284,7 +18943,10 @@
      "kind": "Describe",
      "name": "Proxy module is usable when the original runspace is no longer around",
      "line": 366,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -18386,7 +19048,10 @@
      "kind": "Describe",
      "name": "Import-PSSession with FormatAndTypes",
      "line": 485,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -18440,7 +19105,10 @@
      "kind": "Describe",
      "name": "Import-PSSession functional tests",
      "line": 719,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18524,7 +19192,10 @@
      "kind": "Describe",
      "name": "Implicit remoting parameter binding",
      "line": 820,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -18890,7 +19561,11 @@
      "kind": "Describe",
      "name": "Implicit remoting on restricted ISS",
      "line": 1417,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "Slow"
+     ]
     },
     {
      "kind": "Context",
@@ -18944,7 +19619,10 @@
      "kind": "Describe",
      "name": "Implicit remoting tests",
      "line": 1533,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -19112,7 +19790,10 @@
      "kind": "Describe",
      "name": "Export-PSSession function",
      "line": 1880,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19124,7 +19805,10 @@
      "kind": "Describe",
      "name": "Implicit remoting with disconnected session",
      "line": 1923,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19148,7 +19832,10 @@
      "kind": "Describe",
      "name": "Select-Object with implicit remoting",
      "line": 1968,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19160,7 +19847,10 @@
      "kind": "Describe",
      "name": "Get-FormatData used in Export-PSSession should work on DL targets",
      "line": 1992,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19172,7 +19862,10 @@
      "kind": "Describe",
      "name": "GetCommand locally and remotely",
      "line": 2031,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19184,7 +19877,11 @@
      "kind": "Describe",
      "name": "Import-PSSession on Restricted Session",
      "line": 2050,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "Slow"
+     ]
     },
     {
      "kind": "It",
@@ -19196,7 +19893,10 @@
      "kind": "Describe",
      "name": "Import-PSSession resolved command of an alias",
      "line": 2084,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -19230,7 +19930,9 @@
      "kind": "Describe",
      "name": "Set-Alias DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19278,7 +19980,9 @@
      "kind": "Describe",
      "name": "Set-Alias",
      "line": 75,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19318,7 +20022,9 @@
      "kind": "Describe",
      "name": "Runspace Breakpoint Unit Tests - Feature-Enabled",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -19472,7 +20178,9 @@
      "kind": "Describe",
      "name": "Get-Date DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19568,7 +20276,9 @@
      "kind": "Describe",
      "name": "Get-Date",
      "line": 279,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19622,7 +20332,9 @@
      "kind": "Describe",
      "name": "Get-Date -UFormat tests",
      "line": 340,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19644,7 +20356,9 @@
      "kind": "Describe",
      "name": "Clear-Variable DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19680,7 +20394,9 @@
      "kind": "Describe",
      "name": "Clear-Variable",
      "line": 90,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19798,7 +20514,9 @@
      "kind": "Describe",
      "name": "Get-Unique DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19816,7 +20534,9 @@
      "kind": "Describe",
      "name": "Get-Unique",
      "line": 37,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19880,7 +20600,9 @@
      "kind": "Describe",
      "name": "Get-Host DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -19902,7 +20624,9 @@
      "kind": "Describe",
      "name": "ConvertTo--SecureString",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -19930,7 +20654,9 @@
      "kind": "Describe",
      "name": "Get-FileHash",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -20042,7 +20768,10 @@
      "kind": "Describe",
      "name": "Write-Host with default Console Host",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Slow",
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -20054,7 +20783,9 @@
      "kind": "Describe",
      "name": "Write-Host with wrong colors",
      "line": 27,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20066,7 +20797,9 @@
      "kind": "Describe",
      "name": "Write-Host with TestHostCS",
      "line": 44,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20088,7 +20821,9 @@
      "kind": "Describe",
      "name": "Remove-Variable",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20202,7 +20937,9 @@
      "kind": "Describe",
      "name": "Remove-Variable basic functionality",
      "line": 205,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20248,7 +20985,9 @@
      "kind": "Describe",
      "name": "Stream writer tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -20336,7 +21075,9 @@
      "kind": "Describe",
      "name": "Get-Random DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20366,7 +21107,9 @@
      "kind": "Describe",
      "name": "Get-Random",
      "line": 98,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20562,7 +21305,9 @@
      "kind": "Describe",
      "name": "Import-LocalizedData",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20602,7 +21347,9 @@
      "kind": "Describe",
      "name": "Tee-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -20638,7 +21385,9 @@
      "kind": "Describe",
      "name": "Tee-Object DRT Unit Tests",
      "line": 60,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20672,7 +21421,9 @@
      "kind": "Describe",
      "name": "Event Subscriber Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -20748,7 +21499,9 @@
      "kind": "Describe",
      "name": "Get-FormatData",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -20812,7 +21565,9 @@
      "kind": "Describe",
      "name": "Group-Object DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20824,7 +21579,9 @@
      "kind": "Describe",
      "name": "Group-Object",
      "line": 15,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20944,7 +21701,9 @@
      "kind": "Describe",
      "name": "Check 'Culture' parameter in order object cmdlets (Group-Object, Sort-Object, Compare-Object)",
      "line": 142,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20984,7 +21743,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-StringData DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -20996,7 +21757,9 @@
      "kind": "Describe",
      "name": "ConvertFrom-StringData",
      "line": 14,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21050,7 +21813,9 @@
      "kind": "Describe",
      "name": "Delimiter parameter tests",
      "line": 68,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21084,7 +21849,10 @@
      "kind": "Describe",
      "name": "Send-MailMessage DRT Unit Tests",
      "line": 26,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -21108,7 +21876,10 @@
      "kind": "Describe",
      "name": "Send-MailMessage Feature Tests",
      "line": 208,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Context",
@@ -21178,7 +21949,9 @@
      "kind": "Describe",
      "name": "Add-Member DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21322,7 +22095,9 @@
      "kind": "Describe",
      "name": "Add-Member",
      "line": 185,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21404,7 +22179,9 @@
      "kind": "Describe",
      "name": "Export-FormatData",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21468,7 +22245,9 @@
      "kind": "Describe",
      "name": "Get-PSBreakpoint",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21496,7 +22275,9 @@
      "kind": "Describe",
      "name": "Export-Alias DRT Unit Tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21568,7 +22349,9 @@
      "kind": "Describe",
      "name": "Export-Alias",
      "line": 128,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21596,7 +22379,9 @@
      "kind": "Describe",
      "name": "Import-Csv DRT Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21614,7 +22399,9 @@
      "kind": "Describe",
      "name": "Import-Csv Double Quote Delimiter",
      "line": 24,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21632,7 +22419,9 @@
      "kind": "Describe",
      "name": "Import-Csv File Format Tests",
      "line": 90,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -21662,7 +22451,9 @@
      "kind": "Describe",
      "name": "Import-Csv #Type Tests",
      "line": 144,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21674,7 +22465,9 @@
      "kind": "Describe",
      "name": "Import-Csv with different newlines",
      "line": 164,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21696,7 +22489,9 @@
      "kind": "Describe",
      "name": "Get-Uptime",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21730,7 +22525,9 @@
      "kind": "Describe",
      "name": "New-TemporaryFile",
      "line": 16,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21764,7 +22561,9 @@
      "kind": "Describe",
      "name": "Get-Verb",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21846,7 +22645,9 @@
      "kind": "Describe",
      "name": "Join-String",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -21970,7 +22771,9 @@
      "kind": "Describe",
      "name": "Wait-Event",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -22044,7 +22847,9 @@
      "kind": "Describe",
      "name": "Invoke-Expression",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -22068,7 +22873,9 @@
      "kind": "Describe",
      "name": "Invoke-Expression DRT Unit Tests",
      "line": 20,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22090,7 +22897,9 @@
      "kind": "Describe",
      "name": "Tests for Wait-Debugger",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -22124,7 +22933,9 @@
      "kind": "Describe",
      "name": "Measure-Object",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22280,7 +23091,9 @@
      "kind": "Describe",
      "name": "Measure-Object DRT basic functionality",
      "line": 240,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22298,7 +23111,9 @@
      "kind": "Describe",
      "name": "Directly test the PSPropertyExpression type",
      "line": 388,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22368,7 +23183,9 @@
      "kind": "Describe",
      "name": "GetDateFormatUpdates",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -22398,7 +23215,9 @@
      "kind": "Describe",
      "name": "GetRandomMiscTests",
      "line": 38,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -22420,7 +23239,9 @@
      "kind": "Describe",
      "name": "Remove-Alias",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22478,7 +23299,9 @@
      "kind": "Describe",
      "name": "Write-Debug tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22512,7 +23335,9 @@
      "kind": "Describe",
      "name": "Set-PSBreakpoint DRT Unit Tests",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22638,7 +23463,9 @@
      "kind": "Describe",
      "name": "Set-PSBreakpoint",
      "line": 186,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22678,7 +23505,9 @@
      "kind": "Describe",
      "name": "Format-List",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22738,7 +23567,9 @@
      "kind": "Describe",
      "name": "Format-List DRT basic functionality",
      "line": 85,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -22846,7 +23677,10 @@
      "kind": "Describe",
      "name": "TestWSMan tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -23151,7 +23985,10 @@
      "kind": "Describe",
      "name": "CredSSP cmdlet tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -23181,7 +24018,9 @@
      "kind": "Describe",
      "name": "CredSSP cmdlet error cases tests",
      "line": 106,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -23329,7 +24168,9 @@
      "kind": "Describe",
      "name": "Add-Content cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -23435,7 +24276,10 @@
      "kind": "Describe",
      "name": "Get-EventLog cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -23487,7 +24331,10 @@
      "kind": "Describe",
      "name": "Basic Registry Provider Tests",
      "line": 7,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -23631,7 +24478,10 @@
      "kind": "Describe",
      "name": "Extended Registry Provider Tests",
      "line": 197,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -24034,7 +24884,10 @@
      "kind": "Describe",
      "name": "Start-Process tests requiring admin",
      "line": 165,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -24046,7 +24899,9 @@
      "kind": "Describe",
      "name": "Environment Tests",
      "line": 188,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -24070,7 +24925,9 @@
      "kind": "Describe",
      "name": "Bug fixes",
      "line": 244,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24134,7 +24991,9 @@
      "kind": "Describe",
      "name": "Hierarchical paths",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24198,7 +25057,9 @@
      "kind": "Describe",
      "name": "Get-Timezone test cases",
      "line": 25,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24282,7 +25143,10 @@
      "kind": "Describe",
      "name": "Set-Timezone test case: call by single Id",
      "line": 126,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -24294,7 +25158,10 @@
      "kind": "Describe",
      "name": "Set-Timezone test cases",
      "line": 165,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -24340,7 +25207,9 @@
      "kind": "Describe",
      "name": "Get-PSDrive",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24414,7 +25283,10 @@
      "kind": "Describe",
      "name": "Get-PSDrive for network path",
      "line": 68,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -24442,7 +25314,9 @@
      "kind": "Describe",
      "name": "Get-ItemProperty",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24500,7 +25374,10 @@
      "kind": "Describe",
      "name": "Test-Connection",
      "line": 37,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Context",
@@ -24755,7 +25632,9 @@
      "kind": "Describe",
      "name": "Unimplemented Management Cmdlet Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24777,7 +25656,10 @@
      "kind": "Describe",
      "name": "New-EventLog cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -24823,7 +25705,9 @@
      "kind": "Describe",
      "name": "Split-Path",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -24977,7 +25861,9 @@
      "kind": "Describe",
      "name": "Pop-Location",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25011,7 +25897,9 @@
      "kind": "Describe",
      "name": "Tests for -NoNewline parameter of Out-File, Add-Content and Set-Content",
      "line": 6,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -25045,7 +25933,10 @@
      "kind": "Describe",
      "name": "Control Service cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -25091,7 +25982,9 @@
      "kind": "Describe",
      "name": "Test-Path",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25329,7 +26222,10 @@
      "kind": "Describe",
      "name": "Get-Process for admin",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -25359,7 +26255,9 @@
      "kind": "Describe",
      "name": "Get-Process",
      "line": 37,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25443,7 +26341,9 @@
      "kind": "Describe",
      "name": "Get-Process Formatting",
      "line": 116,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -25455,7 +26355,9 @@
      "kind": "Describe",
      "name": "Process Parent property",
      "line": 140,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25489,7 +26391,9 @@
      "kind": "Describe",
      "name": "Get-Item",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25665,7 +26569,9 @@
      "kind": "Describe",
      "name": "Get-Item environment provider on Windows with accidental case-variant duplicates",
      "line": 186,
-     "tags": []
+     "tags": [
+      "Scenario"
+     ]
     },
     {
      "kind": "It",
@@ -25677,7 +26583,9 @@
      "kind": "Describe",
      "name": "Formatting for FileInfo objects",
      "line": 217,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25701,7 +26609,10 @@
      "kind": "Describe",
      "name": "Formatting for FileInfo requiring admin",
      "line": 255,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -25723,7 +26634,9 @@
      "kind": "Describe",
      "name": "Get-Location",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -25751,7 +26664,9 @@
      "kind": "Describe",
      "name": "Basic FileSystem Provider Tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -26033,7 +26948,9 @@
      "kind": "Describe",
      "name": "Handling of globbing patterns",
      "line": 494,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -26111,7 +27028,10 @@
      "kind": "Describe",
      "name": "Hard link and symbolic link tests",
      "line": 592,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -26291,7 +27211,10 @@
      "kind": "Describe",
      "name": "Copy-Item can avoid copying an item onto itself",
      "line": 969,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -26327,7 +27250,9 @@
      "kind": "Describe",
      "name": "Handling long paths",
      "line": 1118,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -26357,7 +27282,9 @@
      "kind": "Describe",
      "name": "Extended FileSystem Item/Content Cmdlet Provider Tests",
      "line": 1159,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -26639,7 +27566,9 @@
      "kind": "Describe",
      "name": "Extended FileSystem Path/Location Cmdlet Provider Tests",
      "line": 1487,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -26789,7 +27718,9 @@
      "kind": "Describe",
      "name": "UNC paths",
      "line": 1661,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -26801,7 +27732,10 @@
      "kind": "Describe",
      "name": "Remove-Item UnAuthorized Access",
      "line": 1682,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -26842,7 +27776,10 @@
      "kind": "Describe",
      "name": "OneDrive filesystem manipulation",
      "line": 1769,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -26894,7 +27831,10 @@
      "kind": "Describe",
      "name": "Set/New/Remove-Service cmdlet tests",
      "line": 8,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -27018,7 +27958,10 @@
      "kind": "Describe",
      "name": "New-EventLog cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -27046,7 +27989,9 @@
      "kind": "Describe",
      "name": "Validate Copy-Item locally",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -27064,7 +28009,9 @@
      "kind": "Describe",
      "name": "Validate Copy-Item Remotely",
      "line": 71,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -27262,7 +28209,9 @@
      "kind": "Describe",
      "name": "Validate Copy-Item error for target sessions not in FullLanguageMode.",
      "line": 695,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -27274,7 +28223,9 @@
      "kind": "Describe",
      "name": "Copy-Item can use Recurse and Exclude together",
      "line": 769,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -27304,7 +28255,9 @@
      "kind": "Describe",
      "name": "Copy-Item remotely bug fixes",
      "line": 814,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -27356,7 +28309,9 @@
      "kind": "Describe",
      "name": "Get-Content",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -27620,7 +28575,9 @@
      "kind": "Describe",
      "name": "Get-Content -Raw test",
      "line": 392,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -27642,7 +28599,9 @@
      "kind": "Describe",
      "name": "Set-Content cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -27756,7 +28715,10 @@
      "kind": "Describe",
      "name": "Set-Content should work for PSDrive with UNC path as root",
      "line": 109,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -27896,7 +28858,9 @@
      "kind": "Describe",
      "name": "Get-PSProvider",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -27954,7 +28918,9 @@
      "kind": "Describe",
      "name": "Join-Path cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -28024,7 +28990,9 @@
      "kind": "Describe",
      "name": "Basic Alias Provider Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -28066,7 +29034,9 @@
      "kind": "Describe",
      "name": "Extended Alias Provider Tests",
      "line": 58,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -28118,7 +29088,9 @@
      "kind": "Describe",
      "name": "FileSystem Provider Extended Tests for Get-ChildItem cmdlet",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -28694,7 +29666,10 @@
      "kind": "Describe",
      "name": "Validate Get-Item ResolvedTarget property",
      "line": 661,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -29029,7 +30004,9 @@
      "kind": "Describe",
      "name": "Basic Function Provider Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -29159,7 +30136,9 @@
      "kind": "Describe",
      "name": "Set-Location",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -29434,7 +30413,9 @@
      "kind": "Describe",
      "name": "Clear-Content cmdlet tests",
      "line": 41,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -29558,7 +30539,9 @@
      "kind": "Describe",
      "name": "Remove-Item",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -29676,7 +30659,10 @@
      "kind": "Describe",
      "name": "Tests for Get-ComputerInfo: Ensure Type returned",
      "line": 1011,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -29694,7 +30680,10 @@
      "kind": "Describe",
      "name": "Tests for Get-ComputerInfo",
      "line": 1031,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -29778,7 +30767,10 @@
      "kind": "Describe",
      "name": "Special Case Tests for Get-ComputerInfo",
      "line": 1228,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -29854,7 +30846,9 @@
      "kind": "Describe",
      "name": "Get-Service cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -29933,7 +30927,10 @@
      "kind": "Describe",
      "name": "Clear-EventLog cmdlet tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -29967,7 +30964,9 @@
      "kind": "Describe",
      "name": "Validate basic Variable provider cmdlets",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30009,7 +31008,9 @@
      "kind": "Describe",
      "name": "Validate basic negative test cases for Variable provider cmdlets",
      "line": 66,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -30146,7 +31147,9 @@
      "kind": "Describe",
      "name": "Get-ChildItem",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -30320,7 +31323,9 @@
      "kind": "Describe",
      "name": "Get-ChildItem with special path",
      "line": 279,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30381,7 +31386,9 @@
      "kind": "Describe",
      "name": "Basic Alias Provider Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -30417,7 +31424,9 @@
      "kind": "Describe",
      "name": "Extended Alias Provider Tests",
      "line": 51,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -30511,7 +31520,9 @@
      "kind": "Describe",
      "name": "New-Item",
      "line": 33,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30619,7 +31630,10 @@
      "kind": "Describe",
      "name": "New-Item with links",
      "line": 200,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -30655,7 +31669,10 @@
      "kind": "Describe",
      "name": "New-Item: symlink with absolute/relative path test",
      "line": 277,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -30685,7 +31702,9 @@
      "kind": "Describe",
      "name": "New-Item with links fails for non elevated user if developer mode not enabled on Windows.",
      "line": 323,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30703,7 +31722,9 @@
      "kind": "Describe",
      "name": "New-Item -Force allows to create an item even if the directories in the path don't exist",
      "line": 363,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30721,7 +31742,9 @@
      "kind": "Describe",
      "name": "New-Item -Force should throw an error for invalid characters in directory path",
      "line": 389,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30743,7 +31766,9 @@
      "kind": "Describe",
      "name": "Test-Push-Location",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30813,7 +31838,9 @@
      "kind": "Describe",
      "name": "PSReadLine",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30877,7 +31904,9 @@
      "kind": "Describe",
      "name": "Json.NET LINQ Parsing",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -30929,7 +31958,9 @@
      "kind": "Describe",
      "name": "Breakpoint SDK Unit Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -31185,7 +32216,9 @@
      "kind": "Describe",
      "name": "PowerShell Command Debugging",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -31431,7 +32464,9 @@
      "kind": "Describe",
      "name": "UntrustedDataMode tests for variable assignments",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -31603,7 +32638,9 @@
      "kind": "Describe",
      "name": "Windows platform file signatures",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -31615,7 +32652,10 @@
      "kind": "Describe",
      "name": "Windows file content signatures",
      "line": 23,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -31655,7 +32695,9 @@
      "kind": "Describe",
      "name": "Type inference Tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -32867,7 +33909,9 @@
      "kind": "Describe",
      "name": "AstTypeInference tests",
      "line": 1847,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -32895,7 +33939,9 @@
      "kind": "Describe",
      "name": "Serialization Tests",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -32953,7 +33999,9 @@
      "kind": "Describe",
      "name": "Language Primitive Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33107,7 +34155,9 @@
      "kind": "Describe",
      "name": "Method definition Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -33213,7 +34263,9 @@
      "kind": "Describe",
      "name": "Task-based PowerShell async APIs",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -33307,7 +34359,9 @@
      "kind": "Describe",
      "name": "InitialSessionState capacity",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33349,7 +34403,9 @@
      "kind": "Describe",
      "name": "TypeTable duplicate types in reused runspace InitialSessionState TypeTable",
      "line": 64,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -33443,7 +34499,9 @@
      "kind": "Describe",
      "name": "ProxyCommand Tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33477,7 +34535,9 @@
      "kind": "Describe",
      "name": "SuspiciousContentChecker verification",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33499,7 +34559,9 @@
      "kind": "Describe",
      "name": "Basic engine APIs",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -33547,7 +34609,9 @@
      "kind": "Describe",
      "name": "Clean up open Runspaces when exit powershell process",
      "line": 39,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -33559,7 +34623,9 @@
      "kind": "Describe",
      "name": "EndInvoke() should return a collection of results",
      "line": 68,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33593,7 +34659,9 @@
      "kind": "Describe",
      "name": "ScriptBlock.GetNewClosure()",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33691,7 +34759,10 @@
      "kind": "Describe",
      "name": "Remoting loopback tests",
      "line": 187,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -33785,7 +34856,9 @@
      "kind": "Describe",
      "name": "Remote session configuration RoleDefintion RoleCapabilityFiles key tests",
      "line": 6,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -33819,7 +34892,9 @@
      "kind": "Describe",
      "name": "SSHTransport switch parameter value",
      "line": 6,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -33831,7 +34906,9 @@
      "kind": "Describe",
      "name": "SSHConnection parameter hashtable error conditions",
      "line": 23,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -33843,7 +34920,10 @@
      "kind": "Describe",
      "name": "SSHConnection parameter hashtable type conversions",
      "line": 43,
-     "tags": []
+     "tags": [
+      "Feature",
+      "Slow"
+     ]
     },
     {
      "kind": "It",
@@ -33855,7 +34935,9 @@
      "kind": "Describe",
      "name": "No hangs when host doesn't exist",
      "line": 73,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -33877,7 +34959,10 @@
      "kind": "Describe",
      "name": "NamedPipe Custom Remote Connection Tests",
      "line": 27,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -33911,7 +34996,9 @@
      "kind": "Describe",
      "name": "SSH Remoting API Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -33951,7 +35038,10 @@
      "kind": "Describe",
      "name": "WinRM based remoting session abrupt disconnect",
      "line": 5,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -34053,7 +35143,10 @@
      "kind": "Describe",
      "name": "Invoke-Command remote debugging tests",
      "line": 117,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -34093,7 +35186,10 @@
      "kind": "Describe",
      "name": "Remote runspace pool should expose commands in endpoint configuration",
      "line": 6,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -34115,7 +35211,9 @@
      "kind": "Describe",
      "name": "Assembly loaded in a separate AssemblyLoadContext should not be seen by PowerShell type resolution",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34221,7 +35319,9 @@
      "kind": "Describe",
      "name": "Types referenced by PowerShell Standard should not be missing",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34267,7 +35367,9 @@
      "kind": "Describe",
      "name": "Command Discovery tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34397,7 +35499,9 @@
      "kind": "Describe",
      "name": "SemanticVersion api tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -34563,7 +35667,9 @@
      "kind": "Describe",
      "name": "Assembly::LoadWithPartialName Validation Test",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34585,7 +35691,9 @@
      "kind": "Describe",
      "name": "User-Specific powershell.config.json Modifications",
      "line": 8,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34625,7 +35733,9 @@
      "kind": "Describe",
      "name": "Attribute tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34647,7 +35757,9 @@
      "kind": "Describe",
      "name": "Verify aliases and cmdlets",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34683,7 +35795,9 @@
      "kind": "Describe",
      "name": "PATHEXT defaults",
      "line": 641,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34789,7 +35903,9 @@
      "kind": "Describe",
      "name": "Validate Attributes Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -34937,7 +36053,9 @@
      "kind": "Describe",
      "name": "Assembly.LoadFrom Validation Test",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34959,7 +36077,9 @@
      "kind": "Describe",
      "name": "Credential tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -34987,7 +36107,9 @@
      "kind": "Describe",
      "name": "Can load a native assembly",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -35009,7 +36131,9 @@
      "kind": "Describe",
      "name": ".NET Method Binding Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -35097,7 +36221,9 @@
      "kind": "Describe",
      "name": "Assembly loaded in IndividualAssemblyLoadContext should be visible to PowerShell",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -35125,7 +36251,9 @@
      "kind": "Describe",
      "name": "Native command byte piping tests",
      "line": 7,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -35189,7 +36317,9 @@
      "kind": "Describe",
      "name": "Native command error handling tests",
      "line": 6,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -35277,7 +36407,10 @@
      "kind": "Describe",
      "name": "Group policy settings tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -35987,7 +37120,9 @@
      "kind": "Describe",
      "name": "Adapter Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -36131,7 +37266,9 @@
      "kind": "Describe",
      "name": "Adapter XML Tests",
      "line": 267,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -36149,7 +37286,9 @@
      "kind": "Describe",
      "name": "DataRow and DataRowView Adapter tests",
      "line": 295,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -36191,7 +37330,9 @@
      "kind": "Describe",
      "name": "Base method call on object mapped to PropertyOnlyAdapter should work",
      "line": 353,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36219,7 +37360,9 @@
      "kind": "Describe",
      "name": "BooleanParameterDCR Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36253,7 +37396,9 @@
      "kind": "Describe",
      "name": "Hashtable Splatting Parameter Binding Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -36347,7 +37492,9 @@
      "kind": "Describe",
      "name": "Parameter Binding Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36525,7 +37672,9 @@
      "kind": "Describe",
      "name": "Nullable Boolean DCR Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36559,7 +37708,9 @@
      "kind": "Describe",
      "name": "StaticParameterBinder tests",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36744,7 +37895,9 @@
      "kind": "Describe",
      "name": "Basic COM Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36850,7 +38003,9 @@
      "kind": "Describe",
      "name": "Localized resource files validation",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36884,7 +38039,9 @@
      "kind": "Describe",
      "name": "LocProject.json file validation",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -36948,7 +38105,10 @@
      "kind": "Describe",
      "name": "Get-ExperimentalFeature Tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -37008,7 +38168,9 @@
      "kind": "Describe",
      "name": "Default enablement of Experimental Features",
      "line": 133,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37036,7 +38198,10 @@
      "kind": "Describe",
      "name": "Enable-ExperimentalFeature and Disable-ExperimentalFeature tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -37076,7 +38241,9 @@
      "kind": "Describe",
      "name": "Experimental Feature Basic Tests - Feature-Disabled",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37210,7 +38377,9 @@
      "kind": "Describe",
      "name": "Online help tests for PowerShell Cmdlets",
      "line": 5,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -37222,7 +38391,9 @@
      "kind": "Describe",
      "name": "Get-Help -Online is not supported on Nano Server and IoT",
      "line": 57,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37234,7 +38405,9 @@
      "kind": "Describe",
      "name": "Get-Help should throw on network paths",
      "line": 66,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37256,7 +38429,9 @@
      "kind": "Describe",
      "name": "Validate HelpInfo type",
      "line": 47,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37268,7 +38443,9 @@
      "kind": "Describe",
      "name": "Validate that <pshome>/<culture>/default.help.txt is present",
      "line": 57,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37280,7 +38457,9 @@
      "kind": "Describe",
      "name": "Validate that the Help function can Run in strict mode",
      "line": 68,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37292,7 +38471,9 @@
      "kind": "Describe",
      "name": "Validate that get-help works for CurrentUserScope",
      "line": 86,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -37316,7 +38497,9 @@
      "kind": "Describe",
      "name": "Testing Get-Help Progress",
      "line": 126,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -37328,7 +38511,11 @@
      "kind": "Describe",
      "name": "Validate that get-help works for AllUsers Scope",
      "line": 139,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Context",
@@ -37346,7 +38533,9 @@
      "kind": "Describe",
      "name": "Validate that get-help works for provider specific help",
      "line": 170,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37358,7 +38547,11 @@
      "kind": "Describe",
      "name": "Validate about_help.txt under culture specific folder works",
      "line": 243,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -37376,7 +38569,11 @@
      "kind": "Describe",
      "name": "About help files can be found in AllUsers scope",
      "line": 282,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -37388,7 +38585,9 @@
      "kind": "Describe",
      "name": "Get-Help should find help info within help files",
      "line": 305,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37400,7 +38599,9 @@
      "kind": "Describe",
      "name": "Get-Help should find pattern help files",
      "line": 325,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37418,7 +38619,9 @@
      "kind": "Describe",
      "name": "Get-Help should find pattern alias",
      "line": 385,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37448,7 +38651,9 @@
      "kind": "Describe",
      "name": "help function uses full view by default",
      "line": 417,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37472,7 +38677,9 @@
      "kind": "Describe",
      "name": "help can be found for CurrentUser Scope",
      "line": 446,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37484,7 +38691,11 @@
      "kind": "Describe",
      "name": "help can be found for AllUsers Scope",
      "line": 491,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "It",
@@ -37496,7 +38707,9 @@
      "kind": "Describe",
      "name": "Get-Help should accept arrays as the -Parameter parameter value",
      "line": 539,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37508,7 +38721,9 @@
      "kind": "Describe",
      "name": "Get-Help for function parameter should be consistent",
      "line": 564,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37520,7 +38735,9 @@
      "kind": "Describe",
      "name": "Help failure cases",
      "line": 603,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -37532,7 +38749,9 @@
      "kind": "Describe",
      "name": "help renders when using a PAGER with a space in the path",
      "line": 616,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37544,7 +38763,9 @@
      "kind": "Describe",
      "name": "Update-Help allows partial culture matches",
      "line": 647,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37590,55 +38811,89 @@
      "kind": "Describe",
      "name": "Validate Update-Help from the Web for one PowerShell module.",
      "line": 326,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help from the Web for one PowerShell module for user scope.",
      "line": 338,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help from the Web for all PowerShell modules.",
      "line": 350,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help from the Web for all PowerShell modules for user scope.",
      "line": 362,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help -SourcePath for one PowerShell module.",
      "line": 374,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help -SourcePath for one PowerShell module for user scope.",
      "line": 386,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help -SourcePath for all PowerShell modules.",
      "line": 398,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate Update-Help -SourcePath for all PowerShell modules for user scope.",
      "line": 410,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows",
+      "RequireSudoOnUnix"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate 'Update-Help' shows 'HelpCultureNotSupported' when thrown",
      "line": 422,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -37650,13 +38905,19 @@
      "kind": "Describe",
      "name": "Validate 'Save-Help -DestinationPath for one PowerShell modules.",
      "line": 456,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Validate 'Save-Help -DestinationPath for all PowerShell modules.",
      "line": 467,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     }
    ],
    "extraction": "regex (APPROX; no pwsh parser available)"
@@ -37672,7 +38933,9 @@
      "kind": "Describe",
      "name": "Basic Job Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -37922,7 +39185,9 @@
      "kind": "Describe",
      "name": "Update-ModuleManifest tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -37944,7 +39209,9 @@
      "kind": "Describe",
      "name": "Test-ModuleManifest tests",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38010,7 +39277,9 @@
      "kind": "Describe",
      "name": "Tests for circular references in required modules",
      "line": 165,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38040,7 +39309,9 @@
      "kind": "Describe",
      "name": "Test-ModuleManifest Performance bug followup",
      "line": 258,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38062,7 +39333,9 @@
      "kind": "Describe",
      "name": "Tests for paths of submodules in module manifest",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38090,7 +39363,9 @@
      "kind": "Describe",
      "name": "New-ModuleManifest basic tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38108,7 +39383,9 @@
      "kind": "Describe",
      "name": "New-ModuleManifest tests",
      "line": 65,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38148,7 +39425,9 @@
      "kind": "Describe",
      "name": "SxS Module Path Basic Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -38386,7 +39665,9 @@
      "kind": "Describe",
      "name": "Windows Installer",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Scenario"
+     ]
     },
     {
      "kind": "It",
@@ -38582,7 +39863,9 @@
      "kind": "Describe",
      "name": "ConsoleHost unit tests",
      "line": 53,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -39379,7 +40662,10 @@
      "kind": "Describe",
      "name": "Configuration file locations",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI",
+      "Slow"
+     ]
     },
     {
      "kind": "Context",
@@ -39427,7 +40713,9 @@
      "kind": "Describe",
      "name": "PSVersionTable",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -39539,7 +40827,10 @@
      "kind": "Describe",
      "name": "Read-Host",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Slow",
+      "Feature"
+     ]
     },
     {
      "kind": "Context",
@@ -39561,7 +40852,9 @@
      "kind": "Describe",
      "name": "InvokeOnRunspace method argument error handling",
      "line": 3,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -39579,7 +40872,9 @@
      "kind": "Describe",
      "name": "InvokeOnRunspace method as nested command",
      "line": 20,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -39591,7 +40886,10 @@
      "kind": "Describe",
      "name": "InvokeOnRunspace method on remote runspace",
      "line": 34,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -39603,7 +40901,9 @@
      "kind": "Describe",
      "name": "PromptForCredential",
      "line": 64,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -39621,7 +40921,9 @@
      "kind": "Describe",
      "name": "PushRunspaceLocalFailure",
      "line": 84,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -39643,7 +40945,9 @@
      "kind": "Describe",
      "name": "TabCompletion",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -41257,7 +42561,10 @@
      "kind": "Describe",
      "name": "TabCompletion elevated tests",
      "line": 3881,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -41269,7 +42576,10 @@
      "kind": "Describe",
      "name": "Tab completion tests with remote Runspace",
      "line": 3893,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -41287,7 +42597,10 @@
      "kind": "Describe",
      "name": "WSMan Config Provider tab complete tests",
      "line": 3956,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -41321,7 +42634,9 @@
      "kind": "Describe",
      "name": "Tab completion bug fix",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -41427,7 +42742,9 @@
      "kind": "Describe",
      "name": "Replace Operator",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -41505,7 +42822,9 @@
      "kind": "Describe",
      "name": "Culture-invariance tests for -split and -replace",
      "line": 85,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -41637,7 +42956,9 @@
      "kind": "Describe",
      "name": "Using of ternary operator",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -41695,7 +43016,9 @@
      "kind": "Describe",
      "name": "Split Operator",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -41933,7 +43256,9 @@
      "kind": "Describe",
      "name": "NullCoalesceOperations",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42305,7 +43630,9 @@
      "kind": "Describe",
      "name": "Range Operator",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42441,7 +43768,9 @@
      "kind": "Describe",
      "name": "Class can be defined without Runspace affinity",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -42463,7 +43792,9 @@
      "kind": "Describe",
      "name": "Misc Test",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42533,7 +43864,9 @@
      "kind": "Describe",
      "name": "Break statements with classes",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42615,7 +43948,9 @@
      "kind": "Describe",
      "name": "Attributes Test",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42857,7 +44192,9 @@
      "kind": "Describe",
      "name": "PSModuleInfo.GetExportedTypeDefinitions()",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -42869,7 +44206,9 @@
      "kind": "Describe",
      "name": "use of a module from two runspaces",
      "line": 9,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -42881,7 +44220,9 @@
      "kind": "Describe",
      "name": "Module reloading with Class definition",
      "line": 76,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -42909,7 +44250,9 @@
      "kind": "Describe",
      "name": "Exceptions flow for classes",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -42969,7 +44312,9 @@
      "kind": "Describe",
      "name": "Exception error position",
      "line": 227,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -42999,7 +44344,9 @@
      "kind": "Describe",
      "name": "Exception from initializer",
      "line": 257,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43039,7 +44386,9 @@
      "kind": "Describe",
      "name": "Protected Member Access - w/ default ctor",
      "line": 142,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43135,7 +44484,9 @@
      "kind": "Describe",
      "name": "Protected Member Access - w/ non-default ctor",
      "line": 161,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43225,7 +44576,9 @@
      "kind": "Describe",
      "name": "Protected Member Access - members not visible outside class",
      "line": 179,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43277,7 +44630,9 @@
      "kind": "Describe",
      "name": "Positive Parse Properties Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43361,37 +44716,49 @@
      "kind": "Describe",
      "name": "Negative Parsing Tests",
      "line": 258,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Negative methods Tests",
      "line": 315,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Negative Assignment Tests",
      "line": 326,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Negative Assignment Tests",
      "line": 332,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Negative DscResources Tests",
      "line": 356,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Negative ClassAttributes Tests",
      "line": 373,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43469,7 +44836,9 @@
      "kind": "Describe",
      "name": "Property Attributes Test",
      "line": 407,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43499,7 +44868,9 @@
      "kind": "Describe",
      "name": "Testing Method Names can be Keywords",
      "line": 418,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43517,7 +44888,9 @@
      "kind": "Describe",
      "name": "Method Attributes Test",
      "line": 531,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43535,7 +44908,9 @@
      "kind": "Describe",
      "name": "Positive SelfClass Type As Parameter Test",
      "line": 539,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43553,7 +44928,9 @@
      "kind": "Describe",
      "name": "PositiveReturnSelfClassTypeFromMemberFunction Test",
      "line": 571,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43565,7 +44942,9 @@
      "kind": "Describe",
      "name": "TestMultipleArguments Test",
      "line": 588,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43583,13 +44962,17 @@
      "kind": "Describe",
      "name": "Scopes Test",
      "line": 644,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Check PS Class Assembly Test",
      "line": 662,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43601,7 +44984,9 @@
      "kind": "Describe",
      "name": "ScriptScopeAccessFromClassMethod",
      "line": 670,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43613,7 +44998,9 @@
      "kind": "Describe",
      "name": "Hidden Members Test ",
      "line": 683,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43649,7 +45036,9 @@
      "kind": "Describe",
      "name": "BaseMethodCall Test ",
      "line": 737,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43667,7 +45056,9 @@
      "kind": "Describe",
      "name": "Scoped Types Test",
      "line": 743,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43709,7 +45100,9 @@
      "kind": "Describe",
      "name": "ParameterOfClassTypeInModule Test",
      "line": 770,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43721,7 +45114,9 @@
      "kind": "Describe",
      "name": "Type building",
      "line": 787,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43745,7 +45140,9 @@
      "kind": "Describe",
      "name": "RuntimeType created for TypeDefinitionAst",
      "line": 817,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43757,7 +45154,9 @@
      "kind": "Describe",
      "name": "TypeTable lookups",
      "line": 853,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -43781,7 +45180,9 @@
      "kind": "Describe",
      "name": "Protected method access",
      "line": 879,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43799,7 +45200,9 @@
      "kind": "Describe",
      "name": "variable analysis",
      "line": 950,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43821,7 +45224,9 @@
      "kind": "Describe",
      "name": "Script with a class definition run path",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43843,7 +45248,9 @@
      "kind": "Describe",
      "name": "Additional static method tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -43901,7 +45308,9 @@
      "kind": "Describe",
      "name": "DotNetAPI",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -43947,7 +45356,9 @@
      "kind": "Describe",
      "name": "Handle ByRef-like types gracefully",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44107,7 +45518,9 @@
      "kind": "Describe",
      "name": "Generic Method invocation",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44173,7 +45586,9 @@
      "kind": "Describe",
      "name": "Interface inheritance with remoting proxies",
      "line": 260,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44201,7 +45616,9 @@
      "kind": "Describe",
      "name": "Clone array",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44219,7 +45636,9 @@
      "kind": "Describe",
      "name": "Set fields through PSMemberInfo",
      "line": 20,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44243,7 +45662,9 @@
      "kind": "Describe",
      "name": "MSFT:3309783",
      "line": 38,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44267,7 +45688,9 @@
      "kind": "Describe",
      "name": "ScriptBlockAst.GetScriptBlock throws on error",
      "line": 67,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44285,7 +45708,9 @@
      "kind": "Describe",
      "name": "Hashtable key property syntax",
      "line": 84,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44303,7 +45728,9 @@
      "kind": "Describe",
      "name": "Assign automatic variables",
      "line": 109,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44327,7 +45754,9 @@
      "kind": "Describe",
      "name": "Assign readonly/constant variables",
      "line": 145,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44345,7 +45774,9 @@
      "kind": "Describe",
      "name": "Attribute error position",
      "line": 172,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44357,7 +45788,9 @@
      "kind": "Describe",
      "name": "Multiple alias attributes",
      "line": 186,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44369,7 +45802,9 @@
      "kind": "Describe",
      "name": "Members of System.Type",
      "line": 203,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44381,7 +45816,9 @@
      "kind": "Describe",
      "name": "Hash expression with if statement as value",
      "line": 215,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44423,7 +45860,9 @@
      "kind": "Describe",
      "name": "Automatic variable $input",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44451,7 +45890,9 @@
      "kind": "Describe",
      "name": "Using Namespace",
      "line": 42,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44503,7 +45944,9 @@
      "kind": "Describe",
      "name": "Redirection operator now supports encoding changes",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44515,7 +45958,9 @@
      "kind": "Describe",
      "name": "File redirection mixed with Out-Null",
      "line": 77,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44527,7 +45972,9 @@
      "kind": "Describe",
      "name": "File redirection should have 'DoComplete' called on the underlying pipeline processor",
      "line": 87,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44545,7 +45992,9 @@
      "kind": "Describe",
      "name": "Redirection and Set-Variable -append tests",
      "line": 126,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -44585,7 +46034,9 @@
      "kind": "Describe",
      "name": "conversion syntax",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44633,7 +46084,9 @@
      "kind": "Describe",
      "name": "Type resolution should prefer assemblies in powershell assembly cache",
      "line": 90,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -44645,7 +46098,9 @@
      "kind": "Describe",
      "name": "method conversion",
      "line": 144,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44735,7 +46190,9 @@
      "kind": "Describe",
      "name": "float/double precision when converting to string",
      "line": 535,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44747,7 +46204,9 @@
      "kind": "Describe",
      "name": "Casting Behaviour of Boolean/Null to Numeral",
      "line": 560,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -44775,7 +46234,9 @@
      "kind": "Describe",
      "name": "Type accelerators",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -44833,7 +46294,9 @@
      "kind": "Describe",
      "name": "Line Continuance",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -45053,7 +46516,9 @@
      "kind": "Describe",
      "name": "bnot on enums",
      "line": 33,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45083,7 +46548,9 @@
      "kind": "Describe",
      "name": "bnot on integral types",
      "line": 64,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45147,7 +46614,9 @@
      "kind": "Describe",
      "name": "Argument transformation attribute on optional argument with explicit $null",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45207,7 +46676,9 @@
      "kind": "Describe",
      "name": "Custom type conversion in parameter binding",
      "line": 102,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -45231,7 +46702,9 @@
      "kind": "Describe",
      "name": "Roundtrippable Conversions for Bare-string Numeric Literals passed to [string] Parameters",
      "line": 434,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45259,67 +46732,89 @@
      "kind": "Describe",
      "name": "for statement parsing",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "foreach statement parsing",
      "line": 51,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "do/while statement statement parsing",
      "line": 89,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "do/while statement statement parsing",
      "line": 113,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "trap statement parsing",
      "line": 137,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "named blocks parsing",
      "line": 146,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "data statement parsing",
      "line": 171,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "try/catch/finally statement parsing",
      "line": 195,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "switch statement parsing",
      "line": 218,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "function statement parsing",
      "line": 246,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "assignment statement parsing",
      "line": 264,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
@@ -45349,37 +46844,49 @@
      "kind": "Describe",
      "name": "splatting parsing",
      "line": 299,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Pipes parsing",
      "line": 306,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "commands parsing",
      "line": 314,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "tokens parsing",
      "line": 320,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "expressions parsing",
      "line": 325,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Hash Expression parsing",
      "line": 334,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
@@ -45393,7 +46900,9 @@
      "kind": "Describe",
      "name": "Ternary Operator parsing",
      "line": 351,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45443,7 +46952,9 @@
      "kind": "Describe",
      "name": "Keywords 'default', 'hidden', 'in', 'static' Token parsing",
      "line": 467,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45531,7 +47042,9 @@
      "kind": "Describe",
      "name": "The SafeGetValue method on AST returns safe values",
      "line": 4,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45577,61 +47090,81 @@
      "kind": "Describe",
      "name": "Factory based extensible completion",
      "line": 238,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Script block based extensible completion",
      "line": 248,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Test class based extensible completion",
      "line": 257,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Test registration based extensible completion",
      "line": 266,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Test extensible completion of native commands",
      "line": 289,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Test completion of parameters for native commands",
      "line": 304,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Test extensible completion of using namespace",
      "line": 336,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Type extensible completion of type after using namespace",
      "line": 373,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "Additional type name completion tests",
      "line": 400,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Describe",
      "name": "ArgumentCompletionsAttribute tests",
      "line": 431,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45659,7 +47192,9 @@
      "kind": "Describe",
      "name": "Using assembly",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -45729,7 +47264,9 @@
      "kind": "Describe",
      "name": "ParserTests (admin\\monad\\tests\\monad\\src\\engine\\core\\ParserTests.cs)",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -46309,7 +47846,9 @@
      "kind": "Describe",
      "name": "Test trap",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -46355,7 +47894,9 @@
      "kind": "Describe",
      "name": "get-help HelpFunc1",
      "line": 4,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -46517,7 +48058,9 @@
      "kind": "Describe",
      "name": "get-help file",
      "line": 179,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -46559,7 +48102,9 @@
      "kind": "Describe",
      "name": "get-help other tests",
      "line": 237,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -47271,7 +48816,9 @@
      "kind": "Describe",
      "name": "Cmdlet declaration statement",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47293,7 +48840,9 @@
      "kind": "Describe",
      "name": "Test for cmdlet to support Ordered Attribute on hash literal nodes",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47351,7 +48900,9 @@
      "kind": "Describe",
      "name": "DeserializedMethods",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47373,7 +48924,9 @@
      "kind": "Describe",
      "name": "ArrayExpression Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47451,7 +49004,9 @@
      "kind": "Describe",
      "name": "ArrayLiteral Tests",
      "line": 91,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47485,7 +49040,9 @@
      "kind": "Describe",
      "name": "Scripting.Followup.Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47561,7 +49118,9 @@
      "kind": "Describe",
      "name": "Parallel foreach syntax",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -47667,7 +49226,9 @@
      "kind": "Describe",
      "name": "Tests for indexers",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -47725,7 +49286,9 @@
      "kind": "Describe",
      "name": "Tests for (error, warning, etc) action preference",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -48007,7 +49570,9 @@
      "kind": "Describe",
      "name": "Error HistoryId Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48041,7 +49606,9 @@
      "kind": "Describe",
      "name": "Tests conversion of deserialized types to original type using object properties.",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -48165,7 +49732,9 @@
      "kind": "Describe",
      "name": "Test restricted language check method on scriptblocks",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48301,7 +49870,9 @@
      "kind": "Describe",
      "name": "Parallel switch syntax",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -48365,7 +49936,9 @@
      "kind": "Describe",
      "name": "Test constrained language mode",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48387,7 +49960,9 @@
      "kind": "Describe",
      "name": "Generics support",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48463,7 +50038,9 @@
      "kind": "Describe",
      "name": "Test try/catch",
      "line": 9,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48761,7 +50338,9 @@
      "kind": "Describe",
      "name": "Line endings",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48789,7 +50368,9 @@
      "kind": "Describe",
      "name": "Interface static members",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48819,7 +50400,9 @@
      "kind": "Describe",
      "name": "ByRef property",
      "line": 111,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -48907,7 +50490,9 @@
      "kind": "Describe",
      "name": "Tests for parameter binding",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -49175,7 +50760,9 @@
      "kind": "Describe",
      "name": "Tests for lossless rehydration of serialized types.",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -49767,7 +51354,9 @@
      "kind": "Describe",
      "name": "Requires tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -49815,7 +51404,9 @@
      "kind": "Describe",
      "name": "#requires -Modules",
      "line": 94,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -49879,7 +51470,9 @@
      "kind": "Describe",
      "name": "Common parameters support for script cmdlets",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -50087,7 +51680,9 @@
      "kind": "Describe",
      "name": "Error position Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50115,7 +51710,9 @@
      "kind": "Describe",
      "name": "Test for conversion b/w script block and delegate",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50179,7 +51776,9 @@
      "kind": "Describe",
      "name": "Tests for hashtable to PSCustomObject conversion",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50269,7 +51868,9 @@
      "kind": "Describe",
      "name": "PipelineStopToken tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50297,7 +51898,9 @@
      "kind": "Describe",
      "name": "Dynamic parameter support in script cmdlets.",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50343,7 +51946,9 @@
      "kind": "Describe",
      "name": "Testing of MyInvocation",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50419,7 +52024,9 @@
      "kind": "Describe",
      "name": "Tests OutVariable only",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50437,7 +52044,9 @@
      "kind": "Describe",
      "name": "Test ErrorVariable only",
      "line": 79,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50467,7 +52076,9 @@
      "kind": "Describe",
      "name": "Update both OutVariable and ErrorVariable",
      "line": 170,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -50543,7 +52154,9 @@
      "kind": "Describe",
      "name": "Testing of script internationalization",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -51287,7 +52900,9 @@
      "kind": "Describe",
      "name": "Breakpoints set on custom FileSystem provider files should work",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51299,7 +52914,9 @@
      "kind": "Describe",
      "name": "Tests line breakpoints on dot-sourced files",
      "line": 52,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51311,7 +52928,9 @@
      "kind": "Describe",
      "name": "Function calls clear debugger cache too early",
      "line": 106,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51329,7 +52948,9 @@
      "kind": "Describe",
      "name": "Line breakpoints on commands in multi-line pipelines",
      "line": 160,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51377,7 +52998,9 @@
      "kind": "Describe",
      "name": "Unit tests for various script breakpoints",
      "line": 243,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51395,7 +53018,9 @@
      "kind": "Describe",
      "name": "Unit tests for line breakpoints on dot-sourced files",
      "line": 395,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51419,7 +53044,9 @@
      "kind": "Describe",
      "name": "Unit tests for line breakpoints on modules",
      "line": 482,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51449,7 +53076,9 @@
      "kind": "Describe",
      "name": "Sometimes line breakpoints are ignored",
      "line": 586,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51467,7 +53096,9 @@
      "kind": "Describe",
      "name": "Breakpoints use case-insensitive match for script paths",
      "line": 646,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51489,7 +53120,9 @@
      "kind": "Describe",
      "name": "Tests Debugger GetCallStack() on runspaces when attached to a WinRM host process",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51529,7 +53162,9 @@
      "kind": "Describe",
      "name": "NativeLinuxCommands",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51571,7 +53206,9 @@
      "kind": "Describe",
      "name": "Scripts with extensions",
      "line": 52,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51599,7 +53236,9 @@
      "kind": "Describe",
      "name": "Native Windows tilde expansion tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51633,7 +53272,9 @@
      "kind": "Describe",
      "name": "Native UNIX globbing tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51751,7 +53392,9 @@
      "kind": "Describe",
      "name": "Behavior is specific for each platform",
      "line": 5,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51775,7 +53418,9 @@
      "kind": "Describe",
      "name": "tests for multiple languages and extensions",
      "line": 25,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51787,7 +53432,9 @@
      "kind": "Describe",
      "name": "Will error correctly if an attempt to set variable to improper value",
      "line": 157,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51813,7 +53460,9 @@
      "kind": "Describe",
      "name": "Native Command Arguments (${PSNativeCommandArgumentPassing})",
      "line": 186,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51883,7 +53532,9 @@
      "kind": "Describe",
      "name": "Native streams behavior with PowerShell",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "Context",
@@ -51925,7 +53576,9 @@
      "kind": "Describe",
      "name": "piping powershell objects to finished native executable",
      "line": 72,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51947,7 +53600,9 @@
      "kind": "Describe",
      "name": "Native pipeline should have proper encoding",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -51959,7 +53614,9 @@
      "kind": "Describe",
      "name": "native commands with pipeline",
      "line": 9,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -51989,7 +53646,9 @@
      "kind": "Describe",
      "name": "Native Command Processor",
      "line": 103,
-     "tags": []
+     "tags": [
+      "Feature"
+     ]
     },
     {
      "kind": "It",
@@ -52031,7 +53690,10 @@
      "kind": "Describe",
      "name": "Open a text file with NativeCommandProcessor",
      "line": 223,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -52049,7 +53711,10 @@
      "kind": "Describe",
      "name": "Run native command from a mounted FAT-format VHD",
      "line": 315,
-     "tags": []
+     "tags": [
+      "Feature",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -52061,7 +53726,9 @@
      "kind": "Describe",
      "name": "Native application invocation and getting cursor position",
      "line": 380,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",
@@ -52083,7 +53750,10 @@
      "kind": "Describe",
      "name": "Path update for package managers",
      "line": 87,
-     "tags": []
+     "tags": [
+      "CI",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "It",
@@ -52165,7 +53835,11 @@
      "kind": "Describe",
      "name": "Test suite for validating automounted PowerShell drives",
      "line": 9,
-     "tags": []
+     "tags": [
+      "Feature",
+      "Slow",
+      "RequireAdminOnWindows"
+     ]
     },
     {
      "kind": "Context",
@@ -52217,7 +53891,9 @@
      "kind": "Describe",
      "name": "ProviderIntrinsics Tests",
      "line": 3,
-     "tags": []
+     "tags": [
+      "CI"
+     ]
     },
     {
      "kind": "It",

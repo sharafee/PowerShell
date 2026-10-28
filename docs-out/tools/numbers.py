@@ -97,6 +97,22 @@ reg("ENFORCEMENT_SEED_HITS", lambda: len(J("enforcement-points.json")), "enforce
 reg("PARSER_METHODS", lambda: len(J("parser-methods.json")), "parser-methods.json", "APPROX", "methods in Parser.cs + tokenizer.cs")
 
 
+def _tagcount(tag):
+    n = 0
+    for p in J("tests.json")["pester"]:
+        for x in p["tree"]:
+            if x["kind"] == "Describe":
+                n += sum(1 for g in x["tags"] if g.upper() == tag)
+    return n
+
+
+reg("PESTER_DESCRIBE_BLOCKS", lambda: sum(p["describe"] for p in J("tests.json")["pester"]), "tests.json", "APPROX", "literal-named Describe blocks")
+for _t in ("CI", "FEATURE", "SCENARIO", "SLOW", "REQUIREADMINONWINDOWS", "REQUIRESUDOONUNIX"):
+    reg("PESTER_TAG_" + _t, (lambda t=_t: _tagcount(t)), "tests.json", "APPROX", "Describe blocks carrying the tag (regex on -Tag/-Tags)")
+reg("XUNIT_TEST_FILES_WITH_FACTS", lambda: sum(1 for x in J("tests.json")["xunit"] if x["facts"]), "tests.json", "APPROX")
+reg("RESX_LOCALIZED_FILES", lambda: sum(1 for r in _f() if r["language"] == "resx") - len(J("resources.json")), "files.csv", "APPROX", "localized resx = all resx minus neutral")
+
+
 def extras():
     """data/numbers-extra.json: [{key, cmd, dataset, label, notes}] - value = stdout of `cmd` (shell, cwd=REPO_ROOT)."""
     import subprocess
