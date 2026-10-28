@@ -1,0 +1,36 @@
+# Notes VariableAnalysis.cs (T24)
+## W1 1-300
+- VariablePathExtensions.IsAnyLocal L14: IsUnscopedVariable || IsLocal || IsPrivate. => $global:/$script:/$using:/drive-qualified/etc. are NOT tuple candidates.
+- VariableAnalysisDetails L20: BitIndex, LocalTupleIndex, Type, Name, Automatic, PreferenceVariable, Assigned, AssociatedAsts.
+- FindAllVariablesVisitor L44 (pass 1: collect names). Pessimizing cmdlet names L48-63 (New/Remove/Set-Variable, Set-PSBreakpoint, + module-qualified, aliases nv rv sbp sv set): any command whose first element is a StringConstant in the set => _disableOptimizations (L282-286). Dot-sourcing operator => disable (L288-301). Private-scope variable ($private:) => disable (L249-253).
+- Visit overloads: trap L73 and expression (default arg) L84 -> disableOptimizations: true, scriptCmdlet false; IParameterMetadataProvider L94 returns (variables, localsAllocated, forceNoOptimizing). Body visited before params (L102-105).
+- Ctor L122: seeds all SpecialVariables.AutomaticVariables with index i and type AutomaticVariableTypes[i] (automatic: true) L147-150; if scriptCmdlet also PreferenceVariables with index i+NumberOfAutomaticVariables L152-160; `$?` seeded as Unanalyzed bool automatic L162. Asserts fix order of first 9 automatics (_ , args, this, input, PSCmdlet, PSBoundParameters, MyInvocation, PSScriptRoot, PSCommandPath) L127-144.
+- VisitParameters L165: parameters w/o default-able type (Compiler.TryGetDefaultParameterValue fails) -> ForceDynamic L188-191; param type overrides body-deduced type L180.
+- NoteVariable L202: BitIndex = count at insertion.
+- VisitDataStatement L220 notes `data` variable; VisitSwitchStatement L230 notes $switch (IEnumerator); VisitForEachStatement L237 $foreach (IEnumerator); VisitVariableExpression L244 notes local variables with unaliased name (PSItem->_ ); VisitUsingExpression L263 assigns RuntimeUsingIndex sequentially (counter _runtimeUsingIndex) if -1, asserts equal otherwise. Skips children of FunctionDefinition L306, ScriptBlockExpression L312, Trap L318 (own scopes).
+## W2 300-600
+- Constants: Unanalyzed = -1 L329; ForceDynamic = -2 L338 (comment lists 3 reasons: type may change; validation attrs/>1 conversion; unresolved conversion type).
+- Flow-graph: Block (L356) with _asts, successors/predecessors, _throws/_returns/_unreachable; FlowsTo L390 marks next reachable if this reachable; GenerateReverseDepthFirstOrder L411. AssignmentTarget pseudo-Ast L441.
+- GetUnaliasedVariableName L479: PSItem->Underbar.
+- s_allScopeVariables ConcurrentDictionary L495; NoteAllScopeVariable L497; AnyVariablesCouldBeAllScope L502 (callers: runtime; comment L491-494: names known to be AllScope always; others special check before opt/unopt code).
+- Public analysis entry points: AnalyzeExpression L516 (default arg exprs), AnalyzeTrap L539, Analyze(IParameterMetadataProvider, disableOptimizations, scriptCmdlet) L568, AnalyzeMemberFunction L579 (returns whether all exit predecessors return/throw/unreachable).
+- Output contract: Tuple<Type tupleType, Dictionary<string,int> nameToIndexMap> (FinishAnalysis L659-745).
+## W3 600-900
+- AnalyzeImpl(IParameterMetadataProvider) L586: for each param whose varPath IsAnyLocal: counts TypeConstraints (first is parameter type), ValidateArguments/ArgumentTransformation attrs -> anyAttributes; unresolved type -> anyUnresolved; ForceDynamic if (anyAttributes || anyUnresolvedTypes || countConverts>0 || PSReference || MustBeBoxed) && !Automatic && !Preference L643-647; adds AssignmentTarget(varName,type) to entry block L649.
+- FinishAnalysis L659: reverse DFS order; first block bitarray all-false; other blocks = AND of predecessors' bitarrays (definite assignment) L668-690; vars ForceDynamic -> FixTupleIndex/FixAssigned for associated asts L694-704; orderedLocals = those with index>=0 or (ForceDynamic && Automatic && name != "?") ordered by index L711-716; assert: when optimizations disabled only automatic(+preference if scriptCmdlet) are allocated L718-721; nameToIndexMap L723-741; tupleType = MutableTuple.MakeTupleType(types) L743.
+- MustBeBoxed L747: mutable value type (PSVariableAssignmentBinder.IsValueTypeMutable) except SwitchParameter.
+- AnalyzeBlock L788: for each VariableExpressionAst in block: automatic -> TupleIndex=details index & Automatic=true; else TupleIndex = assigned-bit-set-at-this-point && !PreferenceVariable ? LocalTupleIndex : ForceDynamic (read before definite assignment => dynamic). 
+- CheckLHSAssign L844: [convert]$x = ... -> convertType; $foreach/$switch assigned directly => type object; non-local LHS => ForceDynamic L880.
+- CheckLHSAssignVar L884: first assignment allocates slot (_localsAllocated++) unless _disableOptimizations or name in s_allScopeVariables -> ForceDynamic L889-891; MustBeBoxed type => ForceDynamic L894; type compat: first assignment sets Type = convertType ?? object L900-903; later different type => ForceDynamic (or type=object for automatic/preference) L913-925; assignment on path where not yet assigned & no conversion => convertType=object forces comparison L906-911.
+## W4 900-1200
+- Visit* for flow graph: ScriptBlock L943 visits Dynamicparam,Begin,Process,End,Clean blocks in that order; FunctionDefinition not recursed L994; If L1018; Ternary L1058; Trap L1080 body visited; Switch L1086 (allocates $switch slot unless disabled, models as while loop GenerateWhileLoop); DataStatement L1146.
+## W5-W7 1200-1848
+- GenerateWhileLoop L1157 (flow model comment L1162-1174), GenerateDoLoop L1219. Foreach L1261 (allocates $foreach slot; Condition then $foreach+loop var assigned after condition; flow around loop), DoWhile/DoUntil L1291/1297, For L1303 (initializer, optional condition, iterator as continueAction), While L1316.
+- Try L1330: conservative: all catches/finally reachable only from block-before-try (data flow assumes try may throw at first stmt) L1332-1364; finally modeled with rethrow edge if no catch-all L1378-1387.
+- BreakOrContinue L1402 (label lookup in _loopTargets, no target => treated as throw/exit L1424-1429; next block unreachable). Return L1463 `_returns`, Exit L1469 & Throw L1475 `_throws`.
+- GetAssignmentTargets L1483 (paren/array-literal destructuring). VisitAssignmentStatement L1510: visits RHS first; LHS attrs: anyAttributes (non-convert attributes) or convertCount>1 or unresolved convert type => ForceDynamic L1540-1549; simple (<=1 convert, no other attrs) adds AssignmentTarget L1551-1554; non-variable LHS (member/index) visited as normal expression.
+- VisitPipeline L1567: any CommandAst in pipeline inside a loop => pessimistic edges to all enclosing loops' break/continue targets (non-local goto) L1584-1601.
+- VisitBinaryExpression L1639: -and/-or modeled short circuit.
+- VisitUsingExpression L1698: sub-expression NOT visited ("treated like constant replaced before the script block is executed").
+- VisitVariableExpression L1705: local var: if already allocated: TupleIndex = Preference ? ForceDynamic : index, Automatic flag; else deferred to block list; always adds to AssociatedAsts; non-local (global:, script:, using:, drive, etc.) => TupleIndex = ForceDynamic.
+- VisitScriptBlockExpression L1791 not recursed; TypeDefinition/PropertyMember/FunctionMember/UsingStatement/Configuration/DynamicKeyword return null (L1834-1846).

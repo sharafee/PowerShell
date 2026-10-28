@@ -1,0 +1,167 @@
+{
+ "System.Management.Automation": {
+  "short": "SMACMD",
+  "purpose": "The engine assembly itself hosts the commands that implement engine features: command discovery and help (`Get-Command`, `Get-Help`, `Update-Help`, `Save-Help`), modules (`Import-Module`, `Get-Module`, `New-Module`, `New-ModuleManifest`, `Export-ModuleMember`), jobs (`Start-Job`, `Get-Job`, `Receive-Job`, ...), remoting (`Invoke-Command`, `*-PSSession`, `*-PSSessionConfiguration`, `Enable/Disable-PSRemoting`), the pipeline-shaping commands `ForEach-Object` and `Where-Object`, host-output commands (`Out-Default`, `Out-Host`, `Out-Null`, `Format-Default`), history, `Set-StrictMode`, `Set-PSDebug`, `Register-ArgumentCompleter` and experimental-feature commands, plus the six built-in providers (Alias, Environment, FileSystem, Function, Registry (Windows), Variable). Because they live in the engine assembly, these commands can use engine internals directly.",
+  "responsibilities": "Engine-integrated commands; unlike the other families, they are not loaded through a module manifest but through built-in registration tables.",
+  "extension": "Providers are declared with `[CmdletProvider(name, capabilities)]`; the built-in set is registered in `InitialSessionState.cs`. See [provider-model](../03-runtime/provider-model.md).",
+  "security": "Several commands are policy-relevant surface rather than ordinary cmdlets: `Invoke-Command`/`*-PSSession`/`*-PSSessionConfiguration` (remoting and JEA configuration), `Import-Module`/`New-ModuleManifest`/`Test-ModuleManifest` (module load trust), `Set-PSDebug`, `Enter-PSHostProcess`. Their enforcement points are catalogued in Phase 5 (`UNVERIFIED` until then).",
+  "decisions": "Putting `ForEach-Object` and `Where-Object` in the engine assembly (rather than the Utility module) keeps the two most-used pipeline commands available in every host and gives them privileged access to the pipeline machinery (`INFERENCE` from their location; `FACT-SRC` for the location).",
+  "enterprise": "The engine-hosted set cannot be trimmed without editing the engine; the registration tables are static. A new shell should make the built-in set data-driven.",
+  "lessons": [
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-CMD",
+    "text": "Register built-in commands from a declarative table (name -> implementing type -> help) as PowerShell does, but generate the table from attributes at build time so it cannot drift from the classes.",
+    "evidence": "src/System.Management.Automation/engine/InitialSessionState.cs@L5439"
+   },
+   {
+    "verdict": "REPLICATE",
+    "area": "NLD-CMD",
+    "text": "Keep `ForEach-Object`/`Where-Object` as engine-level commands with direct pipeline access so script-block pipelines do not pay module-load or binding overhead.",
+    "evidence": "src/System.Management.Automation/engine/InitialSessionState.cs@L5439"
+   }
+  ],
+  "open": "- `UNVERIFIED`: the exact initial-session-state table boundaries for providers, aliases and variables (only cmdlet entries were extracted)."
+ },
+ "Microsoft.PowerShell.Commands.Utility": {
+  "short": "UTIL",
+  "purpose": "General-purpose utility commands: object and pipeline manipulation (`Select-Object`, `Sort-Object`, `Group-Object`, `Measure-Object`, `Compare-Object`, `New-Object`, `Add-Member`, `Get-Member`), formatting (`Format-List`, `Format-Table`, `Format-Wide`, `Format-Custom`, `Out-File`, `Out-String`), conversion and serialization (CSV, JSON, XML, CLIXML, HTML, Markdown), web commands (`Invoke-WebRequest`, `Invoke-RestMethod`), `Add-Type` (C# compilation through Roslyn), variables (`*-Variable`), tracing, events (`*-Event`, `Register-*Event`), debugging breakpoints, runspace commands, random numbers, mail, `Get-Date`, `Start-Sleep`, `Write-*` stream commands, `Out-GridView` and `Show-Command` (Windows UI) and others. Inventory in section 4 lists all of them.",
+  "security": "Policy-relevant members: `Add-Type` (compiles and loads arbitrary code), `Invoke-Expression`, `Invoke-WebRequest`/`Invoke-RestMethod` (network egress, credentials), `Import-/Export-Clixml` and `ConvertFrom-CliXml` (deserialization), `New-Object` (type instantiation; constrained-language restrictions apply), `Unblock-File` (removes zone mark). `UNVERIFIED` until Phase 5 verifies each enforcement point.",
+  "performance": "The `Select-Object`, `Sort-Object`, `Group-Object` family processes the whole pipeline in memory; no streaming guarantees are asserted here (`UNVERIFIED`).",
+  "lessons": [
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-CMD",
+    "text": "Split the utility set by risk: pure data/formatting commands vs code-loading (`Add-Type`, `Invoke-Expression`) and network commands, so a policy can grant them independently.",
+    "evidence": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/AddType.cs@L67"
+   },
+   {
+    "verdict": "REPLICATE",
+    "area": "NLD-CMD",
+    "text": "Implement object-manipulation commands against the public cmdlet base-class API only, so third-party modules can replace them.",
+    "evidence": "src/Microsoft.PowerShell.Commands.Utility/commands/utility/Compare-Object.cs@L17"
+   }
+  ],
+  "open": "- `UNVERIFIED`: which Utility cmdlets are Windows-only beyond those with a visible `#if` condition (conditions are shown per row)."
+ },
+ "Microsoft.PowerShell.Commands.Management": {
+  "short": "MGMT",
+  "purpose": "Provider-facing and system-management commands: item/content/property commands over providers (`Get-ChildItem`, `Get-Item`, `Set-Content`, `New-Item`, `Copy-Item`, ... `*-ItemProperty`), location stack (`Get-Location`, `Set-Location`, `Push-Location`, `Pop-Location`), path commands (`Join-Path`, `Split-Path`, `Resolve-Path`, `Test-Path`, `Convert-Path`), drives and providers (`*-PSDrive`, `Get-PSProvider`), process and service commands, computer commands (`Restart-Computer`, `Stop-Computer`, `Rename-Computer`, `Get-ComputerInfo`, `Get-HotFix`), `Test-Connection`, time zone and clipboard commands. Platform-conditional classes carry an `#if` condition in section 4.",
+  "security": "The item/content commands are the user-facing entry to provider operations, so provider capability checks (`ShouldProcess`, credentials) apply (see [provider-model](../03-runtime/provider-model.md)). `Start-Process`, `Stop-Process`, service and computer commands act on the host OS.",
+  "lessons": [
+   {
+    "verdict": "REPLICATE",
+    "area": "NLD-CMD",
+    "text": "Keep path- and item-commands provider-agnostic (the same verb set for files, registry, environment, functions) and let providers declare capabilities.",
+    "evidence": "src/Microsoft.PowerShell.Commands.Management/commands/management/GetChildrenCommand.cs@L1"
+   },
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-SEC",
+    "text": "Route OS-level actions (process, service, computer) through an explicit capability so they can be denied per policy.",
+    "evidence": "src/Microsoft.PowerShell.Commands.Management/commands/management/Process.cs@L1"
+   }
+  ],
+  "open": "- `UNVERIFIED`: evidence anchors above point to the start of the named files; Phase 5 will replace them with exact enforcement lines."
+ },
+ "Microsoft.PowerShell.Security": {
+  "short": "SEC",
+  "purpose": "Security commands and the certificate provider: execution policy (`Get-ExecutionPolicy`, `Set-ExecutionPolicy`), Authenticode (`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`), CMS encryption (`Protect-CmsMessage`, `Unprotect-CmsMessage`, `Get-CmsMessage`), file catalogs (`New-FileCatalog`, `Test-FileCatalog`), ACLs (`Get-Acl`, `Set-Acl`), credentials and secure strings (`Get-Credential`, `ConvertTo-SecureString`, `ConvertFrom-SecureString`), PFX certificates (`Get-PfxCertificate`), and one provider (the certificate store provider, `Microsoft.PowerShell.Security` project).",
+  "security": "This family is the user-facing side of the engine's security features; the enforcement itself lives in `src/System.Management.Automation/security/` (see Phase 5 `execution-policy.md`, `amsi-logging.md`). The assembly receives `InternalsVisibleTo` from the engine (see section 12 of `layered-architecture.md`).",
+  "lessons": [
+   {
+    "verdict": "REPLICATE",
+    "area": "NLD-SEC",
+    "text": "Expose signature validation and policy queries as ordinary commands over a policy service so audit tooling can use the same API as users.",
+    "evidence": "src/Microsoft.PowerShell.Security/security/SignatureCommands.cs@L1"
+   },
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-SEC",
+    "text": "Do not rely on `SecureString` cmdlets as a secrets boundary; replace with an OS-keychain-backed secret type (see Phase 5 blueprint).",
+    "evidence": "src/Microsoft.PowerShell.Security/security/SecureStringCommands.cs@L1"
+   }
+  ],
+  "open": "- `UNVERIFIED`: file names in lesson evidence are anchors to the assembly's security sources; verify exact paths in Phase 5."
+ },
+ "Microsoft.PowerShell.ConsoleHost": {
+  "short": "CHOST",
+  "purpose": "The console host assembly also defines the two transcript cmdlets, `Start-Transcript` and `Stop-Transcript`, because transcription is a host feature (`ConsoleHostTranscript.cs`, `StartTranscriptCmdlet.cs`, `StopTranscriptCmdlet.cs` under `host/msh`). The host itself is documented in [console-host](../04-hosting/console-host.md).",
+  "lessons": [
+   {
+    "verdict": "REPLICATE",
+    "area": "NLD-TOOL",
+    "text": "Keep transcription as a host service behind a command pair, so non-console hosts can supply their own sink.",
+    "evidence": "src/Microsoft.PowerShell.ConsoleHost/host/msh/StartTranscriptCmdlet.cs@L1"
+   }
+  ]
+ },
+ "Microsoft.PowerShell.Commands.Diagnostics": {
+  "short": "DIAG",
+  "purpose": "Windows diagnostics commands: `Get-Counter` (performance counters), `Get-WinEvent` and `New-WinEvent` (event log and ETW). Shipped only in Windows runtimes (the `powershell-win-core` project references it; `powershell-unix` does not).",
+  "lessons": [
+   {
+    "verdict": "AVOID",
+    "area": "NLD-CMD",
+    "text": "Leave OS-specific diagnostics out of the initial command set and offer them as optional modules.",
+    "evidence": "src/powershell-win-core/powershell-win-core.csproj@L53",
+    "dev": "DEV-CMD-120"
+   }
+  ]
+ },
+ "Microsoft.WSMan.Management": {
+  "short": "WSMAN",
+  "purpose": "WS-Management client commands (`Connect-WSMan`, `Get-WSManInstance`, `Invoke-WSManAction`, `Set-WSManQuickConfig`, CredSSP commands, `Test-WSMan`) and the WSMan configuration provider. Windows-targeted; depends on `Microsoft.WSMan.Runtime` for session options.",
+  "lessons": [
+   {
+    "verdict": "AVOID",
+    "area": "NLD-CMD",
+    "text": "Do not carry the WSMan command family into the new shell; remoting transport should be pluggable behind one session abstraction.",
+    "evidence": "src/Microsoft.WSMan.Management/Microsoft.WSMan.Management.csproj@L11",
+    "dev": "DEV-CMD-121"
+   }
+  ]
+ },
+ "Microsoft.Management.Infrastructure.CimCmdlets": {
+  "short": "CIM",
+  "purpose": "CIM/WMI commands built on `Microsoft.Management.Infrastructure` (`Get-CimInstance`, `New-CimSession`, `Invoke-CimMethod`, `Register-CimIndicationEvent`, ...). Shipped for Windows; grants `InternalsVisibleTo` to the DSC core configuration providers assembly.",
+  "lessons": [
+   {
+    "verdict": "AVOID",
+    "area": "NLD-CMD",
+    "text": "Treat CIM/WMI as an optional adapter module, not part of the base command set.",
+    "evidence": "src/Microsoft.Management.Infrastructure.CimCmdlets/AssemblyInfo.cs@L1",
+    "dev": "DEV-CMD-122"
+   }
+  ]
+ },
+ "Microsoft.WSMan.Runtime": {
+  "short": "WSMANRT",
+  "purpose": "Tiny shared runtime assembly with the WSMan session-option types (`SessionOption`, `ProxyAccessType`, `ProxyAuthentication`) used by `Microsoft.WSMan.Management`; contains no cmdlets.",
+  "lessons": []
+ },
+ "Microsoft.PowerShell.GraphicalHost": {
+  "short": "GFX",
+  "purpose": "WPF-based UI assembly (project `Microsoft.Management.UI.Internal`, assembly `Microsoft.PowerShell.GraphicalHost`) behind `Out-GridView`, `Show-Command` and `Get-Help -ShowWindow`; included only when the build uses the WindowsDesktop SDK (conditional `ProjectReference` in `powershell-win-core.csproj`). The engine reaches it through a reflection wrapper (`src/System.Management.Automation/utils/GraphicalHostReflectionWrapper.cs`). Contains no cmdlets.",
+  "lessons": [
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-TOOL",
+    "text": "Keep GUI helpers behind a late-bound host service (reflection or plug-in) so the engine never references UI assemblies.",
+    "evidence": "src/System.Management.Automation/utils/GraphicalHostReflectionWrapper.cs@L1"
+   }
+  ]
+ },
+ "Microsoft.PowerShell.CoreCLR.Eventing": {
+  "short": "EVT",
+  "purpose": "Small Windows-only assembly (`EventProvider`, `EventDescriptor`, `EventProviderTraceListener`, native wrappers) giving .NET Core code access to ETW; referenced by `System.Management.Automation` only when `IsWindows` is true and granted `InternalsVisibleTo` back to the engine. Contains no cmdlets.",
+  "lessons": [
+   {
+    "verdict": "ADAPT",
+    "area": "NLD-SEC",
+    "text": "Use the platform's standard structured-logging/ETW abstractions (`EventSource`, OpenTelemetry) instead of a private ETW wrapper.",
+    "evidence": "src/Microsoft.PowerShell.CoreCLR.Eventing/Microsoft.PowerShell.CoreCLR.Eventing.csproj@L1"
+   }
+  ]
+ }
+}

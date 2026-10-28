@@ -109,7 +109,7 @@
   "compile_removes": [],
   "source_generators_analyzers": [],
   "internals_visible_to": [
-   "Microsoft.Windows.DSC.CoreConfProviders,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+   "Microsoft.Windows.DSC.CoreConfProviders"
   ],
   "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
   "cs_files": 35,
@@ -372,7 +372,7 @@
   ],
   "source_generators_analyzers": [],
   "internals_visible_to": [
-   "powershell-tests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+   "powershell-tests"
   ],
   "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
   "cs_files": 26,
@@ -405,7 +405,7 @@
   "compile_removes": [],
   "source_generators_analyzers": [],
   "internals_visible_to": [
-   "System.Management.Automation,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+   "System.Management.Automation"
   ],
   "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
   "cs_files": 9,
@@ -1096,8 +1096,14 @@
    "src/System.Management.Automation/SourceGenerators/PSVersionInfoGenerator/PSVersionInfoGenerator.csproj"
   ],
   "internals_visible_to": [
-   "powershell-perf,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9",
-   "powershell-tests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100b5fc90e7027f67871e773a8fde8938c81dd402ba65b9201d60593e96c492651e889cc13f1415ebb53fac1131ae0bd333c5ee6021672d9718ea31a8aebd0da0072f25d87dba6fc90ffd598ed4da35e44c398c454307e8e33b8426143daec9f596836f97c8f74750e5975c64e2189f45def46b2a2b1247adc3652bf5c308055da9"
+   "Microsoft.PowerShell.Commands.Management",
+   "Microsoft.PowerShell.Commands.Utility",
+   "Microsoft.PowerShell.ConsoleHost",
+   "Microsoft.PowerShell.DscSubsystem",
+   "Microsoft.PowerShell.Security",
+   "System.Management.Automation.Remoting",
+   "powershell-perf",
+   "powershell-tests"
   ],
   "label": "GENERATED (XML parse; MSBuild conditions unevaluated)",
   "cs_files": 704,

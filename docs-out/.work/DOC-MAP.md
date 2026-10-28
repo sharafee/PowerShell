@@ -64,3 +64,12 @@ Paths are relative to `docs-out/`. Link with relative paths from your document. 
 
 ## Lessons (section 18 format, machine-extracted by `tools/lessons.py`)
 Each lesson is one list item: `- **LSN-<DOCSHORT>-<nn>** [REPLICATE|ADAPT|REDESIGN|AVOID] (area: NLD-<AREA>) <lesson text> Evidence: <ref>. DEV: DEV-<AREA>-<NNN>` — the `DEV:` part only for REDESIGN/AVOID. `<AREA>` is one of LEX, GRM, OP, TYP, SCP, ERR, PIP, MOD, CMD, SEC, TOOL, RUN. `DOCSHORT` is a 2-8 letter code unique per document (e.g. TOK, PARSER, AST, SEM, ENG, IR, TIER).
+
+## Additions
+| ID | Path | Task |
+|---|---|---|
+| LANG-RTOPS-001 | 02-language/RUNTIME-OPERATIONS.md | T26 (runtime operations in `engine/runtime/Operations/*`: array/class/misc/numeric/string/variable ops, flow-control exceptions, helpers called from compiled code) |
+| LANG-SCRIPTBLOCK-001 | 02-language/SCRIPT-BLOCKS.md | T210 (ScriptBlock type, `ScriptBlockToPowerShell`, `$using:`, closures, `GetNewClosure`) |
+
+## Explicit paths for the remaining phases (forward links allowed)
+`04-hosting/{host-abstraction,console-host,sdk}.md`, `05-remoting/{psrp-protocol,transports,serialization-clixml,jea}.md`, `06-platform/{windows-unix-split,native-interop}.md`, `07-security/{language-modes,execution-policy,amsi-logging,enforcement-points,threat-model,new-shell-security-blueprint}.md`, `08-engineering/{test-strategy,engineering-processes,localization}.md`, `09-synthesis/{architecture-decision-log,reuse-map,enterprise-gap-analysis,language-design-principles,new-language-design-canvas,deviation-register,implementation-blueprint,dotnet-runtime-integration,requirements-trace,new-shell-spec-outline,reference-architecture,licensing-notes}.md`, `10-command-modules/_index.md` and `10-command-modules/<AssemblyName>.md`.

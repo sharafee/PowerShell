@@ -188,7 +188,7 @@ def parse_projects(files):
             for f in fn:
                 if f.endswith(".cs") and f in ("AssemblyInfo.cs", "AssemblyAttributes.cs"):
                     txt = open(os.path.join(dp, f), encoding="utf-8-sig", errors="replace").read()
-                    ivt += re.findall(r'InternalsVisibleTo\("([^"]+)"', txt)
+                    ivt += re.findall(r'InternalsVisibleTo\(\s*@?"([^",]+)', txt)
         p["internals_visible_to"] = sorted(set(x for x in ivt if x))
         p["label"] = "GENERATED (XML parse; MSBuild conditions unevaluated)"
         res.append(p)

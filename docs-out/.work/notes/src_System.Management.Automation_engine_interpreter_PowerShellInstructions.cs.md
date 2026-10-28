@@ -1,0 +1,2 @@
+# PowerShellInstructions.cs (51) fully read
+- L18 UpdatePositionInstruction: stores `functionContext._currentSequencePointIndex = _sequencePoint`; if _checkBreakpoints && context._debuggingMode > 0 => context.Debugger.OnSequencePointHit(functionContext); returns +1. Create(seqPoint, checkBreakpoints). Only PowerShell-specific instruction class in the folder. Emitted by UpdatePositionExpr.AddInstructions (Compiler.cs L7077-7080).

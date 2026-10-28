@@ -218,7 +218,7 @@ def check_status(write):
 
 
 # ------------------------------------------------------------------ validate-refs (gate 1)
-REF = re.compile(r"((?:src|test|tools|docs)/[\w\./\-]+?\.(?:csproj|cs|ps1xml|ps1|psm1|resx|md|props|json|yml|cpp|c|h)(?![\w]))(?:::([\w\.<>,]+))?(?:@L(\d+)(?:-L?(\d+))?)?")
+REF = re.compile(r"(?<![\w\-/.])((?:src|test|tools|docs)/[\w\./\-]+?\.(?:csproj|cs|ps1xml|ps1|psm1|resx|md|props|json|yml|cpp|c|h)(?![\w]))(?:::([\w\.<>,]+))?(?:@L(\d+)(?:-L?(\d+))?)?")
 
 
 def validate_refs():
@@ -276,9 +276,24 @@ def validate_refs():
 
 
 # ------------------------------------------------------------------ check-links / mermaid lint
-def check_links():
+def planned_paths():
+    """paths in DOC-MAP.md (table rows and bullet lists) - forward links to them are tolerated until the final gate."""
+    out = set()
+    dm = os.path.join(OUT, ".work", "DOC-MAP.md")
+    if os.path.exists(dm):
+        for m in re.finditer(r"`?((?:0\d|10)-[\w\-]+/[\w\.\-\+]+\.(?:md|ebnf\.md))`?", open(dm, encoding="utf-8").read()):
+            out.add(m.group(1))
+        for m in re.finditer(r"(\d\d-[\w\-]+)/\{([^}]+)\}\.md", open(dm, encoding="utf-8").read()):
+            for n in m.group(2).split(","):
+                out.add(f"{m.group(1)}/{n.strip()}.md")
+    return out
+
+
+def check_links(final=False):
     bad = 0
     mm = 0
+    planned = set() if final else planned_paths()
+    pending = 0
     for p in docs(include_cards=True):
         t = open(p, encoding="utf-8").read()
         for m in re.finditer(r"(?<!\!)\[[^\]]*\]\(([^)\s]+)\)", strip_code_keep_links(t)):
@@ -290,6 +305,9 @@ def check_links():
                 continue
             tgt = os.path.normpath(os.path.join(os.path.dirname(p), href))
             if not os.path.exists(tgt):
+                if os.path.relpath(tgt, OUT) in planned:
+                    pending += 1
+                    continue
                 print(f"CHECK-LINKS FAIL {rel(p)}: broken link {href}")
                 bad += 1
         for blk in re.findall(r"```mermaid\n(.*?)```", t, re.S):
@@ -300,7 +318,7 @@ def check_links():
                 bad += 1
             if blk.count("[") != blk.count("]") or blk.count("(") != blk.count(")") or blk.count("{") != blk.count("}"):
                 print(f"CHECK-LINKS WARN {rel(p)}: unbalanced brackets in a mermaid block (lint only; mmdc unavailable)")
-    print("check-links:", "FAIL" if bad else "PASS", f"{bad} broken, {mm} mermaid blocks linted (syntax lint only; no mmdc)")
+    print("check-links:", "FAIL" if bad else "PASS", f"{bad} broken, {pending} links to planned-but-unwritten documents, {mm} mermaid blocks linted (syntax lint only; no mmdc)")
     return 1 if bad else 0
 
 
@@ -359,7 +377,7 @@ def main():
     elif c == "validate-refs":
         r = validate_refs()
     elif c == "check-links":
-        r = check_links()
+        r = check_links("--final" in a)
     elif c == "idreg":
         r = idreg()
     elif c == "all":

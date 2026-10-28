@@ -1,0 +1,11 @@
+# CharTraits.cs notes (T21)
+
+## Window 1-300 / 300-414 (read all 414 lines)
+- L6-25 `SpecialChars`: NoBreakSpace 0xA0, NextLine 0x85, EnDash 0x2013, EmDash 0x2014, HorizontalBar 0x2015; single quotes U+2018,2019,201A,201B; double quotes U+201C,201D,201E (QuoteLowDoubleLeft).
+- L27-89 `[Flags] enum CharTraits` (internal): None 0, IdentifierStart 2, MultiplierStart 4, TypeSuffix 8, Whitespace 0x10, Newline 0x20, HexDigit 0x40, Digit 0x80, VarNameFirst 0x100, ForceStartNewToken 0x200, ForceStartNewAssemblyNameSpecToken 0x400, ForceStartNewTokenAfterNumber 0x800.
+- L93-96 static ctor asserts table length 128.
+- L98-228 `s_traits` 128 entries. Notable: 0x00 ForceStartNewToken|AssemblyName; \t(9) Whitespace+FSNT+FSNAS; \n(0xA) Newline+...; \v(0xB),\f(0xC) Whitespace; \r(0xD) Newline; space Whitespace+...; '!','#','%','*','+','-','.','/','<','>' = ForceStartNewTokenAfterNumber; '&','(',')',';','{','|','}' = ForceStartNewToken; ',' = FSNT|FSNAS; '=' = FSNAS|FSNTAN; ']' FSNAS|FSNTAN; '$',':','?','^' VarNameFirst; digits Digit|HexDigit|VarNameFirst; letters IdentifierStart|VarNameFirst (+HexDigit a-f, TypeSuffix d,l,n,s,u,y; MultiplierStart g,k,m,p,t); '_' IdentifierStart|VarNameFirst. '"' "'" '@' '[' '\' '`' '~' => None.
+  (Note: 'e','E' HexDigit but not type suffix; 'x' not a trait.)
+- L230-413 `CharExtensions`: IsCurlyBracket; IsWhitespace (c<128 table; c<=256 => NBSP or NEL only; else char.IsSeparator) -- note the `<= 256` boundary (0x100 itself falls into the 2nd branch -> false, though char.IsSeparator(0x100) is false anyway); IsDash (- en em horizontal-bar); IsSingleQuote; IsDoubleQuote; IsVariableStart (table VarNameFirst else char.IsLetterOrDigit); IsIdentifierStart (table else char.IsLetter); IsIdentifierFollow (IdentifierStart|Digit else IsLetterOrDigit); IsHexDigit (ASCII only); IsDecimalDigit (uint)(c-'0')<=9; IsBinaryDigit; IsTypeSuffix; IsMultiplierStart; ForceStartNewToken (c<128 table else IsWhitespace); ForceStartNewTokenAfterNumber(c, ternaryChars) (table, or '?' ':' if flag, non-ASCII -> IsDash); ForceStartNewTokenInAssemblyNameSpec.
+- Quirk: IsDecimalDigit ASCII only; IsHexDigit non-ASCII false; IsVariableStart accepts non-ASCII digits (IsLetterOrDigit).
+- Newline IS NOT whitespace (comment L235-236).

@@ -1,47 +1,11 @@
 [
  {
-  "id": "CF-PIN-001",
-  "subject": "version, commit and pin method",
+  "id": "CF-BND-001",
+  "subject": "parameter-binding order and parameter-set resolution",
   "statement": "",
   "label": "UNVERIFIED",
   "evidence": [],
-  "owner": "README.md",
-  "status": "open"
- },
- {
-  "id": "CF-LEX-001",
-  "subject": "tokenizer mode switching rule (command vs expression mode, when it switches)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/02.1-tokenizer.md",
-  "status": "open"
- },
- {
-  "id": "CF-LEX-002",
-  "subject": "numeric-literal rules (radix, suffixes, multipliers)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/02.1-tokenizer.md",
-  "status": "open"
- },
- {
-  "id": "CF-GRM-001",
-  "subject": "statement, pipeline and command grammar; statement terminators",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/GRAMMAR.ebnf.md",
-  "status": "open"
- },
- {
-  "id": "CF-OP-001",
-  "subject": "operator precedence and associativity",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/OPERATOR-TABLE.md",
+  "owner": "03-runtime/parameter-binding.md",
   "status": "open"
  },
  {
@@ -81,30 +45,12 @@
   "status": "open"
  },
  {
-  "id": "CF-PIP-001",
-  "subject": "output unrolling and enumeration rules",
+  "id": "CF-DSC-001",
+  "subject": "command resolution order",
   "statement": "",
   "label": "UNVERIFIED",
   "evidence": [],
-  "owner": "02-language/02.6-types-and-operators.md",
-  "status": "open"
- },
- {
-  "id": "CF-SCP-001",
-  "subject": "scope, variable lookup and assignment rules",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/SCOPE-AND-VARIABLES.md",
-  "status": "open"
- },
- {
-  "id": "CF-FLW-001",
-  "subject": "flow-control semantics (break, continue, return, labels)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
-  "owner": "02-language/02.5-compiler-and-engine.md",
+  "owner": "03-runtime/command-discovery-and-invocation.md",
   "status": "open"
  },
  {
@@ -126,21 +72,30 @@
   "status": "open"
  },
  {
-  "id": "CF-BND-001",
-  "subject": "parameter-binding order and parameter-set resolution",
+  "id": "CF-ETS-001",
+  "subject": "member resolution order",
   "statement": "",
   "label": "UNVERIFIED",
   "evidence": [],
-  "owner": "03-runtime/parameter-binding.md",
+  "owner": "03-runtime/extended-type-system.md",
   "status": "open"
  },
  {
-  "id": "CF-DSC-001",
-  "subject": "command resolution order",
+  "id": "CF-FLW-001",
+  "subject": "flow-control semantics (break, continue, return, labels)",
   "statement": "",
   "label": "UNVERIFIED",
   "evidence": [],
-  "owner": "03-runtime/command-discovery-and-invocation.md",
+  "owner": "02-language/02.5-compiler-and-engine.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-GRM-001",
+  "subject": "statement, pipeline and command grammar; statement terminators",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/GRAMMAR.ebnf.md",
   "status": "open"
  },
  {
@@ -153,12 +108,21 @@
   "status": "open"
  },
  {
-  "id": "CF-ETS-001",
-  "subject": "member resolution order",
+  "id": "CF-LEX-001",
+  "subject": "tokenizer mode switching rule (command vs expression mode, when it switches)",
   "statement": "",
   "label": "UNVERIFIED",
   "evidence": [],
-  "owner": "03-runtime/extended-type-system.md",
+  "owner": "02-language/02.1-tokenizer.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-LEX-002",
+  "subject": "numeric-literal rules (radix, suffixes, multipliers)",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.1-tokenizer.md",
   "status": "open"
  },
  {
@@ -168,6 +132,42 @@
   "label": "UNVERIFIED",
   "evidence": [],
   "owner": "03-runtime/modules.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-OP-001",
+  "subject": "operator precedence and associativity",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/OPERATOR-TABLE.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-PIN-001",
+  "subject": "version, commit and pin method",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "README.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-PIP-001",
+  "subject": "output unrolling and enumeration rules",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/02.6-types-and-operators.md",
+  "status": "open"
+ },
+ {
+  "id": "CF-SCP-001",
+  "subject": "scope, variable lookup and assignment rules",
+  "statement": "",
+  "label": "UNVERIFIED",
+  "evidence": [],
+  "owner": "02-language/SCOPE-AND-VARIABLES.md",
   "status": "open"
  },
  {
