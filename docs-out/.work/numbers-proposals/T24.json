@@ -1,0 +1,16 @@
+[
+ {
+  "key": "SEMANTIC_CHECK_SITES",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count sites",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "nameof(ParserStrings.X) sites in SemanticChecks.cs, SymbolResolver.cs, PSType.cs"
+ },
+ {
+  "key": "SEMANTIC_CHECK_IDS",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count ids",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "distinct ids among them"
+ }
+]

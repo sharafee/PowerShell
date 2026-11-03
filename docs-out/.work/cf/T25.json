@@ -1,0 +1,14 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-ENG-040",
+   "baseline_behavior": "Compilation of a top-level script block runs an AMSI scan, admin-block check and suspicious-content hashing.",
+   "proposed_behavior": "Compilation is policy-free; an optional policy hook runs before execution.",
+   "benefit": "Smaller engine core; platform-independent.",
+   "compatibility_cost": "No AMSI integration or forced logging on suspicious content.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

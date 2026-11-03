@@ -11,29 +11,47 @@
  {
   "id": "CF-CMP-001",
   "subject": "compile-versus-interpret decision rule",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Compile-versus-interpret rule.** Every named block is turned into one expression-tree lambda. At creation of the delegate (`Compiler.CompileTree`), the tiering mode is `NeverCompile` if the script block's total statement count (`_stmtCount`) is greater than 300, otherwise `CompileOnDemand`; `AlwaysCompile` exists but no caller passes it. The delegate starts as an **interpreted** `LightLambda` with a call counter of 32 (`CompileOnDemand`, threshold -1 mapped to `DefaultCompilationThreshold`) or `int.MaxValue` (`NeverCompile`). Each call decrements the counter; the call that reads 0 (the 33rd) queues JIT compilation of the whole lambda on a thread-pool thread and is itself still interpreted; once the compiled delegate exists, every later call uses it. A lambda is **never interpreted** (JIT-compiled at once, synchronously) when the light compiler meets a method call with a by-ref parameter, an instance call on a non-primitive value type, or a constructor with a by-ref parameter; and trap-handler lambdas and single-expression lambdas are always built with `LambdaExpression.Compile()` (never interpreted). Loops are promoted separately (CF-CMP-002).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Compiler.cs::Compiler.Compile@L1974-L2077",
+   "src/System.Management.Automation/engine/parser/Compiler.cs::Compiler.CompileTree@L2079-L2096",
+   "src/System.Management.Automation/engine/interpreter/LightCompiler.cs::LightCompiler@L271-L2052",
+   "src/System.Management.Automation/engine/interpreter/LightLambda.cs::LightLambda.TryGetCompiled@L197-L246",
+   "src/System.Management.Automation/engine/interpreter/LightDelegateCreator.cs::LightDelegateCreator@L30-L220"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CMP-002",
   "subject": "every threshold and limit of the tiering policy",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Tiering thresholds and limits.** Statement count above which a script block is never JIT-compiled by call count: 300 (`_stmtCount > 300`, `Compiler.Compile`). Interpreted calls before JIT: 32 (`LightCompiler.DefaultCompilationThreshold`), so JIT starts on the 33rd call; `int.MaxValue` for `NeverCompile`; threshold 0 or 1 means synchronous compilation (never produced by `Compiler`). Loop iterations before loop JIT: 16 (constructor argument of `EnterLoopInstruction` in `EnterLoopExpression.AddInstructions`), so the loop JIT starts on the 17th arrival at the loop top. Loop statement count at or above which a loop is never promoted: 300 (`LoopStatementCount < 300` required to emit the loop counter). Maximum delegate parameters of an interpreted lambda: 16 (`LightLambda.MaxParameters`). Compile helper cache of delegate `Run` factories: 100 entries (`CacheDict` in `LightLambda`). Parsed-script cache (shares compiled delegates between clones): cleared completely when it holds more than 1024 entries (`ScriptBlock.CacheScriptBlock`).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Compiler.cs::EnterLoopExpression@L6991-L7021",
+   "src/System.Management.Automation/engine/interpreter/LightCompiler.cs::LightCompiler@L271-L2052",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock@L542-L2177"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CMP-003",
   "subject": "optimized-versus-unoptimized preconditions",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used for script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.Compile@L57-L83",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock@L542-L2177",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::PSScriptCmdlet@L2179-L2552",
+   "src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CNV-001",

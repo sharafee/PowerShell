@@ -68,5 +68,54 @@
   "dataset": "visitors.json",
   "label": "APPROX",
   "notes": "Visit methods added by ICustomAstVisitor2"
+ },
+ {
+  "key": "SEMANTIC_CHECK_SITES",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count sites",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "nameof(ParserStrings.X) sites in SemanticChecks.cs, SymbolResolver.cs, PSType.cs"
+ },
+ {
+  "key": "SEMANTIC_CHECK_IDS",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count ids",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "distinct ids among them"
+ },
+ {
+  "key": "COMPILER_VISIT_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count visits",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "Visit* methods of Compiler"
+ },
+ {
+  "key": "COMPILER_HELPER_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count helpers",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "non-Visit methods of Compiler"
+ },
+ {
+  "key": "INSTRUCTION_CLASSES",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count instructions",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "classes deriving from Instruction found by scanner"
+ },
+ {
+  "key": "INSTRUCTION_ABSTRACT",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count abstract",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "abstract ones"
+ },
+ {
+  "key": "INSTRUCTION_FILES",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count files",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "files holding them"
  }
 ]

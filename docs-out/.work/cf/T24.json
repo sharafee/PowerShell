@@ -1,0 +1,14 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-SEM-030",
+   "baseline_behavior": "`using module` is resolved at parse time by running Get-Module -ListAvailable in a PowerShell instance.",
+   "proposed_behavior": "The directive is recorded; module import happens in a later phase.",
+   "benefit": "Parsing has no side effects or I/O.",
+   "compatibility_cost": "Missing-module errors appear later than in PowerShell.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

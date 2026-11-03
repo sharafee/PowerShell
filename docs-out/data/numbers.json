@@ -457,5 +457,68 @@
   "evidence": "E1",
   "label": "APPROX",
   "notes": "Visit methods added by ICustomAstVisitor2"
+ },
+ {
+  "key": "SEMANTIC_CHECK_SITES",
+  "value": 133,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/gen_T24.py --count sites",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "nameof(ParserStrings.X) sites in SemanticChecks.cs, SymbolResolver.cs, PSType.cs"
+ },
+ {
+  "key": "SEMANTIC_CHECK_IDS",
+  "value": 104,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/gen_T24.py --count ids",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "distinct ids among them"
+ },
+ {
+  "key": "COMPILER_VISIT_METHODS",
+  "value": 63,
+  "dataset": "members-tierA.json",
+  "command": "python3 docs-out/tools/gen_T25.py --count visits",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "Visit* methods of Compiler"
+ },
+ {
+  "key": "COMPILER_HELPER_METHODS",
+  "value": 99,
+  "dataset": "members-tierA.json",
+  "command": "python3 docs-out/tools/gen_T25.py --count helpers",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "non-Visit methods of Compiler"
+ },
+ {
+  "key": "INSTRUCTION_CLASSES",
+  "value": 183,
+  "dataset": "instructions.json",
+  "command": "python3 docs-out/tools/gen_T27.py --count instructions",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "classes deriving from Instruction found by scanner"
+ },
+ {
+  "key": "INSTRUCTION_ABSTRACT",
+  "value": 17,
+  "dataset": "instructions.json",
+  "command": "python3 docs-out/tools/gen_T27.py --count abstract",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "abstract ones"
+ },
+ {
+  "key": "INSTRUCTION_FILES",
+  "value": 22,
+  "dataset": "instructions.json",
+  "command": "python3 docs-out/tools/gen_T27.py --count files",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "files holding them"
  }
 ]

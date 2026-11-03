@@ -1,0 +1,4 @@
+path,ranges_read,doc_ids
+src/System.Management.Automation/engine/parser/Compiler.cs,1-7082,LANG-ENGINE-001;LANG-COMPMAP-001;LANG-IR-001
+src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs,1-2553,LANG-ENGINE-001
+src/System.Management.Automation/engine/lang/parserutils.cs,1-2010,LANG-ENGINE-001
