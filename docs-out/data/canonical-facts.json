@@ -65,11 +65,17 @@
  {
   "id": "CF-ERR-002",
   "subject": "parse-error limits and recovery rule",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Parse-error limits and recovery rule.** The parser never throws for a syntax error: each error is appended to `Parser.ErrorList` after de-duplication (an error is dropped only if an earlier error has the same ID and the same start and end line and column), there is no limit on the number of errors, and parsing continues by returning partial or error nodes (`ErrorStatementAst`, `ErrorExpressionAst`), by pretending a missing closing token was present, or by skipping tokens to a synchronization token (`SyncOnError`, which tracks nesting of `()`, `{}` and `[]` and never consumes end of input); `ParseError.IncompleteInput` is true only when the error was reported with `ReportIncompleteInput` and the error position is at the end of the script apart from whitespace and comments. The only exceptions are an exhausted execution stack (the whole parse is retried once on a new thread, then `ScriptTooComplicated` is reported) and any other exception during `ParseFile`/`ParseInput`, which is wrapped as a `ParseException` with `UnrecoverableParserError`.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SaveError@L8026-L8057",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SyncOnError@L366-L432",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ParseTask@L176-L227",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ReportIncompleteInput@L8111-L8141"
+  ],
   "owner": "02-language/ERROR-CATALOG.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T22"
  },
  {
   "id": "CF-ETS-001",
@@ -92,11 +98,17 @@
  {
   "id": "CF-GRM-001",
   "subject": "statement, pipeline and command grammar; statement terminators",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Statement and terminator rule.** A statement list is parsed as: skip any run of newlines and semicolons; parse a statement; skip any run of newlines and semicolons; stop when the next token is `)` or `}` or no statement can be parsed. A terminator is **not** required between statements that end with a closing `}` (e.g. `if`, loops, `try`, `function`), because the list only skips optional terminators; a pipeline (or any statement parsed by `PipelineChainRule`) ends at newline, `;`, `)`, `}`, `&&`/`||` (chain), `&` (background) or end of input, and any other token after a complete pipeline element is `UnexpectedToken`. Newlines continue a construct only in these places: after `|`, before a `|` that starts the next line, after `&&` and `||`, after each binary or unary operator and after `,`, after `=` in an assignment, inside `( )`, after `?`/`:` of a ternary, between `}` and `elseif`/`else`/`catch`/`finally`, and after a backtick line continuation handled by the tokenizer.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.StatementListRule@L1897-L1944",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.PipelineChainRule@L5773-L5988",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.PipelineRule@L5990-L6160",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.CatchBlockRule@L5494-L5591"
+  ],
   "owner": "02-language/GRAMMAR.ebnf.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T22"
  },
  {
   "id": "CF-LCY-001",

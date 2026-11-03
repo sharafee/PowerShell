@@ -1971,7 +1971,7 @@ src/System.Management.Automation/engine/parser/Compiler.cs,7082,A,,,unread
 src/System.Management.Automation/engine/parser/ConstantValues.cs,578,A,,,unread
 src/System.Management.Automation/engine/parser/DebugViewWriter.cs,1219,A,,,unread
 src/System.Management.Automation/engine/parser/PSType.cs,1520,A,,,unread
-src/System.Management.Automation/engine/parser/Parser.cs,8279,A,,,unread
+src/System.Management.Automation/engine/parser/Parser.cs,8279,A,1-8279,LANG-ERRCAT-001;LANG-GRAMMAR-001;LANG-PARSER-001,read
 src/System.Management.Automation/engine/parser/Position.cs,816,A,,,unread
 src/System.Management.Automation/engine/parser/PreOrderVisitor.cs,264,A,,,unread
 src/System.Management.Automation/engine/parser/SafeValues.cs,807,A,,,unread

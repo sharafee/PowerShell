@@ -1,0 +1,2 @@
+path,ranges_read,doc_ids
+src/System.Management.Automation/engine/parser/Parser.cs,1-8279,LANG-PARSER-001;LANG-GRAMMAR-001;LANG-ERRCAT-001

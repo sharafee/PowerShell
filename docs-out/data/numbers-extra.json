@@ -12,5 +12,33 @@
   "dataset": "tables.json",
   "label": "APPROX",
   "notes": "rows of Tokenizer._operatorText"
+ },
+ {
+  "key": "PARSER_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parser_methods",
+  "dataset": "parser-methods.json",
+  "label": "APPROX",
+  "notes": "methods of Parser.cs per scanner"
+ },
+ {
+  "key": "BINARY_OPERATORS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count binary_operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "TokenKinds with BinaryOperator flag in s_staticTokenFlags"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys",
+  "dataset": "resources.json",
+  "label": "APPROX",
+  "notes": "keys of ParserStrings.resx"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS_PARSER_TOKENIZER",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys_parser_tokenizer",
+  "dataset": "resources.json",
+  "label": "APPROX",
+  "notes": "ParserStrings keys with a use site in Parser.cs or tokenizer.cs"
  }
 ]

@@ -231,6 +231,83 @@
   "line": 307
  },
  {
+  "id": "LSN-PARSER-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Hand-written recursive descent with exactly one token of lookahead; the parser, not the tokenizer, owns Command/Expression mode and restores it after each rule.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.SetTokenizerMode@L499-L535`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 420
+ },
+ {
+  "id": "LSN-PARSER-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "At a statement start try an expression in Expression mode first (assignment target or first pipeline element), then fall back to a command.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.PipelineChainRule@L5773-L5988`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 421
+ },
+ {
+  "id": "LSN-PARSER-03",
+  "verdict": "REPLICATE",
+  "area": "NLD-OP",
+  "text": "Parse binary operators with an operand stack and operator stack driven by a per-operator precedence level, all left-associative; comma binds tighter than every binary operator; ternary and assignment sit above.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.BinaryExpressionRule@L6798-L6950`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 422
+ },
+ {
+  "id": "LSN-PARSER-04",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Do not require a terminator after block statements; skip optional newlines and semicolons between statements, and stop pipelines at newline, `;`, `)`, `}`, `&&`, `||`, `&`.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.StatementListRule@L1897-L1944`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 423
+ },
+ {
+  "id": "LSN-PARSER-05",
+  "verdict": "REPLICATE",
+  "area": "NLD-ERR",
+  "text": "Collect errors with de-duplication, return error AST nodes and recover by pretending closers or skipping to a sync token; mark errors at end-of-script as incomplete input so the REPL can continue the line.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.SyncOnError@L366-L432`, `Parser.ReportIncompleteInput@L8111-L8141`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 424
+ },
+ {
+  "id": "LSN-PARSER-06",
+  "verdict": "ADAPT",
+  "area": "NLD-GRM",
+  "text": "Keep stack-depth protection but replace the retry-on-new-thread with a fixed nesting limit that reports `ScriptTooComplicated`. Why: same observable error, deterministic and testable.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.ParseTask@L176-L227`.",
+  "dev": null,
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 425
+ },
+ {
+  "id": "LSN-PARSER-07",
+  "verdict": "AVOID",
+  "area": "NLD-GRM",
+  "text": "Do not perform filesystem access or runspace creation while parsing (`using assembly` resolution, `configuration`); resolve such directives in a later phase.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.ResolveUsingAssembly@L5088-L5168`.",
+  "dev": "DEV-GRM-010",
+  "doc": "LANG-PARSER-001",
+  "file": "02-language/02.2-parser.md",
+  "line": 426
+ },
+ {
   "id": "LSN-CIM-01",
   "verdict": "AVOID",
   "area": "NLD-CMD",

@@ -385,5 +385,41 @@
   "evidence": "E1",
   "label": "APPROX",
   "notes": "rows of Tokenizer._operatorText"
+ },
+ {
+  "key": "PARSER_METHODS",
+  "value": 157,
+  "dataset": "parser-methods.json",
+  "command": "python3 docs-out/tools/gen_T22.py --count parser_methods",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "methods of Parser.cs per scanner"
+ },
+ {
+  "key": "BINARY_OPERATORS",
+  "value": 52,
+  "dataset": "tables.json",
+  "command": "python3 docs-out/tools/gen_T22.py --count binary_operators",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "TokenKinds with BinaryOperator flag in s_staticTokenFlags"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS",
+  "value": 412,
+  "dataset": "resources.json",
+  "command": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "keys of ParserStrings.resx"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS_PARSER_TOKENIZER",
+  "value": 157,
+  "dataset": "resources.json",
+  "command": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys_parser_tokenizer",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "ParserStrings keys with a use site in Parser.cs or tokenizer.cs"
  }
 ]
