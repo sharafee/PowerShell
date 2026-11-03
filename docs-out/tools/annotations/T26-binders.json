@@ -1,0 +1,135 @@
+{
+ "_note": "Hand-written annotations for BINDER-CATALOG.md (task T26). 'read' = body of Bind/Fallback was read (FACT-SRC); 'names' = only member names and compiler usage read (UNVERIFIED detail).",
+ "binders": {
+  "PSEnumerableBinder": [
+   "read",
+   "Convert a value to an IEnumerator following the enumeration rule (CF-PIP-001): AutomationNull = empty; null, string, PSObject-without-base, IDictionary, XmlNode = not enumerable (null result); arrays, DataTable rows, COM enumerables, IEnumerable<T> (typed enumerator preferred), IEnumerable, IEnumerator = enumerated.",
+   "foreach, switch, pipelines, @(), operators that accept collections"
+  ],
+  "PSToObjectArrayBinder": [
+   "read",
+   "Value to object[]: AutomationNull = empty array; non-enumerable = one-element array; List<object> = ToArray; any enumerable = array of its elements.",
+   "`@( \u2026 )` over a single value"
+  ],
+  "PSPipeWriterBinder": [
+   "read",
+   "Write a statement value to the output pipe: AutomationNull writes nothing; non-enumerable written as one object (mutable value types copied via PSVariableAssignmentBinder); enumerable unrolled one level and disposed.",
+   "every bare expression statement (CallAddPipe)"
+  ],
+  "PSArrayAssignmentRHSBinder": [
+   "read",
+   "Shape the right side of `$a,$b,$c = \u2026` to exactly n elements: list of n = as is; fewer = padded with $null; more = last target receives the rest as a slice; non-list = first target gets it, others $null.",
+   "array destructuring assignment"
+  ],
+  "PSToStringBinder": [
+   "names",
+   "Convert a value to string for expandable strings, -f arguments and file names (ToString via the engine string parser; InvokeToString helper).",
+   "expandable strings, format operator, redirection file names"
+  ],
+  "PSPipelineResultToBoolBinder": [
+   "read",
+   "Captured pipeline list to bool: 0 elements = false; 1 element = that element converted to bool; more than 1 = true.",
+   "conditions of if/while/for/switch/do"
+  ],
+  "PSInvokeDynamicMemberBinder": [
+   "names",
+   "Invoke a method whose name is computed at run time (`$o.$name(args)`).",
+   "dynamic member invocation"
+  ],
+  "PSGetDynamicMemberBinder": [
+   "names",
+   "Get a member whose name is computed at run time (`$o.$name`).",
+   "dynamic member read"
+  ],
+  "PSSetDynamicMemberBinder": [
+   "names",
+   "Set a member whose name is computed at run time.",
+   "dynamic member write"
+  ],
+  "PSSwitchClauseEvalBinder": [
+   "names",
+   "Evaluate a non-constant switch clause expression against `$_` according to the switch flags (regex, wildcard, exact, case-sensitive, script block).",
+   "switch clauses that are not constants"
+  ],
+  "PSAttributeGenerator": [
+   "names",
+   "Create an attribute instance from positional and named argument values (CreateInstanceBinder); compiled lambda cached per call shape.",
+   "attribute creation for parameters/functions"
+  ],
+  "PSCustomObjectConverter": [
+   "names",
+   "Convert an ordered dictionary to a PSCustomObject.",
+   "`[pscustomobject]@{\u2026}`"
+  ],
+  "PSDynamicConvertBinder": [
+   "names",
+   "Conversion whose target type is resolved at run time (type name unresolved at compile time).",
+   "`[SomeType]$x` with late-bound type"
+  ],
+  "PSVariableAssignmentBinder": [
+   "names",
+   "Copy mutable value types when a value is stored in a variable or written to the pipe (so later mutation does not alias); also notes types with instance members.",
+   "assignment to object-typed variables, pipe writes"
+  ],
+  "PSBinaryOperationBinder": [
+   "read",
+   "Binary operators on arbitrary operands: dispatch on the operation, then rules per operand types (numeric promotion, string/array/hashtable arithmetic, comparison with enumerable filtering, user-defined op_* methods). See OPERATOR-TABLE.md.",
+   "every non-native binary operator"
+  ],
+  "PSUnaryOperationBinder": [
+   "names",
+   "Unary Not, OnesComplement (-bnot), plus, minus, increment, decrement (members Not, BNot, UnaryPlus, UnaryMinus, IncrDecr).",
+   "unary operators"
+  ],
+  "PSConvertBinder": [
+   "read",
+   "Cast/conversion: AutomationNull converts to the default value of the target; otherwise FigureConversion(value, type) and invoke the converter with invariant culture; binding is restricted by a version number and the language mode; ThrowNoConversion raises the cast error.",
+   "`[type]value`, typed variables, parameter conversions"
+  ],
+  "PSGetIndexBinder": [
+   "names",
+   "Index read: dictionaries, arrays (negative indices count from the end, multi-dimensional arrays, slicing by index lists), strings, objects with an indexer, null-conditional; errors via CannotIndexTarget.",
+   "`$x[i]`, `?[`"
+  ],
+  "PSSetIndexBinder": [
+   "names",
+   "Index write with the same shapes as read, plus value conversion.",
+   "`$x[i] = v`"
+  ],
+  "PSGetMemberBinder": [
+   "names",
+   "Property/field read: instance (ETS) members, adapted .NET members, hashtable/dictionary keys, member enumeration over collections, reserved intrinsic members; strict-mode property-missing errors; language-mode checks.",
+   "`$x.Name`, `[T]::Name`"
+  ],
+  "PSGetMemberBinder.ReservedMemberBinder": [
+   "names",
+   "Handles intrinsic reserved members of PSObject-style access (nested binder).",
+   "reserved member names"
+  ],
+  "PSSetMemberBinder": [
+   "names",
+   "Property/field write with value conversion to the member type, instance members and adapted members.",
+   "`$x.Name = v`"
+  ],
+  "PSInvokeMemberBinder": [
+   "names",
+   "Method call: overload resolution (FindBestMethod with conversion ranks), .Where()/.ForEach() intrinsic methods on collections, method call on each element of a collection, parameterized properties, COM, member-invocation logging.",
+   "`$x.Method(args)`, `[T]::Method(args)`"
+  ],
+  "PSInvokeBinder": [
+   "names",
+   "Invoke a callable value.",
+   "invocation of delegates/script blocks"
+  ],
+  "PSCreateInstanceBinder": [
+   "names",
+   "Constructor call for `[T]::new(args)` / `New-Object`-style creation; rejects by-ref-like and (optionally) non-public types.",
+   "`[T]::new(\u2026)`"
+  ],
+  "PSInvokeBaseCtorBinder": [
+   "names",
+   "Call a base-class constructor from a class constructor.",
+   "`: base(args)` in class constructors"
+  ]
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-BIND-050",
+   "baseline_behavior": "Member access goes through COM and ETS-adapter aware binders.",
+   "proposed_behavior": "Plain reflection member lookup; no COM binders.",
+   "benefit": "Smaller binder layer.",
+   "compatibility_cost": "No COM objects.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-RTOPS-051",
+   "baseline_behavior": "Classes are emitted with Reflection.Emit and method bodies wrapped by ScriptBlockMemberMethodWrapper.",
+   "proposed_behavior": "Classes are interpreter objects, not CLR types.",
+   "benefit": "No Reflection.Emit dependency.",
+   "compatibility_cost": "Classes are not usable from other .NET code.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

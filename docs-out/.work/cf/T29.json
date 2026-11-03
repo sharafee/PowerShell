@@ -1,0 +1,41 @@
+{
+ "cfs": [
+  {
+   "id": "CF-SCP-001",
+   "subject": "scope, variable lookup and assignment rules",
+   "statement": "**Scope, lookup and assignment rules.** A variable name is parsed into an optional scope qualifier (`global:`, `local:`, `script:`, `private:`) or a provider drive (`name:`), and an unqualified name. **Reading:** an unqualified name is searched in the current scope and then in each parent scope up to the global scope, and the first match wins; a variable marked `Private` is skipped when it is found in any scope other than the current one; `global:`, `local:`/`private:` and `script:` search exactly one scope (the global scope, the current scope, the script scope respectively); inside one scope the compiled locals tuple (and any dot-sourced tuples) is checked before the variable table; a drive-qualified name is read through the provider. A name that is not found yields `$null`, or a `VariableIsUndefined` error under strict mode (version 2: always; version 1: except inside expandable strings). **Writing:** an unqualified or `local:`/`private:` assignment always targets the current scope (a parent's variable of the same name is never modified; a new local variable is created if the current scope has none), `script:` and `global:` target the script and global scope; assigning to an existing variable in the target scope keeps its object and replaces its value after running its attributes (transformation, then validation), and a `ReadOnly` or `Constant` variable cannot be written (`VariableNotWritable`; `-Force` can overwrite `ReadOnly` but never `Constant`). **New scopes:** every function or script block call (not dot-sourcing) creates a child scope whose parent is the caller's scope; the script scope is the nearest enclosing scope created for a script file, or the global scope; variables marked `AllScope` are shared by reference with every new scope. **Dot-sourcing** creates no scope: the callee's locals tuple is pushed onto the current scope's `DottedScopes` for the duration of the call.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/ScopedItemSearcher.cs::VariableScopeItemSearcher@L244-L297",
+    "src/System.Management.Automation/engine/SessionStateScope.cs::SessionStateScope.SetVariable@L401-L518",
+    "src/System.Management.Automation/engine/runtime/Operations/VariableOps.cs::VariableOps.SetVariableValue@L19-L120",
+    "src/System.Management.Automation/engine/SessionStateScopeAPIs.cs::SessionStateInternal.NewScope@L227-L240",
+    "src/System.Management.Automation/engine/ExecutionContext.cs::ExecutionContext.IsStrictVersion@L117-L143"
+   ],
+   "owner": "02-language/SCOPE-AND-VARIABLES.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-SCP-080",
+   "baseline_behavior": "Values assigned to global variables are marked untrusted in Constrained Language Mode.",
+   "proposed_behavior": "No trust marking.",
+   "benefit": "Simpler assignment path.",
+   "compatibility_cost": "No Constrained Language Mode.",
+   "affected_cfs": [
+    "CF-SCP-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-CTX-081",
+   "baseline_behavior": "ExecutionContext carries language mode and invalidates binder caches on change.",
+   "proposed_behavior": "No language modes.",
+   "benefit": "No cache invalidation logic.",
+   "compatibility_cost": "No restricted modes.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

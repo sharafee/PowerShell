@@ -1,0 +1,23 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-SB-090",
+   "baseline_behavior": "ScriptBlock can become a PowerShell object and a steppable pipeline.",
+   "proposed_behavior": "Omitted initially.",
+   "benefit": "Less surface.",
+   "compatibility_cost": "No GetPowerShell/GetSteppablePipeline.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-FEAT-091",
+   "baseline_behavior": "workflow/parallel/sequence/inlinescript parse and then fail in semantic checks; from/define/var are reserved.",
+   "proposed_behavior": "Reject at parse time.",
+   "benefit": "No dead syntax.",
+   "compatibility_cost": "Different error text.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

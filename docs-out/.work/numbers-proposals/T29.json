@@ -1,0 +1,16 @@
+[
+ {
+  "key": "SPECIAL_VARIABLE_CONSTANTS",
+  "cmd": "python3 docs-out/tools/gen_T29.py --count constants",
+  "dataset": "auto-variables.json",
+  "label": "APPROX",
+  "notes": "T29"
+ },
+ {
+  "key": "EXECCONTEXT_MEMBERS",
+  "cmd": "python3 docs-out/tools/gen_T29.py --count execcontext",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "T29"
+ }
+]

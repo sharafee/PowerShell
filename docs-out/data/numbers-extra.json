@@ -117,5 +117,68 @@
   "dataset": "instructions.json",
   "label": "APPROX",
   "notes": "files holding them"
+ },
+ {
+  "key": "LANGUAGE_FEATURE_ROWS",
+  "cmd": "python3 docs-out/tools/gen_T210.py --count rows",
+  "dataset": "02.7-language-features.md",
+  "label": "APPROX",
+  "notes": "T210"
+ },
+ {
+  "key": "BINDER_CLASSES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count binders",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CLASSES_PS",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count ps_binders",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CREATION_SITES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count created",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "RUNTIME_OP_TYPES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count optypes",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "OPERATOR_KINDS",
+  "cmd": "python3 docs-out/tools/gen_T28.py --count operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "T28"
+ },
+ {
+  "key": "CONVERSION_RANKS",
+  "cmd": "python3 docs-out/tools/gen_T28.py --count ranks",
+  "dataset": "enums.json",
+  "label": "APPROX",
+  "notes": "T28"
+ },
+ {
+  "key": "SPECIAL_VARIABLE_CONSTANTS",
+  "cmd": "python3 docs-out/tools/gen_T29.py --count constants",
+  "dataset": "auto-variables.json",
+  "label": "APPROX",
+  "notes": "T29"
+ },
+ {
+  "key": "EXECCONTEXT_MEMBERS",
+  "cmd": "python3 docs-out/tools/gen_T29.py --count execcontext",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "T29"
  }
 ]

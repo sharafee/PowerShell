@@ -1,0 +1,16 @@
+[
+ {
+  "key": "OPERATOR_KINDS",
+  "cmd": "python3 docs-out/tools/gen_T28.py --count operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "T28"
+ },
+ {
+  "key": "CONVERSION_RANKS",
+  "cmd": "python3 docs-out/tools/gen_T28.py --count ranks",
+  "dataset": "enums.json",
+  "label": "APPROX",
+  "notes": "T28"
+ }
+]

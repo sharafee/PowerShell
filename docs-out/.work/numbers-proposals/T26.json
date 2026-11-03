@@ -1,0 +1,30 @@
+[
+ {
+  "key": "BINDER_CLASSES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count binders",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CLASSES_PS",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count ps_binders",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CREATION_SITES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count created",
+  "dataset": "binders.json",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "RUNTIME_OP_TYPES",
+  "cmd": "python3 docs-out/tools/gen_T26.py --count optypes",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "T26"
+ }
+]
