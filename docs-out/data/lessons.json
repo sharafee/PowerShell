@@ -154,6 +154,83 @@
   "line": 111
  },
  {
+  "id": "LSN-TOK-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-LEX",
+  "text": "Keep a parser-selected `Mode` (Command / Expression / TypeName / Signature) on a pull-style tokenizer; initial mode Command; each switch restored in `finally`.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.SetTokenizerMode@L499-L535`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 301
+ },
+ {
+  "id": "LSN-TOK-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-LEX",
+  "text": "Treat `-name` as a parameter in Command mode and as dash-operator-or-parameter in Expression mode; recognize keywords only in Command/Signature mode.",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanParameter@L3185-L3338`, `Tokenizer.ScanIdentifier@L4402-L4458`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 302
+ },
+ {
+  "id": "LSN-TOK-03",
+  "verdict": "REPLICATE",
+  "area": "NLD-LEX",
+  "text": "Reproduce the generic-token rule in Command mode: operator characters and non-terminators glue into one word, with the exact terminator set (`ForceStartNewToken`).",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanGenericToken@L3382-L3479`, `src/System.Management.Automation/engine/parser/CharTraits.cs::CharExtensions@L230-L413`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 303
+ },
+ {
+  "id": "LSN-TOK-04",
+  "verdict": "ADAPT",
+  "area": "NLD-LEX",
+  "text": "Implement rescan with an explicit snapshot (position + mode) instead of resyncing from a token, but keep the one-token-lookahead contract so a mode switch re-reads the peeked token. Why: same observable behavior, simpler to reason about.",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.Resync@L1039-L1078`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 304
+ },
+ {
+  "id": "LSN-TOK-05",
+  "verdict": "REPLICATE",
+  "area": "NLD-LEX",
+  "text": "Number literal grammar: suffix before multiplier, multiplier needs `b`, two's-complement hex/binary, int\u2192long\u2192decimal\u2192double promotion.",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.TryGetNumberValue@L3555-L3882`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 305
+ },
+ {
+  "id": "LSN-TOK-06",
+  "verdict": "ADAPT",
+  "area": "NLD-LEX",
+  "text": "Pre-scan `$(...)` inside strings with a tokenizer-aware scan (quotes and comments), not paren counting alone. Why: avoids the early-`)` edge case; observable behavior for valid scripts is identical.",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanSubExpression@L2362-L2447`.",
+  "dev": null,
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 306
+ },
+ {
+  "id": "LSN-TOK-07",
+  "verdict": "AVOID",
+  "area": "NLD-LEX",
+  "text": "Leave `#requires` processing and signature lookalike detection out of the tokenizer (move to a later phase or omit); replace with a dedicated pragma pass if the owner wants it.",
+  "evidence": "`src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.GetScriptRequirements@L1894-L1987`.",
+  "dev": "DEV-LEX-001",
+  "doc": "LANG-TOKENIZER-001",
+  "file": "02-language/02.1-tokenizer.md",
+  "line": 307
+ },
+ {
   "id": "LSN-CIM-01",
   "verdict": "AVOID",
   "area": "NLD-CMD",

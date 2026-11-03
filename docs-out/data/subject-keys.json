@@ -1,1 +1,21 @@
-{}
+{
+ "tokenizer.chain_operators.mode_dependent": "",
+ "tokenizer.comments.block_nest": "",
+ "tokenizer.herestring.footer": "",
+ "tokenizer.line_endings": "",
+ "tokenizer.lookahead.depth": "",
+ "tokenizer.mode.dash_operators_recognized_in": "",
+ "tokenizer.mode.initial": "",
+ "tokenizer.mode.keywords_recognized_in": "",
+ "tokenizer.mode.switch_rescans_lookahead": "",
+ "tokenizer.numeric.default_promotion": "",
+ "tokenizer.numeric.multiplier_base": "",
+ "tokenizer.numeric.multiplier_requires_b": "",
+ "tokenizer.numeric.signed_requires_flag": "",
+ "tokenizer.numeric.type_suffixes": "",
+ "tokenizer.questionmark.expression_only": "",
+ "tokenizer.redirection.stream_digits": "",
+ "tokenizer.requires.recognition": "",
+ "tokenizer.string.single_quote_escape": "",
+ "tokenizer.subexpr.prescan": ""
+}

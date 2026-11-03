@@ -1966,7 +1966,7 @@ src/System.Management.Automation/engine/lang/interface/PSParseError.cs,52,A,,,un
 src/System.Management.Automation/engine/lang/interface/PSParser.cs,194,A,,,unread
 src/System.Management.Automation/engine/lang/interface/PSToken.cs,644,A,,,unread
 src/System.Management.Automation/engine/parser/AstVisitor.cs,822,A,,,unread
-src/System.Management.Automation/engine/parser/CharTraits.cs,414,A,,,unread
+src/System.Management.Automation/engine/parser/CharTraits.cs,414,A,1-414,LANG-TOKCAT-001;LANG-TOKENIZER-001,read
 src/System.Management.Automation/engine/parser/Compiler.cs,7082,A,,,unread
 src/System.Management.Automation/engine/parser/ConstantValues.cs,578,A,,,unread
 src/System.Management.Automation/engine/parser/DebugViewWriter.cs,1219,A,,,unread
@@ -1981,8 +1981,8 @@ src/System.Management.Automation/engine/parser/TypeInferenceVisitor.cs,3338,A,,,
 src/System.Management.Automation/engine/parser/TypeResolver.cs,980,A,,,unread
 src/System.Management.Automation/engine/parser/VariableAnalysis.cs,1848,A,,,unread
 src/System.Management.Automation/engine/parser/ast.cs,10845,A,,,unread
-src/System.Management.Automation/engine/parser/token.cs,1575,A,,,unread
-src/System.Management.Automation/engine/parser/tokenizer.cs,5083,A,,,unread
+src/System.Management.Automation/engine/parser/token.cs,1575,A,1-1575,LANG-TOKCAT-001;LANG-TOKENIZER-001,read
+src/System.Management.Automation/engine/parser/tokenizer.cs,5083,A,1-5083,LANG-TOKCAT-001;LANG-TOKENIZER-001,read
 src/System.Management.Automation/engine/remoting/client/ClientMethodExecutor.cs,243,B,,,unread
 src/System.Management.Automation/engine/remoting/client/ClientRemotePowerShell.cs,1000,B,,,unread
 src/System.Management.Automation/engine/remoting/client/Job.cs,4524,B,,,unread

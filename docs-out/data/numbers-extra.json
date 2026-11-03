@@ -1,1 +1,16 @@
-[]
+[
+ {
+  "key": "TOKENIZER_KEYWORD_ROWS",
+  "cmd": "python3 docs-out/tools/gen_T21.py --count keywords",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "rows of Tokenizer.s_keywordText (regex-parsed array literal)"
+ },
+ {
+  "key": "TOKENIZER_DASH_OPERATOR_ROWS",
+  "cmd": "python3 docs-out/tools/gen_T21.py --count dash_operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "rows of Tokenizer._operatorText"
+ }
+]

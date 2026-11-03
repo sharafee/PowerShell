@@ -1,0 +1,4 @@
+path,ranges_read,doc_ids
+src/System.Management.Automation/engine/parser/tokenizer.cs,1-5083,LANG-TOKENIZER-001;LANG-TOKCAT-001
+src/System.Management.Automation/engine/parser/token.cs,1-1575,LANG-TOKENIZER-001;LANG-TOKCAT-001
+src/System.Management.Automation/engine/parser/CharTraits.cs,1-414,LANG-TOKENIZER-001;LANG-TOKCAT-001
