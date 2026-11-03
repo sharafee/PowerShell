@@ -1,0 +1,54 @@
+{
+ "cfs": [
+  {
+   "id": "CF-OP-001",
+   "subject": "operator precedence and associativity",
+   "statement": "**Operator precedence and associativity.** Binary operators are parsed by precedence climbing and **all are left-associative**; from lowest to highest precedence the levels are: logical (`-and`, `-or`, `-xor`) = 1; bitwise (`-band`, `-bor`, `-bxor`) = 2; comparison group (all `-eq`/`-ne`/`-gt`/`-ge`/`-lt`/`-le`, `-like`, `-match`, `-replace`, `-contains`, `-in` families with their `i`/`c` variants, `-is`, `-isnot`, `-as`, `-split`, `-join`, `-shl`, `-shr`) = 5; null-coalescing `??` = 7; additive (`+`, `-`) = 9; multiplicative (`*`, `/`, `%`) = 10; format `-f` = 12; range `..` = 13. The comma (array-literal) operator binds tighter than every binary operator; the unary operators, casts and `++`/`--` bind tighter than the comma; the ternary `?:` (right-nested) and assignment (`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `??=`, parsed at statement level with a statement on the right) bind looser than all binary operators; `&&` and `||` chain pipelines and are not expression operators. Operators spelled with a leading dash are recognized as operators only when the tokenizer is in expression mode.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/parser/Parser.cs::Parser.BinaryExpressionRule@L6798-L6950",
+    "src/System.Management.Automation/engine/parser/token.cs::TokenFlags@L601-L752"
+   ],
+   "owner": "02-language/OPERATOR-TABLE.md",
+   "status": "open"
+  },
+  {
+   "id": "CF-CNV-001",
+   "subject": "conversion algorithm and converter order",
+   "statement": "**Conversion algorithm and converter order.** For a source type S and target type T the engine returns the first applicable converter in this order (cached per type pair): (1) a cached entry; (2) if S is the null type: `Nullable<\u2026>` \u2192 null, any reference type \u2192 null, a value type \u2192 no conversion (numeric, `char`, `string`, `bool`, `PSReference`, `switch` and `void` targets have pre-cached null conversions); (3) if T is assignable from S: identity (same type) or assignable; (4) by-ref-like types: none; (5) S is a `PSObject`: none (the caller unwraps first); (6) T is `PSObject`: wrap; (7) under Constrained Language Mode: only targets `object`, `object[]` or the core type list are converted (others are refused, or only audited in WDAC audit mode); (8) **language conversions**: `Nullable<U>` through U, `void`, `bool` (from `IList`, enum, value type, class), `string`, arrays (related arrays element-wise, unrelated arrays per element, enumerable to array, scalar to one-element array), `Array`, `Hashtable` from `IDictionary`, `PSReference`, `XmlDocument`, `StringCollection`, `ScriptBlock` to delegate, `PSCustomObject`, integer to enum, `PSMethod` to delegate; (9) a static `Parse` method on T; (10) a static `Create` method; (11) a constructor of T taking S; (12) a cast operator (implicit, then explicit) on S or T; (13) `IConvertible` (numeric sources through the string-convertible path, other `IConvertible` sources via `Convert`); (14) for an `IDictionary` source: T's no-argument constructor then property assignment from the keys; (15) an `IEnumerable` constructor; (16) property-based conversion; if S or T may have a `TypeConverter`/`PSTypeConverter`, or a value-dependent converter was found, the result is wrapped to try the custom/value-dependent converter first and the found converter second; (17) otherwise no conversion (rank `None`, a failing converter that raises `PSInvalidCastException`). Numeric-to-numeric, number-to-string, number-to-bool and null-to-number conversions are pre-cached with fixed ranks.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/LanguagePrimitives.cs::LanguagePrimitives.FigureConversion@L5641-L5828",
+    "src/System.Management.Automation/engine/LanguagePrimitives.cs::LanguagePrimitives.FigureLanguageConversion@L4966-L5120"
+   ],
+   "owner": "02-language/CONVERSION-RULES.md",
+   "status": "open"
+  },
+  {
+   "id": "CF-PIP-001",
+   "subject": "output unrolling and enumeration rules",
+   "statement": "**Output unrolling and enumeration rules.** A value is *enumerated* (treated as a sequence) when, after unwrapping `PSObject`: it is `AutomationNull` (empty sequence), an array, a `DataTable` (its rows), a COM enumerable, any other `IEnumerable` that is not a string, `IDictionary` or `XmlNode` (the generic `IEnumerable<T>` enumerator is preferred), or an `IEnumerator`; `null`, strings, dictionaries (hashtables), `XmlNode` and all other objects are **not** enumerated and are single values. When a statement writes its value to the output pipe: `AutomationNull` writes nothing; a non-enumerable value is written as one object (mutable value types are copied first); an enumerable value is **unrolled exactly one level**: each element is written separately (elements that are themselves collections stay whole), and an enumerator is disposed afterwards if the engine created it.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/runtime/Binding/Binders.cs::PSEnumerableBinder.FallbackConvert@L580-L698",
+    "src/System.Management.Automation/engine/runtime/Binding/Binders.cs::PSPipeWriterBinder@L841-L926",
+    "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs::EnumerableOps.WriteEnumerableToPipe@L3623-L3640"
+   ],
+   "owner": "02-language/02.6-types-and-operators.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-TYP-070",
+   "baseline_behavior": "Constrained Language Mode restricts conversion targets inside FigureConversion.",
+   "proposed_behavior": "No language mode in the conversion layer; allow-list at the type-system boundary.",
+   "benefit": "Simpler conversion code.",
+   "compatibility_cost": "No Constrained Language Mode.",
+   "affected_cfs": [
+    "CF-CNV-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

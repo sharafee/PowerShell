@@ -35,7 +35,7 @@ PowerShell has no bytecode of its own. Its IR is a `System.Linq.Expressions` tre
 
 ## 3. Responsibilities and non-responsibilities
 
-Describes the tree shape, not the AST → tree rules (see [COMPILATION-MAP.md](COMPILATION-MAP.md)) and not binder behavior (T26, planned BINDER-CATALOG).
+Describes the tree shape, not the AST → tree rules (see [COMPILATION-MAP.md](COMPILATION-MAP.md)) and not binder behavior ([BINDER-CATALOG.md](BINDER-CATALOG.md)).
 
 ## 4. Key types and contracts [IMPL]
 
@@ -65,7 +65,7 @@ A `MutableTuple` whose type comes from variable analysis ([02.4-semantic-analysi
 - **Error-action protocol.** Every statement is wrapped so that a non-flow-control exception is passed to `ExceptionHandlingOps.CheckActionPreference(funcContext, e)`; if it returns, execution resumes at the next statement; flow-control exceptions (`FlowControlException`) are rethrown untouched. Detail: [02.5-compiler-and-engine.md](02.5-compiler-and-engine.md) §6.4.
 - **Position protocol.** Before each statement/condition the tree stores the sequence-point index into `funcContext._currentSequencePointIndex` and, if the debugger is active (`_debuggingMode > 0`), calls `OnSequencePointHit`. `UpdatePositionExpr` reduces to `DebugInfo` + that store for the JIT, and to `UpdatePositionInstruction` for the interpreter.
 - **Flow-control protocol.** `break`/`continue` to a loop in the same lambda are `Goto` labels; otherwise `BreakException(label)`/`ContinueException(label)` are thrown and caught by the enclosing loop's catch blocks; `return` is a `Return` to the lambda's label (or `ReturnException` inside trap lambdas); `exit` throws the exception from `PipelineOps.GetExitException`; `throw` converts via `ExceptionHandlingOps.ConvertToException`.
-- **Dynamic operations.** Arithmetic other than double-double, comparisons, conversions, member/index/invoke operations, enumeration, and pipeline writes are `DynamicExpression` sites using the PowerShell binders (`PSBinaryOperationBinder`, `PSConvertBinder`, `PSGetMemberBinder`, …); each emitted site has its own `CallSite` (per-site caches). Binder semantics: BINDER-CATALOG (planned T26).
+- **Dynamic operations.** Arithmetic other than double-double, comparisons, conversions, member/index/invoke operations, enumeration, and pipeline writes are `DynamicExpression` sites using the PowerShell binders (`PSBinaryOperationBinder`, `PSConvertBinder`, `PSGetMemberBinder`, …); each emitted site has its own `CallSite` (per-site caches). Binder semantics: [BINDER-CATALOG.md](BINDER-CATALOG.md).
 
 ## 6. Control flow
 

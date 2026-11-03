@@ -520,5 +520,86 @@
   "evidence": "E1",
   "label": "APPROX",
   "notes": "files holding them"
+ },
+ {
+  "key": "LANGUAGE_FEATURE_ROWS",
+  "value": 39,
+  "dataset": "02.7-language-features.md",
+  "command": "python3 docs-out/tools/gen_T210.py --count rows",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T210"
+ },
+ {
+  "key": "BINDER_CLASSES",
+  "value": 30,
+  "dataset": "binders.json",
+  "command": "python3 docs-out/tools/gen_T26.py --count binders",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CLASSES_PS",
+  "value": 26,
+  "dataset": "binders.json",
+  "command": "python3 docs-out/tools/gen_T26.py --count ps_binders",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "BINDER_CREATION_SITES",
+  "value": 164,
+  "dataset": "binders.json",
+  "command": "python3 docs-out/tools/gen_T26.py --count created",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "RUNTIME_OP_TYPES",
+  "value": 51,
+  "dataset": "types.json",
+  "command": "python3 docs-out/tools/gen_T26.py --count optypes",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T26"
+ },
+ {
+  "key": "OPERATOR_KINDS",
+  "value": 75,
+  "dataset": "tables.json",
+  "command": "python3 docs-out/tools/gen_T28.py --count operators",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T28"
+ },
+ {
+  "key": "CONVERSION_RANKS",
+  "value": 38,
+  "dataset": "enums.json",
+  "command": "python3 docs-out/tools/gen_T28.py --count ranks",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T28"
+ },
+ {
+  "key": "SPECIAL_VARIABLE_CONSTANTS",
+  "value": 70,
+  "dataset": "auto-variables.json",
+  "command": "python3 docs-out/tools/gen_T29.py --count constants",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T29"
+ },
+ {
+  "key": "EXECCONTEXT_MEMBERS",
+  "value": 124,
+  "dataset": "members-tierA.json",
+  "command": "python3 docs-out/tools/gen_T29.py --count execcontext",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "T29"
  }
 ]

@@ -1,0 +1,14 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-TOOLS-100",
+   "baseline_behavior": "PSParser.Tokenize returns PowerShell 2 style tokens by rewriting the saved token list.",
+   "proposed_behavior": "Only the modern token list.",
+   "benefit": "No V2 branches in the parser.",
+   "compatibility_cost": "Legacy tools unsupported.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

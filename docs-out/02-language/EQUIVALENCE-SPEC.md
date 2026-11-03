@@ -123,7 +123,7 @@ None located for tier parity (VB-014).
 
 - **LSN-EQV-01** [REPLICATE] (area: NLD-RUN) Define behavior once, in the evaluator and the protocols, never per execution strategy; if two strategies are ever added, test them differentially. Evidence: src/System.Management.Automation/engine/interpreter/Interpreter.cs::Interpreter@L31-L109.
 - **LSN-EQV-02** [REPLICATE] (area: NLD-ERR) `finally` must run for every exit (return, break, continue, throw) and flow-control signals must never be swallowed by catch-all handlers. Evidence: src/System.Management.Automation/engine/interpreter/ControlFlowInstructions.cs::EnterTryCatchFinallyInstruction@L305-L447.
-- **LSN-EQV-03** [AVOID] (area: NLD-RUN) Do not port the typed arithmetic/comparison instruction families or the DLR-derived interpreter; they are unreachable or defective for PowerShell. Replace with the evaluator's own numeric semantics from CONVERSION-RULES (planned T28). Evidence: src/System.Management.Automation/engine/interpreter/Instruction.cs::Instruction@L27-L70. DEV: DEV-EQV-061
+- **LSN-EQV-03** [AVOID] (area: NLD-RUN) Do not port the typed arithmetic/comparison instruction families or the DLR-derived interpreter; they are unreachable or defective for PowerShell. Replace with the evaluator's own numeric semantics from [CONVERSION-RULES.md](CONVERSION-RULES.md). Evidence: src/System.Management.Automation/engine/interpreter/Instruction.cs::Instruction@L27-L70. DEV: DEV-EQV-061
 
 ## 19. Open questions / UNVERIFIED
 
