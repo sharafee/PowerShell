@@ -20,7 +20,7 @@ generated_from: [data/parser-methods.json]
 
 ## 1. Purpose and scope [SPEC]
 
-An implementer-oriented grammar of the PowerShell language as accepted by `Parser.cs`. It describes **syntax**, not semantics; operator precedence levels are in [02.2-parser.md](02.2-parser.md) §7.2 (generated) and [OPERATOR-TABLE.md](OPERATOR-TABLE.md) (planned T28). Tokenizer-mode dependent lexical rules are in [02.1-tokenizer.md](02.1-tokenizer.md); this grammar uses the token names of [TOKEN-CATALOG.md](TOKEN-CATALOG.md).
+An implementer-oriented grammar of the PowerShell language as accepted by `Parser.cs`. It describes **syntax**, not semantics; operator precedence levels are in [02.2-parser.md](02.2-parser.md) §7.2 (generated) and `OPERATOR-TABLE.md` (planned) (planned T28). Tokenizer-mode dependent lexical rules are in [02.1-tokenizer.md](02.1-tokenizer.md); this grammar uses the token names of [TOKEN-CATALOG.md](TOKEN-CATALOG.md).
 
 Notation: `::=` defines; `|` alternative; `[ x ]` optional; `{ x }` zero or more; `( … )` grouping; `'text'` a token by its text; `Name` a `TokenKind` (e.g. `Variable`, `Generic`); lower-case-hyphen names are non-terminals. `nl` = zero or more `NewLine` tokens (`SkipNewlines`); `nls` = zero or more `NewLine` or `Semi` tokens (`SkipNewlinesAndSemicolons`). "Mode" says which tokenizer mode is active while the production is parsed (C = Command, E = Expression, T = TypeName, S = Signature). Each production names its parser method; all methods are in `src/System.Management.Automation/engine/parser/Parser.cs` (line ranges in [02.2-parser.md](02.2-parser.md) §7.1).
 
