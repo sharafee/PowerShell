@@ -1,1 +1,121 @@
-[]
+[
+ {
+  "key": "TOKENIZER_KEYWORD_ROWS",
+  "cmd": "python3 docs-out/tools/gen_T21.py --count keywords",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "rows of Tokenizer.s_keywordText (regex-parsed array literal)"
+ },
+ {
+  "key": "TOKENIZER_DASH_OPERATOR_ROWS",
+  "cmd": "python3 docs-out/tools/gen_T21.py --count dash_operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "rows of Tokenizer._operatorText"
+ },
+ {
+  "key": "PARSER_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parser_methods",
+  "dataset": "parser-methods.json",
+  "label": "APPROX",
+  "notes": "methods of Parser.cs per scanner"
+ },
+ {
+  "key": "BINARY_OPERATORS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count binary_operators",
+  "dataset": "tables.json",
+  "label": "APPROX",
+  "notes": "TokenKinds with BinaryOperator flag in s_staticTokenFlags"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys",
+  "dataset": "resources.json",
+  "label": "APPROX",
+  "notes": "keys of ParserStrings.resx"
+ },
+ {
+  "key": "PARSERSTRINGS_KEYS_PARSER_TOKENIZER",
+  "cmd": "python3 docs-out/tools/gen_T22.py --count parserstrings_keys_parser_tokenizer",
+  "dataset": "resources.json",
+  "label": "APPROX",
+  "notes": "ParserStrings keys with a use site in Parser.cs or tokenizer.cs"
+ },
+ {
+  "key": "AST_CLASSES_ASTCS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count ast_classes",
+  "dataset": "ast-hierarchy.json",
+  "label": "APPROX",
+  "notes": "Ast-derived classes declared in ast.cs"
+ },
+ {
+  "key": "AST_CLASSES_ABSTRACT",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count abstract",
+  "dataset": "ast-hierarchy.json",
+  "label": "APPROX",
+  "notes": "abstract classes among them"
+ },
+ {
+  "key": "ICUSTOMASTVISITOR_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count iv1",
+  "dataset": "visitors.json",
+  "label": "APPROX",
+  "notes": "Visit methods in ICustomAstVisitor"
+ },
+ {
+  "key": "ICUSTOMASTVISITOR2_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count iv2",
+  "dataset": "visitors.json",
+  "label": "APPROX",
+  "notes": "Visit methods added by ICustomAstVisitor2"
+ },
+ {
+  "key": "SEMANTIC_CHECK_SITES",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count sites",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "nameof(ParserStrings.X) sites in SemanticChecks.cs, SymbolResolver.cs, PSType.cs"
+ },
+ {
+  "key": "SEMANTIC_CHECK_IDS",
+  "cmd": "python3 docs-out/tools/gen_T24.py --count ids",
+  "dataset": "types.json",
+  "label": "APPROX",
+  "notes": "distinct ids among them"
+ },
+ {
+  "key": "COMPILER_VISIT_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count visits",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "Visit* methods of Compiler"
+ },
+ {
+  "key": "COMPILER_HELPER_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count helpers",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "non-Visit methods of Compiler"
+ },
+ {
+  "key": "INSTRUCTION_CLASSES",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count instructions",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "classes deriving from Instruction found by scanner"
+ },
+ {
+  "key": "INSTRUCTION_ABSTRACT",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count abstract",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "abstract ones"
+ },
+ {
+  "key": "INSTRUCTION_FILES",
+  "cmd": "python3 docs-out/tools/gen_T27.py --count files",
+  "dataset": "instructions.json",
+  "label": "APPROX",
+  "notes": "files holding them"
+ }
+]

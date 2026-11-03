@@ -1,0 +1,42 @@
+{
+ "cfs": [
+  {
+   "id": "CF-LEX-001",
+   "subject": "tokenizer mode switching rule (command vs expression mode, when it switches)",
+   "statement": "**Mode rule.** The tokenizer starts in Command mode; the parser switches to Expression mode when it parses an expression operand/operator position (including the first element of a pipeline when it is not a command), to Command mode when it parses a command's arguments or the body of `{ }`, `( )`, `$( )`, to TypeName mode inside `[...]` type literals, and to Signature mode for class/enum/method headers; every switch is restored in a `finally` block, and a switch discards and rescans a pending lookahead token unless its kind is `ParseModeInvariant`.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SetTokenizerMode@L499-L535",
+    "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.Initialize@L762-L797",
+    "src/System.Management.Automation/engine/parser/Parser.cs::Parser.CommandRule@L6444-L6684",
+    "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ExpressionRule@L6696-L6790"
+   ],
+   "owner": "02-language/02.1-tokenizer.md",
+   "status": "open"
+  },
+  {
+   "id": "CF-LEX-002",
+   "subject": "numeric-literal rules (radix, suffixes, multipliers)",
+   "statement": "**Numeric literal rules.** A number is an optional sign (`-`, en/em dash/horizontal bar, or `+`; only when `AllowSignedNumbers`), then either `.digits[exponent]`, `0x` hex digits, `0b` binary digits, or decimal digits with optional `.digits` and `e/E[+|-]digits`; then an optional type suffix (`u s l d y n`, plus a second character only after `u`: `ul us uy`), then an optional multiplier `k m g t p` that **must be followed by `b`/`B`** (powers of 1024; the suffix comes before the multiplier); the literal must be followed by a token terminator (in Expression mode also by a binary-operator start character) or the text is not a number and is rescanned as a generic token. Value typing: no suffix \u2192 `int`, else `long`, else (decimal format only) `decimal`, else `double`; real literals \u2192 `double` unless suffix `d` (`decimal`); hex and binary are two's complement with the sign decided by the top digit (`0xFFFFFFFF` \u2192 `-1`, `0xFF` \u2192 `255`), a 16-hex-digit or 64-bit-digit literal without `u` becomes `long`; the multiplier is applied to the value before the range cast and failure to fit returns `false` (reported as `BadNumericConstant` in Expression mode, otherwise the text becomes a generic token).",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanNumberHelper@L3933-L4163",
+    "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.TryGetNumberValue@L3555-L3882",
+    "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanNumber@L3884-L3931"
+   ],
+   "owner": "02-language/02.1-tokenizer.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-LEX-001",
+   "baseline_behavior": "Tokenizer detects signature-block lookalikes and processes #requires comment lines at parse time.",
+   "proposed_behavior": "Omit both from the tokenizer; if wanted, handle pragmas in a dedicated post-tokenize pass.",
+   "benefit": "Keeps the tokenizer a pure text-to-token function; removes security-sensitive fuzzy matching from the hot path.",
+   "compatibility_cost": "Scripts using #requires get no version/module check; signed-script trailer detection unavailable.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

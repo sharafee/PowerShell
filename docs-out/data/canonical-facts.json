@@ -11,29 +11,47 @@
  {
   "id": "CF-CMP-001",
   "subject": "compile-versus-interpret decision rule",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Compile-versus-interpret rule.** Every named block is turned into one expression-tree lambda. At creation of the delegate (`Compiler.CompileTree`), the tiering mode is `NeverCompile` if the script block's total statement count (`_stmtCount`) is greater than 300, otherwise `CompileOnDemand`; `AlwaysCompile` exists but no caller passes it. The delegate starts as an **interpreted** `LightLambda` with a call counter of 32 (`CompileOnDemand`, threshold -1 mapped to `DefaultCompilationThreshold`) or `int.MaxValue` (`NeverCompile`). Each call decrements the counter; the call that reads 0 (the 33rd) queues JIT compilation of the whole lambda on a thread-pool thread and is itself still interpreted; once the compiled delegate exists, every later call uses it. A lambda is **never interpreted** (JIT-compiled at once, synchronously) when the light compiler meets a method call with a by-ref parameter, an instance call on a non-primitive value type, or a constructor with a by-ref parameter; and trap-handler lambdas and single-expression lambdas are always built with `LambdaExpression.Compile()` (never interpreted). Loops are promoted separately (CF-CMP-002).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Compiler.cs::Compiler.Compile@L1974-L2077",
+   "src/System.Management.Automation/engine/parser/Compiler.cs::Compiler.CompileTree@L2079-L2096",
+   "src/System.Management.Automation/engine/interpreter/LightCompiler.cs::LightCompiler@L271-L2052",
+   "src/System.Management.Automation/engine/interpreter/LightLambda.cs::LightLambda.TryGetCompiled@L197-L246",
+   "src/System.Management.Automation/engine/interpreter/LightDelegateCreator.cs::LightDelegateCreator@L30-L220"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CMP-002",
   "subject": "every threshold and limit of the tiering policy",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Tiering thresholds and limits.** Statement count above which a script block is never JIT-compiled by call count: 300 (`_stmtCount > 300`, `Compiler.Compile`). Interpreted calls before JIT: 32 (`LightCompiler.DefaultCompilationThreshold`), so JIT starts on the 33rd call; `int.MaxValue` for `NeverCompile`; threshold 0 or 1 means synchronous compilation (never produced by `Compiler`). Loop iterations before loop JIT: 16 (constructor argument of `EnterLoopInstruction` in `EnterLoopExpression.AddInstructions`), so the loop JIT starts on the 17th arrival at the loop top. Loop statement count at or above which a loop is never promoted: 300 (`LoopStatementCount < 300` required to emit the loop counter). Maximum delegate parameters of an interpreted lambda: 16 (`LightLambda.MaxParameters`). Compile helper cache of delegate `Run` factories: 100 entries (`CacheDict` in `LightLambda`). Parsed-script cache (shares compiled delegates between clones): cleared completely when it holds more than 1024 entries (`ScriptBlock.CacheScriptBlock`).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Compiler.cs::EnterLoopExpression@L6991-L7021",
+   "src/System.Management.Automation/engine/interpreter/LightCompiler.cs::LightCompiler@L271-L2052",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock@L542-L2177"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CMP-003",
   "subject": "optimized-versus-unoptimized preconditions",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used for script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.Compile@L57-L83",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock@L542-L2177",
+   "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::PSScriptCmdlet@L2179-L2552",
+   "src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847"
+  ],
   "owner": "02-language/TIERING-POLICY.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T27"
  },
  {
   "id": "CF-CNV-001",
@@ -65,11 +83,17 @@
  {
   "id": "CF-ERR-002",
   "subject": "parse-error limits and recovery rule",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Parse-error limits and recovery rule.** The parser never throws for a syntax error: each error is appended to `Parser.ErrorList` after de-duplication (an error is dropped only if an earlier error has the same ID and the same start and end line and column), there is no limit on the number of errors, and parsing continues by returning partial or error nodes (`ErrorStatementAst`, `ErrorExpressionAst`), by pretending a missing closing token was present, or by skipping tokens to a synchronization token (`SyncOnError`, which tracks nesting of `()`, `{}` and `[]` and never consumes end of input); `ParseError.IncompleteInput` is true only when the error was reported with `ReportIncompleteInput` and the error position is at the end of the script apart from whitespace and comments. The only exceptions are an exhausted execution stack (the whole parse is retried once on a new thread, then `ScriptTooComplicated` is reported) and any other exception during `ParseFile`/`ParseInput`, which is wrapped as a `ParseException` with `UnrecoverableParserError`.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SaveError@L8026-L8057",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SyncOnError@L366-L432",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ParseTask@L176-L227",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ReportIncompleteInput@L8111-L8141"
+  ],
   "owner": "02-language/ERROR-CATALOG.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T22"
  },
  {
   "id": "CF-ETS-001",
@@ -92,11 +116,17 @@
  {
   "id": "CF-GRM-001",
   "subject": "statement, pipeline and command grammar; statement terminators",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Statement and terminator rule.** A statement list is parsed as: skip any run of newlines and semicolons; parse a statement; skip any run of newlines and semicolons; stop when the next token is `)` or `}` or no statement can be parsed. A terminator is **not** required between statements that end with a closing `}` (e.g. `if`, loops, `try`, `function`), because the list only skips optional terminators; a pipeline (or any statement parsed by `PipelineChainRule`) ends at newline, `;`, `)`, `}`, `&&`/`||` (chain), `&` (background) or end of input, and any other token after a complete pipeline element is `UnexpectedToken`. Newlines continue a construct only in these places: after `|`, before a `|` that starts the next line, after `&&` and `||`, after each binary or unary operator and after `,`, after `=` in an assignment, inside `( )`, after `?`/`:` of a ternary, between `}` and `elseif`/`else`/`catch`/`finally`, and after a backtick line continuation handled by the tokenizer.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.StatementListRule@L1897-L1944",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.PipelineChainRule@L5773-L5988",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.PipelineRule@L5990-L6160",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.CatchBlockRule@L5494-L5591"
+  ],
   "owner": "02-language/GRAMMAR.ebnf.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T22"
  },
  {
   "id": "CF-LCY-001",
@@ -110,20 +140,31 @@
  {
   "id": "CF-LEX-001",
   "subject": "tokenizer mode switching rule (command vs expression mode, when it switches)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Mode rule.** The tokenizer starts in Command mode; the parser switches to Expression mode when it parses an expression operand/operator position (including the first element of a pipeline when it is not a command), to Command mode when it parses a command's arguments or the body of `{ }`, `( )`, `$( )`, to TypeName mode inside `[...]` type literals, and to Signature mode for class/enum/method headers; every switch is restored in a `finally` block, and a switch discards and rescans a pending lookahead token unless its kind is `ParseModeInvariant`.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.SetTokenizerMode@L499-L535",
+   "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.Initialize@L762-L797",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.CommandRule@L6444-L6684",
+   "src/System.Management.Automation/engine/parser/Parser.cs::Parser.ExpressionRule@L6696-L6790"
+  ],
   "owner": "02-language/02.1-tokenizer.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T21"
  },
  {
   "id": "CF-LEX-002",
   "subject": "numeric-literal rules (radix, suffixes, multipliers)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Numeric literal rules.** A number is an optional sign (`-`, en/em dash/horizontal bar, or `+`; only when `AllowSignedNumbers`), then either `.digits[exponent]`, `0x` hex digits, `0b` binary digits, or decimal digits with optional `.digits` and `e/E[+|-]digits`; then an optional type suffix (`u s l d y n`, plus a second character only after `u`: `ul us uy`), then an optional multiplier `k m g t p` that **must be followed by `b`/`B`** (powers of 1024; the suffix comes before the multiplier); the literal must be followed by a token terminator (in Expression mode also by a binary-operator start character) or the text is not a number and is rescanned as a generic token. Value typing: no suffix \u2192 `int`, else `long`, else (decimal format only) `decimal`, else `double`; real literals \u2192 `double` unless suffix `d` (`decimal`); hex and binary are two's complement with the sign decided by the top digit (`0xFFFFFFFF` \u2192 `-1`, `0xFF` \u2192 `255`), a 16-hex-digit or 64-bit-digit literal without `u` becomes `long`; the multiplier is applied to the value before the range cast and failure to fit returns `false` (reported as `BadNumericConstant` in Expression mode, otherwise the text becomes a generic token).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanNumberHelper@L3933-L4163",
+   "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.TryGetNumberValue@L3555-L3882",
+   "src/System.Management.Automation/engine/parser/tokenizer.cs::Tokenizer.ScanNumber@L3884-L3931"
+  ],
   "owner": "02-language/02.1-tokenizer.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T21"
  },
  {
   "id": "CF-MOD-001",

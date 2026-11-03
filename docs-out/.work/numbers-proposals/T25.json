@@ -1,0 +1,16 @@
+[
+ {
+  "key": "COMPILER_VISIT_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count visits",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "Visit* methods of Compiler"
+ },
+ {
+  "key": "COMPILER_HELPER_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T25.py --count helpers",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "non-Visit methods of Compiler"
+ }
+]

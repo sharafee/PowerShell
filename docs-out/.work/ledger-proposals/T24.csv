@@ -1,0 +1,6 @@
+path,ranges_read,doc_ids
+src/System.Management.Automation/engine/parser/SemanticChecks.cs,1-2455,LANG-SEMANTIC-001
+src/System.Management.Automation/engine/parser/SymbolResolver.cs,1-763,LANG-SEMANTIC-001
+src/System.Management.Automation/engine/parser/TypeResolver.cs,1-980,LANG-SEMANTIC-001
+src/System.Management.Automation/engine/parser/PSType.cs,1-1520,LANG-SEMANTIC-001
+src/System.Management.Automation/engine/parser/VariableAnalysis.cs,1-1848,LANG-SEMANTIC-001
