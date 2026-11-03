@@ -1,0 +1,14 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-AST-020",
+   "baseline_behavior": "AST nodes carry mutable compiler caches (TupleIndex, RuntimeUsingIndex, TypeDefinitionAst.Type) and implement compile-time assignment protocols (ISupportsAssignment/IAssignableValue).",
+   "proposed_behavior": "AST stays purely syntactic; slot indexes and assignment code generation live in compiler side tables keyed by node.",
+   "benefit": "Immutable shareable trees; clean separation of parser and compiler; easier tooling reuse.",
+   "compatibility_cost": "None observable by scripts; internal refactor only.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

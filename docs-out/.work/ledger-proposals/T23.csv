@@ -1,0 +1,7 @@
+path,ranges_read,doc_ids
+src/System.Management.Automation/engine/parser/ast.cs,1-10845,LANG-AST-001;LANG-ASTCAT-001
+src/System.Management.Automation/engine/parser/AstVisitor.cs,1-822,LANG-AST-001;LANG-ASTCAT-001
+src/System.Management.Automation/engine/parser/PreOrderVisitor.cs,1-264,LANG-AST-001;LANG-ASTCAT-001
+src/System.Management.Automation/engine/parser/ConstantValues.cs,1-578,LANG-AST-001
+src/System.Management.Automation/engine/parser/SafeValues.cs,1-807,LANG-AST-001
+src/System.Management.Automation/engine/parser/Position.cs,1-816,LANG-AST-001

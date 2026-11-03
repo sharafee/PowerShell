@@ -40,5 +40,33 @@
   "dataset": "resources.json",
   "label": "APPROX",
   "notes": "ParserStrings keys with a use site in Parser.cs or tokenizer.cs"
+ },
+ {
+  "key": "AST_CLASSES_ASTCS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count ast_classes",
+  "dataset": "ast-hierarchy.json",
+  "label": "APPROX",
+  "notes": "Ast-derived classes declared in ast.cs"
+ },
+ {
+  "key": "AST_CLASSES_ABSTRACT",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count abstract",
+  "dataset": "ast-hierarchy.json",
+  "label": "APPROX",
+  "notes": "abstract classes among them"
+ },
+ {
+  "key": "ICUSTOMASTVISITOR_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count iv1",
+  "dataset": "visitors.json",
+  "label": "APPROX",
+  "notes": "Visit methods in ICustomAstVisitor"
+ },
+ {
+  "key": "ICUSTOMASTVISITOR2_METHODS",
+  "cmd": "python3 docs-out/tools/gen_T23.py --count iv2",
+  "dataset": "visitors.json",
+  "label": "APPROX",
+  "notes": "Visit methods added by ICustomAstVisitor2"
  }
 ]

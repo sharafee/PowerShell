@@ -308,6 +308,94 @@
   "line": 426
  },
  {
+  "id": "LSN-AST-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "One class per construct, get-only properties, constructor invariants that throw on invalid combinations, and parent links set exactly once.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::Ast@L91-L420`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 187
+ },
+ {
+  "id": "LSN-AST-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Provide a pre-order visitor with `Continue`/`SkipChildren`/`StopVisit` and a post-visit hook that fires on every exit path.",
+  "evidence": "`src/System.Management.Automation/engine/parser/PreOrderVisitor.cs::AstVisitor@L35-L215`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 188
+ },
+ {
+  "id": "LSN-AST-03",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Keep error nodes (`ErrorStatementAst`, `ErrorExpressionAst`) that hold partially parsed children so tooling works on broken scripts.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::ErrorStatementAst@L456-L648`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 189
+ },
+ {
+  "id": "LSN-AST-04",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Treat hashtable values as statements and keep `PipelineChainAst` left-nested with a plain `PipelineAst` on the right, as the parser produces them.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::HashtableAst@L10128-L10218`, `PipelineChainAst@L5549-L5650`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 190
+ },
+ {
+  "id": "LSN-AST-05",
+  "verdict": "ADAPT",
+  "area": "NLD-GRM",
+  "text": "Use one visitor family with a default `Visit` for new nodes instead of two families gated by \"v2\" interfaces. Why: the v1/v2 split exists for source compatibility with external visitors, which a new shell does not have.",
+  "evidence": "`src/System.Management.Automation/engine/parser/AstVisitor.cs::ICustomAstVisitor2@L207-L235`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 191
+ },
+ {
+  "id": "LSN-AST-06",
+  "verdict": "ADAPT",
+  "area": "NLD-GRM",
+  "text": "Make type names (`ITypeName`) plain syntax objects resolved lazily by the type system, with a cache owned by the resolver. Why: keeps the AST free of reflection state while keeping the observable `[type]` resolution.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::TypeName@L8425-L8724`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 192
+ },
+ {
+  "id": "LSN-AST-07",
+  "verdict": "AVOID",
+  "area": "NLD-GRM",
+  "text": "Do not store compiler caches (`TupleIndex`, `RuntimeUsingIndex`, `TypeDefinitionAst.Type`) or assignment-code-generation methods on AST nodes; keep them in side tables keyed by node.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::VariableExpressionAst@L9404-L9624`.",
+  "dev": "DEV-AST-020",
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 193
+ },
+ {
+  "id": "LSN-AST-08",
+  "verdict": "ADAPT",
+  "area": "NLD-SEC",
+  "text": "Provide an allow-list \"literal data\" evaluator (no commands, no member calls, no binary operators, node and key caps) for manifests and data sections, evaluated without the compiler. Why: same observable safety as `SafeGetValue`, without depending on the compiler for unary/convert nodes.",
+  "evidence": "`src/System.Management.Automation/engine/parser/SafeValues.cs::IsSafeValueVisitor@L39-L356`.",
+  "dev": null,
+  "doc": "LANG-AST-001",
+  "file": "02-language/02.3-ast.md",
+  "line": 194
+ },
+ {
   "id": "LSN-CIM-01",
   "verdict": "AVOID",
   "area": "NLD-CMD",
