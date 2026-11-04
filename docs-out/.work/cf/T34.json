@@ -1,0 +1,23 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-PROV-140",
+   "baseline_behavior": "Providers receive a mutable Context set by the engine and have no policy mediation layer.",
+   "proposed_behavior": "A mandatory policy mediation layer between engine and providers and an explicit per-call context object.",
+   "benefit": "Root confinement, rights and audit enforced outside provider code.",
+   "compatibility_cost": "Provider authors must target a new context type.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-PROV-141",
+   "baseline_behavior": "File-system drives are auto-mounted on lookup miss.",
+   "proposed_behavior": "Mount drives explicitly or from configuration.",
+   "benefit": "Predictable drive table; no hidden system probing.",
+   "compatibility_cost": "Scripts using unmounted drive letters need explicit mounts.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

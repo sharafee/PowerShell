@@ -1,0 +1,43 @@
+{
+ "cfs": [
+  {
+   "id": "CF-LCY-001",
+   "subject": "command and script lifecycle (begin/process/end/clean, cmdlet lifecycle)",
+   "statement": "**Command lifecycle (CF-LCY-001).** For a pipeline of commands C1\u2026Cn the engine (1) builds all command processors and wires pipes; (2) *prepares* every command in order (parameter binding from the command line, with default parameter values applied) and sets up common-parameter variables; (3) runs the *begin* phase of every command in order C1\u2026Cn (`BeginProcessing`, or the `begin` block); (4) runs the *process* phase *depth-first and synchronously*: C1 reads its input (or runs once with no input if none is expected), and each object it writes into its output pipe causes C2 to run its process phase over everything queued (the default buffer threshold is zero), recursively; every input object is bound before each call (pipeline parameter binding, then mandatory-parameter check); an object that cannot be bound or misses a mandatory parameter produces a non-terminating error and is skipped; (5) when C1's input is exhausted the *end* phase runs for C1\u2026Cn in order \u2014 each command first drains any input still queued through its process phase, then runs `EndProcessing` (or the `end` block); (6) the *clean* phase (`clean` blocks, only for commands that have one) runs for every command in `finally`, with stopping suspended, and its errors are written to the command's error output; (7) all command processors are disposed. The first terminating error is recorded; later failures are logged as health events and do not replace it. A stop request cancels the pipeline token and calls `StopProcessing` on every command.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.Start@L1029-L1147",
+    "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.DoCompleteCore@L614-L709",
+    "src/System.Management.Automation/engine/Pipe.cs::Pipe.AddToPipe@L435-L466",
+    "src/System.Management.Automation/engine/CommandProcessor.cs::CommandProcessor.Read@L452-L581",
+    "src/System.Management.Automation/engine/CommandProcessorBase.cs::CommandProcessorBase.Complete@L591-L609"
+   ],
+   "owner": "03-runtime/runspace-and-pipeline.md",
+   "status": "closed"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-PIPE-110",
+   "baseline_behavior": "Host-facing object streams are effectively unbounded (capacity Int32.MaxValue) and a pipeline has no time or memory budget.",
+   "proposed_behavior": "Bounded, cancellable host streams by default plus an optional per-pipeline time/memory budget.",
+   "benefit": "Predictable resource use in enterprise hosts.",
+   "compatibility_cost": "Behavior differs for producers that exceed the bound; hosts must handle blocking or rejection.",
+   "affected_cfs": [
+    "CF-LCY-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-PIPE-111",
+   "baseline_behavior": "An internal empty \"pulse\" pipeline is created to run pending engine events when the runspace is idle.",
+   "proposed_behavior": "Schedule event processing on the runspace loop without creating a pipeline.",
+   "benefit": "Removes a special pipeline and its state-machine corner cases.",
+   "compatibility_cost": "Code that observed the pulse pipeline (id 0, history) would not see it.",
+   "affected_cfs": [
+    "CF-LCY-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

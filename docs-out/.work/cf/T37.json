@@ -1,0 +1,43 @@
+{
+ "cfs": [
+  {
+   "id": "CF-MOD-001",
+   "subject": "module load, export and auto-load rules",
+   "statement": "**Module load, export and auto-load rules (CF-MOD-001).** (1) A module name without a path is searched in each `PSModulePath` entry in order (entries marked to skip the system folder are skipped; on Unix the folder name is matched case-insensitively): in an entry, the module base is `<entry>/<name>`; its version sub-folders are tried first (the first whose version satisfies the constraints and equals its manifest's `ModuleVersion` is loaded); if none loads, the files `<entry>/<name>/<name>` + extension are tried in the order `.psd1`, `.psm1`, `.cdxml`, `.ni.dll`, `.dll`, `.exe` (a name that already carries a module extension is tried as given); the first successful load ends the search and its exports are added to the analysis cache. (2) A manifest is read as data and its keys are checked against the known key list (\u00a74); the processing of the root module, nested modules, required modules (version-constrained; a cyclic-requirement check exists), required assemblies, scripts to process, types and formats follows, in an order that is `UNVERIFIED` (VB-046); how the manifest export lists combine with a script module's own exports is `UNVERIFIED` (VB-046). (3) A module already loaded that satisfies the requested constraints is not loaded again unless `-Force`; only its members are re-imported with the requested prefix and options. (4) Each module has its own session state; exported commands are copied into the importer's session state. (5) `Export-ModuleMember` selects exports by wildcard patterns per category (functions, cmdlets, variables, aliases), skipping `AllScope` items and built-in variable names. (6) Import applies `-Prefix`/`DefaultCommandPrefix`, `-NoClobber`, visibility and the verb/noun checks, in that order: cmdlets, aliases, functions, variables. (7) **Auto-loading** happens during command lookup: a module-qualified name loads exactly that module; any other unknown command name is looked up in the analysis cache of every module file on `PSModulePath` and the first module exporting a command of that exact name is imported (`$PSModuleAutoLoadingPreference`: `None`, `ModuleQualified`, `All`). (8) Removal of a module (`RemoveModule`) is `UNVERIFIED` here (VB-046).",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.LoadUsingModulePath@L343-L423",
+    "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.LoadUsingExtensions@L5422-L5518",
+    "src/System.Management.Automation/engine/Modules/ModuleIntrinsics.cs::ModuleIntrinsics.ExportModuleMembers@L1529-L1689",
+    "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.ImportModuleMembers@L7022-L7251",
+    "src/System.Management.Automation/engine/Modules/AnalysisCache.cs::AnalysisCache.GetExportedCommands@L44-L96"
+   ],
+   "owner": "03-runtime/modules.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-MOD-170",
+   "baseline_behavior": "PSModulePath entries have equal trust and auto-load picks the first module exporting a name.",
+   "proposed_behavior": "Module search path entries carry trust levels; auto-load only from trusted entries unless policy allows.",
+   "benefit": "Prevents shadowing through writable low-trust folders.",
+   "compatibility_cost": "Auto-load from user-writable folders needs explicit policy.",
+   "affected_cfs": [
+    "CF-MOD-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-MOD-171",
+   "baseline_behavior": "Windows PowerShell compatibility imports, .cdxml CIM modules and DSC resource exports are supported.",
+   "proposed_behavior": "Omit in the first version.",
+   "benefit": "Smaller scope; removes Windows-only machinery.",
+   "compatibility_cost": "Those modules cannot be imported.",
+   "affected_cfs": [
+    "CF-MOD-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

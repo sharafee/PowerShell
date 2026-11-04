@@ -1,0 +1,42 @@
+{
+ "cfs": [
+  {
+   "id": "CF-DSC-001",
+   "subject": "command resolution order",
+   "statement": "**Command resolution order (CF-DSC-001).** For one name the searcher tries, in this order and returning the first match that is allowed: (1) **alias** (a match whose visibility does not allow the caller's origin is skipped and the search continues with functions); (2) **function / filter / configuration**; (3) **cmdlet** (a module-qualified name `Module\\Cmdlet` matches only cmdlets of that module; with several cmdlets of the same name in different modules, the first in table order is returned unless all scopes are searched); (4) if application or external-script types are allowed: a name that is a *qualified provider path* is resolved as a path; then an absolute path to an existing file; then the file system search of each `PATH` directory in order (for a name with a directory part: only that directory); then a PowerShell-relative path (name starting with `.`, `~` or `\\`). Within one directory the candidate file names are, in order: the name itself first if it already has an extension; `name.ps1` when external scripts are allowed (also `.psm1` and `.psd1` in non-discovery searches); on Windows every `PATHEXT` extension when applications are allowed; then the bare name if not yet added. A `.ps1` file becomes an external script; any other existing file becomes an application. If the normal search fails and the name contains neither `-` nor `\\`, the lookup is repeated once with the name prefixed with `Get-`. If still unresolved, module-qualified names trigger module auto-loading, and (with `$PSModuleAutoLoadingPreference` = `All`, the default) other names trigger module auto-discovery against the module analysis cache; then the *command-not-found* handler runs; then a `CommandNotFoundException` is raised. In a session whose origin is `Runspace`, application and external-script types are removed from the search when the session state has no allowed applications or scripts, and a name with a directory part must match an allow-list entry (prefix match, or the list is exactly `*`).",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/CommandSearcher.cs::CommandSearcher.MoveNext@L78-L239",
+    "src/System.Management.Automation/engine/CommandDiscovery.cs::CommandDiscovery.LookupCommandInfo@L656-L793",
+    "src/System.Management.Automation/engine/CommandDiscovery.cs::CommandDiscovery.TryNormalSearch@L886-L949",
+    "src/System.Management.Automation/engine/CommandSearcher.cs::CommandSearcher.ConstructSearchPatternsFromName@L1322-L1363"
+   ],
+   "owner": "03-runtime/command-discovery-and-invocation.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-DISC-120",
+   "baseline_behavior": "Unknown command names trigger module auto-discovery by analyzing every module file on PSModulePath.",
+   "proposed_behavior": "Resolve through an explicit signed command index refreshed on module install/update; keep module-qualified auto-load.",
+   "benefit": "Faster misses, no file scans on typos, auditable resolution.",
+   "compatibility_cost": "Modules not indexed are not auto-loaded until indexed.",
+   "affected_cfs": [
+    "CF-DSC-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-DISC-121",
+   "baseline_behavior": "Native argument passing has three styles (Legacy, Standard, Windows) with a name-based list of legacy programs.",
+   "proposed_behavior": "List-based passing only, with a per-command opt-in for raw command lines.",
+   "benefit": "Removes the quoting ambiguity and the legacy program list.",
+   "compatibility_cost": "Scripts relying on Legacy re-quoting need the opt-in.",
+   "affected_cfs": [
+    "CF-DSC-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

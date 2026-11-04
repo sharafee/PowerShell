@@ -9,7 +9,7 @@ Run mode: STATIC-ONLY (`ALLOW_STATIC_ONLY=true`). Branch `claude/repo-review-exp
 | 0 Recon, pinning, tooling | done | datasets in `data/`, tools in `tools/`, registers, glossary, census, dependency graph, source-tree map, 297 folder cards + 40 project cards (generated; annotation overlay pending) |
 | 1 Repository map | done | layered-architecture, build-system, ci-cd-and-packaging, coding-standards (committed 4a6efaf) |
 | 2 Language pipeline | in progress | wave 1: T21 DONE (draft); T22 DONE (draft); T23 DONE (draft); T24 T25 T27 DONE (draft); T26 T28 T29 T210 T211 DONE (draft, partial reading depth: see D-019 and VB-017..VB-023); the coordinator documents of 02-language are DONE (draft): pipeline map, stage contracts, call graphs, lifecycle, spec draft, 32 quirks, design space, golden-samples index (empty), oracle protocol (waived), test corpus; Phase 2 documents are complete except the reading-depth gaps VB-017..VB-023 |
-| 3 Runtime | todo | |
+| 3 Runtime | in progress | T31..T39 DONE (draft, tier B subsystems at contract depth): runspace-and-pipeline, command-discovery-and-invocation, parameter-binding, cmdlet-infrastructure, provider-model, extended-type-system, formatting-and-output, help-system, modules, errors-and-diagnostics, jobs-and-concurrency, debugger, eventing; execution-context-and-session-state done in Phase 2 (T29); reading gaps VB-024..VB-057; SEC-ENF IDs not yet assigned (Phase 5) |
 | 4 Hosting/SDK/remoting/platform/command modules | todo | |
 | 5 Security | todo | |
 | 6 Engineering | todo | |
@@ -37,4 +37,16 @@ T21 tokenizer | T22 parser/grammar/errors | T23 AST | T24 semantic | T25 compile
 
 | COORD | `02-language/00-pipeline-map.md`, `STAGE-CONTRACTS.md`, `CALL-GRAPHS.md` (`tools/gen_coord.py`), `LIFECYCLE-script-execution.md`, `LANGUAGE-SPEC-DRAFT.md`, `SEMANTIC-QUIRKS.md`, `INTERPRETER-DESIGN-SPACE.md` (scores in `data/interpreter-scores.json`), `GOLDEN-SAMPLES.md`, `ORACLE-PROTOCOL.md`, `REFERENCE-TEST-CORPUS.md`, `09-synthesis/new-language-design-canvas.md`, `README.md` | draft; DEV-DESIGN-110; entry-point correction recorded (CON-013) |
 
-Next step: Phase 3 runtime (T31 runspace/pipeline, T32 command discovery, T33 parameter binding and cmdlet infrastructure, T34-T39) and the deeper reads listed in VB-017..VB-023. Open: CF-OP-001 (OPERATOR-TABLE, T28) is linked from the parser doc but not yet written.
+| T31 | `03-runtime/runspace-and-pipeline.md` (CF-LCY-001) | draft; DEV-PIPE-110/111; VB-024..026; checks pass |
+| T32 | `03-runtime/command-discovery-and-invocation.md` (CF-DSC-001) | draft; DEV-DISC-120/121; CON-014; VB-027..029; checks pass |
+| T33 | `03-runtime/parameter-binding.md` (CF-BND-001), `03-runtime/cmdlet-infrastructure.md` | draft; DEV-BIND-130, DEV-CMDLET-135; VB-030..034; checks pass |
+| T34 | `03-runtime/provider-model.md` | draft (tier B); DEV-PROV-140/141; VB-035..037 |
+| T35 | `03-runtime/extended-type-system.md` (CF-ETS-001) | draft (tier B); DEV-ETS-150/151; VB-038/039 |
+| T36 | `03-runtime/formatting-and-output.md`, `03-runtime/help-system.md` | draft (tier B); DEV-FMT-160/161, DEV-HELP-165/166; VB-040..044 |
+| T37 | `03-runtime/modules.md` (CF-MOD-001) | draft (tier B); DEV-MOD-170/171; VB-045..047 |
+| T38 | `03-runtime/errors-and-diagnostics.md` (CF-ERR-001) | draft (tier B); DEV-ERR-180; VB-048..050 |
+| T39 | `03-runtime/jobs-and-concurrency.md`, `03-runtime/debugger.md`, `03-runtime/eventing.md` | draft (tier B); DEV-JOB-190/191, DEV-DBG-195/196, DEV-EVT-198/199; VB-051..057 |
+
+Generated parts of 03-runtime (test tables, security-seed tables): `docs-out/tools/gen_T3.py` + `docs-out/tools/annotations/T3-docs.json` (D-022).
+
+Next step: Phase 4 (hosting, SDK, remoting, platform, command-module families), Phase 5 security (assign `SEC-ENF` IDs to verified seed hits), and the deeper reads in VB-017..VB-023 and VB-024..VB-057. Open: golden samples and oracle remain waived (VB-001).

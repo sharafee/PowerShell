@@ -2,11 +2,18 @@
  {
   "id": "CF-BND-001",
   "subject": "parameter-binding order and parameter-set resolution",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Parameter binding order and parameter-set resolution (CF-BND-001).** Command-line binding runs these steps in order: (1) arguments that came from hashtable splatting are moved after all other arguments; (2) a parameter name with no value is joined with the next argument as its value (a switch parameter takes `$true` instead; a name followed by another recognizable parameter name, or a name at the end, is a `MissingArgument` error); (3) **named binding**: every argument with a name is matched (exact name or alias first, then unambiguous prefix); a parameter already bound is an error (`ParameterAlreadyBound`) except that a splatted entry whose name was already bound explicitly is skipped; the `--%` verbatim marker is consumed here; (4) **positional binding**: unbound parameters that have a position in the still-valid sets are grouped by position number in ascending order; arguments without a name are taken in order; each is offered to the parameters of that position in four attempts \u2014 default set without type coercion, all valid sets without coercion, default set with coercion, all valid sets with coercion \u2014 and an argument no parameter accepts stays unbound; (5) values from `$PSDefaultParameterValues` are bound to still-unbound parameters, after positional binding and again after dynamic parameters; (6) `ValidateParameterSets`; (7) dynamic parameters are fetched once from the command (`GetDynamicParameters`), merged into the parameter table and set bitmasks, and named and positional binding are repeated for the leftover arguments; (8) leftover arguments are bound to the single `ValueFromRemainingArguments` parameter (two such parameters in the current sets is an error); (9) any argument still unbound is an error (`NamedParameterNotFound` for a named one, `PositionalParameterNotFound` otherwise); (10) the final parameter-set check and the mandatory-parameter step (\u00a77); (11) script parameters that are still unbound get their declared default values; (12) the set mask is saved for pipeline binding. **Parameter-set resolution:** each bound parameter narrows the current set mask to the sets it belongs to. After binding, with *one* valid set that set is chosen. With *several* valid sets: if the mask is \"all sets\" and the command has no default set, the call is accepted as set-less; else if the command defines a default set and it is among the valid sets, the command's parameter-set name is set to the default set, and the mask is narrowed to the default set only in validation calls that ask for it (the final check after command-line binding does; the checks made before dynamic parameters and during pipeline binding may not); else, if pipeline input is still expected and some valid set has an unbound parameter that takes pipeline input, the decision is postponed to pipeline binding; else the mask is reduced to sets with no unbound mandatory parameter; if exactly one set remains it is chosen, otherwise `AmbiguousParameterSet`. With *zero* valid sets (conflicting parameters) the result is `AmbiguousParameterSet` as well. **Pipeline-object binding** for each input object restores the saved mask and the original values of parameters bound by the previous object, then makes four passes over the unbound parameters that accept pipeline input \u2014 (a) by value without coercion, (b) by property name without coercion, (c) by value with coercion, (d) by property name with coercion \u2014 trying the default set before the other valid sets in each pass; a successful bind narrows the set mask again.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.BindCommandLineParametersNoValidation@L202-L277",
+   "src/System.Management.Automation/engine/ParameterBinderController.cs::ParameterBinderController.BindPositionalParameters@L699-L871",
+   "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.ValidateParameterSets@L2532-L2640",
+   "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.BindPipelineParametersPrivate@L3255-L3347",
+   "src/System.Management.Automation/engine/ParameterBinderBase.cs::ParameterBinderBase.BindParameter@L329-L667"
+  ],
   "owner": "03-runtime/parameter-binding.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T33"
  },
  {
   "id": "CF-CMP-001",
@@ -70,20 +77,32 @@
  {
   "id": "CF-DSC-001",
   "subject": "command resolution order",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Command resolution order (CF-DSC-001).** For one name the searcher tries, in this order and returning the first match that is allowed: (1) **alias** (a match whose visibility does not allow the caller's origin is skipped and the search continues with functions); (2) **function / filter / configuration**; (3) **cmdlet** (a module-qualified name `Module\\Cmdlet` matches only cmdlets of that module; with several cmdlets of the same name in different modules, the first in table order is returned unless all scopes are searched); (4) if application or external-script types are allowed: a name that is a *qualified provider path* is resolved as a path; then an absolute path to an existing file; then the file system search of each `PATH` directory in order (for a name with a directory part: only that directory); then a PowerShell-relative path (name starting with `.`, `~` or `\\`). Within one directory the candidate file names are, in order: the name itself first if it already has an extension; `name.ps1` when external scripts are allowed (also `.psm1` and `.psd1` in non-discovery searches); on Windows every `PATHEXT` extension when applications are allowed; then the bare name if not yet added. A `.ps1` file becomes an external script; any other existing file becomes an application. If the normal search fails and the name contains neither `-` nor `\\`, the lookup is repeated once with the name prefixed with `Get-`. If still unresolved, module-qualified names trigger module auto-loading, and (with `$PSModuleAutoLoadingPreference` = `All`, the default) other names trigger module auto-discovery against the module analysis cache; then the *command-not-found* handler runs; then a `CommandNotFoundException` is raised. In a session whose origin is `Runspace`, application and external-script types are removed from the search when the session state has no allowed applications or scripts, and a name with a directory part must match an allow-list entry (prefix match, or the list is exactly `*`).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/CommandSearcher.cs::CommandSearcher.MoveNext@L78-L239",
+   "src/System.Management.Automation/engine/CommandDiscovery.cs::CommandDiscovery.LookupCommandInfo@L656-L793",
+   "src/System.Management.Automation/engine/CommandDiscovery.cs::CommandDiscovery.TryNormalSearch@L886-L949",
+   "src/System.Management.Automation/engine/CommandSearcher.cs::CommandSearcher.ConstructSearchPatternsFromName@L1322-L1363"
+  ],
   "owner": "03-runtime/command-discovery-and-invocation.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T32"
  },
  {
   "id": "CF-ERR-001",
   "subject": "terminating/non-terminating errors; try/catch/finally/trap ordering",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Terminating versus non-terminating errors; try/catch/finally/trap ordering (CF-ERR-001).** (1) A *non-terminating* error is an `ErrorRecord` written to the error stream by a command (`WriteError`); it does not interrupt the command or the pipeline, sets the pipeline's failed state and `$?` to false, and is subject to the command's `ErrorAction` (`Ignore`: dropped, not recorded; `SilentlyContinue`: recorded in `$Error`/`-ErrorVariable` but not shown; `Continue`: recorded and written; `Inquire`: ask, then as `Continue` or stop; `Stop`: converted to a terminating `ActionPreferenceStopException`). (2) A *terminating* error is an exception: `ThrowTerminatingError` from a cmdlet (wrapped as `CmdletInvocationException`), `throw`, a runtime error in an expression, or `ActionPreferenceStop`. It stops the current *statement* and, unless handled, the command, and is recorded as the pipeline's first terminating error (later ones are only logged). (3) In **script code every statement is guarded**: when a statement throws a non-flow-control exception the engine consults `$ErrorActionPreference` (default `Continue`): `SilentlyContinue`/`Ignore` resume with the next statement; `Continue` reports the error record and resumes with the next statement \u2014 except that an exception produced by a `throw` statement is rethrown when no trap is present; `Stop` rethrows (terminates the enclosing scope and propagates); `Inquire` prompts. (4) **Handler order** for one thrown exception: innermost enclosing `try` is searched first; its `catch` clauses are tried in source order with the first matching type winning (a catch without a type matches any `RuntimeException`; `PipelineStoppedException` is never caught by a type-less catch); `finally` runs after the try/catch block completes, on normal exit, after a caught exception, and while an unhandled exception propagates; if no `catch` in the `try` matches, the exception propagates to the enclosing `try`, then to `trap` handlers of the enclosing blocks (a trap matches by the exception type, trying the inner exception before the outer one), then to the statement-level preference rule of (3). A `trap` runs in a new scope with `$_` set to the error record; `continue` in a trap means *SilentlyContinue*, `break` means *Stop*; otherwise the action is the current preference. (5) Flow control (`break`, `continue`, `return`, `exit`) travels as exceptions that are never caught by `catch` or traps and are rethrown by the statement guard. (6) `$?` is true after a statement that completes without error and false after a statement in which an error (terminating-handled or non-terminating) occurred; the pipeline-level failed state also covers errors written by commands.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs::ExceptionHandlingOps.CheckActionPreference@L1699-L1788",
+   "src/System.Management.Automation/engine/MshCommandRuntime.cs::MshCommandRuntime._WriteErrorSkipAllowCheck@L2858-L2968",
+   "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.RecordFailure@L1455-L1498",
+   "src/System.Management.Automation/engine/CommandProcessorBase.cs::CommandProcessorBase.ManageInvocationException@L848-L947"
+  ],
   "owner": "03-runtime/errors-and-diagnostics.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T38"
  },
  {
   "id": "CF-ERR-002",
@@ -103,11 +122,17 @@
  {
   "id": "CF-ETS-001",
   "subject": "member resolution order",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Member resolution order (CF-ETS-001).** Looking up member *name* on a value `v` (wrapped as a `PSObject`) proceeds in this order and returns the first hit: (1) the reserved names `psbase`, `psadapted`, `psextended`, `psobject` and `pstypenames`, generated on demand; (2) **instance members** added to this object (for example by `Add-Member`); (3) **type-table (extended) members** merged over the object's type-name hierarchy, most specific type name winning; (4) **adapted members** from the adapter chosen for the object; (5) **base members**: the .NET members of the wrapped object, only when the chosen adapter is not already the .NET adapter. Member-name matching in the .NET adapter is case-insensitive (its binding flags include `IgnoreCase`). Type-table collection entries are marked \"replicate and clone when returning\" (a copy bound to the current object is handed out), adapted and base entries are not; the enumeration order across sources is `UNVERIFIED` (VB-038). Member lookup on a `PSMemberSet` owner searches the set's own members first, then the same collections.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/MshMemberInfo.cs::PSMemberInfoIntegratingCollection@L4503-L5152",
+   "src/System.Management.Automation/engine/MshObject.cs::PSObject.GetMappedAdapter@L460-L538",
+   "src/System.Management.Automation/engine/TypeTable.cs::TypeTable.MemberFactory@L3985-L4041",
+   "src/System.Management.Automation/engine/MshObject.cs::PSObject.GetMemberCollection@L261-L309"
+  ],
   "owner": "03-runtime/extended-type-system.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T35"
  },
  {
   "id": "CF-FLW-001",
@@ -135,12 +160,19 @@
  },
  {
   "id": "CF-LCY-001",
-  "subject": "command and script lifecycle (begin/process/end/clean, cmdlet lifecycle, stop)",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "subject": "command and script lifecycle (begin/process/end/clean, cmdlet lifecycle)",
+  "statement": "**Command lifecycle (CF-LCY-001).** For a pipeline of commands C1\u2026Cn the engine (1) builds all command processors and wires pipes; (2) *prepares* every command in order (parameter binding from the command line, with default parameter values applied) and sets up common-parameter variables; (3) runs the *begin* phase of every command in order C1\u2026Cn (`BeginProcessing`, or the `begin` block); (4) runs the *process* phase *depth-first and synchronously*: C1 reads its input (or runs once with no input if none is expected), and each object it writes into its output pipe causes C2 to run its process phase over everything queued (the default buffer threshold is zero), recursively; every input object is bound before each call (pipeline parameter binding, then mandatory-parameter check); an object that cannot be bound or misses a mandatory parameter produces a non-terminating error and is skipped; (5) when C1's input is exhausted the *end* phase runs for C1\u2026Cn in order \u2014 each command first drains any input still queued through its process phase, then runs `EndProcessing` (or the `end` block); (6) the *clean* phase (`clean` blocks, only for commands that have one) runs for every command in `finally`, with stopping suspended, and its errors are written to the command's error output; (7) all command processors are disposed. The first terminating error is recorded; later failures are logged as health events and do not replace it. A stop request cancels the pipeline token and calls `StopProcessing` on every command.",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.Start@L1029-L1147",
+   "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.DoCompleteCore@L614-L709",
+   "src/System.Management.Automation/engine/Pipe.cs::Pipe.AddToPipe@L435-L466",
+   "src/System.Management.Automation/engine/CommandProcessor.cs::CommandProcessor.Read@L452-L581",
+   "src/System.Management.Automation/engine/CommandProcessorBase.cs::CommandProcessorBase.Complete@L591-L609"
+  ],
   "owner": "03-runtime/runspace-and-pipeline.md",
-  "status": "open"
+  "status": "closed",
+  "_task": "T31"
  },
  {
   "id": "CF-LEX-001",
@@ -174,11 +206,18 @@
  {
   "id": "CF-MOD-001",
   "subject": "module load, export and auto-load rules",
-  "statement": "",
-  "label": "UNVERIFIED",
-  "evidence": [],
+  "statement": "**Module load, export and auto-load rules (CF-MOD-001).** (1) A module name without a path is searched in each `PSModulePath` entry in order (entries marked to skip the system folder are skipped; on Unix the folder name is matched case-insensitively): in an entry, the module base is `<entry>/<name>`; its version sub-folders are tried first (the first whose version satisfies the constraints and equals its manifest's `ModuleVersion` is loaded); if none loads, the files `<entry>/<name>/<name>` + extension are tried in the order `.psd1`, `.psm1`, `.cdxml`, `.ni.dll`, `.dll`, `.exe` (a name that already carries a module extension is tried as given); the first successful load ends the search and its exports are added to the analysis cache. (2) A manifest is read as data and its keys are checked against the known key list (\u00a74); the processing of the root module, nested modules, required modules (version-constrained; a cyclic-requirement check exists), required assemblies, scripts to process, types and formats follows, in an order that is `UNVERIFIED` (VB-046); how the manifest export lists combine with a script module's own exports is `UNVERIFIED` (VB-046). (3) A module already loaded that satisfies the requested constraints is not loaded again unless `-Force`; only its members are re-imported with the requested prefix and options. (4) Each module has its own session state; exported commands are copied into the importer's session state. (5) `Export-ModuleMember` selects exports by wildcard patterns per category (functions, cmdlets, variables, aliases), skipping `AllScope` items and built-in variable names. (6) Import applies `-Prefix`/`DefaultCommandPrefix`, `-NoClobber`, visibility and the verb/noun checks, in that order: cmdlets, aliases, functions, variables. (7) **Auto-loading** happens during command lookup: a module-qualified name loads exactly that module; any other unknown command name is looked up in the analysis cache of every module file on `PSModulePath` and the first module exporting a command of that exact name is imported (`$PSModuleAutoLoadingPreference`: `None`, `ModuleQualified`, `All`). (8) Removal of a module (`RemoveModule`) is `UNVERIFIED` here (VB-046).",
+  "label": "FACT-SRC",
+  "evidence": [
+   "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.LoadUsingModulePath@L343-L423",
+   "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.LoadUsingExtensions@L5422-L5518",
+   "src/System.Management.Automation/engine/Modules/ModuleIntrinsics.cs::ModuleIntrinsics.ExportModuleMembers@L1529-L1689",
+   "src/System.Management.Automation/engine/Modules/ModuleCmdletBase.cs::ModuleCmdletBase.ImportModuleMembers@L7022-L7251",
+   "src/System.Management.Automation/engine/Modules/AnalysisCache.cs::AnalysisCache.GetExportedCommands@L44-L96"
+  ],
   "owner": "03-runtime/modules.md",
-  "status": "open"
+  "status": "open",
+  "_task": "T37"
  },
  {
   "id": "CF-OP-001",

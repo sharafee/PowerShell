@@ -119,7 +119,7 @@ Called from the per-statement catch block of compiled code ([02.5-compiler-and-e
 6. Else if the preference is `Inquire` (and prompting is allowed) → ask the host.
 7. `SilentlyContinue`/`Ignore` → return (execution resumes at the next statement). `Stop` → mark prompts suppressed and rethrow. Otherwise (`Continue`): if there is no trap and the exception came from a `throw` statement → rethrow; else report the error record to the error stream (`ReportErrorRecord`) and, if it cannot be reported, rethrow.
 
-This is the rule that makes ordinary errors in script statements non-terminating by default while `throw` and `-ErrorAction Stop` terminate. The terminating/non-terminating canonical fact CF-ERR-001 is owned by the errors document (planned T38).
+This is the rule that makes ordinary errors in script statements non-terminating by default while `throw` and `-ErrorAction Stop` terminate. The terminating/non-terminating canonical fact CF-ERR-001 is owned by [errors-and-diagnostics](../03-runtime/errors-and-diagnostics.md).
 
 ### 6.2 Collections and arrays
 
