@@ -41,13 +41,14 @@
  {
   "id": "CF-CMP-003",
   "subject": "optimized-versus-unoptimized preconditions",
-  "statement": "**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used for script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.",
+  "statement": "**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used by the command processors that run script blocks (`DlrScriptCommandProcessor` constructor) and script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.",
   "label": "FACT-SRC",
   "evidence": [
    "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.Compile@L57-L83",
    "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock@L542-L2177",
    "src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::PSScriptCmdlet@L2179-L2552",
-   "src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847"
+   "src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847",
+   "src/System.Management.Automation/engine/ScriptCommandProcessor.cs::DlrScriptCommandProcessor.Init@L274-L296"
   ],
   "owner": "02-language/TIERING-POLICY.md",
   "status": "open",

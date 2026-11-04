@@ -1,1 +1,472 @@
-[]
+{
+ "_note": "Hand-authored scores for INTERPRETER-DESIGN-SPACE.md (task coordinator). Scores 1-5; weights sum to 100; totals and recommendations are computed by tools/gen_coord.py, never typed.",
+ "weights": {
+  "fidelity": 25,
+  "sandbox": 15,
+  "startup": 10,
+  "throughput": 10,
+  "debug": 10,
+  "aot": 10,
+  "determinism": 5,
+  "memory": 5,
+  "observability": 5,
+  "complexity": 5
+ },
+ "options": [
+  {
+   "id": "S0",
+   "name": "PowerShell-faithful tiered pipeline (AST \u2192 expression trees \u2192 light interpreter \u2192 JIT)",
+   "scores": {
+    "fidelity": 5,
+    "sandbox": 3,
+    "startup": 3,
+    "throughput": 5,
+    "debug": 4,
+    "aot": 1,
+    "determinism": 2,
+    "memory": 2,
+    "observability": 4,
+    "complexity": 1
+   },
+   "why": {
+    "fidelity": [
+     "FACT-SRC",
+     "It is the strategy PowerShell itself uses, so observable behavior is reproduced by construction (TIERING-POLICY, EQUIVALENCE-SPEC)."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "Expression trees and call sites run arbitrary delegates; hooks exist at binders and runtime helpers but the JIT tier bypasses interpreter-level checks."
+    ],
+    "startup": [
+     "FACT-SRC",
+     "The interpreter tier starts cheaply but the compiler front end builds trees for every block (COMPILATION-MAP)."
+    ],
+    "throughput": [
+     "FACT-SRC",
+     "Hot blocks and loops are JIT-compiled after 32 calls or 16 iterations (TIERING-POLICY)."
+    ],
+    "debug": [
+     "FACT-SRC",
+     "Sequence points and debugger hooks are emitted in both tiers (IR-SPEC \u00a75)."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Expression.Compile and Reflection.Emit need a JIT; under NativeAOT trees fall back to a slow interpreter."
+    ],
+    "determinism": [
+     "FACT-SRC",
+     "Asynchronous promotion makes the executing tier nondeterministic (TIERING-POLICY \u00a77.5)."
+    ],
+    "memory": [
+     "FACT-SRC",
+     "Trees, instruction arrays, call sites and caches are retained per block."
+    ],
+    "observability": [
+     "FACT-SRC",
+     "ETW compile events and script block logging exist (02.5 \u00a714)."
+    ],
+    "complexity": [
+     "FACT-SRC",
+     "About 6,600 lines of compiler plus the interpreter, binders and DLR dependency."
+    ]
+   },
+   "gates": {
+    "H1": true,
+    "H2_jit": true,
+    "H2_aot": false,
+    "H3": true,
+    "note": "AOT: JIT tier and Expression.Compile unavailable (EXTERNAL)"
+   }
+  },
+  {
+   "id": "S1",
+   "name": "AST tree-walking interpreter",
+   "scores": {
+    "fidelity": 4,
+    "sandbox": 5,
+    "startup": 5,
+    "throughput": 2,
+    "debug": 5,
+    "aot": 5,
+    "determinism": 5,
+    "memory": 4,
+    "observability": 4,
+    "complexity": 5
+   },
+   "why": {
+    "fidelity": [
+     "INFERENCE",
+     "Every protocol of IR-SPEC \u00a75 can be implemented once in the evaluator; no PowerShell-visible behavior requires a compiled form."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "All execution passes through one evaluator, so policy checks sit at every node visit and call."
+    ],
+    "startup": [
+     "INFERENCE",
+     "No compile step: execution starts at the first node."
+    ],
+    "throughput": [
+     "INFERENCE",
+     "Each node costs a virtual dispatch and allocations for values; no slot access without a resolver pass."
+    ],
+    "debug": [
+     "INFERENCE",
+     "The evaluator is the debugger: breakpoints and stepping are plain hooks on statements."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Pure managed code without dynamic code generation runs under NativeAOT."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Single tier: results never depend on promotion timing."
+    ],
+    "memory": [
+     "INFERENCE",
+     "Only the AST is retained; no trees or instruction arrays."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Trace of statements and calls is trivial to emit."
+    ],
+    "complexity": [
+     "INFERENCE",
+     "Smallest implementation; the main work is the language rules, not an engine."
+    ]
+   },
+   "gates": {
+    "H1": true,
+    "H2_jit": true,
+    "H2_aot": true,
+    "H3": true,
+    "note": "Fidelity depends on implementing the protocols of IR-SPEC \u00a75 and the equivalence obligations EQ-01..EQ-08"
+   }
+  },
+  {
+   "id": "S2",
+   "name": "Custom bytecode VM",
+   "scores": {
+    "fidelity": 4,
+    "sandbox": 5,
+    "startup": 4,
+    "throughput": 3,
+    "debug": 3,
+    "aot": 5,
+    "determinism": 5,
+    "memory": 4,
+    "observability": 3,
+    "complexity": 2
+   },
+   "why": {
+    "fidelity": [
+     "INFERENCE",
+     "A VM can implement the same protocols; the extra translation step adds risk of divergence from the AST semantics."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "A VM executes only its own instructions, so hooks go into the instruction loop."
+    ],
+    "startup": [
+     "INFERENCE",
+     "A compile step to bytecode is cheap compared with trees but not free."
+    ],
+    "throughput": [
+     "INFERENCE",
+     "A tight instruction loop beats tree-walking (PowerShell's own interpreter is of this kind, INSTRUCTION-SET)."
+    ],
+    "debug": [
+     "INFERENCE",
+     "Needs source maps from instructions to sequence points."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Managed bytecode interpreter has no AOT constraints."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Single tier, deterministic."
+    ],
+    "memory": [
+     "INFERENCE",
+     "Instruction arrays and constant pools per block."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Instruction-level tracing is possible but noisy."
+    ],
+    "complexity": [
+     "INFERENCE",
+     "A compiler, an instruction set and a frame model must be designed and tested."
+    ]
+   },
+   "gates": {
+    "H1": true,
+    "H2_jit": true,
+    "H2_aot": true,
+    "H3": true,
+    "note": "Must reproduce flow-control and error-action protocols in the instruction set"
+   }
+  },
+  {
+   "id": "S3",
+   "name": "System.Linq.Expressions compilation to delegates",
+   "scores": {
+    "fidelity": 5,
+    "sandbox": 3,
+    "startup": 2,
+    "throughput": 5,
+    "debug": 3,
+    "aot": 2,
+    "determinism": 3,
+    "memory": 2,
+    "observability": 3,
+    "complexity": 3
+   },
+   "why": {
+    "fidelity": [
+     "FACT-SRC",
+     "PowerShell compiles to expression trees; behavior is reproduced via the same IR (COMPILATION-MAP)."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "Compiled delegates run unchecked CLR code once produced; policy must be emitted into the trees."
+    ],
+    "startup": [
+     "FACT-SRC",
+     "Tree building and Expression.Compile cost start-up time; PowerShell avoids it by interpreting first."
+    ],
+    "throughput": [
+     "FACT-SRC",
+     "JIT-compiled delegates are the fast path of PowerShell hot code."
+    ],
+    "debug": [
+     "INFERENCE",
+     "Debug info is possible (DebugInfo nodes) but stepping compiled code is harder."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Expression.Compile under NativeAOT degrades to an interpreter."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Compile on demand with caching is deterministic if synchronous."
+    ],
+    "memory": [
+     "FACT-SRC",
+     "Delegates and trees are cached per block (CompiledScriptBlockData)."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Compile events can be logged."
+    ],
+    "complexity": [
+     "FACT-SRC",
+     "Needs the compiler, binders and caches but not the light interpreter."
+    ]
+   },
+   "gates": {
+    "H1": true,
+    "H2_jit": true,
+    "H2_aot": false,
+    "H3": true,
+    "note": "AOT: Expression.Compile falls back to interpretation (EXTERNAL)"
+   }
+  },
+  {
+   "id": "S4",
+   "name": "Reflection.Emit dynamic assemblies",
+   "scores": {
+    "fidelity": 3,
+    "sandbox": 2,
+    "startup": 1,
+    "throughput": 5,
+    "debug": 2,
+    "aot": 1,
+    "determinism": 3,
+    "memory": 1,
+    "observability": 2,
+    "complexity": 1
+   },
+   "why": {
+    "fidelity": [
+     "FACT-SRC",
+     "PowerShell uses Reflection.Emit only to define classes and enums (TypeDefiner), not for the dynamic language core."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "Emitted code calls the CLR directly; checks must be emitted explicitly."
+    ],
+    "startup": [
+     "EXTERNAL",
+     "Emitting and loading assemblies costs the most start-up time of the options."
+    ],
+    "throughput": [
+     "EXTERNAL",
+     "Emitted IL is JIT-compiled to native code."
+    ],
+    "debug": [
+     "INFERENCE",
+     "Debugging emitted code needs symbol emission."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Reflection.Emit is unavailable under NativeAOT."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Deterministic if emission is synchronous."
+    ],
+    "memory": [
+     "EXTERNAL",
+     "Dynamic assemblies stay loaded unless collectible (AssemblyLoadContext)."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Emitted code is opaque to tracing."
+    ],
+    "complexity": [
+     "INFERENCE",
+     "Emitting IL for dynamic scoping, pipelines and error-action semantics is the most complex option."
+    ]
+   },
+   "gates": {
+    "H1": false,
+    "H2_jit": true,
+    "H2_aot": false,
+    "H3": false,
+    "note": "No evidence it can host the dynamic-scoping core (INFERENCE); emitted code bypasses evaluator hooks"
+   }
+  },
+  {
+   "id": "S5",
+   "name": "Source-generated ahead-of-time compilation (built-in commands)",
+   "scores": {
+    "fidelity": 2,
+    "sandbox": 4,
+    "startup": 5,
+    "throughput": 5,
+    "debug": 2,
+    "aot": 5,
+    "determinism": 5,
+    "memory": 5,
+    "observability": 3,
+    "complexity": 3
+   },
+   "why": {
+    "fidelity": [
+     "INFERENCE",
+     "It cannot run user scripts; it only compiles the shell's own built-in commands."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "Generated code is reviewed at build time and calls only allowed APIs."
+    ],
+    "startup": [
+     "EXTERNAL",
+     "AOT or R2R code needs no JIT at start-up."
+    ],
+    "throughput": [
+     "EXTERNAL",
+     "Native code is the fastest."
+    ],
+    "debug": [
+     "INFERENCE",
+     "Generated code is debuggable like normal C#."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Fully compatible with NativeAOT."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Deterministic."
+    ],
+    "memory": [
+     "EXTERNAL",
+     "No runtime code generation memory."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Generated hooks can add tracing."
+    ],
+    "complexity": [
+     "INFERENCE",
+     "A source generator is extra work but each command stays plain code."
+    ]
+   },
+   "gates": {
+    "H1": false,
+    "H2_jit": true,
+    "H2_aot": true,
+    "H3": true,
+    "note": "Complement for built-in commands, not a strategy for user scripts"
+   }
+  },
+  {
+   "id": "S6",
+   "name": "Hybrid: tree-walker plus bytecode tier for hot paths",
+   "scores": {
+    "fidelity": 4,
+    "sandbox": 5,
+    "startup": 4,
+    "throughput": 4,
+    "debug": 3,
+    "aot": 5,
+    "determinism": 4,
+    "memory": 3,
+    "observability": 3,
+    "complexity": 2
+   },
+   "why": {
+    "fidelity": [
+     "INFERENCE",
+     "Behavior is defined by the tree-walker; the bytecode tier must match it (EQUIVALENCE-SPEC applies)."
+    ],
+    "sandbox": [
+     "INFERENCE",
+     "Both tiers are interpreters, so hooks are placed in two loops."
+    ],
+    "startup": [
+     "INFERENCE",
+     "Starts as a tree-walker; bytecode is generated only for hot code."
+    ],
+    "throughput": [
+     "INFERENCE",
+     "Hot paths run the bytecode loop."
+    ],
+    "debug": [
+     "INFERENCE",
+     "Two tiers need two debug paths."
+    ],
+    "aot": [
+     "EXTERNAL",
+     "Managed code only; no JIT requirement."
+    ],
+    "determinism": [
+     "INFERENCE",
+     "Deterministic if promotion is synchronous and count-based."
+    ],
+    "memory": [
+     "INFERENCE",
+     "AST plus bytecode for hot blocks."
+    ],
+    "observability": [
+     "INFERENCE",
+     "Promotion events can be traced."
+    ],
+    "complexity": [
+     "INFERENCE",
+     "Two engines and an equivalence test harness."
+    ]
+   },
+   "gates": {
+    "H1": true,
+    "H2_jit": true,
+    "H2_aot": true,
+    "H3": true,
+    "note": "Build only after S1 is verified; triggers in INTERPRETER-DESIGN-SPACE \u00a77"
+   }
+  }
+ ]
+}

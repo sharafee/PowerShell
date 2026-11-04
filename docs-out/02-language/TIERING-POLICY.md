@@ -73,9 +73,9 @@ flowchart TD
 
 ### 7.1 Which variant (CF-CMP-003)
 
-<!--CF:CF-CMP-003-->**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used for script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.<!--/CF-->
+<!--CF:CF-CMP-003-->**Optimized versus unoptimized.** A script block clause is run from the optimized code (variables in fixed tuple slots) only if the engine is not debugging (`ExecutionContext._debuggingMode <= 0`) **and** the invocation creates a new local scope (`createLocalScope`, i.e. not dot-sourced); the same two conditions are used by the command processors that run script blocks (`DlrScriptCommandProcessor` constructor) and script cmdlets. If the optimized compile shows that any slot-allocated variable name could be an `AllScope` variable (`VariableAnalysis.AnyVariablesCouldBeAllScope`), the unoptimized variant is used instead, and both variants are compiled. In the unoptimized variant only the automatic variables (plus the preference variables for script cmdlets) get tuple slots and every other variable is looked up by name. Independently of this choice, variable analysis allocates no slots for a block that uses `New-Variable`, `Remove-Variable`, `Set-Variable`, `Set-PSBreakpoint` (or their aliases), dot-sourcing or `$private:` variables.<!--/CF-->
 
-Evidence: src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock.InvokeWithPipeImpl@L935-L959 (`runOptimized = context._debuggingMode <= 0 && createLocalScope`), src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.Compile@L57-L83, src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::PSScriptCmdlet@L2179-L2552 (constructor), src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847, src/System.Management.Automation/engine/parser/VariableAnalysis.cs::FindAllVariablesVisitor@L44-L323.
+Evidence: src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::ScriptBlock.InvokeWithPipeImpl@L961-L1263 (`runOptimized = context._debuggingMode <= 0 && createLocalScope`), src/System.Management.Automation/engine/ScriptCommandProcessor.cs::DlrScriptCommandProcessor.Init@L274-L296 (`Compile(optimized: _context._debuggingMode <= 0 && UseLocalScope)`), src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.Compile@L57-L83, src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::PSScriptCmdlet@L2179-L2552 (constructor), src/System.Management.Automation/engine/parser/VariableAnalysis.cs::VariableAnalysis@L325-L1847, src/System.Management.Automation/engine/parser/VariableAnalysis.cs::FindAllVariablesVisitor@L44-L323.
 
 ### 7.2 Interpret versus JIT (CF-CMP-001)
 
@@ -115,7 +115,7 @@ None public. `InternalTestHooks` can disable the script block cache. `CompileSyn
 
 ## 12. Dependencies
 
-Inbound: `ScriptBlock` invocation, `PSScriptCmdlet`, `Compiler`. Outbound: `System.Linq.Expressions`, `ThreadPool`.
+Inbound: `ScriptBlock` invocation, `DlrScriptCommandProcessor`, `PSScriptCmdlet`, `Compiler`. Outbound: `System.Linq.Expressions`, `ThreadPool`.
 
 ## 13. Performance notes
 

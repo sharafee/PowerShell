@@ -741,11 +741,33 @@
   "verdict": "AVOID",
   "area": "NLD-RUN",
   "text": "Do not port COM binders and `PSGetMemberBinder`'s COM/ETS-adapter paths in the first versions. Replace with a plain reflection member lookup.",
-  "evidence": "`src/System.Management.Automation/engine/ComInterop/ComBinder.cs::ComBinder@L1-L400`.",
+  "evidence": "`src/System.Management.Automation/engine/ComInterop/ComBinder.cs::ComBinder@L1-L378`.",
   "dev": "DEV-BIND-050",
   "doc": "LANG-BINDERCAT-001",
   "file": "02-language/BINDER-CATALOG.md",
   "line": 80
+ },
+ {
+  "id": "LSN-CALLG-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-TOOL",
+  "text": "Keep the five entry points (tokenize, parse, check, compile, invoke) as separate callable stages with narrow signatures so each can be tested alone.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.ParseTask@L176-L227`.",
+  "dev": null,
+  "doc": "LANG-CALLG-001",
+  "file": "02-language/CALL-GRAPHS.md",
+  "line": 352
+ },
+ {
+  "id": "LSN-CALLG-02",
+  "verdict": "ADAPT",
+  "area": "NLD-TOOL",
+  "text": "Generate such graphs in CI from the shell's own sources to catch accidental coupling between stages. Why: the PowerShell graphs show the compiler calling parser-time helpers and the AST calling the compiler.",
+  "evidence": "`src/System.Management.Automation/engine/parser/ast.cs::VariableExpressionAst@L9404-L9624`.",
+  "dev": null,
+  "doc": "LANG-CALLG-001",
+  "file": "02-language/CALL-GRAPHS.md",
+  "line": 353
  },
  {
   "id": "LSN-CONV-01",
@@ -828,12 +850,23 @@
   "id": "LSN-EQV-03",
   "verdict": "AVOID",
   "area": "NLD-RUN",
-  "text": "Do not port the typed arithmetic/comparison instruction families or the DLR-derived interpreter; they are unreachable or defective for PowerShell. Replace with the evaluator's own numeric semantics from CONVERSION-RULES (planned T28).",
+  "text": "Do not port the typed arithmetic/comparison instruction families or the DLR-derived interpreter; they are unreachable or defective for PowerShell. Replace with the evaluator's own numeric semantics from [CONVERSION-RULES.md](CONVERSION-RULES.md).",
   "evidence": "src/System.Management.Automation/engine/interpreter/Instruction.cs::Instruction@L27-L70.",
   "dev": "DEV-EQV-061",
   "doc": "LANG-EQUIV-001",
   "file": "02-language/EQUIVALENCE-SPEC.md",
   "line": 126
+ },
+ {
+  "id": "LSN-GOLD-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-TOOL",
+  "text": "Keep an oracle-recorded conformance corpus as the acceptance test of the new interpreter.",
+  "evidence": "`test/powershell/Language/Parser/` (the repository's own language tests, see REFERENCE-TEST-CORPUS).",
+  "dev": null,
+  "doc": "LANG-GOLDEN-001",
+  "file": "02-language/GOLDEN-SAMPLES.md",
+  "line": 91
  },
  {
   "id": "LSN-HOWTO-01",
@@ -867,6 +900,39 @@
   "doc": "LANG-HOWTO-001",
   "file": "02-language/HOWTO-extend-language.md",
   "line": 145
+ },
+ {
+  "id": "LSN-DESIGN-01",
+  "verdict": "ADAPT",
+  "area": "NLD-RUN",
+  "text": "Build `S1`, a tree-walking evaluator that implements the protocols of IR-SPEC \u00a75, as the first and only engine until measurements justify another tier. Why: same observable behavior as PowerShell's compiled pipeline with a fraction of the machinery.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Compiler.cs::Compiler@L816-L6661`.",
+  "dev": null,
+  "doc": "LANG-DESIGNSPACE-001",
+  "file": "02-language/INTERPRETER-DESIGN-SPACE.md",
+  "line": 228
+ },
+ {
+  "id": "LSN-DESIGN-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-RUN",
+  "text": "If a second tier is added, test it differentially against the first on the whole corpus.",
+  "evidence": "`src/System.Management.Automation/engine/interpreter/LightLambda.cs::LightLambda@L43-L303`.",
+  "dev": null,
+  "doc": "LANG-DESIGNSPACE-001",
+  "file": "02-language/INTERPRETER-DESIGN-SPACE.md",
+  "line": 229
+ },
+ {
+  "id": "LSN-DESIGN-03",
+  "verdict": "AVOID",
+  "area": "NLD-RUN",
+  "text": "Do not adopt `Reflection.Emit` or `Expression.Compile` as the core engine.",
+  "evidence": "`src/System.Management.Automation/engine/parser/PSType.cs::TypeDefiner@L18-L1505`.",
+  "dev": "DEV-DESIGN-110",
+  "doc": "LANG-DESIGNSPACE-001",
+  "file": "02-language/INTERPRETER-DESIGN-SPACE.md",
+  "line": 230
  },
  {
   "id": "LSN-IR-01",
@@ -924,6 +990,72 @@
   "line": 186
  },
  {
+  "id": "LSN-SPEC-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-GRM",
+  "text": "Treat this specification plus the quirks catalog as the acceptance baseline and add oracle-confirmed tests per statement.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser@L36-L8191`.",
+  "dev": null,
+  "doc": "LANG-SPEC-001",
+  "file": "02-language/LANGUAGE-SPEC-DRAFT.md",
+  "line": 120
+ },
+ {
+  "id": "LSN-SPEC-02",
+  "verdict": "ADAPT",
+  "area": "NLD-TOOL",
+  "text": "Keep the specification in the shell's repository as executable examples (snippet + expected result) rather than prose only. Why: same content, checkable.",
+  "evidence": "`test/powershell/Language/Parser/` (test style).",
+  "dev": null,
+  "doc": "LANG-SPEC-001",
+  "file": "02-language/LANGUAGE-SPEC-DRAFT.md",
+  "line": 121
+ },
+ {
+  "id": "LSN-LIFE-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-RUN",
+  "text": "Treat the command line as one script command followed by an output command in an ordinary pipeline, so interactive and file execution share a path.",
+  "evidence": "src/Microsoft.PowerShell.ConsoleHost/host/msh/Executor.cs::Executor.ExecuteCommandHelper@L335-L357.",
+  "dev": null,
+  "doc": "LANG-LIFECYCLE-001",
+  "file": "02-language/LIFECYCLE-script-execution.md",
+  "line": 148
+ },
+ {
+  "id": "LSN-LIFE-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-ERR",
+  "text": "Parse the whole text before running anything and report incomplete input distinctly so a REPL can ask for another line.",
+  "evidence": "src/System.Management.Automation/engine/AutomationEngine.cs::AutomationEngine.ParseScriptBlock@L96-L127.",
+  "dev": null,
+  "doc": "LANG-LIFECYCLE-001",
+  "file": "02-language/LIFECYCLE-script-execution.md",
+  "line": 149
+ },
+ {
+  "id": "LSN-LIFE-03",
+  "verdict": "REPLICATE",
+  "area": "NLD-RUN",
+  "text": "Run script blocks through a begin/process/end command processor that sets `$_`/`$input`, scopes, error pipe and language mode around each clause.",
+  "evidence": "src/System.Management.Automation/engine/ScriptCommandProcessor.cs::DlrScriptCommandProcessor.RunClause@L485-L623.",
+  "dev": null,
+  "doc": "LANG-LIFECYCLE-001",
+  "file": "02-language/LIFECYCLE-script-execution.md",
+  "line": 150
+ },
+ {
+  "id": "LSN-LIFE-04",
+  "verdict": "ADAPT",
+  "area": "NLD-RUN",
+  "text": "Merge the `CommandProcessor`/`DlrScriptCommandProcessor` split into one script command processor. Why: the split exists for cmdlet-style binding of advanced functions; the observable begin/process/end behavior is the same.",
+  "evidence": "src/System.Management.Automation/engine/hostifaces/Command.cs::Command.CreateCommandProcessor@L450-L540.",
+  "dev": null,
+  "doc": "LANG-LIFECYCLE-001",
+  "file": "02-language/LIFECYCLE-script-execution.md",
+  "line": 151
+ },
+ {
   "id": "LSN-OP-01",
   "verdict": "REPLICATE",
   "area": "NLD-OP",
@@ -955,6 +1087,39 @@
   "doc": "LANG-OPTABLE-001",
   "file": "02-language/OPERATOR-TABLE.md",
   "line": 136
+ },
+ {
+  "id": "LSN-ORACLE-01",
+  "verdict": "ADAPT",
+  "area": "NLD-TOOL",
+  "text": "Use the recorded oracle outputs as the expected values of the new interpreter's conformance suite and re-run the oracle for each new quirk. Why: same coverage with an automated diff instead of manual review.",
+  "evidence": "`test/powershell/Language/Operators/` (existing assertion style).",
+  "dev": null,
+  "doc": "LANG-ORACLE-001",
+  "file": "02-language/ORACLE-PROTOCOL.md",
+  "line": 94
+ },
+ {
+  "id": "LSN-CORPUS-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-TOOL",
+  "text": "Organize the new shell's specification tests by the same feature folders (parser, operators, scripting, classes) and keep one behavior per test.",
+  "evidence": "`test/powershell/Language/Parser/` (folder layout in `data/tests.json`).",
+  "dev": null,
+  "doc": "LANG-TESTCORPUS-001",
+  "file": "02-language/REFERENCE-TEST-CORPUS.md",
+  "line": 234
+ },
+ {
+  "id": "LSN-CORPUS-02",
+  "verdict": "ADAPT",
+  "area": "NLD-TOOL",
+  "text": "Write the new suite in the shell's own language plus a small C# harness, so tests run without PowerShell. Why: same coverage, no dependency on the reference implementation.",
+  "evidence": "`test/xUnit/csharp/test_Binders.cs` (xUnit tests of internal binders).",
+  "dev": null,
+  "doc": "LANG-TESTCORPUS-001",
+  "file": "02-language/REFERENCE-TEST-CORPUS.md",
+  "line": 235
  },
  {
   "id": "LSN-RTOPS-01",
@@ -1142,6 +1307,72 @@
   "doc": "LANG-SCRIPTBLOCK-001",
   "file": "02-language/SCRIPT-BLOCKS.md",
   "line": 111
+ },
+ {
+  "id": "LSN-QRK-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-OP",
+  "text": "Treat QRK-01 to QRK-27 and QRK-30 to QRK-32 as part of the baseline language and specify them with tests before implementing.",
+  "evidence": "`src/System.Management.Automation/engine/runtime/Binding/Binders.cs::PSBinaryOperationBinder@L2119-L3422`.",
+  "dev": null,
+  "doc": "LANG-QUIRKS-001",
+  "file": "02-language/SEMANTIC-QUIRKS.md",
+  "line": 124
+ },
+ {
+  "id": "LSN-QRK-02",
+  "verdict": "ADAPT",
+  "area": "NLD-OP",
+  "text": "Keep the observable behavior of QRK-04, QRK-21 and QRK-22 with safer mechanisms (full scan, single comparer, caps in all modes).",
+  "evidence": "`src/System.Management.Automation/engine/runtime/Operations/StringOps.cs::StringOps@L15-L107`.",
+  "dev": null,
+  "doc": "LANG-QUIRKS-001",
+  "file": "02-language/SEMANTIC-QUIRKS.md",
+  "line": 125
+ },
+ {
+  "id": "LSN-QRK-03",
+  "verdict": "AVOID",
+  "area": "NLD-GRM",
+  "text": "Do not reproduce parse-time side effects (QRK-28, QRK-29) or tokenizer-level pragma handling (QRK-03).",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.ResolveUsingAssembly@L5088-L5168`.",
+  "dev": "DEV-GRM-010",
+  "doc": "LANG-QUIRKS-001",
+  "file": "02-language/SEMANTIC-QUIRKS.md",
+  "line": 126
+ },
+ {
+  "id": "LSN-STAGES-01",
+  "verdict": "REPLICATE",
+  "area": "NLD-TOOL",
+  "text": "Keep the six boundaries as explicit interfaces with the three error channels (diagnostics, runtime exception, error record).",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.ParseTask@L176-L227`.",
+  "dev": null,
+  "doc": "LANG-STAGES-001",
+  "file": "02-language/STAGE-CONTRACTS.md",
+  "line": 172
+ },
+ {
+  "id": "LSN-STAGES-02",
+  "verdict": "REPLICATE",
+  "area": "NLD-SEC",
+  "text": "Place static policy at B3, content policy at B4, and a single invoke/convert choke point at B5.",
+  "evidence": "`src/System.Management.Automation/engine/runtime/CompiledScriptBlock.cs::CompiledScriptBlockData.PerformSecurityChecks@L197-L283`.",
+  "dev": null,
+  "doc": "LANG-STAGES-001",
+  "file": "02-language/STAGE-CONTRACTS.md",
+  "line": 173
+ },
+ {
+  "id": "LSN-STAGES-03",
+  "verdict": "ADAPT",
+  "area": "NLD-GRM",
+  "text": "Pass tokenizer mode as an argument and keep annotations in a side model. Why: same behavior, removes hidden state.",
+  "evidence": "`src/System.Management.Automation/engine/parser/Parser.cs::Parser.SetTokenizerMode@L499-L535`.",
+  "dev": null,
+  "doc": "LANG-STAGES-001",
+  "file": "02-language/STAGE-CONTRACTS.md",
+  "line": 174
  },
  {
   "id": "LSN-TIER-01",

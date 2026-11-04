@@ -1,0 +1,16 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-DESIGN-110",
+   "baseline_behavior": "PowerShell compiles to expression trees and uses Reflection.Emit for classes.",
+   "proposed_behavior": "MicroteamShell starts with a tree-walking evaluator and does not adopt Reflection.Emit or Expression.Compile as the core engine.",
+   "benefit": "AOT-friendly, debuggable, small.",
+   "compatibility_cost": "Lower peak throughput; classes (if added) are interpreter objects.",
+   "affected_cfs": [
+    "CF-CMP-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}
