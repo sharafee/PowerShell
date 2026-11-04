@@ -601,5 +601,86 @@
   "evidence": "E1",
   "label": "APPROX",
   "notes": "T29"
+ },
+ {
+  "key": "PARSER_RULE_NODES",
+  "value": 62,
+  "dataset": "members-tierA.json",
+  "command": "python3 docs-out/tools/gen_coord.py --count callgraph_nodes",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_TOTAL",
+  "value": 32,
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "command": "python3 docs-out/tools/gen_coord.py --count quirks_total",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_REPLICATE",
+  "value": 26,
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "command": "python3 docs-out/tools/gen_coord.py --count quirks_replicate",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_ADAPT",
+  "value": 3,
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "command": "python3 docs-out/tools/gen_coord.py --count quirks_adapt",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_AVOID",
+  "value": 3,
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "command": "python3 docs-out/tools/gen_coord.py --count quirks_avoid",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_REDESIGN",
+  "value": 0,
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "command": "python3 docs-out/tools/gen_coord.py --count quirks_redesign",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "LANGUAGE_TEST_FILES",
+  "value": 81,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/gen_coord.py --count test_files",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "LANGUAGE_TEST_ITS",
+  "value": 1249,
+  "dataset": "tests.json",
+  "command": "python3 docs-out/tools/gen_coord.py --count test_its",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "INTERPRETER_OPTIONS",
+  "value": 7,
+  "dataset": "interpreter-scores.json",
+  "command": "python3 docs-out/tools/gen_coord.py --count options",
+  "evidence": "E1",
+  "label": "APPROX",
+  "notes": "coordinator documents"
  }
 ]

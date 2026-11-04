@@ -1,0 +1,31 @@
+{
+ "cfs": [
+  {
+   "id": "CF-ERR-001",
+   "subject": "terminating/non-terminating errors; try/catch/finally/trap ordering",
+   "statement": "**Terminating versus non-terminating errors; try/catch/finally/trap ordering (CF-ERR-001).** (1) A *non-terminating* error is an `ErrorRecord` written to the error stream by a command (`WriteError`); it does not interrupt the command or the pipeline, sets the pipeline's failed state and `$?` to false, and is subject to the command's `ErrorAction` (`Ignore`: dropped, not recorded; `SilentlyContinue`: recorded in `$Error`/`-ErrorVariable` but not shown; `Continue`: recorded and written; `Inquire`: ask, then as `Continue` or stop; `Stop`: converted to a terminating `ActionPreferenceStopException`). (2) A *terminating* error is an exception: `ThrowTerminatingError` from a cmdlet (wrapped as `CmdletInvocationException`), `throw`, a runtime error in an expression, or `ActionPreferenceStop`. It stops the current *statement* and, unless handled, the command, and is recorded as the pipeline's first terminating error (later ones are only logged). (3) In **script code every statement is guarded**: when a statement throws a non-flow-control exception the engine consults `$ErrorActionPreference` (default `Continue`): `SilentlyContinue`/`Ignore` resume with the next statement; `Continue` reports the error record and resumes with the next statement \u2014 except that an exception produced by a `throw` statement is rethrown when no trap is present; `Stop` rethrows (terminates the enclosing scope and propagates); `Inquire` prompts. (4) **Handler order** for one thrown exception: innermost enclosing `try` is searched first; its `catch` clauses are tried in source order with the first matching type winning (a catch without a type matches any `RuntimeException`; `PipelineStoppedException` is never caught by a type-less catch); `finally` runs after the try/catch block completes, on normal exit, after a caught exception, and while an unhandled exception propagates; if no `catch` in the `try` matches, the exception propagates to the enclosing `try`, then to `trap` handlers of the enclosing blocks (a trap matches by the exception type, trying the inner exception before the outer one), then to the statement-level preference rule of (3). A `trap` runs in a new scope with `$_` set to the error record; `continue` in a trap means *SilentlyContinue*, `break` means *Stop*; otherwise the action is the current preference. (5) Flow control (`break`, `continue`, `return`, `exit`) travels as exceptions that are never caught by `catch` or traps and are rethrown by the statement guard. (6) `$?` is true after a statement that completes without error and false after a statement in which an error (terminating-handled or non-terminating) occurred; the pipeline-level failed state also covers errors written by commands.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs::ExceptionHandlingOps.CheckActionPreference@L1699-L1788",
+    "src/System.Management.Automation/engine/MshCommandRuntime.cs::MshCommandRuntime._WriteErrorSkipAllowCheck@L2858-L2968",
+    "src/System.Management.Automation/engine/pipeline.cs::PipelineProcessor.RecordFailure@L1455-L1498",
+    "src/System.Management.Automation/engine/CommandProcessorBase.cs::CommandProcessorBase.ManageInvocationException@L848-L947"
+   ],
+   "owner": "03-runtime/errors-and-diagnostics.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-ERR-180",
+   "baseline_behavior": "Errors are only on the user error stream and honour -ErrorAction/$ErrorActionPreference, including suppression.",
+   "proposed_behavior": "A separate audit stream for policy decisions and denials that user preferences cannot suppress.",
+   "benefit": "Audit integrity.",
+   "compatibility_cost": "Additional stream to consume.",
+   "affected_cfs": [
+    "CF-ERR-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

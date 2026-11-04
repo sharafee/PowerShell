@@ -1,0 +1,431 @@
+{
+ "T31": {
+  "doc": "03-runtime/runspace-and-pipeline.md",
+  "pester": [
+   "PipelineBehaviour",
+   "PipelineStoppedToken",
+   "PipelineChainOperator",
+   "RunspaceCmdlets",
+   "engine/Remoting/RunspacePool",
+   "TaskBasedAsyncPowerShellAPI",
+   "NoRunspaceAffinity",
+   "engine/Api/PSCommand",
+   "engine/Api/BasicEngine",
+   "engine/Api/InitialSessionState"
+  ],
+  "xunit": [
+   "test_Runspace",
+   "test_PowerShellAPI"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/hostifaces/",
+   "src/System.Management.Automation/engine/pipeline.cs",
+   "src/System.Management.Automation/engine/Pipe.cs"
+  ]
+ },
+ "T32": {
+  "doc": "03-runtime/command-discovery-and-invocation.md",
+  "pester": [
+   "engine/Basic/CommandDiscovery",
+   "NativeExecution/",
+   "engine/Basic/NativeCommand",
+   "Microsoft.PowerShell.Core/Get-Command",
+   "Microsoft.PowerShell.Utility/Get-Command",
+   "Scripting/Requires"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/CommandDiscovery.cs",
+   "src/System.Management.Automation/engine/CommandSearcher.cs",
+   "src/System.Management.Automation/engine/CommandPathSearch.cs",
+   "src/System.Management.Automation/engine/NativeCommand",
+   "src/System.Management.Automation/engine/CommandInfo.cs",
+   "src/System.Management.Automation/engine/ScriptCommandProcessor.cs"
+  ]
+ },
+ "T33B": {
+  "doc": "03-runtime/parameter-binding.md",
+  "pester": [
+   "engine/ParameterBinding/",
+   "Parser/ParameterBinding",
+   "Scripting/ParameterBinding",
+   "Scripting/CommonParameters",
+   "Dynamicparameters"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/CmdletParameterBinderController.cs",
+   "src/System.Management.Automation/engine/ParameterBinderBase.cs",
+   "src/System.Management.Automation/engine/ParameterBinderController.cs",
+   "src/System.Management.Automation/engine/MergedCommandParameterMetadata.cs"
+  ]
+ },
+ "T33C": {
+  "doc": "03-runtime/cmdlet-infrastructure.md",
+  "pester": [
+   "Scripting/CmdletBinding",
+   "Scripting/ShouldProcess",
+   "engine/Basic/DefaultCommands",
+   "CommonParameters",
+   "Scripting/AdvancedFunction",
+   "Scripting/Functions",
+   "Scripting/Dynamicparameters"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/cmdlet.cs",
+   "src/System.Management.Automation/engine/CommandBase.cs",
+   "src/System.Management.Automation/engine/MshCommandRuntime.cs",
+   "src/System.Management.Automation/engine/MshCmdlet.cs"
+  ]
+ },
+ "T34": {
+  "doc": "03-runtime/provider-model.md",
+  "pester": [
+   "Management/FileSystem.Tests",
+   "Management/FileSystemProviderExtended",
+   "Management/Registry.Tests",
+   "Management/Alias.Tests",
+   "Management/FunctionProvider",
+   "Management/Variable.Tests",
+   "Management/PSDrive.Tests",
+   "Management/New-PSDrive",
+   "Management/Get-PSDrive",
+   "Management/Get-PSProvider",
+   "Security/CertificateProvider",
+   "ImportProvider",
+   "Management/Resolve-Path",
+   "Management/Set-Location",
+   "Management/Push-Location",
+   "Environment-Variables"
+  ],
+  "xunit": [
+   "test_FileSystemProvider"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/namespaces/",
+   "src/System.Management.Automation/engine/SessionStateProviderAPIs.cs",
+   "src/System.Management.Automation/engine/SessionStateDriveAPIs.cs",
+   "src/System.Management.Automation/engine/DataStoreAdapter"
+  ]
+ },
+ "T35": {
+  "doc": "03-runtime/extended-type-system.md",
+  "pester": [
+   "engine/ETS/",
+   "Scripting/Adapter.Tests",
+   "Utility/Update-TypeData",
+   "Utility/Remove-TypeData",
+   "Utility/Add-Member",
+   "Utility/Get-Member",
+   "HashtableToPSCustomObjectConversion"
+  ],
+  "xunit": [
+   "test_PSObject"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/MshObject.cs",
+   "src/System.Management.Automation/engine/MshMemberInfo.cs",
+   "src/System.Management.Automation/engine/CoreAdapter.cs",
+   "src/System.Management.Automation/engine/TypeTable.cs",
+   "src/System.Management.Automation/engine/ExtraAdapter.cs",
+   "src/System.Management.Automation/engine/ThirdPartyAdapter.cs"
+  ]
+ },
+ "T36F": {
+  "doc": "03-runtime/formatting-and-output.md",
+  "pester": [
+   "Core/Out-Default",
+   "Core/Out-Host",
+   "Utility/Out-String",
+   "Utility/Format-Custom",
+   "Utility/Format-Wide",
+   "Utility/Out-File",
+   "Utility/Format-Table",
+   "Utility/Format-List",
+   "engine/Formatting/"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/FormatAndOutput/"
+  ]
+ },
+ "T36H": {
+  "doc": "03-runtime/help-system.md",
+  "pester": [
+   "engine/Help/",
+   "Scripting/ScriptHelp"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/help/"
+  ]
+ },
+ "T37": {
+  "doc": "03-runtime/modules.md",
+  "pester": [
+   "Core/ModuleManifest",
+   "Core/Get-Module",
+   "Core/Remove-Module",
+   "Core/Import-Module",
+   "engine/Module/"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/Modules/"
+  ]
+ },
+ "T38": {
+  "doc": "03-runtime/errors-and-diagnostics.md",
+  "pester": [
+   "Host/Start-Transcript",
+   "Utility/Write-Error",
+   "Utility/Get-Error",
+   "Core/Get-Error",
+   "engine/Basic/NativeCommandErrorHandling",
+   "Formatting/ErrorView",
+   "Classes.Exceptions",
+   "Scripting/Trap",
+   "Scripting/CommandErrorHandling",
+   "Scripting/ErrorHistoryId",
+   "Scripting/TryCatch",
+   "Scripting/CleanBlockErrorHandling",
+   "Scripting/ErrorPosition",
+   "Scripting/OutErrorVariable"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/ErrorPackage.cs",
+   "src/System.Management.Automation/engine/hostifaces/MshHostUserInterface.cs",
+   "src/System.Management.Automation/engine/QuestionMarkVariable.cs",
+   "src/System.Management.Automation/engine/runtime/Operations/MiscOps.cs"
+  ]
+ },
+ "T39J": {
+  "doc": "03-runtime/jobs-and-concurrency.md",
+  "pester": [
+   "Core/Job.Tests",
+   "Core/ForEach-Object.Tests",
+   "Modules/ThreadJob/",
+   "Foreach-Object-Parallel",
+   "engine/Job/",
+   "ForeachParallel",
+   "SwitchParallel"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/client/Job",
+   "src/System.Management.Automation/engine/remoting/client/ThrottlingJob.cs",
+   "src/System.Management.Automation/engine/remoting/commands/JobRepository.cs",
+   "src/System.Management.Automation/engine/remoting/commands/StartJob.cs",
+   "src/System.Management.Automation/engine/hostifaces/PSTask.cs",
+   "src/System.Management.Automation/engine/hostifaces/PowerShellProcessInstance.cs"
+  ]
+ },
+ "T39D": {
+  "doc": "03-runtime/debugger.md",
+  "pester": [
+   "ConstrainedLanguageDebugger",
+   "Set-PSDebug",
+   "Disable-PSBreakpoint",
+   "Enable-PSBreakpoint",
+   "Remove-PSBreakpoint",
+   "Get-RunspaceDebug",
+   "RunspaceBreakpointManagement",
+   "Debug-Runspace",
+   "Get-PSBreakpoint",
+   "Wait-Debugger",
+   "Set-PSBreakpoint",
+   "SDK/Breakpoint",
+   "SDK/PSDebugging",
+   "InvokeCommandRemoteDebug",
+   "Scripting/Debugging/"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/debugger/"
+  ]
+ },
+ "T39E": {
+  "doc": "03-runtime/eventing.md",
+  "pester": [
+   "Register-EngineEvent",
+   "New-Event",
+   "Register-ObjectEvent",
+   "Get-EventSubscriber",
+   "Remove-Event",
+   "Get-Event.Tests",
+   "Utility/Eventing",
+   "Wait-Event"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/EventManager.cs",
+   "src/Microsoft.PowerShell.Commands.Utility/commands/utility/RegisterObjectEventCommand.cs",
+   "src/Microsoft.PowerShell.Commands.Utility/commands/utility/NewEventCommand.cs"
+  ]
+ },
+ "T41": {
+  "doc": "04-hosting/host-abstraction.md",
+  "pester": [
+   "Host/HostUtilities",
+   "Utility/Read-Host",
+   "Utility/Write-Host",
+   "Core/Out-Host",
+   "engine/Api/InitialSessionState"
+  ],
+  "xunit": [
+   "test_Runspace"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/hostifaces/MshHost.cs",
+   "src/System.Management.Automation/engine/hostifaces/MshHostUserInterface.cs",
+   "src/System.Management.Automation/engine/hostifaces/MshHostRawUserInterface.cs",
+   "src/System.Management.Automation/engine/hostifaces/InternalHost",
+   "src/System.Management.Automation/engine/InitialSessionState.cs"
+  ]
+ },
+ "T42": {
+  "doc": "04-hosting/console-host.md",
+  "pester": [
+   "Host/ConsoleHost",
+   "Host/Startup",
+   "Host/Logging",
+   "Host/Base-Directory",
+   "Host/PSVersionTable",
+   "PSReadLine",
+   "Host/TabCompletion/TabCompletion"
+  ],
+  "xunit": [
+   "test_CommandLineParser"
+  ],
+  "sec_prefix": [
+   "src/Microsoft.PowerShell.ConsoleHost/"
+  ]
+ },
+ "T43": {
+  "doc": "04-hosting/sdk.md",
+  "pester": [
+   "SDK/",
+   "engine/Api/PSCommand",
+   "engine/Api/BasicEngine",
+   "engine/Api/TaskBasedAsyncPowerShellAPI",
+   "engine/Api/Serialization"
+  ],
+  "xunit": [
+   "test_PowerShellAPI",
+   "test_SessionState",
+   "test_PSObject"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/hostifaces/PowerShell.cs",
+   "src/System.Management.Automation/engine/hostifaces/ConnectionFactory.cs",
+   "src/System.Management.Automation/engine/hostifaces/Connection.cs",
+   "src/Microsoft.PowerShell.SDK/"
+  ]
+ },
+ "T44": {
+  "doc": "05-remoting/psrp-protocol.md",
+  "pester": [
+   "Remoting/",
+   "engine/Remoting"
+  ],
+  "xunit": [
+   "test_RemoteHyperV"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/common/",
+   "src/System.Management.Automation/engine/remoting/fanin/",
+   "src/System.Management.Automation/engine/remoting/server/"
+  ]
+ },
+ "T45": {
+  "doc": "05-remoting/transports.md",
+  "pester": [
+   "Remoting/",
+   "engine/Remoting",
+   "SSHRemoting"
+  ],
+  "xunit": [
+   "test_NamedPipe",
+   "test_RemoteHyperV"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/fanin/WSMan",
+   "src/System.Management.Automation/engine/remoting/common/RemoteSessionNamedPipe.cs",
+   "src/System.Management.Automation/engine/remoting/common/RunspaceConnectionInfo.cs",
+   "src/System.Management.Automation/engine/remoting/server/OutOfProc"
+  ]
+ },
+ "T46": {
+  "doc": "05-remoting/serialization-clixml.md",
+  "pester": [
+   "Serialization",
+   "Export-Clixml",
+   "Import-Clixml",
+   "CliXml",
+   "Clixml"
+  ],
+  "xunit": [
+   "test_Serialization"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/serialization.cs",
+   "src/System.Management.Automation/engine/SerializationStrings.cs"
+  ]
+ },
+ "T47": {
+  "doc": "05-remoting/jea.md",
+  "pester": [
+   "SessionConfiguration",
+   "PSSessionConfiguration",
+   "RoleCapab",
+   "JEA",
+   "ConfigurationFile"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+   "src/System.Management.Automation/engine/remoting/commands/CustomShellCommands.cs",
+   "src/System.Management.Automation/engine/remoting/fanin/PSPrincipal.cs"
+  ]
+ },
+ "T48": {
+  "doc": "06-platform/windows-unix-split.md",
+  "pester": [
+   "FileSystem.Tests",
+   "NativeCommandProcessor",
+   "NativeLinuxCommands",
+   "NativeUnixGlobbing",
+   "Base-Directory",
+   "ExecutionPolicy.Tests"
+  ],
+  "xunit": [
+   "test_CorePsPlatform",
+   "test_FileSystemProvider",
+   "test_PSConfiguration"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/CoreCLR/CorePsPlatform.cs",
+   "src/System.Management.Automation/security/SecurityManager.cs",
+   "src/System.Management.Automation/security/SecuritySupport.cs"
+  ]
+ },
+ "T49": {
+  "doc": "06-platform/native-interop.md",
+  "pester": [
+   "Assembly.LoadNative",
+   "NativeCommandBytePiping"
+  ],
+  "xunit": [
+   "test_NativeInterop",
+   "test_CorePsPlatform"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/Interop/",
+   "src/System.Management.Automation/CoreCLR/CorePsAssemblyLoadContext.cs",
+   "src/System.Management.Automation/utils/PlatformInvokes.cs",
+   "src/System.Management.Automation/utils/tracing/SysLogProvider.cs"
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "cfs": [
+  {
+   "id": "CF-ETS-001",
+   "subject": "member resolution order",
+   "statement": "**Member resolution order (CF-ETS-001).** Looking up member *name* on a value `v` (wrapped as a `PSObject`) proceeds in this order and returns the first hit: (1) the reserved names `psbase`, `psadapted`, `psextended`, `psobject` and `pstypenames`, generated on demand; (2) **instance members** added to this object (for example by `Add-Member`); (3) **type-table (extended) members** merged over the object's type-name hierarchy, most specific type name winning; (4) **adapted members** from the adapter chosen for the object; (5) **base members**: the .NET members of the wrapped object, only when the chosen adapter is not already the .NET adapter. Member-name matching in the .NET adapter is case-insensitive (its binding flags include `IgnoreCase`). Type-table collection entries are marked \"replicate and clone when returning\" (a copy bound to the current object is handed out), adapted and base entries are not; the enumeration order across sources is `UNVERIFIED` (VB-038). Member lookup on a `PSMemberSet` owner searches the set's own members first, then the same collections.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/MshMemberInfo.cs::PSMemberInfoIntegratingCollection@L4503-L5152",
+    "src/System.Management.Automation/engine/MshObject.cs::PSObject.GetMappedAdapter@L460-L538",
+    "src/System.Management.Automation/engine/TypeTable.cs::TypeTable.MemberFactory@L3985-L4041",
+    "src/System.Management.Automation/engine/MshObject.cs::PSObject.GetMemberCollection@L261-L309"
+   ],
+   "owner": "03-runtime/extended-type-system.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-ETS-150",
+   "baseline_behavior": "Adapters exist for WMI, DirectoryEntry, DataRow/DataRowView, COM, CIM and XML nodes.",
+   "proposed_behavior": "Ship .NET, XML, PSObject, member-set and the third-party adapter bridge only.",
+   "benefit": "Smaller surface, fewer Windows-only dependencies.",
+   "compatibility_cost": "Scripts using those object kinds lose adapted members.",
+   "affected_cfs": [
+    "CF-ETS-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-ETS-151",
+   "baseline_behavior": "Built-in type data is compiled into C# from types.ps1xml.",
+   "proposed_behavior": "Compile at build time and also publish a versioned data file.",
+   "benefit": "One source for tooling and a clean-room implementation.",
+   "compatibility_cost": "None observable.",
+   "affected_cfs": [
+    "CF-ETS-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

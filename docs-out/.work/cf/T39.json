@@ -1,0 +1,59 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-JOB-190",
+   "baseline_behavior": "Background jobs start a separate pwsh process and parallel tasks use runspaces created from the session; policy inheritance is not enforced in the code read.",
+   "proposed_behavior": "Child processes and parallel runspaces inherit policy, language mode and visibility as a hard rule, with per-job quotas.",
+   "benefit": "Prevents escape from a restricted session through jobs.",
+   "compatibility_cost": "Jobs cannot be more privileged than the parent.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-JOB-191",
+   "baseline_behavior": "ThrottlingJob, ContainerParentJob and a job source-adapter registry exist.",
+   "proposed_behavior": "One local job type plus the parallel pool.",
+   "benefit": "Smaller job model.",
+   "compatibility_cost": "Third-party job sources unsupported initially.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-DBG-195",
+   "baseline_behavior": "Debugger enable/attach is not a distinct audited privilege.",
+   "proposed_behavior": "Policy-controlled, audited debugger attach; prompt runs at the lowest trust level on the stack.",
+   "benefit": "Controls a code-execution channel.",
+   "compatibility_cost": "Debug sessions need explicit permission.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-DBG-196",
+   "baseline_behavior": "Nested debugging of jobs and remote runspaces exists.",
+   "proposed_behavior": "Omit in the first version.",
+   "benefit": "Smaller debugger.",
+   "compatibility_cost": "No job or remote debugging initially.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-EVT-198",
+   "baseline_behavior": "Received-event and action queues are unbounded.",
+   "proposed_behavior": "Bounded queues with policy-defined drop rules.",
+   "benefit": "Resource safety.",
+   "compatibility_cost": "Events may be dropped under load.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-EVT-199",
+   "baseline_behavior": "Forwarded events and WMI/CIM event sources are supported.",
+   "proposed_behavior": "Omit in the first version.",
+   "benefit": "Smaller eventing surface.",
+   "compatibility_cost": "No event forwarding initially.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

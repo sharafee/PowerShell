@@ -1,0 +1,41 @@
+{
+ "cfs": [],
+ "deviations": [
+  {
+   "id": "DEV-FMT-160",
+   "baseline_behavior": "Output is text-only through a LineOutput sink.",
+   "proposed_behavior": "Add an optional structured (typed record) sink next to the text sink.",
+   "benefit": "Machine consumers need not parse text.",
+   "compatibility_cost": "Additional sink contract to maintain.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-FMT-161",
+   "baseline_behavior": "Format data is loaded from an XML schema with a large loader family.",
+   "proposed_behavior": "Built-in views as compiled data and a small JSON/YAML definition for extensions.",
+   "benefit": "Smaller loader, simpler validation.",
+   "compatibility_cost": "Existing format.ps1xml files need conversion.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-HELP-165",
+   "baseline_behavior": "Updatable help downloads unsigned packages from a module-provided URI.",
+   "proposed_behavior": "Signed help packages with a catalog and offline mode, verified before install.",
+   "benefit": "Integrity of installed help.",
+   "compatibility_cost": "Help authors must sign packages.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-HELP-166",
+   "baseline_behavior": "Help is authored in MAML XML plus a DSC resource provider.",
+   "proposed_behavior": "Lighter structured format and comment-based help only.",
+   "benefit": "Simpler authoring and parsing.",
+   "compatibility_cost": "Existing MAML help needs conversion.",
+   "affected_cfs": [],
+   "status": "PROPOSED"
+  }
+ ]
+}

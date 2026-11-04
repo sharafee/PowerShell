@@ -1,0 +1,43 @@
+{
+ "cfs": [
+  {
+   "id": "CF-BND-001",
+   "subject": "parameter-binding order and parameter-set resolution",
+   "statement": "**Parameter binding order and parameter-set resolution (CF-BND-001).** Command-line binding runs these steps in order: (1) arguments that came from hashtable splatting are moved after all other arguments; (2) a parameter name with no value is joined with the next argument as its value (a switch parameter takes `$true` instead; a name followed by another recognizable parameter name, or a name at the end, is a `MissingArgument` error); (3) **named binding**: every argument with a name is matched (exact name or alias first, then unambiguous prefix); a parameter already bound is an error (`ParameterAlreadyBound`) except that a splatted entry whose name was already bound explicitly is skipped; the `--%` verbatim marker is consumed here; (4) **positional binding**: unbound parameters that have a position in the still-valid sets are grouped by position number in ascending order; arguments without a name are taken in order; each is offered to the parameters of that position in four attempts \u2014 default set without type coercion, all valid sets without coercion, default set with coercion, all valid sets with coercion \u2014 and an argument no parameter accepts stays unbound; (5) values from `$PSDefaultParameterValues` are bound to still-unbound parameters, after positional binding and again after dynamic parameters; (6) `ValidateParameterSets`; (7) dynamic parameters are fetched once from the command (`GetDynamicParameters`), merged into the parameter table and set bitmasks, and named and positional binding are repeated for the leftover arguments; (8) leftover arguments are bound to the single `ValueFromRemainingArguments` parameter (two such parameters in the current sets is an error); (9) any argument still unbound is an error (`NamedParameterNotFound` for a named one, `PositionalParameterNotFound` otherwise); (10) the final parameter-set check and the mandatory-parameter step (\u00a77); (11) script parameters that are still unbound get their declared default values; (12) the set mask is saved for pipeline binding. **Parameter-set resolution:** each bound parameter narrows the current set mask to the sets it belongs to. After binding, with *one* valid set that set is chosen. With *several* valid sets: if the mask is \"all sets\" and the command has no default set, the call is accepted as set-less; else if the command defines a default set and it is among the valid sets, the command's parameter-set name is set to the default set, and the mask is narrowed to the default set only in validation calls that ask for it (the final check after command-line binding does; the checks made before dynamic parameters and during pipeline binding may not); else, if pipeline input is still expected and some valid set has an unbound parameter that takes pipeline input, the decision is postponed to pipeline binding; else the mask is reduced to sets with no unbound mandatory parameter; if exactly one set remains it is chosen, otherwise `AmbiguousParameterSet`. With *zero* valid sets (conflicting parameters) the result is `AmbiguousParameterSet` as well. **Pipeline-object binding** for each input object restores the saved mask and the original values of parameters bound by the previous object, then makes four passes over the unbound parameters that accept pipeline input \u2014 (a) by value without coercion, (b) by property name without coercion, (c) by value with coercion, (d) by property name with coercion \u2014 trying the default set before the other valid sets in each pass; a successful bind narrows the set mask again.",
+   "label": "FACT-SRC",
+   "evidence": [
+    "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.BindCommandLineParametersNoValidation@L202-L277",
+    "src/System.Management.Automation/engine/ParameterBinderController.cs::ParameterBinderController.BindPositionalParameters@L699-L871",
+    "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.ValidateParameterSets@L2532-L2640",
+    "src/System.Management.Automation/engine/CmdletParameterBinderController.cs::CmdletParameterBinderController.BindPipelineParametersPrivate@L3255-L3347",
+    "src/System.Management.Automation/engine/ParameterBinderBase.cs::ParameterBinderBase.BindParameter@L329-L667"
+   ],
+   "owner": "03-runtime/parameter-binding.md",
+   "status": "open"
+  }
+ ],
+ "deviations": [
+  {
+   "id": "DEV-BIND-130",
+   "baseline_behavior": "Execution-detail logging records bound values (first 256 characters) for every parameter.",
+   "proposed_behavior": "Redact bound values by parameter type and attribute (secure types, sensitive marker).",
+   "benefit": "Avoids leaking secrets into logs.",
+   "compatibility_cost": "Existing log consumers lose raw values.",
+   "affected_cfs": [
+    "CF-BND-001"
+   ],
+   "status": "PROPOSED"
+  },
+  {
+   "id": "DEV-CMDLET-135",
+   "baseline_behavior": "Cmdlets can require a transaction (-UseTransaction, SupportsTransactions) via an engine protection scope.",
+   "proposed_behavior": "Omit transaction support.",
+   "benefit": "Removes a Windows-only feature and engine scope handling.",
+   "compatibility_cost": "Cmdlets and scripts using transactions are unsupported.",
+   "affected_cfs": [
+    "CF-LCY-001"
+   ],
+   "status": "PROPOSED"
+  }
+ ]
+}

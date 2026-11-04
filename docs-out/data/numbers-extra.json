@@ -180,5 +180,68 @@
   "dataset": "members-tierA.json",
   "label": "APPROX",
   "notes": "T29"
+ },
+ {
+  "key": "PARSER_RULE_NODES",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count callgraph_nodes",
+  "dataset": "members-tierA.json",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_TOTAL",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count quirks_total",
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_REPLICATE",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count quirks_replicate",
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_ADAPT",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count quirks_adapt",
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_AVOID",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count quirks_avoid",
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "QUIRKS_REDESIGN",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count quirks_redesign",
+  "dataset": "SEMANTIC-QUIRKS.md",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "LANGUAGE_TEST_FILES",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count test_files",
+  "dataset": "tests.json",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "LANGUAGE_TEST_ITS",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count test_its",
+  "dataset": "tests.json",
+  "label": "APPROX",
+  "notes": "coordinator documents"
+ },
+ {
+  "key": "INTERPRETER_OPTIONS",
+  "cmd": "python3 docs-out/tools/gen_coord.py --count options",
+  "dataset": "interpreter-scores.json",
+  "label": "APPROX",
+  "notes": "coordinator documents"
  }
 ]

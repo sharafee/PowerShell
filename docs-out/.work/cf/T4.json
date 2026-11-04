@@ -1,0 +1,104 @@
+{
+"cfs": [],
+"deviations": [
+{
+"id": "DEV-HOST-200",
+"baseline_behavior": "ConsoleHost parses switches that widen access (for example -noprofile, -executionpolicy, -configurationfile, server modes) from the command line, then starts; policy applies after parsing.",
+"proposed_behavior": "Load policy from a signed source first; refuse switches that widen access when lockdown is on; refuse server modes without an authenticated transport.",
+"benefit": "Closes a path where a launch argument weakens a locked-down start.",
+"compatibility_cost": "Scripts that pass widening switches under lockdown stop working.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-HOST-201",
+"baseline_behavior": "ConsoleHost carries Windows-only pieces: ConsoleControl Win32 calls, jump list, -windowstyle, -sta by default, Hyper-V socket modes.",
+"proposed_behavior": "Leave them out of the first version.",
+"benefit": "Smaller host, fewer native calls.",
+"compatibility_cost": "No Windows console extras, no Hyper-V mode.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-SDK-205",
+"baseline_behavior": "The default embedded session is full language with all commands visible.",
+"proposed_behavior": "Default embedded session is restricted; full language needs an explicit opt-in.",
+"benefit": "Safe default for host applications.",
+"compatibility_cost": "Embedders must opt in to the full session.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-REM-210",
+"baseline_behavior": "PSRP carries XML payloads, fragments, in-protocol key exchange and priority streams over several transports.",
+"proposed_behavior": "No remoting in the first version; if added later, use a typed binary protocol with transport-level authentication.",
+"benefit": "Removes a large attack surface and a large unverified area.",
+"compatibility_cost": "No remote sessions initially.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-REM-211",
+"baseline_behavior": "Transports: WSMan (native plugin), SSH subsystem, named pipe, Hyper-V socket, container and VM process.",
+"proposed_behavior": "Omit WSMan, Hyper-V and container transports; consider SSH-style process stdio first if remoting is added.",
+"benefit": "Avoids Windows-only native components.",
+"compatibility_cost": "No WSMan or Hyper-V endpoints.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-SER-215",
+"baseline_behavior": "CLIXML reader has depth limits but no explicit maximum input size; depth-1 property bags can include sensitive properties.",
+"proposed_behavior": "Add a maximum input size and streaming limit to the reader; mark sensitive properties so shallow bags cannot leak them.",
+"benefit": "Bounds memory and leakage.",
+"compatibility_cost": "Large documents fail to import unless a limit is raised.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-JEA-220",
+"baseline_behavior": "Role merging concatenates values from all matching roles; there is no deny rule.",
+"proposed_behavior": "Add explicit deny rules with deny-over-allow precedence and a report of effective capabilities.",
+"benefit": "Predictable least privilege.",
+"compatibility_cost": "Role files need a deny section; merge results change when deny is used.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-PLAT-230",
+"baseline_behavior": "OS differences are spread over 390 conditional blocks and many runtime queries.",
+"proposed_behavior": "One platform interface with a runtime capability table; conditional compilation only inside interface implementations.",
+"benefit": "Testable on every OS; one place to review.",
+"compatibility_cost": "Larger initial design effort.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-PLAT-231",
+"baseline_behavior": "Native layer: hand-kept struct layouts for libpsl-native, three interop styles, C source in another repository.",
+"proposed_behavior": "One native surface per OS with generated bindings and a layout test in CI.",
+"benefit": "Fewer ABI mismatches.",
+"compatibility_cost": "Build tooling must generate and verify bindings.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-PLAT-232",
+"baseline_behavior": "Last-resort resolver loads <rid>/<name>.<ext> from the folder of the calling assembly with no signature or location check.",
+"proposed_behavior": "Prefer the application directory and a signed or pinned per-RID folder; refuse writable locations unless policy allows.",
+"benefit": "Blocks library planting through writable module folders.",
+"compatibility_cost": "Modules with native libraries need a signed or allowed location.",
+"affected_cfs": [],
+"status": "PROPOSED"
+},
+{
+"id": "DEV-PLAT-233",
+"baseline_behavior": "Zone checks and the execution-policy store exist only on Windows; Unix treats every file as local and cannot set a policy.",
+"proposed_behavior": "Define origin and policy for every supported OS, or report 'not enforced' through one status API.",
+"benefit": "Security behavior is the same or explicitly different per OS.",
+"compatibility_cost": "Unix users get a policy store and origin marks.",
+"affected_cfs": [],
+"status": "PROPOSED"
+}
+]
+}
