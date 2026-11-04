@@ -264,5 +264,168 @@
    "src/Microsoft.PowerShell.Commands.Utility/commands/utility/RegisterObjectEventCommand.cs",
    "src/Microsoft.PowerShell.Commands.Utility/commands/utility/NewEventCommand.cs"
   ]
+ },
+ "T41": {
+  "doc": "04-hosting/host-abstraction.md",
+  "pester": [
+   "Host/HostUtilities",
+   "Utility/Read-Host",
+   "Utility/Write-Host",
+   "Core/Out-Host",
+   "engine/Api/InitialSessionState"
+  ],
+  "xunit": [
+   "test_Runspace"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/hostifaces/MshHost.cs",
+   "src/System.Management.Automation/engine/hostifaces/MshHostUserInterface.cs",
+   "src/System.Management.Automation/engine/hostifaces/MshHostRawUserInterface.cs",
+   "src/System.Management.Automation/engine/hostifaces/InternalHost",
+   "src/System.Management.Automation/engine/InitialSessionState.cs"
+  ]
+ },
+ "T42": {
+  "doc": "04-hosting/console-host.md",
+  "pester": [
+   "Host/ConsoleHost",
+   "Host/Startup",
+   "Host/Logging",
+   "Host/Base-Directory",
+   "Host/PSVersionTable",
+   "PSReadLine",
+   "Host/TabCompletion/TabCompletion"
+  ],
+  "xunit": [
+   "test_CommandLineParser"
+  ],
+  "sec_prefix": [
+   "src/Microsoft.PowerShell.ConsoleHost/"
+  ]
+ },
+ "T43": {
+  "doc": "04-hosting/sdk.md",
+  "pester": [
+   "SDK/",
+   "engine/Api/PSCommand",
+   "engine/Api/BasicEngine",
+   "engine/Api/TaskBasedAsyncPowerShellAPI",
+   "engine/Api/Serialization"
+  ],
+  "xunit": [
+   "test_PowerShellAPI",
+   "test_SessionState",
+   "test_PSObject"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/hostifaces/PowerShell.cs",
+   "src/System.Management.Automation/engine/hostifaces/ConnectionFactory.cs",
+   "src/System.Management.Automation/engine/hostifaces/Connection.cs",
+   "src/Microsoft.PowerShell.SDK/"
+  ]
+ },
+ "T44": {
+  "doc": "05-remoting/psrp-protocol.md",
+  "pester": [
+   "Remoting/",
+   "engine/Remoting"
+  ],
+  "xunit": [
+   "test_RemoteHyperV"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/common/",
+   "src/System.Management.Automation/engine/remoting/fanin/",
+   "src/System.Management.Automation/engine/remoting/server/"
+  ]
+ },
+ "T45": {
+  "doc": "05-remoting/transports.md",
+  "pester": [
+   "Remoting/",
+   "engine/Remoting",
+   "SSHRemoting"
+  ],
+  "xunit": [
+   "test_NamedPipe",
+   "test_RemoteHyperV"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/fanin/WSMan",
+   "src/System.Management.Automation/engine/remoting/common/RemoteSessionNamedPipe.cs",
+   "src/System.Management.Automation/engine/remoting/common/RunspaceConnectionInfo.cs",
+   "src/System.Management.Automation/engine/remoting/server/OutOfProc"
+  ]
+ },
+ "T46": {
+  "doc": "05-remoting/serialization-clixml.md",
+  "pester": [
+   "Serialization",
+   "Export-Clixml",
+   "Import-Clixml",
+   "CliXml",
+   "Clixml"
+  ],
+  "xunit": [
+   "test_Serialization"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/serialization.cs",
+   "src/System.Management.Automation/engine/SerializationStrings.cs"
+  ]
+ },
+ "T47": {
+  "doc": "05-remoting/jea.md",
+  "pester": [
+   "SessionConfiguration",
+   "PSSessionConfiguration",
+   "RoleCapab",
+   "JEA",
+   "ConfigurationFile"
+  ],
+  "xunit": [],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/remoting/fanin/InitialSessionStateProvider.cs",
+   "src/System.Management.Automation/engine/remoting/commands/CustomShellCommands.cs",
+   "src/System.Management.Automation/engine/remoting/fanin/PSPrincipal.cs"
+  ]
+ },
+ "T48": {
+  "doc": "06-platform/windows-unix-split.md",
+  "pester": [
+   "FileSystem.Tests",
+   "NativeCommandProcessor",
+   "NativeLinuxCommands",
+   "NativeUnixGlobbing",
+   "Base-Directory",
+   "ExecutionPolicy.Tests"
+  ],
+  "xunit": [
+   "test_CorePsPlatform",
+   "test_FileSystemProvider",
+   "test_PSConfiguration"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/CoreCLR/CorePsPlatform.cs",
+   "src/System.Management.Automation/security/SecurityManager.cs",
+   "src/System.Management.Automation/security/SecuritySupport.cs"
+  ]
+ },
+ "T49": {
+  "doc": "06-platform/native-interop.md",
+  "pester": [
+   "Assembly.LoadNative",
+   "NativeCommandBytePiping"
+  ],
+  "xunit": [
+   "test_NativeInterop",
+   "test_CorePsPlatform"
+  ],
+  "sec_prefix": [
+   "src/System.Management.Automation/engine/Interop/",
+   "src/System.Management.Automation/CoreCLR/CorePsAssemblyLoadContext.cs",
+   "src/System.Management.Automation/utils/PlatformInvokes.cs",
+   "src/System.Management.Automation/utils/tracing/SysLogProvider.cs"
+  ]
  }
 }

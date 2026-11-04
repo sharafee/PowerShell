@@ -17,6 +17,12 @@ Pin: version `v7.6.9`, commit `523031e` (`.work/pin.json`). STATIC-ONLY run: not
 2. State and types: [execution-context-and-session-state.md](03-runtime/execution-context-and-session-state.md), [extended-type-system.md](03-runtime/extended-type-system.md) (CF-ETS-001), [modules.md](03-runtime/modules.md) (CF-MOD-001), [provider-model.md](03-runtime/provider-model.md)
 3. Output and tooling: [formatting-and-output.md](03-runtime/formatting-and-output.md), [help-system.md](03-runtime/help-system.md), [jobs-and-concurrency.md](03-runtime/jobs-and-concurrency.md), [debugger.md](03-runtime/debugger.md), [eventing.md](03-runtime/eventing.md)
 
+## Hosting, remoting and platform (`04-hosting/`, `05-remoting/`, `06-platform/`)
+
+1. Hosting: [host-abstraction.md](04-hosting/host-abstraction.md) → [console-host.md](04-hosting/console-host.md) → [sdk.md](04-hosting/sdk.md)
+2. Remoting (out of first-version scope, documented): [psrp-protocol.md](05-remoting/psrp-protocol.md) → [transports.md](05-remoting/transports.md) → [serialization-clixml.md](05-remoting/serialization-clixml.md) → [jea.md](05-remoting/jea.md)
+3. Platform: [windows-unix-split.md](06-platform/windows-unix-split.md) → [native-interop.md](06-platform/native-interop.md)
+
 ## Repository overview (`00-overview/`, `01-repository/`, `10-command-modules/`)
 
 [repo-census](00-overview/repo-census.md), [source-tree-map](00-overview/source-tree-map.md), [project-dependency-graph](00-overview/project-dependency-graph.md), [external-dependencies](00-overview/external-dependencies.md), [layered-architecture](00-overview/layered-architecture.md), [build-system](01-repository/build-system.md), [ci-cd-and-packaging](01-repository/ci-cd-and-packaging.md), [coding-standards](01-repository/coding-standards.md), [command module families](10-command-modules/_index.md).

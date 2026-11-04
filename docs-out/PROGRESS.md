@@ -46,7 +46,16 @@ T21 tokenizer | T22 parser/grammar/errors | T23 AST | T24 semantic | T25 compile
 | T37 | `03-runtime/modules.md` (CF-MOD-001) | draft (tier B); DEV-MOD-170/171; VB-045..047 |
 | T38 | `03-runtime/errors-and-diagnostics.md` (CF-ERR-001) | draft (tier B); DEV-ERR-180; VB-048..050 |
 | T39 | `03-runtime/jobs-and-concurrency.md`, `03-runtime/debugger.md`, `03-runtime/eventing.md` | draft (tier B); DEV-JOB-190/191, DEV-DBG-195/196, DEV-EVT-198/199; VB-051..057 |
+| T41 | `04-hosting/host-abstraction.md` (HOST-ABSTRACTION-001) | draft (tier B); DEV-HOST-200 shared with T42; VB-058/059 |
+| T42 | `04-hosting/console-host.md` (HOST-CONSOLE-001) | draft (tier B); DEV-HOST-200/201; VB-060/061 |
+| T43 | `04-hosting/sdk.md` (HOST-SDK-001) | draft (tier B); DEV-SDK-205; VB-062/063 |
+| T44 | `05-remoting/psrp-protocol.md` (REM-PSRP-001, out of scope, documented) | draft (tier B); DEV-REM-210; VB-064/065 |
+| T45 | `05-remoting/transports.md` (REM-TRANSPORT-001, out of scope, documented) | draft (tier B); DEV-REM-211; VB-066/067 |
+| T46 | `05-remoting/serialization-clixml.md` (REM-CLIXML-001, extended) | draft (tier B); DEV-SER-215; VB-068/069 |
+| T47 | `05-remoting/jea.md` (REM-JEA-001, out of scope, documented) | draft (tier B); DEV-JEA-220; VB-070/071 |
+| T48 | `06-platform/windows-unix-split.md` (PLAT-SPLIT-001) | draft (tier B); DEV-PLAT-230, DEV-PLAT-233; VB-072/073 |
+| T49 | `06-platform/native-interop.md` (PLAT-NATIVE-001) | draft (tier B); DEV-PLAT-231, DEV-PLAT-232; VB-074/075 |
 
-Generated parts of 03-runtime (test tables, security-seed tables): `docs-out/tools/gen_T3.py` + `docs-out/tools/annotations/T3-docs.json` (D-022).
+Generated parts of 03-runtime and Phase 4 documents (test tables, security-seed tables): `docs-out/tools/gen_T3.py` + `docs-out/tools/annotations/T3-docs.json` (D-022, D-026).
 
-Next step: Phase 4 (hosting, SDK, remoting, platform, command-module families), Phase 5 security (assign `SEC-ENF` IDs to verified seed hits), and the deeper reads in VB-017..VB-023 and VB-024..VB-057. Open: golden samples and oracle remain waived (VB-001).
+Phase 4 status: hosting, remoting and platform documents (T41..T49) written; command-module families were generated in Phase 0 (D-025). Next step: Phase 5 security (assign `SEC-ENF` IDs to verified seed hits), and the deeper reads in VB-017..VB-023 and VB-024..VB-075. Open: golden samples and oracle remain waived (VB-001).
